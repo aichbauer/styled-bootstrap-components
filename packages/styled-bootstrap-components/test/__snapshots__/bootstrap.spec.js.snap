@@ -1,0 +1,645 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Simply check if all components are imported and exported correctly 1`] = `
+<div
+  className="sc-bdVaJa dZWWon"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 2`] = `
+<a
+  className="sc-bdVaJa eRiqeT"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 3`] = `
+<span
+  className="sc-bdVaJa hARFHz"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 4`] = `
+<abbr
+  className="sc-bwzfXH hQIZYv"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 5`] = `
+<address
+  className="sc-htpNat IDuKi"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 6`] = `
+<article
+  className="sc-bxivhb imCjfa"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 7`] = `
+<aside
+  className="sc-ifAKCX kXFzZl"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 8`] = `
+<aside
+  className="sc-EHOje chIqkb"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 9`] = `
+<blockquote
+  className="sc-bZQynM jJNEyA"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 10`] = `
+<button
+  className="sc-gzVnrw dvUyjS"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 11`] = `
+<caption
+  className="sc-htoDjs TqXFR"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 12`] = `
+<code
+  className="sc-dnqmqq iEfGQF"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 13`] = `
+<dd
+  className="sc-iwsKbI cLKkzg"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 14`] = `
+<dfn
+  className="sc-gZMcBi fYCSTw"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 15`] = `
+<dialog
+  className="sc-gqjmRU iMlnVN"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 16`] = `
+<dl
+  className="sc-VigVT lhVxpa"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 17`] = `
+<dt
+  className="sc-jTzLTM eCuhBu"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 18`] = `
+<fieldset
+  className="sc-fjdhpX iOghEC"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 19`] = `
+<figcaption
+  className="sc-jzJRlG ioCwbZ"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 20`] = `
+<figure
+  className="sc-cSHVUG cuVHWp"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 21`] = `
+<article
+  className="sc-kAzzGY busMyf"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 22`] = `
+<h1
+  className="sc-chPdSV gsIoNr"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 23`] = `
+<h2
+  className="sc-kgoBCf heAfjH"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 24`] = `
+<h3
+  className="sc-kGXeez hQezwx"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 25`] = `
+<h4
+  className="sc-kpOJdX hpFqPU"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 26`] = `
+<h5
+  className="sc-dxgOiQ dVBofo"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 27`] = `
+<h6
+  className="sc-ckVGcZ jbogWf"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 28`] = `[Function]`;
+
+exports[`Simply check if all components are imported and exported correctly 29`] = `
+<hgroup
+  className="sc-eNQAEJ fbMoJW"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 30`] = `
+<hr
+  className="sc-hMqMXs bwkndM"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 31`] = `
+<img
+  className="sc-kEYyzF fPtozN"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 32`] = `
+<input
+  className="sc-kkGfuU iPhqsl"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 33`] = `
+<kbd
+  className="sc-iAyFgw jornwW"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 34`] = `
+<legend
+  className="sc-hSdWYo inyEYY"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 35`] = `
+<label
+  className="sc-eHgmQL kXCcHL"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 36`] = `
+<main
+  className="sc-cvbbAY bUAGEQ"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 37`] = `
+<nav
+  className="sc-jWBwVP fAZsB"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 38`] = `
+<ol
+  className="sc-brqgnP bkLfOv"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 39`] = `
+<optgroup
+  className="sc-cMljjf kGqvBC"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 40`] = `
+<output
+  className="sc-jAaTju bNkYZj"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 41`] = `
+<p
+  className="sc-jDwBTQ fuUvcK"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 42`] = `
+<pre
+  className="sc-gPEVay dcjgLP"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 43`] = `
+<progress
+  className="sc-iRbamj iKLRDT"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 44`] = `
+<samp
+  className="sc-jlyJG etGLca"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 45`] = `
+<section
+  className="sc-gipzik uKEIp"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 46`] = `
+<select
+  className="sc-csuQGl dtcdPU"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 47`] = `
+<strong
+  className="sc-Rmtcm TdETe"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 48`] = `
+<strong
+  className="sc-bRBYWo kfrlKC"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 49`] = `
+<sub
+  className="sc-hzDkRC gkXgGo"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 50`] = `
+<summary
+  className="sc-jhAzac gaHbMu"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 51`] = `
+<sup
+  className="sc-fBuWsC kLrubk"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 52`] = `
+<svg
+  className="sc-fMiknA iOkVP"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 53`] = `
+<table
+  className="sc-dVhcbM bJkNMW"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 54`] = `
+<textarea
+  className="sc-eqIVtm hTPvyW"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 55`] = `
+<th
+  className="sc-fAjcbJ zEahk"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 56`] = `
+<ul
+  className="sc-caSCKo llhhSE"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 57`] = `
+<ol
+  className="sc-bdVaJa gwKakH sc-brqgnP bkLfOv"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 58`] = `
+<li
+  className="sc-bwzfXH kKLPKO"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 59`] = `
+<button
+  className="sc-bdVaJa ipUclB sc-gzVnrw dvUyjS"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 60`] = `
+<div
+  className="sc-bwzfXH BNlwh"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 61`] = `
+<div
+  className="sc-htpNat ffCmMW"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 62`] = `
+<div
+  className="sc-bdVaJa iWnrTB"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 63`] = `
+<div
+  className="sc-bwzfXH ghFkPJ"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 64`] = `
+<div
+  className="sc-htpNat cpPFok"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 65`] = `
+<div
+  className="sc-bxivhb ikVFYW"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 66`] = `
+<img
+  className="sc-ifAKCX faXbQR sc-kEYyzF fPtozN"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 67`] = `
+<p
+  className="sc-EHOje kDfYFG sc-jDwBTQ fuUvcK"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 68`] = `
+<h4
+  className="sc-dnqmqq biQLAy sc-kpOJdX hpFqPU"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 69`] = `
+<div
+  className="sc-bdVaJa eQYGCc"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 70`] = `
+<div
+  className="sc-bdVaJa hbTNoA"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 71`] = `
+<div
+  className="sc-bwzfXH kyGbme"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 72`] = `
+<div
+  className="sc-htpNat eyWxfm"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 73`] = `
+<div
+  className="sc-bxivhb cxJBQo"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 74`] = `
+<div
+  className="sc-bdVaJa ckmHRx"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 75`] = `
+<input
+  className="sc-bwzfXH kpQPhd sc-kkGfuU iPhqsl"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 76`] = `
+<input
+  className="sc-htpNat bIzgow sc-kkGfuU iPhqsl"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 77`] = `
+<input
+  className="sc-EHOje giJpVN sc-kkGfuU iPhqsl"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 78`] = `
+<input
+  className="sc-bZQynM epSHqO sc-kkGfuU iPhqsl"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 79`] = `
+<div
+  className="sc-gzVnrw dAbIbD"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 80`] = `
+<form
+  className="sc-htoDjs dsAaWw"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 81`] = `
+<strong
+  className="sc-dnqmqq dPMQoH sc-Rmtcm TdETe"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 82`] = `
+<div
+  className="sc-iwsKbI lcucxe"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 83`] = `
+<div
+  className="sc-gZMcBi dJchzE"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 84`] = `
+<div
+  className="sc-gqjmRU ikSodu"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 85`] = `
+<span
+  className="sc-VigVT dDwUkb"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 86`] = `
+<div
+  className="sc-bdVaJa hEMnQx"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 87`] = `
+<div
+  className="sc-bwzfXH dPavLm"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 88`] = `
+<div
+  className="sc-bdVaJa dQomal"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 89`] = `
+<ul
+  className="sc-bdVaJa fzpmwg sc-caSCKo llhhSE"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 90`] = `
+<li
+  className="sc-bwzfXH iIfNIg"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 91`] = `
+<div
+  className="sc-bdVaJa ccTDVo"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 92`] = `
+<div
+  className="sc-bwzfXH lddWrE"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 93`] = `
+<div
+  className="sc-htpNat fxEHIu"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 94`] = `
+<div
+  className="sc-bxivhb ctYvZG"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 95`] = `
+<div
+  className="sc-ifAKCX gGRfdJ"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 96`] = `
+<div
+  className="sc-EHOje kmXwEX"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 97`] = `
+<h4
+  className="sc-bZQynM dCHhGA sc-kpOJdX hpFqPU"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 98`] = `
+<nav
+  className="sc-bdVaJa eTBMlR sc-jWBwVP fAZsB"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 99`] = `
+<a
+  className="sc-htpNat tLpdQ sc-bdVaJa eRiqeT"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 100`] = `
+<nav
+  className="sc-bdVaJa djQjqz sc-jWBwVP fAZsB"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 101`] = `
+<a
+  className="sc-bwzfXH hEQiCg sc-htpNat tLpdQ sc-bdVaJa eRiqeT"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 102`] = `
+<div
+  className="sc-bdVaJa eAZntw"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 103`] = `
+<div
+  className="sc-bwzfXH fygUC"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 104`] = `
+<div
+  className="sc-htpNat djXQbQ"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 105`] = `
+<h4
+  className="sc-bZQynM kvVrYk sc-kpOJdX hpFqPU"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 106`] = `
+<div
+  className="sc-bdVaJa fElwpp"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 107`] = `
+<div
+  className="sc-bwzfXH jNtWFa"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 108`] = `
+<div
+  className="sc-htpNat gRnePJ"
+/>
+`;

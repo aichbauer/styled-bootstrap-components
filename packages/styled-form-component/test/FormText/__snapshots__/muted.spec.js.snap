@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches FormText muted 1`] = `
+.c0 {
+  display: block;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+  color: #6c757d;
+}
+
+<strong
+  className="c0 sc-Rmtcm TdETe"
+  muted={true}
+/>
+`;

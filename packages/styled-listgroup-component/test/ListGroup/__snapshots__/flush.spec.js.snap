@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches ListGroup flush 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.c0 > a,
+.c0 > li {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.c0 > a:first-child,
+.c0 > li:first-child {
+  border-top: 0;
+}
+
+.c0 > a:last-child,
+.c0 > li:last-child {
+  border-bottom: 0;
+}
+
+<ul
+  className="c0 sc-caSCKo llhhSE"
+/>
+`;

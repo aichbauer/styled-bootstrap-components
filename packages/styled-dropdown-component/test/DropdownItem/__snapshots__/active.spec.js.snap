@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches DropdownItem active 1`] = `
+.c0 {
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+<div
+  className="c0"
+/>
+`;

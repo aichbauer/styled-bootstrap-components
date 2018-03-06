@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches CardText 1`] = `
+.c1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.c0 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+  className="c0 c1"
+/>
+`;

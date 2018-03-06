@@ -1,0 +1,25 @@
+{
+  "name": "styled-bootstrap-components",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.2",
+    "jest-styled-components": "^5.0.0",
+    "lerna": "^2.8.0",
+    "lint-staged": "^7.0.0",
+    "react": "^16.2.0",
+    "react-test-renderer": "^16.2.0"
+  }
+}

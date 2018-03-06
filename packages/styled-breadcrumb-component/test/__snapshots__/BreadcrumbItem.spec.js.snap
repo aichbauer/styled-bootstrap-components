@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches BreadcrumbItem 1`] = `
+.c0:not(:first-child)::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #6c757d;
+  content: "/";
+}
+
+.c0 + .c0:hover::before {
+  text-decoration: none;
+}
+
+<li
+  className="c0"
+/>
+`;
+
+exports[`Styles matches BreadcrumbItem active 1`] = `
+.c0 {
+  color: #6c757d;
+}
+
+.c0:not(:first-child)::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #6c757d;
+  content: "/";
+}
+
+.c0 + .c0:hover::before {
+  text-decoration: none;
+}
+
+<li
+  className="c0"
+/>
+`;

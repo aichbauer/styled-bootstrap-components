@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches FormControl small 1`] = `
+.c1 {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+.c0 {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+  padding-right: 0;
+  padding-left: 0;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.c0::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.c0:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.c0::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+<input
+  className="c0 c1"
+/>
+`;
+
+exports[`Styles matches FormControl small select 1`] = `
+.c0 {
+  height: calc(2.25rem + 2px);
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+  padding-right: 0;
+  padding-left: 0;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+  height: calc(1.8125rem + 2px);
+}
+
+.c0::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.c0:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.c0::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+
+<select
+  className="c0 sc-csuQGl dtcdPU"
+/>
+`;

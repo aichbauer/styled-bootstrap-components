@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches CardImageHeader 1`] = `
+.c1 {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.c0 {
+  width: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+<img
+  className="c0 c1"
+/>
+`;

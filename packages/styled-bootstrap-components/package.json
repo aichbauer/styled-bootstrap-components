@@ -1,0 +1,46 @@
+{
+  "name": "styled-bootstrap-components",
+  "version": "0.0.0",
+  "main": "./src/index.js",
+  "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "styled-alert-component": "^0.0.0",
+    "styled-badge-component": "^0.0.0",
+    "styled-base-components": "^0.0.0",
+    "styled-breadcrumb-component": "^0.0.0",
+    "styled-button-component": "^0.0.0",
+    "styled-card-component": "^0.0.0",
+    "styled-components": "^3.1.4",
+    "styled-config": "^0.0.0",
+    "styled-container-component": "^0.0.0",
+    "styled-dropdown-component": "^0.0.0",
+    "styled-form-component": "^0.0.0",
+    "styled-grid-component": "^0.0.0",
+    "styled-jumbotron-component": "^0.0.0",
+    "styled-listgroup-component": "^0.0.0",
+    "styled-modal-component": "^0.0.0",
+    "styled-nav-component": "^0.0.0",
+    "styled-navbar-component": "^0.0.0",
+    "styled-popover-component": "^0.0.0",
+    "styled-tooltip-component": "^0.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "jest": "^22.4.2",
+    "jest-styled-components": "^5.0.0",
+    "react": "^16.2.0",
+    "react-test-renderer": "^16.2.0"
+  }
+}

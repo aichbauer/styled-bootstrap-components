@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches Container 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    max-width: 540px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width:1200px) {
+  .c0 {
+    max-width: 1140px;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles matches Container 2`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    max-width: 100%;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1200px) {
+  .c0 {
+    max-width: 100%;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;

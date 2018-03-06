@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches NavLink 1`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #007bff;
+}
+
+.c0:hover,
+.c0:focus {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+<a
+  className="c0 sc-bdVaJa eRiqeT"
+/>
+`;

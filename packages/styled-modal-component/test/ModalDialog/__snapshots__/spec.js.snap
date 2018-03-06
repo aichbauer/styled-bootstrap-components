@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches ModalDialog 1`] = `
+.c0 {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;

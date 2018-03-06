@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches dismissible 1`] = `
+.c0 {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding-right: 4rem;
+}
+
+.c0 > a {
+  font-weight: 700;
+}
+
+.c0 > h1,
+.c0 > h2,
+.c0 > h3,
+.c0 > h4,
+.c0 > h5,
+.c0 > h6 {
+  color: inherit;
+}
+
+<div
+  className="c0"
+/>
+`;

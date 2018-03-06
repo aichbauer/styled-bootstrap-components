@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches success 1`] = `
+.c0 {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.c0 > a {
+  font-weight: 700;
+}
+
+.c0 > h1,
+.c0 > h2,
+.c0 > h3,
+.c0 > h4,
+.c0 > h5,
+.c0 > h6 {
+  color: inherit;
+}
+
+.c0 > hr {
+  border-top-color: #b1dfbb;
+}
+
+.c0 > a,
+.c0 > a:hover {
+  color: #0b2e13;
+}
+
+<div
+  className="c0"
+/>
+`;

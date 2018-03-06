@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches TooltipArrow right 1`] = `
+.c0 {
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.4rem;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  top: 28%;
+}
+
+.c0::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+.c0::before {
+  right: 0;
+  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-right-color: #000;
+}
+
+<div
+  className="c0"
+/>
+`;

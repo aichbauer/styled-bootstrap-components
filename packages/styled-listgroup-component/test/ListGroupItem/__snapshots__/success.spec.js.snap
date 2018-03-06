@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches ListGroupItem success 1`] = `
+.c0 {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.125);
+  color: #155724;
+  background-color: #c3e6cb;
+}
+
+.c0:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c0 > a:hover,
+.c0 > a:focus {
+  z-index: 1;
+  text-decoration: none;
+}
+
+<li
+  className="c0"
+/>
+`;
+
+exports[`Styles matches ListGroupItem success action 1`] = `
+.c0 {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.125);
+  color: #155724;
+  background-color: #c3e6cb;
+}
+
+.c0:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c0 > a:hover,
+.c0 > a:focus {
+  z-index: 1;
+  text-decoration: none;
+}
+
+.c0 > a {
+  color: #495057;
+}
+
+.c0 > a:hover,
+.c0 > a:focus {
+  color: #495057;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.c0 > a:hover,
+.c0 > a:focus {
+  color: #155724;
+  background-color: #b1dfbb;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: #b1dfbb;
+  cursor: pointer;
+}
+
+<li
+  action={true}
+  className="c0"
+/>
+`;
+
+exports[`Styles matches ListGroupItem success active 1`] = `
+.c0 {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.125);
+  z-index: 2;
+  color: #fff;
+  background-color: #155724;
+  border-color: #155724;
+  color: #155724;
+  background-color: #c3e6cb;
+  z-index: 2;
+  color: #fff;
+  background-color: #155724;
+  border-color: #155724;
+}
+
+.c0:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c0 > a:hover,
+.c0 > a:focus {
+  z-index: 1;
+  text-decoration: none;
+}
+
+<li
+  className="c0"
+/>
+`;

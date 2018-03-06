@@ -1,0 +1,24 @@
+# modules
+node_modules
+npm-debug.log
+packages/*/node_modules
+.storybook/node_modules
+
+# generated
+.nyc*
+coverage
+packages/*/coverage
+*.log
+packages/*/*.log
+*.cache
+packages/*/*.cache
+.eslintcache
+packages/**/.eslintcache
+package-lock.json
+packages/*/package-lock.json
+
+# macOS
+.DS_STORE
+
+# IDE / Editors
+.idea/

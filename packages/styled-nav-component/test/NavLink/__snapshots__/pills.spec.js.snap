@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches NavLink pills active 1`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #007bff;
+  color: #495057;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #007bff;
+}
+
+.c0:hover,
+.c0:focus {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #fff;
+}
+
+<a
+  active={true}
+  className="c0"
+  href="#"
+  onClick={[Function]}
+  pill={true}
+  router={true}
+/>
+`;

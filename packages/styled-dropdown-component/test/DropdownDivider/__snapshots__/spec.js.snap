@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches DropdownDivider 1`] = `
+.c0 {
+  height: 0;
+  padding-top: 0.5rem;
+  margin-top: 0.6rem;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+<div
+  className="c0"
+/>
+`;

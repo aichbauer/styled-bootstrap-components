@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches PopoverArrow 1`] = `
+.c0 {
+  position: absolute;
+  display: block;
+  width: 1rem;
+  margin: 0 0.3rem;
+}
+
+.c0::before,
+.c0::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+<div
+  className="c0"
+/>
+`;

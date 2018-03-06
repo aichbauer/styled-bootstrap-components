@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches Jumbotron 1`] = `
+.c0 {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    padding: 4rem 2rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
