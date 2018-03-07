@@ -7,7 +7,7 @@ node_js:
 install:
   - yarn
   - npm i -g codecov
-  - lerna bootstrap
+  - travis_wait lerna bootstrap
 script:
   - npm test
 notifications:
