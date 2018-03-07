@@ -55,7 +55,6 @@ const readmeDecorator = (story) => (
 
 const loadStories = () => {
   addDecorator(readmeDecorator);
-  require('./stories/customize');
   require('./stories/alerts');
   require('./stories/badges');
   require('./stories/breadcrumbs');
@@ -74,6 +73,7 @@ const loadStories = () => {
   require('./stories/navbars');
   require('./stories/popovers');
   require('./stories/tooltips');
+  require('./stories/customize');
 };
 
 configure(loadStories(), module);
