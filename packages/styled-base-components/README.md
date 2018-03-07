@@ -1,10 +1,10 @@
 # styled-base-components
 
-> The [bootstrap](https://getbootstrap.com) base components made with [styled components](https://styled-components.com).
+> The [bootstrap](https://getbootstrap.com) base components made with [styled-components](https://styled-components.com).
 
 ## Table of Contents
 
-* [Documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components)
+* [Documentation](https://aichbauer.github.io/react-styled-bootstrap-components)
 * [Why?](#why)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -14,7 +14,7 @@
 
 ## Why?
 
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled-components](https://styled-components.com).
 
 ## Installation
 
@@ -33,6 +33,13 @@ $ yarn add styled-base-components
 > This are just pre-styled html elements to work with the bootstrap layout. They use the styles from bootstrap.
 
 ```jsx
+/*
+  if you installed `styled-bootstrap-components` use
+
+    import { ... } from 'styled-bootstrap-components'
+
+  instead.
+*/
 import {
   A,
   Abbr,
@@ -100,9 +107,9 @@ This components do not have any specific props, they are just pre-styled html el
 
 ## Related
 
-[bootstrap](https://getbootstrap.com)
-[styled components](https://styled-components.com)
-[styled-system](http://jxnblk.com/styled-system/)
+* [bootstrap](https://getbootstrap.com)
+* [styled-components](https://styled-components.com)
+* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 

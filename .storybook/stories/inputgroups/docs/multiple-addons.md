@@ -1,13 +1,13 @@
 ```jsx
 <Container fluid>
-  <InputGroup style={{ marginBottom: '0.5rem' }}>
+  <InputGroup>
     <InputGroupPrepend>
       <InputGroupText>$</InputGroupText>
       <InputGroupText>0.00</InputGroupText>
     </InputGroupPrepend>
     <FormControl type="text" />
   </InputGroup>
-  <InputGroup style={{ marginBottom: '0.5rem' }}>
+  <InputGroup>
     <FormControl type="text" />
     <InputGroupAppend>
       <InputGroupText>$</InputGroupText>

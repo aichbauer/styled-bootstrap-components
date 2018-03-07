@@ -15,6 +15,7 @@ exports[`Styles matches DropdownItem 1`] = `
 .c0:hover,
 .c0:focus {
   color: #16181b;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #f8f9fa;
 }

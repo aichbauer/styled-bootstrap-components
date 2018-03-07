@@ -16,6 +16,7 @@ exports[`Styles matches Nav tabs 1`] = `
 }
 
 .c0 > a {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

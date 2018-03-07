@@ -27,6 +27,7 @@ exports[`Styles matches Button info outline 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -77,6 +78,7 @@ exports[`Styles matches Button info outline disabled 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

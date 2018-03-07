@@ -1,11 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches CardImageHeader 1`] = `
-.c1 {
-  vertical-align: middle;
-  border-style: none;
-}
-
 .c0 {
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
@@ -13,6 +8,6 @@ exports[`Styles matches CardImageHeader 1`] = `
 }
 
 <img
-  className="c0 c1"
+  className="c0 sc-kEYyzF fPtozN"
 />
 `;

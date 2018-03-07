@@ -1,6 +1,6 @@
 ```jsx
 <Container>
-  <Card style={{ width: '18rem', textAlign: 'left' }}>
+  <Card width="18rem" textAlign="left">
     <CardBody>
       <CardTitle h5>
         Card title

@@ -1,9 +1,31 @@
 {
   "name": "styled-bootstrap-components",
+  "version": "0.0.0",
+  "description": "The bootstrap components created with styled-components and styled-system",
   "scripts": {
     "test": "jest --coverage"
   },
   "license": "MIT",
+  "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
+  "keywords": [
+    "components",
+    "react",
+    "react-component",
+    "ui",
+    "styled-components",
+    "bootstrap",
+    "presentational",
+    "stateless",
+    "functional"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aichbauer/styled-bootstrap-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aichbauer/styled-bootstrap-components/issues"
+  },
+  "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",

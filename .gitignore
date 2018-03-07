@@ -2,20 +2,33 @@
 node_modules
 npm-debug.log
 packages/*/node_modules
+packages/*/npm-debug.log
+packages/*/error-log.log
 .storybook/node_modules
+.storybook/npm-debug.log
+.storybook/yarn-error.log
 
 # generated
-.nyc*
 coverage
-packages/*/coverage
+.nyc*
 *.log
-packages/*/*.log
 *.cache
-packages/*/*.cache
 .eslintcache
-packages/**/.eslintcache
 package-lock.json
+
+packages/*/coverage
+packages/*/.nyc*
+packages/*/*.log
+packages/*/*.cache
+packages/**/.eslintcache
 packages/*/package-lock.json
+
+.storybook/coverage
+.storybook/.nyc*
+.storybook/*.log
+.storybook/*.cache
+.storybook/.eslintcache
+.storybook/package-lock.json
 
 # macOS
 .DS_STORE

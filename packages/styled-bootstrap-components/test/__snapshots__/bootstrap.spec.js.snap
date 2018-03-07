@@ -162,7 +162,11 @@ exports[`Simply check if all components are imported and exported correctly 27`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 28`] = `[Function]`;
+exports[`Simply check if all components are imported and exported correctly 28`] = `
+<header
+  className="sc-jKJlTe gpxFaj"
+/>
+`;
 
 exports[`Simply check if all components are imported and exported correctly 29`] = `
 <hgroup
@@ -586,7 +590,7 @@ exports[`Simply check if all components are imported and exported correctly 98`]
 
 exports[`Simply check if all components are imported and exported correctly 99`] = `
 <a
-  className="sc-htpNat tLpdQ sc-bdVaJa eRiqeT"
+  className="sc-htpNat jZQKac sc-bdVaJa eRiqeT"
 />
 `;
 
@@ -598,7 +602,7 @@ exports[`Simply check if all components are imported and exported correctly 100`
 
 exports[`Simply check if all components are imported and exported correctly 101`] = `
 <a
-  className="sc-bwzfXH hEQiCg sc-htpNat tLpdQ sc-bdVaJa eRiqeT"
+  className="sc-bwzfXH hEQiCg sc-htpNat jZQKac sc-bdVaJa eRiqeT"
 />
 `;
 

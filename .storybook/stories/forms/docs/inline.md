@@ -4,7 +4,7 @@
     <FormGroup>
       <FormControlPlainText type="text" readonly disabled value="email@example.com" />
     </FormGroup>
-    <FormGroup style={{ marginRight: '1rem' }}>
+    <FormGroup mr="1rem">
       <FormControl type="password" placeholder="Password" />
     </FormGroup>
     <FormGroup>

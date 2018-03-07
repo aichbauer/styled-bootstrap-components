@@ -24,6 +24,7 @@ exports[`Styles matches Button active 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

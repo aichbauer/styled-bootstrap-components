@@ -1,13 +1,13 @@
 ```jsx
 <Container>
-  <Row style={{ marginBottom: '0.5rem' }}>
+  <Row>
     <ButtonGroup lg>
       <Button secondary>Left</Button>
       <Button secondary>Middle</Button>
       <Button secondary>Right</Button>
     </ButtonGroup>
   </Row>
-  <Row style={{ marginBottom: '0.5rem' }}>
+  <Row>
     <ButtonGroup>
       <Button secondary>Left</Button>
       <Button secondary>Middle</Button>

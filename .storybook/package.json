@@ -1,27 +1,22 @@
 {
 	"name": "storybook",
+	"license": "MIT",
+	"author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
 	"scripts": {
 		"storybook": "start-storybook -p 9001 -c .",
-		"storybook-build": "build-storybook -c . -o ../docs",
-		"delete-node-modules": "rm -rf ../packages/*/node_modules",
-		"copy": "cp -R ../packages ./packages",
-		"replace-imports-for-built": "node ./scripts/replaceBuilt.js",
-		"replace-imports-for-dev-before": "node ./scripts/replaceDevBefore.js",
-		"replace-imports-for-dev-after": "node ./scripts/replaceDevAfter.js",
-		"build": "npm run delete-node-modules; npm run copy; npm run replace-imports-for-built; npm run replace-imports-for-dev-after; npm run storybook-build; npm run delete-packages; npm run replace-imports-for-dev-before; lerna bootstrap;",
-		"delete-packages": "rm -rf ./packages"
+		"storybook-build": "build-storybook -c . -o ../docs"
 	},
 	"devDependencies": {
-		"@storybook/addon-info": "^3.3.13",
-		"@storybook/addon-options": "^3.3.12",
-		"@storybook/addons": "^3.3.11",
-		"@storybook/react": "^3.3.11",
+		"@storybook/addon-options": "^3.3.15",
+		"@storybook/addons": "^3.3.15",
+		"@storybook/react": "^3.3.15",
+		"babel-core": "^6.26.0",
 		"fs-extra": "^5.0.0",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",
 		"react-router-dom": "^4.2.2",
 		"read-dir-names": "^1.0.0",
-		"storybook-readme": "^3.2.0"
+		"storybook-readme": "^3.2.1"
 	},
 	"dependencies": {
 		"styled-components": "^3.2.0",

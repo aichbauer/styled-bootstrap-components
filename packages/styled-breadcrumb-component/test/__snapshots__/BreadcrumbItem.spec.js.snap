@@ -10,6 +10,7 @@ exports[`Styles matches BreadcrumbItem 1`] = `
 }
 
 .c0 + .c0:hover::before {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -32,6 +33,7 @@ exports[`Styles matches BreadcrumbItem active 1`] = `
 }
 
 .c0 + .c0:hover::before {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

@@ -1,10 +1,10 @@
 # styled-tooltip-component
 
-> The [bootstrap](https://getbootstrap.com) tooltip component made with [styled components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/)
+> The [bootstrap](https://getbootstrap.com) tooltip component made with [styled-components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/)
 
 ## Table of Contents
 
-* [Documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components)
+* [Documentation](https://aichbauer.github.io/react-styled-bootstrap-components)
 * [Why?](#why)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -14,34 +14,43 @@
 
 ## Why?
 
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled-components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/).
 
 ## Installation
 
 ```sh
-$ npm i styled-tooltip-component styled-container-component styled-button-component -S
+$ npm i styled-tooltip-component -S
 ```
 
 or
 
 ```sh
-$ yarn add styled-tooltip-component styled-container-component styled-button-component
+$ yarn add styled-tooltip-component
 ```
 
 ## Usage
 
-For more detailed information take a look at the [documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components).
+For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
+
+> Note: if you want this example to work you need to install `styled-container-component`, and  `styled-button-component`as well, but you do not need them to work properly
 
 ```jsx
 import React from 'react';
 
-import { Container } from '../../../../packages/styled-container-component';
-import { Button } from '../../../../packages/styled-button-component';
+/*
+  if you installed `styled-bootstrap-components` use
+
+    import { ... } from 'styled-bootstrap-components'
+
+  instead.
+*/
+import { Container } from 'styled-container-component';
+import { Button } from 'styled-button-component';
 import {
   Tooltip,
   TooltipArrow,
   TooltipInner,
-} from '../../../../packages/styled-tooltip-component';
+} from 'styled-tooltip-component';
 
 export class SimpleTooltipToggle extends React.Component {
   constructor(props) {
@@ -134,7 +143,7 @@ Properties which can be added to the component to change the visual appearance.
 ## Related
 
 [bootstrap](https://getbootstrap.com)
-[styled components](https://styled-components.com)
+[styled-components](https://styled-components.com)
 [styled-system](http://jxnblk.com/styled-system/)
 
 ## License

@@ -25,6 +25,7 @@ import FormReadme from '../../../packages/styled-form-component/README.md';
 import FormSimpleDocs from './docs/simple.md';
 import FormControlsDocs from './docs/form-controls.md';
 import FormSizingDocs from './docs/sizing.md';
+import FormReadonlyDocs from './docs/readonly.md';
 import FormReadonlyPlainTextDocs from './docs/readonly-plain-text.md';
 import FormInlineDocs from './docs/inline.md';
 import FormCheckboxRadioDefaultDocs from './docs/checkbox-radio-default.md';
@@ -117,7 +118,7 @@ storiesOf('Forms', module)
       </form>
     </Container>
   ))))
-  .add('Readonly', withReadme(FormReadme, withDocs(FormReadme, () => (
+  .add('Readonly', withReadme(FormReadme, withDocs(FormReadonlyDocs, () => (
     <Container fluid style={{ textAlign: 'left' }}>
       <form>
         <FormControl readonly disabled type="text" placeholder="Readonly input here..." />

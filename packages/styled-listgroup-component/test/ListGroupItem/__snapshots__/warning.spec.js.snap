@@ -26,6 +26,7 @@ exports[`Styles matches ListGroupItem warning 1`] = `
 .c0 > a:hover,
 .c0 > a:focus {
   z-index: 1;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -60,6 +61,7 @@ exports[`Styles matches ListGroupItem warning action 1`] = `
 .c0 > a:hover,
 .c0 > a:focus {
   z-index: 1;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -130,6 +132,7 @@ exports[`Styles matches ListGroupItem warning active 1`] = `
 .c0 > a:hover,
 .c0 > a:focus {
   z-index: 1;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

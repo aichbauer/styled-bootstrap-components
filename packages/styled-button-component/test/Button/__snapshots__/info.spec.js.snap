@@ -26,6 +26,7 @@ exports[`Styles matches Button info 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -75,6 +76,7 @@ exports[`Styles matches Button info disabled 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

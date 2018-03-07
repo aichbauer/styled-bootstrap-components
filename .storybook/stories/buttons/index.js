@@ -6,8 +6,8 @@ import {
 } from 'storybook-readme';
 
 import { Button } from '../../../packages/styled-button-component/src';
-import { Container } from '../../../packages/styled-container-component';
-import { Row } from '../../../packages/styled-grid-component';
+import { Container } from '../../../packages/styled-container-component/src';
+import { Row } from '../../../packages/styled-grid-component/src';
 
 import ButtonReadme from '../../../packages/styled-button-component/README.md';
 

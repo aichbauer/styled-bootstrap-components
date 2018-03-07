@@ -27,7 +27,7 @@ import CardImagesDocs from './docs/images.md';
 storiesOf('Cards', module)
   .add('Simple', withReadme(CardReadme, withDocs(CardSimpleDocs, () => (
     <Container>
-      <Card style={{ width: '18rem', textAlign: 'left' }}>
+      <Card width="18rem" textAlign="left">
         <CardImageHeader src="http://via.placeholder.com/350x150" />
         <CardBody>
           <CardTitle h5>
@@ -55,7 +55,7 @@ storiesOf('Cards', module)
   ))))
   .add('Titles, text, and links', withReadme(CardReadme, withDocs(CardTitlesTextLinksDocs, () => (
     <Container>
-      <Card style={{ width: '18rem', textAlign: 'left' }}>
+      <Card width="18rem" textAlign="left">
         <CardBody>
           <CardTitle h5>
             Card title
@@ -77,7 +77,7 @@ storiesOf('Cards', module)
   ))))
   .add('Images', withReadme(CardReadme, withDocs(CardImagesDocs, () => (
     <Container>
-      <Card style={{ width: '18rem', textAlign: 'left' }}>
+      <Card width="18rem" textAlign="left">
         <CardImageHeader src="http://via.placeholder.com/350x150" />
         <CardBody>
           <CardText>

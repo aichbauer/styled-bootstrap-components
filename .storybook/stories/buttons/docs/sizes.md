@@ -1,6 +1,6 @@
 ```jsx
 <Container>
-  <Row style={{ marginBottom: '0.5rem' }}>
+  <Row>
     <Button primary lg>Large button</Button>
     <Button secondary lg>Large button</Button>
   </Row>

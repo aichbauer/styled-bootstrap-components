@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches FormCheckInput 1`] = `
-.c1 {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  overflow: visible;
-}
-
 .c0 {
   position: absolute;
   margin-top: 0.3rem;
@@ -17,6 +9,6 @@ exports[`Styles matches FormCheckInput 1`] = `
 }
 
 <input
-  className="c0 c1"
+  className="c0 sc-kkGfuU iPhqsl"
 />
 `;

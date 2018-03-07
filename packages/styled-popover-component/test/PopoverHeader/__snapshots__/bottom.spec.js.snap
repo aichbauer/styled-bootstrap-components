@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches PopoverHeader bottom 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.5rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -36,6 +25,6 @@ exports[`Styles matches PopoverHeader bottom 1`] = `
 }
 
 <h4
-  className="c0 c1"
+  className="c0 sc-kpOJdX hpFqPU"
 />
 `;

@@ -2,20 +2,39 @@
   "name": "styled-form-component",
   "version": "0.0.0",
   "main": "./src/index.js",
-  "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
-  "license": "MIT",
   "private": false,
   "scripts": {
     "test": "jest --coverage"
   },
+  "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "components",
+    "react",
+    "react-component",
+    "ui",
+    "styled-components",
+    "form",
+    "bootstrap",
+    "presentational",
+    "stateless"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aichbauer/styled-bootstrap-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aichbauer/styled-bootstrap-components/issues"
+  },
+  "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "dependencies": {
     "styled-base-components": "^0.0.0",
-    "styled-components": "^3.1.4",
-    "styled-config": "^0.0.0",
-    "styled-system": "^2.1.0"
+    "styled-config": "^0.0.0"
   },
   "peerDependencies": {
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "styled-components": "^3.1.4",
+    "styled-system": "^2.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -26,6 +45,8 @@
     "jest": "^22.4.2",
     "jest-styled-components": "^5.0.0",
     "react": "^16.2.0",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "styled-components": "^3.1.4",
+    "styled-system": "^2.1.0"
   }
 }

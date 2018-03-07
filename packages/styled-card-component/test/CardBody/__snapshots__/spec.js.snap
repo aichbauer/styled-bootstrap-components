@@ -9,6 +9,7 @@ exports[`Styles matches CardBody 1`] = `
 }
 
 .c0 > a:hover {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

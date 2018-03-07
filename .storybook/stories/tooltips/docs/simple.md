@@ -1,7 +1,7 @@
 ```jsx
 export class SimpleTooltipToggle extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       top: 0,
       left: 0,

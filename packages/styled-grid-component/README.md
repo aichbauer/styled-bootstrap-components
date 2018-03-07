@@ -1,10 +1,10 @@
 # styled-grid-component
 
-> The [bootstrap](https://getbootstrap.com) grid component made with [styled components](https://styled-components.com)
+> The [bootstrap](https://getbootstrap.com) grid component made with [styled-components](https://styled-components.com)
 
 ## Table of Contents
 
-* [Documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components)
+* [Documentation](https://aichbauer.github.io/react-styled-bootstrap-components)
 * [Why?](#why)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -14,25 +14,34 @@
 
 ## Why?
 
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled-components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/).
 
 ## Installation
 
 ```sh
-$ npm i styled-grid-component styled-container-component -S
+$ npm i styled-grid-component -S
 ```
 
 or
 
 ```sh
-$ yarn add styled-grid-component styled-container-component
+$ yarn add styled-grid-component
 ```
 
 ## Usage
 
-For more detailed information take a look at the [documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components).
+For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
+
+> Note: if you want this example to work you need to install the `styled-container-component` as well, but you do not need a `<Container />` component around a `<Row />` or `<Column />` component.
 
 ```jsx
+/*
+  if you installed `styled-bootstrap-components` use
+
+    import { ... } from 'styled-bootstrap-components'
+
+  instead.
+*/
 import { Container } from 'styled-container-component';
 import {
   Column,
@@ -204,7 +213,7 @@ Every row consists of maximum of 12 columns.
 ## Related
 
 [bootstrap](https://getbootstrap.com)
-[styled components](https://styled-components.com)
+[styled-components](https://styled-components.com)
 [styled-system](http://jxnblk.com/styled-system/)
 
 ## License

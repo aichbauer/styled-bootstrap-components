@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-* [Documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components)
+* [Documentation](https://aichbauer.github.io/react-styled-bootstrap-components)
 * [Why?](#why)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -30,9 +30,16 @@ $ yarn add styled-alert-component
 
 ## Usage
 
-For more detailed information take a look at the [documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components).
+For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
 ```jsx
+/*
+  if you installed `styled-bootstrap-components` use
+
+    import { ... } from 'styled-bootstrap-components'
+
+  instead.
+*/
 import {
   Alert,
   AlertHeading,
@@ -99,9 +106,9 @@ Properties which can be added to the component to change the visual appearance.
 
 ## Related
 
-[bootstrap](https://getbootstrap.com)
-[styled components](https://styled-components.com)
-[styled-system](http://jxnblk.com/styled-system/)
+* [bootstrap](https://getbootstrap.com)
+* [styled components](https://styled-components.com)
+* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 

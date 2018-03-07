@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches PopoverHeader 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.5rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -28,21 +17,11 @@ exports[`Styles matches PopoverHeader 1`] = `
 }
 
 <h4
-  className="c0 c1"
+  className="c0 sc-kpOJdX hpFqPU"
 />
 `;
 
 exports[`Styles matches PopoverHeader h1 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 2.5rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -59,21 +38,11 @@ exports[`Styles matches PopoverHeader h1 1`] = `
 }
 
 <h1
-  className="c0 c1"
+  className="c0 sc-chPdSV gsIoNr"
 />
 `;
 
 exports[`Styles matches PopoverHeader h2 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 2rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -90,21 +59,11 @@ exports[`Styles matches PopoverHeader h2 1`] = `
 }
 
 <h2
-  className="c0 c1"
+  className="c0 sc-kgoBCf heAfjH"
 />
 `;
 
 exports[`Styles matches PopoverHeader h3 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.75rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -121,22 +80,11 @@ exports[`Styles matches PopoverHeader h3 1`] = `
 }
 
 <h3
-  className="c0 c1"
+  className="c0 sc-kGXeez hQezwx"
 />
 `;
 
 exports[`Styles matches PopoverHeader h4 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.5rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -153,21 +101,11 @@ exports[`Styles matches PopoverHeader h4 1`] = `
 }
 
 <h4
-  className="c0 c1"
+  className="c0 sc-kpOJdX hpFqPU"
 />
 `;
 
 exports[`Styles matches PopoverHeader h5 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.25rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -184,21 +122,11 @@ exports[`Styles matches PopoverHeader h5 1`] = `
 }
 
 <h5
-  className="c0 c1"
+  className="c0 sc-dxgOiQ dVBofo"
 />
 `;
 
 exports[`Styles matches PopoverHeader h6 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1rem;
-}
-
 .c0 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
@@ -215,6 +143,6 @@ exports[`Styles matches PopoverHeader h6 1`] = `
 }
 
 <h6
-  className="c0 c1"
+  className="c0 sc-ckVGcZ jbogWf"
 />
 `;

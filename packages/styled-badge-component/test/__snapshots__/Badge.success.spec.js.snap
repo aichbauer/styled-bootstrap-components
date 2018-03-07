@@ -44,12 +44,14 @@ exports[`Styles matches success action 1`] = `
 }
 
 .c0 > a {
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
 .c0 > a:hover,
 .c0 > a:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }

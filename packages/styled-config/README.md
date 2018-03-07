@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-* [Documentation with Storybook](https://aichbauer.github.io/react-styled-bootstrap-components)
+* [Documentation](https://aichbauer.github.io/react-styled-bootstrap-components)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Related](#related)
@@ -43,7 +43,7 @@ screenSize.xl
 ## Related
 
 [bootstrap](https://getbootstrap.com)
-[styled components](https://styled-components.com)
+[styled-components](https://styled-components.com)
 [styled-system](http://jxnblk.com/styled-system/)
 
 ## License

@@ -1,6 +1,6 @@
 ```jsx
 <Container>
-  <Card style={{ textAlign: 'left' }}>
+  <Card>
     <CardBody>
       This is some text within a card body.
     </CardBody>

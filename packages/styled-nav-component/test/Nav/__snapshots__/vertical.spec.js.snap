@@ -18,6 +18,7 @@ exports[`Styles matches Nav vertical 1`] = `
 }
 
 .c0 > a {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

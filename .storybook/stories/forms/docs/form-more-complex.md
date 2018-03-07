@@ -1,5 +1,5 @@
 ```jsx
-<Container fluid style={{ textAlign: 'left' }}>
+<Container fluid>
   <form>
     <FormGroup row nomb>
       <Column sm={6}>

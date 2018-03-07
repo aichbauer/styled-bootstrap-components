@@ -1,6 +1,6 @@
 ```jsx
 <Container fluid>
-  <InputGroup style={{ marginBottom: '0.5rem' }}>
+  <InputGroup>
     <InputGroupPrepend>
       <InputGroupText>
         <FormCheck>
@@ -10,7 +10,7 @@
     </InputGroupPrepend>
     <FormControl type="text" />
   </InputGroup>
-  <InputGroup style={{ marginBottom: '0.5rem' }}>
+  <InputGroup>
     <InputGroupPrepend>
       <InputGroupText>
         <FormCheck>

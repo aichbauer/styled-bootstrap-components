@@ -27,6 +27,7 @@ exports[`Styles matches Button large 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

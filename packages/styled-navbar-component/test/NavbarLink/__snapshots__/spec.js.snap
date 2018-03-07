@@ -1,21 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches NavbarLink brand 1`] = `
-.c1 {
-  display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-}
-
-.c1:hover,
-.c1:focus {
-  text-decoration: none;
-  color: #0056b3;
-}
-
 .c0 {
   display: inline-block;
   padding-top: 0.3125rem;
@@ -26,28 +11,11 @@ exports[`Styles matches NavbarLink brand 1`] = `
 }
 
 <a
-  className="c0 c1 sc-bdVaJa eRiqeT"
+  className="c0 sc-htpNat jZQKac eRiqeT"
 />
 `;
 
 exports[`Styles matches NavbarLink dark active 1`] = `
-.c1 {
-  display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-  color: #495057;
-  background-color: #fff;
-}
-
-.c1:hover,
-.c1:focus {
-  text-decoration: none;
-  color: #0056b3;
-}
-
 .c0 {
   color: rgba(255,255,255,0.9);
 }
@@ -58,32 +26,11 @@ exports[`Styles matches NavbarLink dark active 1`] = `
 }
 
 <a
-  className="c0 c1 sc-bdVaJa eRiqeT"
+  className="c0 sc-htpNat jZQKac eRiqeT"
 />
 `;
 
 exports[`Styles matches NavbarLink dark disabled 1`] = `
-.c1 {
-  display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-  color: #6c757d;
-}
-
-.c1:hover,
-.c1:focus {
-  text-decoration: none;
-  color: #0056b3;
-}
-
-.c1:hover,
-.c1:focus {
-  color: #6c757d;
-}
-
 .c0 {
   color: rgba(255,255,255,0.25);
 }
@@ -94,27 +41,12 @@ exports[`Styles matches NavbarLink dark disabled 1`] = `
 }
 
 <a
-  className="c0 c1 sc-bdVaJa eRiqeT"
+  className="c0 sc-htpNat bwBFZr eRiqeT"
   disabled={true}
 />
 `;
 
 exports[`Styles matches NavbarLink dark disabled 2`] = `
-.c1 {
-  display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-}
-
-.c1:hover,
-.c1:focus {
-  text-decoration: none;
-  color: #0056b3;
-}
-
 .c0 {
   color: rgba(255,255,255,0.5);
 }
@@ -125,28 +57,11 @@ exports[`Styles matches NavbarLink dark disabled 2`] = `
 }
 
 <a
-  className="c0 c1 sc-bdVaJa eRiqeT"
+  className="c0 sc-htpNat jZQKac eRiqeT"
 />
 `;
 
 exports[`Styles matches NavbarLink light active 1`] = `
-.c1 {
-  display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-  color: #495057;
-  background-color: #fff;
-}
-
-.c1:hover,
-.c1:focus {
-  text-decoration: none;
-  color: #0056b3;
-}
-
 .c0 {
   color: rgba(0,0,0,0.9);
 }
@@ -157,32 +72,11 @@ exports[`Styles matches NavbarLink light active 1`] = `
 }
 
 <a
-  className="c0 c1 sc-bdVaJa eRiqeT"
+  className="c0 sc-htpNat jZQKac eRiqeT"
 />
 `;
 
 exports[`Styles matches NavbarLink light disabled 1`] = `
-.c1 {
-  display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-  color: #6c757d;
-}
-
-.c1:hover,
-.c1:focus {
-  text-decoration: none;
-  color: #0056b3;
-}
-
-.c1:hover,
-.c1:focus {
-  color: #6c757d;
-}
-
 .c0 {
   color: rgba(0,0,0,0.3);
 }
@@ -193,27 +87,12 @@ exports[`Styles matches NavbarLink light disabled 1`] = `
 }
 
 <a
-  className="c0 c1 sc-bdVaJa eRiqeT"
+  className="c0 sc-htpNat bwBFZr eRiqeT"
   disabled={true}
 />
 `;
 
 exports[`Styles matches NavbarLink light disabled 2`] = `
-.c1 {
-  display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-}
-
-.c1:hover,
-.c1:focus {
-  text-decoration: none;
-  color: #0056b3;
-}
-
 .c0 {
   color: rgba(0,0,0,0.5);
 }
@@ -224,6 +103,6 @@ exports[`Styles matches NavbarLink light disabled 2`] = `
 }
 
 <a
-  className="c0 c1 sc-bdVaJa eRiqeT"
+  className="c0 sc-htpNat jZQKac eRiqeT"
 />
 `;

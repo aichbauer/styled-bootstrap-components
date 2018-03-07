@@ -13,6 +13,7 @@ exports[`Styles matches NavLink disabled 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #0056b3;
 }
@@ -23,7 +24,7 @@ exports[`Styles matches NavLink disabled 1`] = `
 }
 
 <a
-  className="c0 sc-bdVaJa eRiqeT"
+  className="c0 eRiqeT"
   disabled={true}
 />
 `;

@@ -1,6 +1,6 @@
 ```jsx
 <Container fluid>
-  <InputGroup style={{ marginBottom: '0.5rem' }}>
+  <InputGroup>
     <InputGroupPrepend>
       <InputGroupText>First and last name</InputGroupText>
     </InputGroupPrepend>

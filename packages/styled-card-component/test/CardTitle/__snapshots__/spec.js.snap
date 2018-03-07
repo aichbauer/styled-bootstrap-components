@@ -1,180 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches CardTitle h1 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 2.5rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
 }
 
 <h1
-  className="c0 c1"
+  className="c0 sc-chPdSV gsIoNr"
 />
 `;
 
 exports[`Styles matches CardTitle h1 2`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 2.5rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
 }
 
 <h1
-  className="c0 c1"
+  className="c0 sc-chPdSV gsIoNr"
 />
 `;
 
 exports[`Styles matches CardTitle h2 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 2rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
 }
 
 <h2
-  className="c0 c1"
+  className="c0 sc-kgoBCf heAfjH"
 />
 `;
 
 exports[`Styles matches CardTitle h3 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.75rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
 }
 
 <h3
-  className="c0 c1"
+  className="c0 sc-kGXeez hQezwx"
 />
 `;
 
 exports[`Styles matches CardTitle h4 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.5rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
 }
 
 <h4
-  className="c0 c1"
+  className="c0 sc-kpOJdX hpFqPU"
 />
 `;
 
 exports[`Styles matches CardTitle h5 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.25rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
 }
 
 <h5
-  className="c0 c1"
+  className="c0 sc-dxgOiQ dVBofo"
 />
 `;
 
 exports[`Styles matches CardTitle h6 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
 }
 
 <h6
-  className="c0 c1"
+  className="c0 sc-ckVGcZ jbogWf"
 />
 `;
 
 exports[`Styles matches CardTitle muted 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
   color: #6c757d;
 }
 
 <h6
-  className="c0 c1"
+  className="c0 sc-ckVGcZ jbogWf"
   muted={true}
 />
 `;
 
 exports[`Styles matches CardTitle subtitle 1`] = `
-.c1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-  font-size: 1.5rem;
-}
-
 .c0 {
   margin-bottom: 0.75rem;
   margin-top: -0.375rem;
@@ -182,6 +90,6 @@ exports[`Styles matches CardTitle subtitle 1`] = `
 }
 
 <h4
-  className="c0 c1"
+  className="c0 sc-kpOJdX hpFqPU"
 />
 `;

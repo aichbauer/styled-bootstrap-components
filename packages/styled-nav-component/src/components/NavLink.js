@@ -26,14 +26,6 @@ const navLinkDisabled = (props) => (
   `
 );
 
-const navLinkActive = (props) => (
-  props.active &&
-  css`
-    color: #495057;
-    background-color: #fff;
-  `
-);
-
 const navLinkTabs = (props) => {
   if (props.tabs) {
     if (props.active) {
@@ -63,7 +55,7 @@ const navLinkTabs = (props) => {
 };
 
 const navLinkPills = (props) => (
-  props.pill &&
+  props.pills &&
   props.active &&
   css`
     border-radius: 0.25rem;
@@ -88,7 +80,6 @@ const navLinkStyle = () => css`
       text-decoration: none;
       color: #0056b3;
     };
-    ${navLinkActive};
     ${navLinkDisabled};
     ${navLinkTabs};
     ${navLinkPills};

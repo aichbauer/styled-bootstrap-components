@@ -6,7 +6,7 @@ import 'jest-styled-components';
 import { NavLink } from '../../src';
 
 test('Styles matches NavLink pills active', () => {
-  const tree = renderer.create(<BrowserRouter><NavLink to="#" router pill active /></BrowserRouter>).toJSON();
+  const tree = renderer.create(<BrowserRouter><NavLink to="#" router pills active /></BrowserRouter>).toJSON();
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('border-radius', '0.25rem');
   expect(tree).toHaveStyleRule('color', '#fff');

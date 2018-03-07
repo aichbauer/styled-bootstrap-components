@@ -19,6 +19,7 @@ exports[`Styles matches Nav start 1`] = `
 }
 
 .c0 > a {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

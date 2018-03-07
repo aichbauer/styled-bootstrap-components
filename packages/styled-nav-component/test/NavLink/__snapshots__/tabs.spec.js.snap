@@ -12,6 +12,7 @@ exports[`Styles matches NavLink tabs 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #0056b3;
 }
@@ -22,7 +23,7 @@ exports[`Styles matches NavLink tabs 1`] = `
 }
 
 <a
-  className="c0 sc-bdVaJa eRiqeT"
+  className="c0 eRiqeT"
 />
 `;
 
@@ -35,13 +36,12 @@ exports[`Styles matches NavLink tabs active 1`] = `
   border-top-right-radius: 0.25rem;
   color: #007bff;
   color: #495057;
-  background-color: #fff;
-  color: #495057;
   border-color: #e9ecef #e9ecef #fff;
 }
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #0056b3;
 }
@@ -52,7 +52,7 @@ exports[`Styles matches NavLink tabs active 1`] = `
 }
 
 <a
-  className="c0 sc-bdVaJa eRiqeT"
+  className="c0 eRiqeT"
 />
 `;
 
@@ -70,6 +70,7 @@ exports[`Styles matches NavLink tabs disabled 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #0056b3;
 }
@@ -80,7 +81,7 @@ exports[`Styles matches NavLink tabs disabled 1`] = `
 }
 
 <a
-  className="c0 sc-bdVaJa eRiqeT"
+  className="c0 eRiqeT"
   disabled={true}
 />
 `;

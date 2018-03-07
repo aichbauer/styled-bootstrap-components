@@ -27,6 +27,7 @@ exports[`Styles matches Button dark expandMd toggleCollapse 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -92,6 +93,7 @@ exports[`Styles matches Button dark expandSm toggleCollapse 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -157,6 +159,7 @@ exports[`Styles matches Button light expandMd toggleCollapse 1`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -222,6 +225,7 @@ exports[`Styles matches Button light expandMd toggleCollapse 2`] = `
 
 .c0:hover,
 .c0:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
