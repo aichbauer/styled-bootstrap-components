@@ -1,6 +1,6 @@
 # styled-config
 
-> The styled config for all styled-bootstrap-components
+> The configuration for styled-bootstrap-components
 
 ## Table of Contents
 

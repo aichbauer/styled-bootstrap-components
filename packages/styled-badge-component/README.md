@@ -1,6 +1,6 @@
 # styled-badge-component
 
-> The [bootstrap](https://getbootstrap.com) badge component made with [styled-components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/)
+> The [bootstrap](https://getbootstrap.com) badge component made with [styled-components](https://styled-components.com)
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Why?
 
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one bootstrap component for your application. To work with ease with any other libary or framework this component is build with [styled-components](https://styled-components.com) and [styled-system](http://jxnblk.com/styled-system/).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one bootstrap component for your application. To work with ease with any other libary or framework this component is build with [styled-components](https://styled-components.com).
 
 ## Installation
 
@@ -55,7 +55,7 @@ const MyBadgeComponent = (props) => (
 
 ## Properties
 
-Properties which can be added to the component to change the visual appearance.
+Properties which can be added to the component to change the visual appearance. This component uses [styled-system](http://jxnblk.com/styled-system/).
 
 * `pill` **Type**: boolean
 * `primary` **Type**: boolean
