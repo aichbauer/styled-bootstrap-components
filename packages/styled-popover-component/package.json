@@ -1,6 +1,7 @@
 {
   "name": "styled-popover-component",
   "version": "0.0.0",
+  "description": "The bootstrap popover component created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

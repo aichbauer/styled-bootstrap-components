@@ -1,6 +1,7 @@
 {
   "name": "styled-breadcrumb-component",
   "version": "0.0.0",
+  "description": "The bootstrap breadcrumb component created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

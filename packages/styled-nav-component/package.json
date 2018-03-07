@@ -1,6 +1,7 @@
 {
   "name": "styled-nav-component",
   "version": "0.0.0",
+  "description": "The bootstrap nav component created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

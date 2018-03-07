@@ -1,6 +1,7 @@
 {
   "name": "styled-config",
   "version": "0.0.0",
+  "description": "The configuration for styled-bootstrap-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

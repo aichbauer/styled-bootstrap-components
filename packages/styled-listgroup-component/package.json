@@ -1,6 +1,7 @@
 {
   "name": "styled-listgroup-component",
   "version": "0.0.0",
+  "description": "The bootstrap listgroup component created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

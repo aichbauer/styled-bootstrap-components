@@ -1,6 +1,7 @@
 {
   "name": "styled-jumbotron-component",
   "version": "0.0.0",
+  "description": "The bootstrap jumbotron component created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

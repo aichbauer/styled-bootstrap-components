@@ -1,6 +1,7 @@
 {
   "name": "styled-form-component",
   "version": "0.0.0",
+  "description": "The bootstrap form component created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

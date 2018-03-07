@@ -1,6 +1,7 @@
 {
   "name": "styled-base-components",
   "version": "0.0.0",
+  "description": "The bootstrap base components created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {

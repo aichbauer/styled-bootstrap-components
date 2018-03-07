@@ -1,6 +1,7 @@
 {
   "name": "styled-dropdown-component",
   "version": "0.0.0",
+  "description": "The bootstrap dropdown component created with styled-components",
   "main": "./src/index.js",
   "private": false,
   "scripts": {
