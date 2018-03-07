@@ -99,7 +99,7 @@ import {
 import {
   Column,
   Row,
-} from 'styled-grid-component';
+} from 'styled-grid-system-component';
 import { Jumbotron } from 'styled-jumbotron-component';
 import {
   ListGroup,

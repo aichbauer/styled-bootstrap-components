@@ -64,7 +64,7 @@ For detailed information take a look at the [documentation](https://aichbauer.gi
 * [Container Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-container-component#readme)
 * [Dropdown Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-dropdown-component#readme)
 * [Form Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-form-component#readme)
-* [Grid Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-grid-component#readme)
+* [Grid Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-grid-system-component#readme)
 * [Jumbotron Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-jumbotron-component#readme)
 * [Listgroup Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-listgroup-component#readme)
 * [Modal Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-modal-component#readme)

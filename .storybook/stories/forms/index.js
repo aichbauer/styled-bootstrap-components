@@ -6,7 +6,7 @@ import {
 } from 'storybook-readme';
 
 import { Container } from '../../../packages/styled-container-component';
-import { Column } from '../../../packages/styled-grid-component';
+import { Column } from '../../../packages/styled-grid-system-component';
 import { Button } from '../../../packages/styled-button-component';
 import { Label } from '../../../packages/styled-base-components';
 import {

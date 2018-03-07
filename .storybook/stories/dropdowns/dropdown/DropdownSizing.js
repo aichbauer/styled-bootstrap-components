@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Button, ButtonGroup } from '../../../../packages/styled-button-component/src';
 import { Container } from '../../../../packages/styled-container-component';
-import { Row } from '../../../../packages/styled-grid-component';
+import { Row } from '../../../../packages/styled-grid-system-component';
 import {
   Dropdown,
   DropdownItem,

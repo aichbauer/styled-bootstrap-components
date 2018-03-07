@@ -1,5 +1,5 @@
 {
-  "name": "styled-grid-component",
+  "name": "styled-grid-system-component",
   "version": "0.0.0",
   "description": "The bootstrap grid component created with styled-components",
   "main": "./src/index.js",

@@ -1,6 +1,6 @@
-# styled-grid-component
+# styled-grid-system-component
 
-> The [bootstrap](https://getbootstrap.com) grid component made with [styled-components](https://styled-components.com)
+> The [bootstrap](https://getbootstrap.com) grid system component made with [styled-components](https://styled-components.com)
 
 ## Table of Contents
 
@@ -19,13 +19,13 @@ This is a modular approach to use [bootstrap](https://getbootstrap.com) componen
 ## Installation
 
 ```sh
-$ npm i styled-grid-component -S
+$ npm i styled-grid-system-component -S
 ```
 
 or
 
 ```sh
-$ yarn add styled-grid-component
+$ yarn add styled-grid-system-component
 ```
 
 ## Usage
@@ -46,7 +46,7 @@ import { Container } from 'styled-container-component';
 import {
   Column,
   Row,
-} from 'styled-grid-component';
+} from 'styled-grid-system-component';
 
 const MyGridComponent = (props) => (
   {/* fixed width for small, medium, large and xlarge screen width */}

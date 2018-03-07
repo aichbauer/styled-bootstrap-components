@@ -8,10 +8,10 @@ import {
 import {
   Column,
   Row,
-} from '../../../packages/styled-grid-component';
+} from '../../../packages/styled-grid-system-component';
 import { Container } from '../../../packages/styled-container-component';
 
-import GridReadme from '../../../packages/styled-grid-component/README.md';
+import GridReadme from '../../../packages/styled-grid-system-component/README.md';
 
 import GridSimpleDocs from './docs/simple.md';
 import GridAdvancedDocs from './docs/advanced.md';
