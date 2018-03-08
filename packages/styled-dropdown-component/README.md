@@ -10,7 +10,7 @@
 
 ## Table of Contents
 
-* [Documentation](https://aichbauer.github.io/react-styled-bootstrap-components)
+* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
 * [Why?](#why)
 * [Installation](#installation)
 * [Usage](#usage)
