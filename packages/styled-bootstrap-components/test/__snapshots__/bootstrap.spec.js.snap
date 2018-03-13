@@ -410,7 +410,7 @@ exports[`Simply check if all components are imported and exported correctly 68`]
 
 exports[`Simply check if all components are imported and exported correctly 69`] = `
 <div
-  className="sc-bdVaJa eQYGCc"
+  className="sc-bdVaJa cxSKpF"
 />
 `;
 
@@ -512,13 +512,13 @@ exports[`Simply check if all components are imported and exported correctly 85`]
 
 exports[`Simply check if all components are imported and exported correctly 86`] = `
 <div
-  className="sc-bdVaJa hEMnQx"
+  className="sc-bdVaJa foeCXs"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 87`] = `
 <div
-  className="sc-bwzfXH dPavLm"
+  className="sc-bwzfXH hggJSN"
 />
 `;
 
