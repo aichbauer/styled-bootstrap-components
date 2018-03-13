@@ -1,5 +1,27 @@
 import styled from 'styled-components';
 import { screenSize } from 'styled-config';
+import {
+  space,
+  color,
+  width,
+  fontSize,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  display,
+  borderRadius,
+  borderColor,
+  borders,
+  alignItems,
+  alignContent,
+  justifyContent,
+  flexWrap,
+  flexBasis,
+  flexDirection,
+  flex,
+  justifySelf,
+  alignSelf,
+} from 'styled-system';
 
 const calcFlex = (size) => {
   switch (size) {
@@ -86,4 +108,24 @@ export const Column = styled.div`
   @media (min-width: ${screenSize.xl}) {
     flex: ${(props) => calcFlex(props.sm || props.md || props.lg || props.xl)};
   };
+  ${space};
+  ${width};
+  ${color};
+  ${fontSize};
+  ${fontWeight};
+  ${textAlign};
+  ${lineHeight};
+  ${display};
+  ${borderRadius};
+  ${borderColor};
+  ${borders};
+  ${alignItems};
+  ${alignContent};
+  ${justifyContent};
+  ${flexWrap};
+  ${flexBasis};
+  ${flexDirection};
+  ${flex};
+  ${justifySelf};
+  ${alignSelf};
 `;

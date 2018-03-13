@@ -1,5 +1,27 @@
 import styled from 'styled-components';
 import { screenSize } from 'styled-config';
+import {
+  space,
+  color,
+  width,
+  fontSize,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  display,
+  borderRadius,
+  borderColor,
+  borders,
+  alignItems,
+  alignContent,
+  justifyContent,
+  flexWrap,
+  flexBasis,
+  flexDirection,
+  flex,
+  justifySelf,
+  alignSelf,
+} from 'styled-system';
 
 export const Container = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -23,4 +45,24 @@ export const Container = styled.div`
   @media (min-width: ${screenSize.xl}) {
     max-width: ${(props) => (props.fluid ? '100%' : '1140px')};
   };
+  ${space};
+  ${width};
+  ${color};
+  ${fontSize};
+  ${fontWeight};
+  ${textAlign};
+  ${lineHeight};
+  ${display};
+  ${borderRadius};
+  ${borderColor};
+  ${borders};
+  ${alignItems};
+  ${alignContent};
+  ${justifyContent};
+  ${flexWrap};
+  ${flexBasis};
+  ${flexDirection};
+  ${flex};
+  ${justifySelf};
+  ${alignSelf};
 `;
