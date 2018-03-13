@@ -68,6 +68,43 @@ const MyContainerFluidComponent = (props) => (
 Properties which can be added to the component to change the visual appearance.
 
 * `fluid` **Type**: boolean
+* `m`  margin **Type**: string
+* `mt` margin-top **Type**: string
+* `mr` margin-right **Type**: string
+* `mb` margin-bottom **Type**: string
+* `ml` margin-left **Type**: string
+* `mx` margin-left and margin-right **Type**: string
+* `my` margin-top and margin-bottom **Type**: string
+* `p`  padding **Type**: string
+* `pt` padding-top **Type**: string
+* `pr` padding-right **Type**: string
+* `pb` padding-bottom **Type**: string
+* `pl` padding-left **Type**: string
+* `px` padding-left and padding-right **Type**: string
+* `py` padding-top and padding-bottom **Type**: string
+* `width` **Type**: string
+* `fontSize` **Type**: string
+* `fontWeight` **Type**: string
+* `textAlign` **Type**: string
+* `lineHeight` **Type**: string
+* `display` **Type**: string
+* `color` **Type**: string
+* `borderRadius` **Type**: string
+* `borderColor` **Type**: string
+* `border` **Type**: string
+* `borderTop` **Type**: string
+* `borderRight` **Type**: string
+* `borderBottom` **Type**: string
+* `borderLeft` **Type**: string
+* `alignItems` **Type**: string
+* `justifyContent` **Type**: string
+* `flexWrap` **Type**: string
+* `flexDirection` **Type**: string
+* `flex` **Type**: string
+* `alignContent` **Type**: string
+* `justifySelf` **Type**: string
+* `alignSelf` **Type**: string
+* `flexBasis` **Type**: string
 
 ## Related
 
