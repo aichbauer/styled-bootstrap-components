@@ -1,6 +1,6 @@
 {
   "name": "styled-tooltip-component",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The bootstrap tooltip component created with styled-components",
   "main": "./src/index.js",
   "private": false,
