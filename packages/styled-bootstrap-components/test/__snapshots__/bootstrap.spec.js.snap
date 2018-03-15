@@ -631,18 +631,30 @@ exports[`Simply check if all components are imported and exported correctly 105`
 `;
 
 exports[`Simply check if all components are imported and exported correctly 106`] = `
+<table
+  className="sc-bdVaJa jufgRS sc-dVhcbM bJkNMW"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 107`] = `
+<tr
+  className="sc-bwzfXH jgfQOF"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 108`] = `
 <div
   className="sc-bdVaJa fElwpp"
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 107`] = `
+exports[`Simply check if all components are imported and exported correctly 109`] = `
 <div
   className="sc-bwzfXH jNtWFa"
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 108`] = `
+exports[`Simply check if all components are imported and exported correctly 110`] = `
 <div
   className="sc-htpNat gRnePJ"
 />
