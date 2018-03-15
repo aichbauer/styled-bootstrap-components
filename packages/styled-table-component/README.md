@@ -38,11 +38,7 @@ $ yarn add styled-table-component
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-> Note: if you want this example to work you need to install `styled-container-component`, and  `styled-button-component`as well, but you do not need them to work properly
-
 ```jsx
-import React from 'react';
-
 /*
   if you installed `styled-bootstrap-components` use
 
@@ -50,73 +46,102 @@ import React from 'react';
 
   instead.
 */
-import { Container } from 'styled-container-component';
-import { Button } from 'styled-button-component';
 import {
-  Tooltip,
-  TooltipArrow,
-  TooltipInner,
+  Table,
+  Tr,
 } from 'styled-table-component';
 
-export class SimpleTooltipToggle extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      top: 0,
-      left: 0,
-      hidden: true,
-    };
-  }
-
-  handleTooltip(ev, hidden) {
-    this.setState({
-      top: ev.target.offsetTop + 5,
-      left: ev.target.offsetLeft + ev.target.offsetWidth,
-      hidden,
-    });
-  }
-
-  render() {
-    const {
-      top,
-      left,
-      hidden,
-    } = this.state;
-    return (
-      <Container>
-        <Button
-          danger
-          onMouseEnter={(ev) => this.handleTooltip(ev, false)}
-          onMouseLeave={(ev) => this.handleTooltip(ev, true)}
-        >
-          Click to toggle popover
-        </Button>
-        <Tooltip
-          hidden={hidden}
-          style={{
-            top: `${top}px`,
-            left: `${left}px`
-          }}
-          right
-        >
-          <TooltipArrow right />
-          <TooltipInner right>Tooltip Title</TooltipInner>
-        </Tooltip>
-      </Container>
-    );
-  }
-};
+const MyTableComponent = (props) => (
+  {/* use different props to change the visual appearance */}
+  <Table>
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <Tr active>
+        <td>Active</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr>
+        <td>Default</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr primary>
+        <td>Primary</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr secondary>
+        <td>Secondary</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr success>
+        <td>Success</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr danger>
+        <td>Danger</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr warning>
+        <td>Warning</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr info>
+        <td>Info</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr light>
+        <td>Light</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+      <Tr dark>
+        <td>Dark</td>
+        <td>Cell</td>
+        <td>Cell</td>
+      </Tr>
+    </tbody>
+  </Table>
+);
 ```
 
 ## Properties
 
 Properties which can be added to the component to change the visual appearance. This component uses [styled-system](http://jxnblk.com/styled-system/).
 
-* `hidden` **Type**: boolean
-* `right` **Type**: boolean
-* `top` **Type**: boolean
-* `left` **Type**: boolean
-* `bottom` **Type**: boolean
+* `tableDark` only on Table **Type**: boolean
+* `theadDark` only on Table **Type**: boolean
+* `theadLight` only on Table **Type**: boolean
+* `striped` only on Table **Type**: boolean
+* `bordered` only on Table **Type**: boolean
+* `sm` only on Table **Type**: boolean
+* `responsive` only on Table **Type**: boolean
+* `responsiveSm` only on Table **Type**: boolean
+* `responsiveMd` only on Table **Type**: boolean
+* `responsiveLg` only on Table **Type**: boolean
+* `responsiveXl` only on Table **Type**: boolean
+* `hover` **Type**: boolean
+* `primary` only on Tr **Type**: boolean
+* `secondary` only on Tr **Type**: boolean
+* `success` only on Tr **Type**: boolean
+* `info` only on Tr **Type**: boolean
+* `danger` only on Tr **Type**: boolean
+* `warning` only on Tr **Type**: boolean
+* `light` only on Tr **Type**: boolean
+* `dark` only on Tr **Type**: boolean
+* `active` only on Tr **Type**: boolean
 * `m` margin **Type**: string
 * `mt` margin-top **Type**: string
 * `mr` margin-right **Type**: string
@@ -148,9 +173,9 @@ Properties which can be added to the component to change the visual appearance. 
 
 ## Related
 
-[bootstrap](https://getbootstrap.com)
-[styled-components](https://styled-components.com)
-[styled-system](http://jxnblk.com/styled-system/)
+* [bootstrap](https://getbootstrap.com)
+* [styled-components](https://styled-components.com)
+* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 
