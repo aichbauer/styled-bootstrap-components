@@ -46,6 +46,7 @@
     "styled-nav-component": "^1.1.0",
     "styled-navbar-component": "^1.1.0",
     "styled-popover-component": "^1.1.0",
+    "styled-table-component": "^1.1.0",
     "styled-tooltip-component": "^1.1.0"
   },
   "peerDependencies": {
