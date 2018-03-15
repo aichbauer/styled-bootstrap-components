@@ -25,10 +25,10 @@ export class NavbarLight extends React.Component {
     return (
       <Router>
         <Container fluid>
-          <Container fluid>
-            <Navbar expandSm light>
-              <Nav start>
-                <NavbarLink light brand router to="#">BRAND</NavbarLink>
+          <Navbar expandSm light>
+            <Nav start>
+              <NavbarLink light brand router to="#">BRAND</NavbarLink>
+              <Nav end>
                 <Button
                   light
                   outline
@@ -39,14 +39,14 @@ export class NavbarLight extends React.Component {
                   <span>&#9776;</span>
                 </Button>
               </Nav>
-              <Nav start collapse expandSm hidden={hidden}>
-                <NavbarLink light active router to="#">Active</NavbarLink>
-                <NavbarLink light router to="#">Link</NavbarLink>
-                <NavbarLink light router to="#">Link</NavbarLink>
-                <NavbarLink light router disabled to="#">Disabled</NavbarLink>
-              </Nav>
-            </Navbar>
-          </Container>
+            </Nav>
+            <Nav start collapse expandSm hidden={hidden}>
+              <NavbarLink light active router to="#">Active</NavbarLink>
+              <NavbarLink light router to="#">Link</NavbarLink>
+              <NavbarLink light router to="#">Link</NavbarLink>
+              <NavbarLink light router disabled to="#">Disabled</NavbarLink>
+            </Nav>
+          </Navbar>
         </Container>
       </Router>
     );
