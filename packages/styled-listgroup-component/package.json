@@ -1,6 +1,6 @@
 {
   "name": "styled-listgroup-component",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The bootstrap listgroup component created with styled-components",
   "main": "./src/index.js",
   "private": false,
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "dependencies": {
-    "styled-base-components": "^1.1.0"
+    "styled-base-components": "^1.2.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",

@@ -1,6 +1,6 @@
 {
   "name": "styled-table-component",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The bootstrap table component created with styled-components",
   "main": "./src/index.js",
   "private": false,
@@ -47,6 +47,6 @@
     "styled-system": "^2.1.0"
   },
   "dependencies": {
-    "styled-base-components": "^1.1.0"
+    "styled-base-components": "^1.2.0"
   }
 }
