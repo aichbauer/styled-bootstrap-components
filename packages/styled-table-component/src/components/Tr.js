@@ -223,7 +223,7 @@ export const tableActive = (props) => (
   css`
     & > th,
     & > td {
-      background-color: rgba(0, 0, 0, 0.075);;
+      background-color: rgba(0, 0, 0, 0.075);
     };
     ${tableActiveHover};
   `

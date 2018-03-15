@@ -42,7 +42,7 @@ const tableBordered = (props) => (
 const tableStriped = (props) => (
   props.striped &&
   css`
-    tbody tr:nth-of-type(odd) {
+    & tbody tr:nth-of-type(odd) {
       background-color: rgba(0, 0, 0, 0.05);
     };
   `
@@ -89,7 +89,7 @@ const tableDarkDarkBordered = (props) => (
 const tableDarkDarkStriped = (props) => (
   props.striped &&
   css`
-    tbody tr:nth-of-type(odd) {
+    & tbody tr:nth-of-type(odd) {
       background-color: rgba(255, 255, 255, 0.05);
     };
   `
@@ -98,7 +98,7 @@ const tableDarkDarkStriped = (props) => (
 const tableDarkDarkHover = (props) => (
   props.hover &&
   css`
-    tbody tr:hover {
+    & tbody tr:hover {
       background-color: rgba(255, 255, 255, 0.075);
     };
   `
