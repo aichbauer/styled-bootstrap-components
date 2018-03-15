@@ -16,7 +16,7 @@
 		"react-dom": "^16.2.0",
 		"react-router-dom": "^4.2.2",
 		"read-dir-names": "^1.0.0",
-		"storybook-readme": "3.2.0"
+		"storybook-readme": "^3.3.0"
 	},
 	"dependencies": {
 		"styled-components": "^3.2.0",
