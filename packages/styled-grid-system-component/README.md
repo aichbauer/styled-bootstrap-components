@@ -255,9 +255,9 @@ Every row consists of maximum of 12 columns.
 
 ## Related
 
-[bootstrap](https://getbootstrap.com)
-[styled-components](https://styled-components.com)
-[styled-system](http://jxnblk.com/styled-system/)
+* [bootstrap](https://getbootstrap.com)
+* [styled-components](https://styled-components.com)
+* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 

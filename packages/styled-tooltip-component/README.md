@@ -148,9 +148,9 @@ Properties which can be added to the component to change the visual appearance. 
 
 ## Related
 
-[bootstrap](https://getbootstrap.com)
-[styled-components](https://styled-components.com)
-[styled-system](http://jxnblk.com/styled-system/)
+* [bootstrap](https://getbootstrap.com)
+* [styled-components](https://styled-components.com)
+* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 
