@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches Table small 1`] = `
+.c0 {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.c0 th,
+.c0 td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.c0 thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.c0 tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.c0 + .c0 {
+  background-color: #fff;
+}
+
+.c0 th,
+.c0 td {
+  padding: 0.3rem;
+}
+
+<table
+  className="c0 sc-dVhcbM bJkNMW"
+/>
+`;

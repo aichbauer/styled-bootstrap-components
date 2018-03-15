@@ -24,6 +24,8 @@ This is a modular approach to use [bootstrap](https://getbootstrap.com) componen
 
 ## Installation
 
+> Note: this component has a peer dependency on `styled-components` and `styled-system`. To use this component you also need to `npm i styled-components styled-system -S`.
+
 ```sh
 $ npm i styled-dropdown-component -S
 ```
@@ -130,9 +132,9 @@ Properties which can be added to the component to change the visual appearance. 
 
 ## Related
 
-[bootstrap](https://getbootstrap.com)
-[styled-components](https://styled-components.com)
-[styled-system](http://jxnblk.com/styled-system/)
+* [bootstrap](https://getbootstrap.com)
+* [styled-components](https://styled-components.com)
+* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 

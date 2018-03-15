@@ -73,6 +73,7 @@ const loadStories = () => {
   require('./stories/navbars');
   require('./stories/popovers');
   require('./stories/tooltips');
+  require('./stories/tables');
   require('./stories/customize');
 };
 

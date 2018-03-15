@@ -24,6 +24,8 @@ This is a modular approach to use [bootstrap](https://getbootstrap.com) componen
 
 ## Installation
 
+> Note: this component has a peer dependency on `styled-components` and `styled-system`. To use this component you also need to `npm i styled-components styled-system -S`.
+
 ```sh
 $ npm i styled-grid-system-component -S
 ```
@@ -255,9 +257,9 @@ Every row consists of maximum of 12 columns.
 
 ## Related
 
-[bootstrap](https://getbootstrap.com)
-[styled-components](https://styled-components.com)
-[styled-system](http://jxnblk.com/styled-system/)
+* [bootstrap](https://getbootstrap.com)
+* [styled-components](https://styled-components.com)
+* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 

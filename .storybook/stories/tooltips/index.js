@@ -15,4 +15,3 @@ storiesOf('Tooltips', module)
   .add('Simple', withReadme(TooltipReadme, withDocs(TooltipSimpleDocs, () => (
     <SimpleTooltipToggle />
   ))));
-

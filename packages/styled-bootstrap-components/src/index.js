@@ -51,7 +51,7 @@ import {
   Summary,
   Sup,
   Svg,
-  Table,
+  Table as BaseTable,
   Textarea,
   Th,
   Ul,
@@ -129,6 +129,10 @@ import {
   PopoverHeader,
 } from 'styled-popover-component';
 import {
+  Table,
+  Tr,
+} from 'styled-table-component';
+import {
   Tooltip,
   TooltipArrow,
   TooltipInner,
@@ -187,7 +191,7 @@ export {
   Summary,
   Sup,
   Svg,
-  Table,
+  BaseTable,
   Textarea,
   Th,
   Ul,
@@ -241,6 +245,8 @@ export {
   PopoverArrow,
   PopoverBody,
   PopoverHeader,
+  Table,
+  Tr,
   Tooltip,
   TooltipArrow,
   TooltipInner,

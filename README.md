@@ -28,6 +28,8 @@ I also wanted to learn a bit more on how CSS works and on how to build a CSS UI 
 
 You can install all bootstrap components with...
 
+> Note: every component has a peer dependency on `styled-components` and `styled-system`. To use this components you also need to `npm i styled-components styled-system -S`.
+
 ```sh
 $ npm i styled-bootstrap-components -S
 ```
@@ -77,6 +79,7 @@ For detailed information take a look at the [documentation](https://aichbauer.gi
 * [Nav Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-nav-component#readme)
 * [Navbar Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-navbar-component#readme)
 * [Popover Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-popover-component#readme)
+* [Table Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-table-component#readme)
 * [Tooltip Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-tooltip-component#readme)
 
 ## Related

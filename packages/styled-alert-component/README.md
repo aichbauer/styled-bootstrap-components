@@ -6,7 +6,7 @@
 [![storybook](https://img.shields.io/badge/docs%20with-storybook-f1618c.svg?style=flat-square)](https://aichbauer.github.io/styled-bootstrap-components)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
 
-> The [bootstrap](https://getbootstrap.com) alert component made with [styled components](https://styled-components.com)
+> The [bootstrap](https://getbootstrap.com) alert component made with [styled-components](https://styled-components.com)
 
 ## Table of Contents
 
@@ -20,9 +20,11 @@
 
 ## Why?
 
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is build with [styled-components](https://styled-components.com).
 
 ## Installation
+
+> Note: this component has a peer dependency on `styled-components` and `styled-system`. To use this component you also need to `npm i styled-components styled-system -S`.
 
 ```sh
 $ npm i styled-alert-component -S
@@ -113,7 +115,7 @@ Properties which can be added to the component to change the visual appearance. 
 ## Related
 
 * [bootstrap](https://getbootstrap.com)
-* [styled components](https://styled-components.com)
+* [styled-components](https://styled-components.com)
 * [styled-system](http://jxnblk.com/styled-system/)
 
 ## License

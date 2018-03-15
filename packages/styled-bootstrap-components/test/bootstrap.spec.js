@@ -55,7 +55,7 @@ import {
   Summary,
   Sup,
   Svg,
-  Table,
+  BaseTable,
   Textarea,
   Th,
   Ul,
@@ -109,6 +109,8 @@ import {
   PopoverArrow,
   PopoverBody,
   PopoverHeader,
+  Table,
+  Tr,
   Tooltip,
   TooltipArrow,
   TooltipInner,
@@ -270,8 +272,8 @@ test('Simply check if all components are imported and exported correctly', () =>
   const svg = renderer.create(<Svg />).toJSON();
   expect(svg).toMatchSnapshot();
 
-  const table = renderer.create(<Table />).toJSON();
-  expect(table).toMatchSnapshot();
+  const baseTable = renderer.create(<BaseTable />).toJSON();
+  expect(baseTable).toMatchSnapshot();
 
   const textarea = renderer.create(<Textarea />).toJSON();
   expect(textarea).toMatchSnapshot();
@@ -430,6 +432,12 @@ test('Simply check if all components are imported and exported correctly', () =>
 
   const popoverHeader = renderer.create(<PopoverHeader />).toJSON();
   expect(popoverHeader).toMatchSnapshot();
+
+  const table = renderer.create(<Table />).toJSON();
+  expect(table).toMatchSnapshot();
+
+  const tr = renderer.create(<Tr />).toJSON();
+  expect(tr).toMatchSnapshot();
 
   const tooltip = renderer.create(<Tooltip />).toJSON();
   expect(tooltip).toMatchSnapshot();
