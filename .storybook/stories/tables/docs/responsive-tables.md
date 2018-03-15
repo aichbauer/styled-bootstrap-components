@@ -1,5 +1,5 @@
 ```jsx
-<Table>
+<Table responsive>
   <thead>
     <tr>
       <th scope="col">#</th>
