@@ -79,6 +79,7 @@ For detailed information take a look at the [documentation](https://aichbauer.gi
 * [Nav Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-nav-component#readme)
 * [Navbar Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-navbar-component#readme)
 * [Popover Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-popover-component#readme)
+* [Table Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-table-component#readme)
 * [Tooltip Component](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-tooltip-component#readme)
 
 ## Related
