@@ -1,0 +1,52 @@
+{
+  "name": "styled-table-component",
+  "version": "1.1.0",
+  "description": "The bootstrap table component created with styled-components",
+  "main": "./src/index.js",
+  "private": false,
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "components",
+    "react",
+    "react-component",
+    "ui",
+    "styled-components",
+    "table",
+    "bootstrap",
+    "presentational",
+    "stateless"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aichbauer/styled-bootstrap-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aichbauer/styled-bootstrap-components/issues"
+  },
+  "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "styled-components": "^3.1.4",
+    "styled-system": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "jest": "^22.4.2",
+    "jest-styled-components": "^5.0.0",
+    "react": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
+    "styled-components": "^3.1.4",
+    "styled-system": "^2.1.0"
+  },
+  "dependencies": {
+    "styled-base-components": "^1.1.0"
+  }
+}
