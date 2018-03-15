@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches Tr active hover 1`] = `
+.c0 > th,
+.c0 > td {
+  background-color: rgba(0,0,0,0.075);
+}
+
+.c0 tbody tr:hover {
+  background-color: rgba(0,0,0,0.075);
+}
+
+.c0 tbody tr:hover > th,
+.c0 tbody tr:hover > td {
+  background-color: rgba(0,0,0,0.075);
+}
+
+<tr
+  className="c0"
+/>
+`;

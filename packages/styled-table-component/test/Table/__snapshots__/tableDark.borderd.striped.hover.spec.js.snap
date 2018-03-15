@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches Table tableDark bordered striped hover 1`] = `
+.c0 {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  color: #fff;
+  background-color: #212529;
+  border: 0;
+}
+
+.c0 th,
+.c0 td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.c0 thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.c0 tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.c0 + .c0 {
+  background-color: #fff;
+}
+
+.c0 th,
+.c0 td {
+  border: 1px solid #dee2e6;
+}
+
+.c0 thead th,
+.c0 thead td {
+  border-bottom-width: 2px;
+}
+
+.c0 tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.c0 tbody tr:hover {
+  background-color: rgba(0,0,0,0.075);
+}
+
+.c0 th,
+.c0 td,
+.c0 thead th {
+  border-color: #32383e;
+}
+
+.c0 tbody tr:nth-of-type(odd) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.c0 tbody tr:hover {
+  background-color: rgba(255,255,255,0.075);
+}
+
+<table
+  className="c0 sc-dVhcbM bJkNMW"
+/>
+`;
