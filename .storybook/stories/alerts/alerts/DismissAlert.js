@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Alert } from '../../../../packages/styled-alert-component/src';
-import { Container } from '../../../../packages/styled-container-component/src';
+import { Alert } from '../../../../packages/styled-alert-component';
+import { Container } from '../../../../packages/styled-container-component';
 
 export class DismissAlert extends React.Component {
   constructor(props) {

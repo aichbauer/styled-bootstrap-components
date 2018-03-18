@@ -5,9 +5,9 @@ import {
   withDocs,
 } from 'storybook-readme';
 
-import { Button } from '../../../packages/styled-button-component/src';
-import { Container } from '../../../packages/styled-container-component/src';
-import { Row } from '../../../packages/styled-grid-system-component/src';
+import { Button } from '../../../packages/styled-button-component';
+import { Container } from '../../../packages/styled-container-component';
+import { Row } from '../../../packages/styled-grid-system-component';
 
 import ButtonReadme from '../../../packages/styled-button-component/README.md';
 

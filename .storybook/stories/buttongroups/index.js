@@ -9,7 +9,7 @@ import {
   Button,
   ButtonGroup,
   ButtonToolbar,
-} from '../../../packages/styled-button-component/src';
+} from '../../../packages/styled-button-component';
 import { Container } from '../../../packages/styled-container-component';
 import { Row } from '../../../packages/styled-grid-system-component';
 
