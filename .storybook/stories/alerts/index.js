@@ -6,14 +6,14 @@ import {
 } from 'storybook-readme';
 
 import { DismissAlert } from './alerts/DismissAlert';
-import { Alert } from '../../../packages/styled-alert-component/src';
-import { Container } from '../../../packages/styled-container-component/src';
+import { Alert } from '../../../packages/styled-alert-component';
+import { Container } from '../../../packages/styled-container-component';
 import {
   A,
   Hr,
   H4,
   P,
-} from '../../../packages/styled-base-components/src';
+} from '../../../packages/styled-base-components';
 import AlertReadme from '../../../packages/styled-alert-component/README.md';
 
 import AlertSimpleDocs from './docs/simple.md';

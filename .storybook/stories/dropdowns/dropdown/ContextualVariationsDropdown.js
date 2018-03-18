@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from '../../../../packages/styled-button-component/src';
+import { Button } from '../../../../packages/styled-button-component';
 import { Container } from '../../../../packages/styled-container-component';
 import {
   Dropdown,

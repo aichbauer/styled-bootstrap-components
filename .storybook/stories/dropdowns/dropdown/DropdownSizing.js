@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, ButtonGroup } from '../../../../packages/styled-button-component/src';
+import { Button, ButtonGroup } from '../../../../packages/styled-button-component';
 import { Container } from '../../../../packages/styled-container-component';
 import { Row } from '../../../../packages/styled-grid-system-component';
 import {

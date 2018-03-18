@@ -16,6 +16,8 @@ coverage
 .eslintcache
 package-lock.json
 
+packages/*/lib
+
 packages/*/coverage
 packages/*/.nyc*
 packages/*/*.log

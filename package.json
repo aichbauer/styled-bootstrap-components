@@ -4,7 +4,7 @@
   "description": "The bootstrap components created with styled-components and styled-system",
   "scripts": {
     "precommit": "lint-staged",
-    "test": "jest --coverage"
+    "test": "jest --coverage --collectCoverageFrom=packages/**/src/**/*.js"
   },
   "license": "MIT",
   "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
     "babel-preset-env": "^1.6.1",

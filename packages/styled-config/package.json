@@ -2,10 +2,11 @@
   "name": "styled-config",
   "version": "1.2.0",
   "description": "The configuration for styled-bootstrap-components",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "private": false,
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "prepublish": "babel src --out-dir lib"
   },
   "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
   "license": "MIT",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.1",
     "jest": "^22.4.2"
