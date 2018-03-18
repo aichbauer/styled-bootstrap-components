@@ -1,6 +1,6 @@
 {
   "name": "styled-form-component",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "The bootstrap form component created with styled-components",
   "main": "./lib/index.js",
   "private": false,
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "dependencies": {
-    "styled-base-components": "^1.2.0",
-    "styled-config": "^1.2.0"
+    "styled-base-components": "^1.3.0",
+    "styled-config": "^1.3.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
