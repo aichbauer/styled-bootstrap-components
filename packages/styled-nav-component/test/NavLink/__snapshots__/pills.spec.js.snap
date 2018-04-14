@@ -26,11 +26,7 @@ exports[`Styles matches NavLink pills active 1`] = `
 }
 
 <a
-  active={true}
-  className="c0"
-  href="#"
-  onClick={[Function]}
-  pills={true}
-  router={true}
+  className="c0 eRiqeT"
+  to="#"
 />
 `;
