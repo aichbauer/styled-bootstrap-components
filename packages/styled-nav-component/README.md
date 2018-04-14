@@ -53,16 +53,6 @@ import {
   NavLink,
 } from 'styled-nav-component';
 
-const MyNavWithReactRouter = (props) => (
-  {/* use different props to change visual the appearance */}
-  <Nav end>
-    <NavLink active router to="#">Active</NavLink>
-    <NavLink router to="#">Link</NavLink>
-    <NavLink router to="#">Link</NavLink>
-    <NavLink router disabled to="#">Disabled</NavLink>
-  </Nav>
-);
-
 const MyNavWithATag = (props) => (
   {/* use different props to change visual the appearance */}
   <Nav vertical>
@@ -70,6 +60,41 @@ const MyNavWithATag = (props) => (
     <NavLink tabs href="#">Link</NavLink>
     <NavLink tabs href="#">Link</NavLink>
     <NavLink tabs disabled href="#">Disabled</NavLink>
+  </Nav>
+);
+```
+
+Usage with [react-router-dom](https://reacttraining.com/react-router/web/example/basic).
+
+```jsx
+/*
+  if you installed `styled-bootstrap-components` use
+
+    import { ... } from 'styled-bootstrap-components'
+
+  instead.
+*/
+import {
+  Nav,
+  NavLink,
+} from 'styled-nav-component';
+import { Link } from 'react-router-dom';
+
+const MyNavWithReactRouterDom = (props) => (
+  {/* use different props to change visual the appearance */}
+  <Nav vertical>
+    <Link to="#">
+      <NavLink tabs active>Active</NavLink>
+    </Link>
+    <Link to="#">
+      <NavLink tabs>Link</NavLink>
+    </Link>
+    <Link to="#">
+      <NavLink tabs>Link</NavLink>
+    </Link>
+    <Link to="#">
+      <NavLink tabs disabled>Disabled</NavLink>
+    </Link>
   </Nav>
 );
 ```
