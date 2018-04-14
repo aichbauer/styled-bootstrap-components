@@ -4,7 +4,6 @@ import {
   withReadme,
   withDocs,
 } from 'storybook-readme';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Container } from '../../../packages/styled-container-component';
 import {
@@ -26,99 +25,83 @@ import NavFillDocs from './docs/fill.md';
 
 storiesOf('Navs', module)
   .add('Simple', withReadme(NavReadme, withDocs(NavSimpleDocs, () => (
-    <Router>
-      <Container fluid>
-        <Nav>
-          <NavLink active router to="#">Active</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid>
+      <Nav>
+        <NavLink active href="#">Active</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))))
   .add('Horizontal center', withReadme(NavReadme, withDocs(NavHorizontalCenterDocs, () => (
-    <Router>
-      <Container fluid>
-        <Nav center>
-          <NavLink active router to="#">Active</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid>
+      <Nav center>
+        <NavLink active href="#">Active</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))))
   .add('Horizontal end', withReadme(NavReadme, withDocs(NavHorizontalEndDocs, () => (
-    <Router>
-      <Container fluid>
-        <Nav end>
-          <NavLink active router to="#">Active</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid>
+      <Nav end>
+        <NavLink active href="#">Active</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))))
   .add('Vertical', withReadme(NavReadme, withDocs(NavVerticalDocs, () => (
-    <Router>
-      <Container fluid style={{ textAlign: 'left' }}>
-        <Nav vertical>
-          <NavLink active router to="#">Active</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router to="#">Link</NavLink>
-          <NavLink router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid style={{ textAlign: 'left' }}>
+      <Nav vertical>
+        <NavLink active href="#">Active</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))))
   .add('Tabs', withReadme(NavReadme, withDocs(NavTabsDocs, () => (
-    <Router>
-      <Container fluid>
-        <Nav tabs>
-          <NavLink tabs active router to="#">Active</NavLink>
-          <NavLink tabs router to="#">Link</NavLink>
-          <NavLink tabs router to="#">Link</NavLink>
-          <NavLink tabs router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid>
+      <Nav tabs>
+        <NavLink tabs active href="#">Active</NavLink>
+        <NavLink tabs href="#">Link</NavLink>
+        <NavLink tabs href="#">Link</NavLink>
+        <NavLink tabs disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))))
   .add('Pills', withReadme(NavReadme, withDocs(NavPillsDocs, () => (
-    <Router>
-      <Container fluid>
-        <Nav>
-          <NavLink pills active router to="#">Active</NavLink>
-          <NavLink pills router to="#">Link</NavLink>
-          <NavLink pills router to="#">Link</NavLink>
-          <NavLink pills router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid>
+      <Nav>
+        <NavLink pills active href="#">Active</NavLink>
+        <NavLink pills href="#">Link</NavLink>
+        <NavLink pills href="#">Link</NavLink>
+        <NavLink pills disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))))
   .add('Justified', withReadme(NavReadme, withDocs(NavJustifiedDocs, () => (
-    <Router>
-      <Container fluid>
-        <Nav justified>
-          <NavLink pills item active router to="#">Active</NavLink>
-          <NavLink pills item router to="#">Link</NavLink>
-          <NavLink pills item router to="#">Link</NavLink>
-          <NavLink pills item router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid>
+      <Nav justified>
+        <NavLink pills item active href="#">Active</NavLink>
+        <NavLink pills item href="#">Link</NavLink>
+        <NavLink pills item href="#">Link</NavLink>
+        <NavLink pills item disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))))
   .add('Fill', withReadme(NavReadme, withDocs(NavFillDocs, () => (
-    <Router>
-      <Container fluid>
-        <Nav fill>
-          <NavLink pills item active router to="#">Active</NavLink>
-          <NavLink pills item router to="#">Link</NavLink>
-          <NavLink pills item router to="#">Link</NavLink>
-          <NavLink pills item router disabled to="#">Disabled</NavLink>
-        </Nav>
-      </Container>
-    </Router>
+    <Container fluid>
+      <Nav fill>
+        <NavLink pills item active href="#">Active</NavLink>
+        <NavLink pills item href="#">Link</NavLink>
+        <NavLink pills item href="#">Link</NavLink>
+        <NavLink pills item disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
   ))));
 

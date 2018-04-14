@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Container } from '../../../../packages/styled-container-component';
 import { Button } from '../../../../packages/styled-button-component';
@@ -23,11 +22,10 @@ export class NavbarLight extends React.Component {
   render() {
     const { hidden } = this.state;
     return (
-      <Router>
         <Container fluid>
           <Navbar expandSm light>
             <Nav start>
-              <NavbarLink light brand router to="#">BRAND</NavbarLink>
+              <NavbarLink light brand href="#">BRAND</NavbarLink>
               <Nav end>
                 <Button
                   light
@@ -41,14 +39,13 @@ export class NavbarLight extends React.Component {
               </Nav>
             </Nav>
             <Nav start collapse expandSm hidden={hidden}>
-              <NavbarLink light active router to="#">Active</NavbarLink>
-              <NavbarLink light router to="#">Link</NavbarLink>
-              <NavbarLink light router to="#">Link</NavbarLink>
-              <NavbarLink light router disabled to="#">Disabled</NavbarLink>
+              <NavbarLink light active>Active</NavbarLink>
+              <NavbarLink light href="#">Link</NavbarLink>
+              <NavbarLink light href="#">Link</NavbarLink>
+              <NavbarLink light disabled href="#">Disabled</NavbarLink>
             </Nav>
           </Navbar>
         </Container>
-      </Router>
     );
   }
 }

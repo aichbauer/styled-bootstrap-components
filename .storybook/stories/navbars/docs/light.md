@@ -16,32 +16,30 @@ export class NavbarLight extends React.Component {
   render() {
     const { hidden } = this.state;
     return (
-      <Router>
-        <Container fluid>
-          <Navbar expandSm light>
-            <Nav start>
-              <NavbarLink light brand router to="#">BRAND</NavbarLink>
-              <Nav end>
-                <Button
-                  light
-                  outline
-                  toggleCollapse
-                  expandSm
-                  onClick={() => this.handleOpenCloseNav()}
-                >
-                  <span>&#9776;</span>
-                </Button>
-              </Nav>
+      <Container fluid>
+        <Navbar expandSm light>
+          <Nav start>
+            <NavbarLink light brand href="#">BRAND</NavbarLink>
+            <Nav end>
+              <Button
+                light
+                outline
+                toggleCollapse
+                expandSm
+                onClick={() => this.handleOpenCloseNav()}
+              >
+                <span>&#9776;</span>
+              </Button>
             </Nav>
-            <Nav start collapse expandSm hidden={hidden}>
-              <NavbarLink light active router to="#">Active</NavbarLink>
-              <NavbarLink light router to="#">Link</NavbarLink>
-              <NavbarLink light router to="#">Link</NavbarLink>
-              <NavbarLink light router disabled to="#">Disabled</NavbarLink>
-            </Nav>
-          </Navbar>
-        </Container>
-      </Router>
+          </Nav>
+          <Nav start collapse expandSm hidden={hidden}>
+            <NavbarLink light active href="#">Active</NavbarLink>
+            <NavbarLink light href="#">Link</NavbarLink>
+            <NavbarLink light href="#">Link</NavbarLink>
+            <NavbarLink light disabled href="#">Disabled</NavbarLink>
+          </Nav>
+        </Navbar>
+      </Container>
     );
   }
 };
