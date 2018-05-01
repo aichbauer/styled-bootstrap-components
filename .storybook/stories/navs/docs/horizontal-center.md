@@ -2,10 +2,10 @@ Source Code:
 ```jsx
 <Container fluid>
   <Nav center>
-    <NavLink active router to="#">Active</NavLink>
-    <NavLink router to="#">Link</NavLink>
-    <NavLink router to="#">Link</NavLink>
-    <NavLink router disabled to="#">Disabled</NavLink>
+    <NavLink active href="#">Active</NavLink>
+    <NavLink href="#">Link</NavLink>
+    <NavLink href="#">Link</NavLink>
+    <NavLink disabled href="#">Disabled</NavLink>
   </Nav>
 </Container>
 ```

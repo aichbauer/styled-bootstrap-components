@@ -11,7 +11,7 @@ exports[`Styles matches NavbarLink brand 1`] = `
 }
 
 <a
-  className="c0 sc-htpNat jZQKac eRiqeT"
+  className="c0 sc-bwzfXH kwDbDW eRiqeT"
 />
 `;
 
@@ -26,7 +26,7 @@ exports[`Styles matches NavbarLink dark active 1`] = `
 }
 
 <a
-  className="c0 sc-htpNat jZQKac eRiqeT"
+  className="c0 sc-bwzfXH kwDbDW eRiqeT"
 />
 `;
 
@@ -41,7 +41,7 @@ exports[`Styles matches NavbarLink dark disabled 1`] = `
 }
 
 <a
-  className="c0 sc-htpNat bwBFZr eRiqeT"
+  className="c0 sc-bwzfXH eHDKOl eRiqeT"
   disabled={true}
 />
 `;
@@ -57,7 +57,7 @@ exports[`Styles matches NavbarLink dark disabled 2`] = `
 }
 
 <a
-  className="c0 sc-htpNat jZQKac eRiqeT"
+  className="c0 sc-bwzfXH kwDbDW eRiqeT"
 />
 `;
 
@@ -72,7 +72,7 @@ exports[`Styles matches NavbarLink light active 1`] = `
 }
 
 <a
-  className="c0 sc-htpNat jZQKac eRiqeT"
+  className="c0 sc-bwzfXH kwDbDW eRiqeT"
 />
 `;
 
@@ -87,7 +87,7 @@ exports[`Styles matches NavbarLink light disabled 1`] = `
 }
 
 <a
-  className="c0 sc-htpNat bwBFZr eRiqeT"
+  className="c0 sc-bwzfXH eHDKOl eRiqeT"
   disabled={true}
 />
 `;
@@ -103,6 +103,6 @@ exports[`Styles matches NavbarLink light disabled 2`] = `
 }
 
 <a
-  className="c0 sc-htpNat jZQKac eRiqeT"
+  className="c0 sc-bwzfXH kwDbDW eRiqeT"
 />
 `;

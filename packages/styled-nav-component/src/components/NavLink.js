@@ -12,7 +12,6 @@ import {
   borderColor,
   borders,
 } from 'styled-system';
-import { Link } from 'react-router-dom';
 import { A } from 'styled-base-components';
 
 const navLinkDisabled = (props) => (
@@ -68,46 +67,30 @@ const navLinkPills = (props) => (
   `
 );
 
-const navLinkStyle = () => css`
-    display: block;
-    padding: 0.5rem;
-    border: 1px solid transparent;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    color: #007bff;
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: #0056b3;
-    };
-    ${navLinkDisabled};
-    ${navLinkTabs};
-    ${navLinkPills};
-    ${space};
-    ${width};
-    ${color};
-    ${fontSize};
-    ${fontWeight};
-    ${textAlign};
-    ${lineHeight};
-    ${display};
-    ${borderRadius};
-    ${borderColor};
-    ${borders};
-  `;
-
-const NavRouterLink = styled(Link)`
-  ${navLinkStyle};
+export const NavLink = styled(A)`
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #007bff;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: #0056b3;
+  };
+  ${navLinkDisabled};
+  ${navLinkTabs};
+  ${navLinkPills};
+  ${space};
+  ${width};
+  ${color};
+  ${fontSize};
+  ${fontWeight};
+  ${textAlign};
+  ${lineHeight};
+  ${display};
+  ${borderRadius};
+  ${borderColor};
+  ${borders};
 `;
-
-const NavNormalLink = styled(A)`
-  ${navLinkStyle};
-`;
-
-export const NavLink = (props) => {
-  if (props.router) {
-    return new NavRouterLink(props);
-  }
-
-  return new NavNormalLink(props);
-};

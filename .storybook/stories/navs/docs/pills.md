@@ -2,10 +2,10 @@ Source Code:
 ```jsx
 <Container fluid>
   <Nav>
-    <NavLink pills active router to="#">Active</NavLink>
-    <NavLink pills router to="#">Link</NavLink>
-    <NavLink pills router to="#">Link</NavLink>
-    <NavLink pills router disabled to="#">Disabled</NavLink>
+    <NavLink pills active href="#">Active</NavLink>
+    <NavLink pills href="#">Link</NavLink>
+    <NavLink pills href="#">Link</NavLink>
+    <NavLink pills disabled href="#">Disabled</NavLink>
   </Nav>
 </Container>
 ```
