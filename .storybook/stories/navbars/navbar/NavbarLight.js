@@ -10,7 +10,9 @@ export class NavbarLight extends React.Component {
     super(props);
     this.state = {
       hidden: true,
+      Width: window.innerWidth,
     };
+    this.handleResize=this.handleResize.bind(this);
   }
 
   handleOpenCloseNav() {
@@ -18,6 +20,19 @@ export class NavbarLight extends React.Component {
       hidden: !this.state.hidden,
     });
   }
+
+  handleResize(e) {
+    this.setState({Width:window.innerWidth});
+  }
+
+  componentDidMount(){
+    window.addEventListener('resize', this.handleResize);
+
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  } 
 
   render() {
     const { hidden } = this.state;
@@ -38,7 +53,7 @@ export class NavbarLight extends React.Component {
                 </Button>
               </Nav>
             </Nav>
-            <Nav start collapse expandSm hidden={hidden}>
+            <Nav start collapse expandSm hidden={(this.state.Width>576)? false:!hidden}>
               <NavbarLink light active>Active</NavbarLink>
               <NavbarLink light href="#">Link</NavbarLink>
               <NavbarLink light href="#">Link</NavbarLink>
