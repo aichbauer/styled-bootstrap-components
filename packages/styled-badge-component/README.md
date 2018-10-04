@@ -20,7 +20,7 @@
 
 ## Why?
 
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one bootstrap component for your application. To work with ease with any other libary or framework this component is build with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one bootstrap component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
 
 ## Installation
 
