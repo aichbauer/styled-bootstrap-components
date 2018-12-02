@@ -92,25 +92,24 @@ export class MyModal extends React.Component {
                 <Button outline onClick={() => this.handleModal()}>
                   <span aria-hidden="true">&times;</span>
                 </Button>
-                </ModalHeader>
-                <ModalBody>
-                  <p>
-                    Modal Body
-                  </p>
-                </ModalBody>
-                <ModalFooter>
-                  <Button onClick={() => this.handleModal()}>
-                    Close
-                  </Button>
-                </ModalFooter>
               </ModalHeader>
+              <ModalBody>
+                <p>
+                  Modal Body
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button onClick={() => this.handleModal()}>
+                  Close
+                </Button>
+              </ModalFooter>
             </ModalContent>
           </ModalDialog>
         </Modal>
         <Button onClick={() => this.handleModal()} >
           Launch Modal
         </Button>
-      <div>
+      </div>
     );
   }
 };
