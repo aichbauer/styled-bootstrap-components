@@ -20,15 +20,15 @@
 
 ## Why?
 
-I wanted to use [bootstrap](https://getbootstrap.com) with [React](https://reactjs.org/) for **fast prototypes**, or as entrypoint for **my own UI Component Library**, or if I needed just one bootstrap component for my application, now I can simply install that specific component. To work with ease with any other libary or framework these components are built with [styled-components](https://styled-components.com).
-
-I also wanted to learn a bit more on how CSS works and on how to build a CSS UI Library from scratch, mostly but not only by reading the [bootstrap CSS code](https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css) and the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS). I also wanted to learn how to manage and maintain a monorepo with multiple packages based on [lerna](https://lernajs.io/).
+* I wanted to use [bootstrap](https://getbootstrap.com) with [React](https://reactjs.org/) for **fast prototypes**, or as an entrypoint for **my own UI Component Library**, or if I needed just one bootstrap component for my application, now I can simply install that specific component. To work with ease with any other library or framework these components are built with [styled-components](https://styled-components.com).
+* I wanted to learn a bit more on how CSS works and on how to build a CSS UI Library from scratch, mostly but not only by reading the [bootstrap CSS code](https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css) and the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS). 
+* I wanted to learn how to manage and maintain a monorepo with multiple packages based on [lerna](https://lernajs.io/).
 
 ## Installation
 
 You can install all bootstrap components with...
 
-> Note: every component has a peer dependency on `styled-components` and `styled-system`. To use this components you also need to `npm i styled-components styled-system -S`.
+> Note: every component has a peer dependency on `styled-components` and `styled-system`. To use these components you also need to `npm i styled-components styled-system -S`.
 
 ```sh
 $ npm i styled-bootstrap-components -S
@@ -44,9 +44,9 @@ or you can install just the components that you need by following the installati
 
 ## Usage
 
-For detailed information (also on how to customize this components) take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
+For detailed information (also on how to customize these components) take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-Most of this components are using [styled-system](http://jxnblk.com/styled-system/).
+Most of these components are using [styled-system](http://jxnblk.com/styled-system/).
 
 To see which components are available take a look at the [components section](#components).
 
