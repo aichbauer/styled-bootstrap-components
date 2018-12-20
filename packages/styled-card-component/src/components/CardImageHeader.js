@@ -1,32 +1,31 @@
-import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { Img } from 'styled-base-components';
+import styled, { css } from 'styled-components';
 
-export const CardImageHeader = styled(Img)`
+
+import {
+  theme,
+  borderRadius as br,
+} from 'styled-config';
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`
+      border-radius: ${br(props, 'cardImageHeader').noRadius};
+    `;
+  }
+
+  return css`
+    border-top-left-radius: ${br(props, 'cardImageHeader').topLeftRight};
+    border-top-right-radius: ${br(props, 'cardImageHeader').topLeftRight};
+  `;
+}
+
+const CardImageHeader = styled.img`
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => borderRadius(props)}
 `;
+
+CardImageHeader.defaultProps = {
+  theme,
+};
+
+export { CardImageHeader };

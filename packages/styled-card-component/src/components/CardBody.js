@@ -1,39 +1,26 @@
 import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
 
-export const CardBody = styled.div`
+import {
+  theme,
+  padding,
+  margin,
+} from 'styled-config';
+
+const CardBody = styled.div`
   flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: ${(props) => padding(props, 'cardBody').default};
   & > a {
     &:hover {
       text-decoration: none;
     };
     & + a {
-      margin-left: 1.25rem;
+      margin-left: ${(props) => margin(props, 'cardBody').leftA};
     };
   };
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
 `;
 
+CardBody.defaultProps = {
+  theme,
+};
+
+export { CardBody };

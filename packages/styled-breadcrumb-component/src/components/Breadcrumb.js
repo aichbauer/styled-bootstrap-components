@@ -1,36 +1,35 @@
-import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { Ol } from 'styled-base-components';
+import styled, { css } from 'styled-components';
 
-export const Breadcrumb = styled(Ol)`
+import {
+  theme,
+  colors,
+  margin,
+  padding,
+  borderRadius as br,
+} from 'styled-config';
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`border-radius: ${br(props, 'breadcrumb').noRadius};`;
+  } else if (props.pill) {
+    return css`border-radius: ${br(props, 'breadcrumb').pill};`;
+  }
+
+  return css`border-radius: ${br(props, 'breadcrumb').default};`;
+}
+
+const Breadcrumb = styled.ol`
   display: flex;
   flex-wrap: wrap;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
+  padding: ${(props) => padding(props, 'breadcrumb').default};
+  margin-bottom: ${(props) => margin(props, 'breadcrumb').bottom};
   list-style: none;
-  background-color: #e9ecef;
-  border-radius: 0.25rem;
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  background-color: ${(props) => colors(props, 'breadcrumb').backgroundColor};
+  ${(props) => borderRadius(props)}
 `;
+
+Breadcrumb.defaultProps = {
+  theme,
+};
+
+export { Breadcrumb };

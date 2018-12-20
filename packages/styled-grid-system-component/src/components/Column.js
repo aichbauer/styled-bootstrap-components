@@ -1,27 +1,6 @@
 import styled from 'styled-components';
-import { screenSize } from 'styled-config';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-  alignItems,
-  alignContent,
-  justifyContent,
-  flexWrap,
-  flexBasis,
-  flexDirection,
-  flex,
-  justifySelf,
-  alignSelf,
-} from 'styled-system';
+
+import { theme } from 'styled-config';
 
 const calcFlex = (size) => {
   switch (size) {
@@ -89,43 +68,29 @@ export const lgFlex = (props) => {
   return '0 0 100%';
 };
 
-export const Column = styled.div`
+const Column = styled.div`
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;
   flex: 0 0 100%;
   overflow: hidden;
   word-break: break-all;
-  @media (min-width: ${screenSize.sm}) {
+  @media (min-width: ${(props) => props.theme.screenSize.sm}) {
     flex: ${(props) => smFlex(props)};
   };
-  @media (min-width: ${screenSize.md}) {
+  @media (min-width: ${(props) => props.theme.screenSize.md}) {
     flex: ${(props) => mdFlex(props)};
   };
-  @media (min-width: ${screenSize.lg}) {
+  @media (min-width: ${(props) => props.theme.screenSize.lg}) {
     flex: ${(props) => lgFlex(props)};
   };
-  @media (min-width: ${screenSize.xl}) {
+  @media (min-width: ${(props) => props.theme.screenSize.xl}) {
     flex: ${(props) => calcFlex(props.sm || props.md || props.lg || props.xl)};
   };
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
-  ${alignItems};
-  ${alignContent};
-  ${justifyContent};
-  ${flexWrap};
-  ${flexBasis};
-  ${flexDirection};
-  ${flex};
-  ${justifySelf};
-  ${alignSelf};
 `;
+
+Column.defaultProps = {
+  theme,
+};
+
+export { Column };

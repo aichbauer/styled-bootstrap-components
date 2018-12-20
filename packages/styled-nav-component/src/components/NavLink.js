@@ -1,96 +1,112 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { A } from 'styled-base-components';
+  theme,
+  colors,
+  padding,
+  borderRadius as br,
+  border as b,
+} from 'styled-config';
 
-const navLinkDisabled = (props) => (
-  props.disabled &&
-  css`
-    color: #6c757d;
-    &:hover,
-    &:focus {
-      color: #6c757d;
-    };
-  `
-);
-
-const navLinkTabs = (props) => {
-  if (props.tabs) {
-    if (props.active) {
-      return css`
-        color: #495057;
-        border-color: #e9ecef #e9ecef #fff;
-        &:hover,
-        &:focus {
-          color: #495057;
-        };
-      `;
-    } else if (props.disabled) {
-      return css`
-        border-color: transparent;
-      `;
-    }
-
+const color = (props) => {
+  if (props.disabled) {
     return css`
+      color: ${colors(props, 'navLink').colorDisabled};
       &:hover,
       &:focus {
-        border-color: #e9ecef #e9ecef #dee2e6;
+        color: ${colors(props, 'navLink').colorDisabledHoverFocus};
+      };
+    `;
+  } else if (props.tabs && props.active) {
+    return css`
+      color: ${colors(props, 'navLink').colorTabsActive};
+      &:hover,
+      &:focus {
+        color: ${colors(props, 'navLink').colorTabsActiveHoverFocus};
+      };
+    `;
+  } else if (props.pills && props.active) {
+    return css`
+      color: ${colors(props, 'navLink').colorPillsActive};
+      &:hover,
+      &:focus {
+        color: ${colors(props, 'navLink').colorPillsActiveHoverFocus};
       };
     `;
   }
 
-  return '';
-};
-
-const navLinkPills = (props) => (
-  props.pills &&
-  props.active &&
-  css`
-    border-radius: 0.25rem;
-    color: #fff;
-    background-color: #007bff;
+  return css`
+    color: ${colors(props, 'navLink').color};
     &:hover,
     &:focus {
-      color: #fff;
+      color: ${colors(props, 'navLink').colorHoverFocus};
     };
+  `;
+}
+
+const backgroundColor = (props) => (
+  (props.pills && props.active) &&
+  css`
+    background-color: ${colors(props, 'navLink').backgroundColorPillsActive};
   `
 );
 
-export const NavLink = styled(A)`
+const border = (props) => {
+  if (props.tabs && props.active) {
+    return css`
+      border-color: ${colors(props, 'navLink').borderColorTabsActive};
+    `;
+  } if (props.tabs && props.disabled) {
+    return css`
+      border-color: ${colors(props, 'navLink').borderColorTabsDisabled};
+    `;
+  } else if (props.tabs) {
+    return css`
+      &:hover,
+      &:focus {
+        border-color: ${colors(props, 'navLink').borderColorTabsHoverFocus};
+      };
+    `;
+  } else if (props.pills && props.active) {
+    return css`
+      background-color: ${colors(props, 'navLink').borderColorPillsActive};
+    `;
+  }
+};
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`
+      border-radius: ${br(props, 'navLink').noRadius};
+    `;
+  } else if (props.pills && props.active) {
+    return css`
+      border-radius: ${br(props, 'navLink').default};
+    `;
+  }
+
+  return css`
+    border-top-left-radius: ${br(props, 'navLink').default};
+    border-top-right-radius: ${br(props, 'navLink').default};
+  `;
+};
+
+const NavLink = styled.a`
   display: block;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
+  padding: ${(props) => padding(props, 'navLink').default};
+  border: ${(props) => b(props, 'navLink').default} ${(props) => colors(props, 'navLink').borderColor};
   &:hover,
   &:focus {
     text-decoration: none;
-    color: #0056b3;
   };
-  ${navLinkDisabled};
-  ${navLinkTabs};
-  ${navLinkPills};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => color(props)};
+  ${(props) => backgroundColor(props)};
+  ${(props) => border(props)};
+  ${(props) => borderRadius(props)};
 `;
+
+NavLink.defaultProps = {
+  theme,
+};
+
+export { NavLink };

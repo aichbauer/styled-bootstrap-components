@@ -1,109 +1,112 @@
 import styled, { css } from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+
 import { NavLink } from 'styled-nav-component';
+import {
+  theme,
+  colors,
+  padding as p,
+  fontSize as fs,
+} from 'styled-config';
 
-const navbarLinkLight = (props) => {
-  if (props.light) {
-    if (props.active) {
-      return css`
-        color: rgba(0, 0, 0, 0.9);
-        &:hover,
-        &:focus {
-          color: rgba(0, 0, 0, 0.9);
-        };
-      `;
-    } else if (props.disabled) {
-      return css`
-        color: rgba(0, 0, 0, 0.3);
-        &:hover,
-        &:focus {
-          color: rgba(0, 0, 0, 0.3);
-        };
-      `;
-    }
-
+const color = (props) => {
+  if (props.dark && props.disabled) {
     return css`
-      color: rgba(0, 0, 0, 0.5);
+      color: ${colors(props, 'navbarLink').colorDisabled};
       &:hover,
       &:focus {
-        color: rgba(0, 0, 0, 0.7);
+        color: ${colors(props, 'navbarLink').colorDisabledHoverFocus};
+      };
+    `;
+  } else if (props.dark && props.active) {
+    return css`
+      color: ${colors(props, 'navbarLink').colorActive};
+      &:hover,
+      &:focus {
+        color: ${colors(props, 'navbarLink').colorActiveHoverFocus};
+      };
+    `;
+  } else if (props.dark) {
+    return css`
+      color: ${colors(props, 'navbarLink').color};
+      &:hover,
+      &:focus {
+        color: ${colors(props, 'navbarLink').colorHoverFocus};
+      };
+    `;
+  } else if (props.disabled) {
+    return css`
+      color: ${colors(props, 'navbarLink').colorDisabled};
+      &:hover,
+      &:focus {
+        color: ${colors(props, 'navbarLink').colorDisabledHoverFocus};
+      };
+    `;
+  } else if (props.active) {
+    return css`
+      color: ${colors(props, 'navbarLink').colorActive};
+      &:hover,
+      &:focus {
+        color: ${colors(props, 'navbarLink').colorActiveHoverFocus};
       };
     `;
   }
 
-  return '';
-};
+  return css`
+    color: ${colors(props, 'navbarLink').color};
+    &:hover,
+    &:focus {
+      color: ${colors(props, 'navbarLink').colorHoverFocus};
+    };
+  `
+}
 
-const navbarLinkDark = (props) => {
-  if (props.dark) {
-    if (props.active) {
-      return css`
-        color: rgba(255, 255, 255, 0.9);
-        &:hover,
-        &:focus {
-          color: rgba(255, 255, 255, 0.9);
-        };
-      `;
-    } else if (props.disabled) {
-      return css`
-        color: rgba(255, 255, 255, 0.25);
-        &:hover,
-        &:focus {
-          color: rgba(255, 255, 255, 0.25);
-        };
-      `;
-    }
-
-    return css`
-      color: rgba(255, 255, 255, 0.5);
-      &:hover,
-      &:focus {
-        color: rgba(255, 255, 255, 0.75);
-      };
-    `;
-  }
-
-  return '';
-};
-
-const navbarLinkBrand = (props) => (
+const display = (props) => (
   props.brand &&
   css`
     display: inline-block;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    font-size: 1.25rem;
+  `
+);
+
+const padding = (props) => (
+  props.brand &&
+  css`
+    padding-top: ${p(props, 'navbarLink').brandTop};
+    padding-bottom: ${p(props, 'navbarLink').brandBottom};
+  `
+);
+
+const fontSize = (props) => (
+  props.brand &&
+  css`
+    font-size: ${fs(props, 'navbarLink').lg};
+  `
+);
+
+const lineHeight = (props) => (
+  props.brand &&
+  css`
     line-height: inherit;
+  `
+);
+
+const whiteSpace = (props) => (
+  props.brand &&
+  css`
     white-space: nowrap;
   `
 );
 
-export const NavbarLink = styled(NavLink)`
-  ${navbarLinkBrand};
-  ${navbarLinkLight};
-  ${navbarLinkDark};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+const NavbarLink = styled(NavLink)`
+  ${(props) => color(props)}
+  ${(props) => display(props)}
+  ${(props) => padding(props)}
+  ${(props) => fontSize(props)}
+  ${(props) => lineHeight(props)}
+  ${(props) => whiteSpace(props)}
 `;
 
+NavbarLink.defaultProps = {
+  theme,
+};
+
+export { NavbarLink };

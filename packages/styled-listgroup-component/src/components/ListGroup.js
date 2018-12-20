@@ -1,52 +1,41 @@
 import styled, { css } from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { Ul } from 'styled-base-components';
 
-export const listGroupFlush = (props) => (
+import {
+  theme,
+  padding,
+  margin,
+  border as b,
+  borderRadius,
+} from 'styled-config';
+
+const border = (props) => (
   props.flush &&
   css`
     & > a, 
     & > li {
-      border-right: 0;
-      border-left: 0;
-      border-radius: 0;
+      border-right: ${b(props, 'listGroup').aLiFlushRight};
+      border-left: ${b(props, 'listGroup').aLiFlushLeft};
+      border-radius: ${borderRadius(props, 'listGroup').noRadius};
       &:first-child {
-        border-top: 0;
+        border-top: ${b(props, 'listGroup').aLiFlushFirstChildTop};
       };
       &:last-child {
-        border-bottom: 0;
+        border-bottom: ${b(props, 'listGroup').aLiFlushLastChildBottom};
       };
     };
   `
 );
 
-export const ListGroup = styled(Ul)`
+const ListGroup = styled.ul`
   display: flex;
   flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  ${listGroupFlush};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  padding-left: ${(props) => padding(props, 'listGroup').left};
+  margin-bottom: ${(props) => margin(props, 'listGroup').bottom};
+  ${(props) => border(props)};
 `;
+
+ListGroup.defaultProps = {
+  theme,
+};
+
+export { ListGroup };

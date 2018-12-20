@@ -1,51 +1,64 @@
 import styled, { css } from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
 
-const formCheckInline = (props) => (
+import {
+  theme,
+  margin,
+  padding,
+} from 'styled-config';
+
+const display = (props) => {
+  if (props.inline) {
+    return css`
+      display: inline-flex;
+    `;
+  }
+
+  return css`
+    display: block;
+  `;
+}
+
+const alignItems = (props) => (
   props.inline &&
   css`
-    display: inline-flex;
     align-items: center;
-    padding-left: 0;
-    margin-right: 0.75rem;
   `
 );
 
-export const FormCheck = styled.div`
+const paddingLeft = (props) => (
+  props.inline &&
+  css`
+    padding-left: ${padding(props, 'formCheck').inlineLeft};
+  `
+);
+
+const marginRight = (props) => (
+  props.inline &&
+  css`
+    margin-right: ${margin(props, 'formCheck').inlineRight};
+  `
+);
+
+const FormCheck = styled.div`
   position: relative;
-  display: block;
   box-sizing: border-box;
   & > label {
-    margin-bottom: 0;
+    margin-bottom: ${(props) => margin(props, 'formCheck').labelBottom};
   };
   & > input {
     position: static;
-    margin-top: 0;
-    margin-right: 0.3125rem;
-    margin-left: 0;
+    margin-top: ${(props) => margin(props, 'formCheck').inputTop};
+    margin-right:${(props) => margin(props, 'formCheck').inputRight};
+    margin-left: ${(props) => margin(props, 'formCheck').inputLeft};
   };
-  ${formCheckInline};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => display(props)}
+  ${(props) => alignItems(props)}
+  ${(props) => paddingLeft(props)}
+  ${(props) => marginRight(props)}
 `;
+
+FormCheck.defaultProps = {
+  theme,
+};
+
+export { FormCheck };

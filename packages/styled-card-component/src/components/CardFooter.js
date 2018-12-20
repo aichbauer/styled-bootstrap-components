@@ -1,38 +1,40 @@
-import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+import styled, { css } from 'styled-components';
 
-export const CardFooter = styled.div`
-  padding: 0.75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+import {
+  theme,
+  colors,
+  padding,
+  border,
+  borderRadius as br,
+} from 'styled-config';
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`
+      border-radius: ${br(props, 'cardFooter').noRadius};
+    `;
+  }
+
+  return css`
+    border-radius: ${br(props, 'cardFooter').default};
+  `;
+};
+
+const CardFooter = styled.div`
+  padding: ${(props) => padding(props, 'cardFooter').default};
+  background-color: ${(props) => colors(props, 'cardFooter').background};
+  border-top: ${(props) => border(props, 'cardFooter').default} ${(props) => colors(props, 'cardFooter').borderTop};
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   margin: -3px;
   &:last-child {
-    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+    ${(props) => borderRadius(props)}
   };
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
 `;
+
+CardFooter.defaultProps = {
+  theme,
+};
+
+export { CardFooter };

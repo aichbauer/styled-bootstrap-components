@@ -1,36 +1,37 @@
-import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+import styled, { css } from 'styled-components';
 
-export const CardHeader = styled.div`
-  padding: 0.75rem 1.25rem;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+import {
+  theme,
+  colors,
+  padding,
+  borderRadius as br,
+} from 'styled-config';
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`
+      border-radius: ${br(props, 'cardHeader').noRadius};
+    `;
+  }
+
+  return css`
+    border-top-left-radius: ${br(props, 'cardHeader').topLeftRight};
+    border-top-right-radius: ${br(props, 'cardHeader').topLeftRight};
+  `;
+}
+
+const CardHeader = styled.div`
+  padding: ${(props) => padding(props, 'cardHeader').default}
+  background-color: ${(props) => colors(props, 'cardHeader').background};
+  border-bottom: 1px solid ${(props) => colors(props, 'cardHeader').borderBottom};
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => borderRadius(props)}
 `;
+
+CardHeader.defaultProps = {
+  theme,
+};
+
+export { CardHeader };
