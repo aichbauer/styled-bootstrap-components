@@ -15,5 +15,5 @@ test('Styles matches PopoverHeader bottom', () => {
   expect(tree).toHaveStyleRule('width', '1rem');
   expect(tree).toHaveStyleRule('margin-left', '-0.5rem');
   expect(tree).toHaveStyleRule('content', '""');
-  expect(tree).toHaveStyleRule('border-bottom', '1px solid #f7f7f7');
+  expect(tree).toHaveStyleRule('border-bottom', '0');
 });

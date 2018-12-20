@@ -26,13 +26,13 @@ test('Styles matches FormControl', () => {
   expect(tree).toHaveStyleRule('background-color', '#fff', {
     modifier: '&:focus',
   });
-  expect(tree).toHaveStyleRule('border-color', '#80bdff', {
+  expect(tree).toHaveStyleRule('border-color', '#ced4da', {
     modifier: '&:focus',
   });
   expect(tree).toHaveStyleRule('outline', '0', {
     modifier: '&:focus',
   });
-  expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(0,123,255,0.25)', {
+  expect(tree).toHaveStyleRule('box-shadow', '0', {
     modifier: '&:focus',
   });
   expect(tree).toHaveStyleRule('color', '#6c757d', {

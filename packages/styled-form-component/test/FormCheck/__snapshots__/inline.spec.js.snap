@@ -3,7 +3,6 @@
 exports[`Styles matches FormCheck inline 1`] = `
 .c0 {
   position: relative;
-  display: block;
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

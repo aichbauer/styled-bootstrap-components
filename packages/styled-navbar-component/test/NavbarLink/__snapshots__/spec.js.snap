@@ -2,6 +2,13 @@
 
 exports[`Styles matches NavbarLink brand 1`] = `
 .c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #007bff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(0,0,0,0.5);
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -10,91 +17,15 @@ exports[`Styles matches NavbarLink brand 1`] = `
   white-space: nowrap;
 }
 
-<a
-  className="c0 sc-bwzfXH kwDbDW eRiqeT"
-/>
-`;
-
-exports[`Styles matches NavbarLink dark active 1`] = `
-.c0 {
-  color: rgba(255,255,255,0.9);
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:hover,
 .c0:focus {
-  color: rgba(255,255,255,0.9);
-}
-
-<a
-  className="c0 sc-bwzfXH kwDbDW eRiqeT"
-/>
-`;
-
-exports[`Styles matches NavbarLink dark disabled 1`] = `
-.c0 {
-  color: rgba(255,255,255,0.25);
-}
-
-.c0:hover,
-.c0:focus {
-  color: rgba(255,255,255,0.25);
-}
-
-<a
-  className="c0 sc-bwzfXH eHDKOl eRiqeT"
-  disabled={true}
-/>
-`;
-
-exports[`Styles matches NavbarLink dark disabled 2`] = `
-.c0 {
-  color: rgba(255,255,255,0.5);
-}
-
-.c0:hover,
-.c0:focus {
-  color: rgba(255,255,255,0.75);
-}
-
-<a
-  className="c0 sc-bwzfXH kwDbDW eRiqeT"
-/>
-`;
-
-exports[`Styles matches NavbarLink light active 1`] = `
-.c0 {
-  color: rgba(0,0,0,0.9);
-}
-
-.c0:hover,
-.c0:focus {
-  color: rgba(0,0,0,0.9);
-}
-
-<a
-  className="c0 sc-bwzfXH kwDbDW eRiqeT"
-/>
-`;
-
-exports[`Styles matches NavbarLink light disabled 1`] = `
-.c0 {
-  color: rgba(0,0,0,0.3);
-}
-
-.c0:hover,
-.c0:focus {
-  color: rgba(0,0,0,0.3);
-}
-
-<a
-  className="c0 sc-bwzfXH eHDKOl eRiqeT"
-  disabled={true}
-/>
-`;
-
-exports[`Styles matches NavbarLink light disabled 2`] = `
-.c0 {
-  color: rgba(0,0,0,0.5);
+  color: #0056b3;
 }
 
 .c0:hover,
@@ -103,6 +34,200 @@ exports[`Styles matches NavbarLink light disabled 2`] = `
 }
 
 <a
-  className="c0 sc-bwzfXH kwDbDW eRiqeT"
+  className="sc-bwzfXH c0"
+/>
+`;
+
+exports[`Styles matches NavbarLink dark active 1`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #007bff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #0056b3;
+}
+
+.c0:hover,
+.c0:focus {
+  color: rgba(255,255,255,0.9);
+}
+
+<a
+  className="sc-bwzfXH c0"
+/>
+`;
+
+exports[`Styles matches NavbarLink dark disabled 1`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #6c757d;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(255,255,255,0.25);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #6c757d;
+}
+
+.c0:hover,
+.c0:focus {
+  color: rgba(255,255,255,0.25);
+}
+
+<a
+  className="sc-bwzfXH c0"
+  disabled={true}
+/>
+`;
+
+exports[`Styles matches NavbarLink dark disabled 2`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #007bff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #0056b3;
+}
+
+.c0:hover,
+.c0:focus {
+  color: rgba(255,255,255,0.75);
+}
+
+<a
+  className="sc-bwzfXH c0"
+/>
+`;
+
+exports[`Styles matches NavbarLink light active 1`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #007bff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(0,0,0,0.9);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #0056b3;
+}
+
+.c0:hover,
+.c0:focus {
+  color: rgba(0,0,0,0.9);
+}
+
+<a
+  className="sc-bwzfXH c0"
+/>
+`;
+
+exports[`Styles matches NavbarLink light disabled 1`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #6c757d;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(0,0,0,0.3);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #6c757d;
+}
+
+.c0:hover,
+.c0:focus {
+  color: rgba(0,0,0,0.3);
+}
+
+<a
+  className="sc-bwzfXH c0"
+  disabled={true}
+/>
+`;
+
+exports[`Styles matches NavbarLink light disabled 2`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #007bff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(0,0,0,0.5);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #0056b3;
+}
+
+.c0:hover,
+.c0:focus {
+  color: rgba(0,0,0,0.7);
+}
+
+<a
+  className="sc-bwzfXH c0"
 />
 `;

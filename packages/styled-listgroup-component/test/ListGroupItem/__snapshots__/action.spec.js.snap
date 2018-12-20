@@ -5,9 +5,12 @@ exports[`Styles matches ListGroupItem action 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  margin-bottom: -1px;
-  background-color: #fff;
   border: 1px solid rgba(0,0,0,0.125);
+  border-bottom: none;
+  margin-bottom: -1px;
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(0,0,0,0.125);
 }
 
 .c0:first-child {
@@ -16,6 +19,7 @@ exports[`Styles matches ListGroupItem action 1`] = `
 }
 
 .c0:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.125);
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -28,18 +32,23 @@ exports[`Styles matches ListGroupItem action 1`] = `
   text-decoration: none;
 }
 
-.c0 > a {
-  color: #495057;
-}
-
+.c0 > a,
 .c0 > a:hover,
 .c0 > a:focus {
   color: #495057;
 }
 
 .c0:hover,
-.c0:focus {
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
   background-color: #f8f9fa;
+}
+
+.c0:hover,
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
   cursor: pointer;
 }
 
@@ -54,13 +63,15 @@ exports[`Styles matches ListGroupItem action active 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  margin-bottom: -1px;
-  background-color: #fff;
   border: 1px solid rgba(0,0,0,0.125);
-  z-index: 2;
+  border-bottom: none;
+  margin-bottom: -1px;
   color: #fff;
+  background-color: #fff;
+  border-color: rgba(0,0,0,0.125);
   background-color: #007bff;
   border-color: #007bff;
+  z-index: 2;
 }
 
 .c0:first-child {
@@ -69,6 +80,7 @@ exports[`Styles matches ListGroupItem action active 1`] = `
 }
 
 .c0:last-child {
+  border-bottom: 1px solid #007bff;
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -81,18 +93,30 @@ exports[`Styles matches ListGroupItem action active 1`] = `
   text-decoration: none;
 }
 
-.c0 > a {
-  color: #fff;
-}
-
+.c0 > a,
 .c0 > a:hover,
 .c0 > a:focus {
   color: #fff;
 }
 
 .c0:hover,
-.c0:focus {
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
+  background-color: #f8f9fa;
+}
+
+.c0:hover,
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
   background-color: #007bff;
+}
+
+.c0:hover,
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
   cursor: pointer;
 }
 

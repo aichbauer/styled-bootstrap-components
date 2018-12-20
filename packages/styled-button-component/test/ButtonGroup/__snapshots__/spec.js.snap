@@ -16,6 +16,9 @@ exports[`Styles matches ButtonGroup 1`] = `
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .c0 > button:hover {

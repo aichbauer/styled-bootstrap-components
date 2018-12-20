@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches noRadius 1`] = `
+.c0 {
+  display: inline-block;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  position: relative;
+  top: -1px;
+  border-radius: 0;
+  padding: 0.25rem 0.4rem;
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.c0:empty {
+  display: none;
+}
+
+.c0 > a {
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #6c757d;
+}
+
+<span
+  className="c0"
+/>
+`;

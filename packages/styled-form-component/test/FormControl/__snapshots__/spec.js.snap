@@ -4,17 +4,17 @@ exports[`Styles matches FormControl 1`] = `
 .c0 {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
   -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
 }
 
 .c0::-ms-expand {
@@ -24,8 +24,6 @@ exports[`Styles matches FormControl 1`] = `
 
 .c0:focus {
   color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
 }
@@ -50,7 +48,19 @@ exports[`Styles matches FormControl 1`] = `
   opacity: 1;
 }
 
+.c0:focus {
+  background-color: #fff;
+}
+
+.c0:focus {
+  border-color: #ced4da;
+}
+
+.c0:focus {
+  box-shadow: 0;
+}
+
 <input
-  className="c0 sc-kkGfuU iPhqsl"
+  className="c0"
 />
 `;

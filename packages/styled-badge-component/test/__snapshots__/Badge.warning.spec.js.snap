@@ -3,20 +3,29 @@
 exports[`Styles matches warning 1`] = `
 .c0 {
   display: inline-block;
-  padding: 0.25em 0.4em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
+  position: relative;
+  top: -1px;
   border-radius: 0.25rem;
+  padding: 0.25rem 0.4rem;
   color: #212529;
   background-color: #ffc107;
 }
 
 .c0:empty {
   display: none;
+}
+
+.c0 > a {
+  color: #212529;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #ffc107;
 }
 
 <span
@@ -27,14 +36,16 @@ exports[`Styles matches warning 1`] = `
 exports[`Styles matches warning action 1`] = `
 .c0 {
   display: inline-block;
-  padding: 0.25em 0.4em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
+  position: relative;
+  top: -1px;
   border-radius: 0.25rem;
+  padding: 0.25rem 0.4rem;
   color: #212529;
   background-color: #ffc107;
 }
@@ -44,20 +55,27 @@ exports[`Styles matches warning action 1`] = `
 }
 
 .c0 > a {
+  color: #212529;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #212529;
+  background-color: #ffc107;
 }
 
 .c0 > a:hover,
 .c0 > a:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #212529;
+  background-color: #d39e00;
 }
 
 .c0:hover,
 .c0:focus {
+  cursor: pointer;
+  background-color: #d39e00;
+}
+
+.c0:hover > a,
+.c0:focus > a {
   background-color: #d39e00;
 }
 

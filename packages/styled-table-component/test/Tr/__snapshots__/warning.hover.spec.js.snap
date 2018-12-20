@@ -6,10 +6,9 @@ exports[`Styles matches Tr warning hover 1`] = `
   background-color: #ffeeba;
 }
 
-.c0 tbody tr:hover {
-  background-color: #ffe8a1;
-}
-
+.c0:hover > td,
+.c0:hover > th,
+.c0 tbody tr:hover,
 .c0 tbody tr:hover > th,
 .c0 tbody tr:hover > td {
   background-color: #ffe8a1;

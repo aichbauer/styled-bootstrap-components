@@ -11,6 +11,6 @@ exports[`Styles matches CardText 1`] = `
 }
 
 <p
-  className="c0 sc-jDwBTQ fuUvcK"
+  className="c0"
 />
 `;

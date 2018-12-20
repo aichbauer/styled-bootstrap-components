@@ -10,7 +10,7 @@ test('Styles matches Button light outline disabled', () => {
   expect(tree).toHaveStyleRule('color', '#f8f9fa');
   expect(tree).toHaveStyleRule('background-color', 'transparent');
   expect(tree).toHaveStyleRule('background-image', 'none');
-  expect(tree).toHaveStyleRule('border-color', '#f8f9fa');
+  expect(tree).toHaveStyleRule('border', '1px solid #f8f9fa');
   expect(tree).toHaveStyleRule('color', '#f8f9fa', {
     modifier: '&:hover',
   });
@@ -20,7 +20,7 @@ test('Styles matches Button light outline disabled', () => {
   expect(tree).toHaveStyleRule('background-image', 'none', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#f8f9fa', {
+  expect(tree).toHaveStyleRule('border', '1px solid #f8f9fa', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(248,249,250,0.5)', {
@@ -34,14 +34,14 @@ test('Styles matches Button light outline', () => {
   expect(tree).toHaveStyleRule('color', '#f8f9fa');
   expect(tree).toHaveStyleRule('background-color', 'transparent');
   expect(tree).toHaveStyleRule('background-image', 'none');
-  expect(tree).toHaveStyleRule('border-color', '#f8f9fa');
+  expect(tree).toHaveStyleRule('border', '1px solid #f8f9fa');
   expect(tree).toHaveStyleRule('color', '#212529', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('background-color', '#f8f9fa', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#f8f9fa', {
+  expect(tree).toHaveStyleRule('border', '1px solid #f8f9fa', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(248,249,250,0.5)', {

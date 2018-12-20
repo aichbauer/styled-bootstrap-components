@@ -3,8 +3,8 @@
 exports[`Styles matches FormCheck 1`] = `
 .c0 {
   position: relative;
-  display: block;
   box-sizing: border-box;
+  display: block;
 }
 
 .c0 > label {

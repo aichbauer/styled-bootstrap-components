@@ -14,7 +14,7 @@ exports[`Styles matches FormCheckInput disabled 1`] = `
 }
 
 <input
-  className="c0 sc-kkGfuU iPhqsl"
+  className="c0"
   disabled={true}
 />
 `;

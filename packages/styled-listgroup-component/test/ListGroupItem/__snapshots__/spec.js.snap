@@ -5,9 +5,12 @@ exports[`Styles matches ListGroupItem 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  margin-bottom: -1px;
-  background-color: #fff;
   border: 1px solid rgba(0,0,0,0.125);
+  border-bottom: none;
+  margin-bottom: -1px;
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(0,0,0,0.125);
 }
 
 .c0:first-child {
@@ -16,6 +19,7 @@ exports[`Styles matches ListGroupItem 1`] = `
 }
 
 .c0:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.125);
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -26,6 +30,13 @@ exports[`Styles matches ListGroupItem 1`] = `
   z-index: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
+  cursor: text;
 }
 
 <li

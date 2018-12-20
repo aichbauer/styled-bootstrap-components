@@ -7,6 +7,6 @@ exports[`Styles matches ModalTitle 1`] = `
 }
 
 <h4
-  className="c0 sc-kpOJdX hpFqPU"
+  className="c0"
 />
 `;

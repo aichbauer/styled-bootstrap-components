@@ -5,19 +5,16 @@ exports[`Styles matches NavLink pills active 1`] = `
   display: block;
   padding: 0.5rem;
   border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: #007bff;
-  border-radius: 0.25rem;
   color: #fff;
   background-color: #007bff;
+  background-color: #007bff;
+  border-radius: 0.25rem;
 }
 
 .c0:hover,
 .c0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0056b3;
 }
 
 .c0:hover,
@@ -26,7 +23,7 @@ exports[`Styles matches NavLink pills active 1`] = `
 }
 
 <a
-  className="c0 eRiqeT"
+  className="c0"
   to="#"
 />
 `;

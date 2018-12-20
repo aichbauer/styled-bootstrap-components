@@ -8,8 +8,8 @@ exports[`Styles matches FormText muted 1`] = `
   color: #6c757d;
 }
 
-<strong
-  className="c0 sc-Rmtcm TdETe"
+<small
+  className="c0"
   muted={true}
 />
 `;

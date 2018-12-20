@@ -30,6 +30,7 @@ exports[`Styles matches Popover hidden 1`] = `
   background-clip: padding-box;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 0.3rem;
+  margin-left: 0.5rem;
   display: none;
 }
 

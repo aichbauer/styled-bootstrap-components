@@ -34,6 +34,6 @@ exports[`Styles matches Nav justified 1`] = `
 }
 
 <nav
-  className="c0 sc-jWBwVP fAZsB"
+  className="c0"
 />
 `;

@@ -31,6 +31,6 @@ exports[`Styles matches ListGroup flush 1`] = `
 }
 
 <ul
-  className="c0 sc-caSCKo llhhSE"
+  className="c0"
 />
 `;

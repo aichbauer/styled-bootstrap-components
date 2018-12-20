@@ -31,6 +31,6 @@ exports[`Styles matches Nav tabs 1`] = `
 }
 
 <nav
-  className="c0 sc-jWBwVP fAZsB"
+  className="c0"
 />
 `;

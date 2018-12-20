@@ -6,10 +6,9 @@ exports[`Styles matches TooltipArrow right 1`] = `
   display: block;
   width: 0.8rem;
   height: 0.4rem;
-  left: 0;
   width: 0.4rem;
+  left: 0;
   height: 100%;
-  top: 28%;
 }
 
 .c0::before {
@@ -20,7 +19,8 @@ exports[`Styles matches TooltipArrow right 1`] = `
 }
 
 .c0::before {
-  right: 0;
+  right: 0.4rem;
+  top: calc(50% - 0.35rem);
   border-width: 0.4rem 0.4rem 0.4rem 0;
   border-right-color: #000;
 }

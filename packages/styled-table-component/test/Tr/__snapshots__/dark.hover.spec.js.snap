@@ -6,10 +6,9 @@ exports[`Styles matches Tr dark hover 1`] = `
   background-color: #c6c8ca;
 }
 
-.c0 tbody tr:hover {
-  background-color: #b9bbbe;
-}
-
+.c0:hover > td,
+.c0:hover > th,
+.c0 tbody tr:hover,
 .c0 tbody tr:hover > th,
 .c0 tbody tr:hover > td {
   background-color: #b9bbbe;

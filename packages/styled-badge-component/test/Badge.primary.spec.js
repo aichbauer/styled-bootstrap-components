@@ -22,18 +22,6 @@ test('Styles matches primary action', () => {
   expect(tree).toHaveStyleRule('color', '#fff', {
     modifier: '& > a',
   });
-  expect(tree).toHaveStyleRule('text-decoration', 'none', {
-    modifier: '& > a:hover',
-  });
-  expect(tree).toHaveStyleRule('color', '#fff', {
-    modifier: '& > a:hover',
-  });
-  expect(tree).toHaveStyleRule('text-decoration', 'none', {
-    modifier: '& > a:focus',
-  });
-  expect(tree).toHaveStyleRule('color', '#fff', {
-    modifier: '& > a:focus',
-  });
   expect(tree).toHaveStyleRule('background-color', '#0062cc', {
     modifier: '&:focus',
   });
