@@ -1,5 +1,3 @@
-const padding = (props, accessor) => {
-  return props.theme[accessor].padding;
-}
+const padding = (props, accessor) => props.theme[accessor].padding;
 
 export { padding };

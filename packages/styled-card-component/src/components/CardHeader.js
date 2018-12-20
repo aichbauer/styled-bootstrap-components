@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import {
   theme,
@@ -18,7 +18,7 @@ const borderRadius = (props) => {
     border-top-left-radius: ${br(props, 'cardHeader').topLeftRight};
     border-top-right-radius: ${br(props, 'cardHeader').topLeftRight};
   `;
-}
+};
 
 const CardHeader = styled.div`
   padding: ${(props) => padding(props, 'cardHeader').default}

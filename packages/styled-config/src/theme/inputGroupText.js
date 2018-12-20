@@ -1,5 +1,5 @@
-import { colors } from "./colors";
-import { utils } from "./utils";
+import { colors } from './colors';
+import { utils } from './utils';
 
 const inputGroupText = {
   colors: {

@@ -6,4 +6,4 @@ const FormControlFile = styled.input`
   box-sizing: border-box;
 `;
 
-export { FormControlFile };
+export { FormControlFile };

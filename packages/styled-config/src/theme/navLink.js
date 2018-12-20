@@ -1,7 +1,7 @@
-import { colors } from "./colors";
-import { utils } from "./utils";
+import { colors } from './colors';
+import { utils } from './utils';
 
-const navLink =  {
+const navLink = {
   colors: {
     default: {
       colorDisabled: colors.gray,

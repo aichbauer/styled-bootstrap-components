@@ -1,5 +1,3 @@
-const width = (props, accessor) => {
-  return props.theme[accessor].width;
-};
+const width = (props, accessor) => props.theme[accessor].width;
 
 export { width };

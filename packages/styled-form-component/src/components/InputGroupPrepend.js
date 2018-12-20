@@ -19,4 +19,4 @@ const InputGroupPrepend = styled.div`
   };
 `;
 
-export { InputGroupPrepend };
+export { InputGroupPrepend };

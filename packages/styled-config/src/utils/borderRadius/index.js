@@ -1,5 +1,3 @@
-const borderRadius = (props, accessor) => {
-  return props.theme[accessor].borderRadius;
-}
+const borderRadius = (props, accessor) => props.theme[accessor].borderRadius;
 
 export { borderRadius };

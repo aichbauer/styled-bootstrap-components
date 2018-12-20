@@ -19,4 +19,4 @@ const InputGroupAppend = styled.div`
   };
 `;
 
-export { InputGroupAppend };
+export { InputGroupAppend };

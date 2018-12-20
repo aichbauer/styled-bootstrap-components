@@ -1,5 +1,3 @@
-const boxShadow = (props, accessor) => {
-  return props.theme[accessor].boxShadow;
-};
+const boxShadow = (props, accessor) => props.theme[accessor].boxShadow;
 
-export { boxShadow };
+export { boxShadow };

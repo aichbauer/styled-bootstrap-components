@@ -23,7 +23,9 @@ const justifyContent = (props) => {
       justify-content: flex-start !important;
     `;
   }
-}
+
+  return '';
+};
 
 const flexDirection = (props) => (
   props.vertical &&
@@ -56,6 +58,8 @@ const textAlign = (props) => {
       text-align: center;
       `;
   }
+
+  return '';
 };
 
 const flex = (props) => (

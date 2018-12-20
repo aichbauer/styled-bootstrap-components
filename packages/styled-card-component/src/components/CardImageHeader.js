@@ -17,7 +17,7 @@ const borderRadius = (props) => {
     border-top-left-radius: ${br(props, 'cardImageHeader').topLeftRight};
     border-top-right-radius: ${br(props, 'cardImageHeader').topLeftRight};
   `;
-}
+};
 
 const CardImageHeader = styled.img`
   width: 100%;

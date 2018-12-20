@@ -56,7 +56,7 @@ const fontSize = (props) => {
       font-size: ${fs(props, 'inputGroup').default};
     };
   `;
-}
+};
 
 const padding = (props) => {
   if (props.lg) {
@@ -78,6 +78,8 @@ const padding = (props) => {
       };
     `;
   }
+
+  return '';
 };
 
 const InputGroup = styled.div`

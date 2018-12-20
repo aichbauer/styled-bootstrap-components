@@ -1,5 +1,3 @@
-const fontFamily = (props, accessor) => {
-  return props.theme[accessor].fontFamily;
-};
+const fontFamily = (props, accessor) => props.theme[accessor].fontFamily;
 
 export { fontFamily };

@@ -1,5 +1,3 @@
-const fontWeight = (props, accessor) => {
-  return props.theme[accessor].fontWeight;
-};
+const fontWeight = (props, accessor) => props.theme[accessor].fontWeight;
 
-export { fontWeight };
+export { fontWeight };

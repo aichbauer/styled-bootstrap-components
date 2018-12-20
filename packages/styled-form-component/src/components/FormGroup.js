@@ -63,7 +63,7 @@ const margin = (props) => {
   return css`
     margin-bottom: ${m(props, 'formGroup').bottom};
   `;
-}
+};
 
 const justifyContent = (props) => (
   props.justify &&
@@ -186,6 +186,8 @@ const padding = (props) => {
       };
     `;
   }
+
+  return '';
 };
 
 const FormGroup = styled.div`

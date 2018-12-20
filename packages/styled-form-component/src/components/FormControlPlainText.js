@@ -17,7 +17,7 @@ const display = (props) => {
   return css`
     display: block;
   `;
-}
+};
 
 const padding = (props) => (
   (props.sm || props.lg) &&

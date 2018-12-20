@@ -16,7 +16,7 @@ const borderRadius = (props) => {
   }
 
   return css`border-radius: ${br(props, 'breadcrumb').default};`;
-}
+};
 
 const Breadcrumb = styled.ol`
   display: flex;

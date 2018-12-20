@@ -42,7 +42,7 @@ const color = (props) => {
       color: ${colors(props, 'navLink').colorHoverFocus};
     };
   `;
-}
+};
 
 const backgroundColor = (props) => (
   (props.pills && props.active) &&
@@ -72,6 +72,8 @@ const border = (props) => {
       background-color: ${colors(props, 'navLink').borderColorPillsActive};
     `;
   }
+
+  return '';
 };
 
 const borderRadius = (props) => {

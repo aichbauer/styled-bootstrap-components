@@ -1,4 +1,4 @@
-import { colors } from './colors';
+import { colors } from './colors';
 import { utils } from './utils';
 
 const modalHeader = {
@@ -14,4 +14,4 @@ const modalHeader = {
   borderRadius: utils.borderRadius,
 };
 
-export {modalHeader };
+export { modalHeader };

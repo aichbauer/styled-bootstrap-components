@@ -1,5 +1,5 @@
 const cardBody = {
-  padding:{
+  padding: {
     default: '1.25rem',
   },
   margin: {

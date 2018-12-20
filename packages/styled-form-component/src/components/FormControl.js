@@ -86,12 +86,14 @@ const opacity = (props) => {
       }
     `;
   }
+
+  return '';
 };
 
 const formControlFormInline = (props) => (
   props.formInline &&
   css`
-    @media (min-width: ${(props) => props.theme.components.screenSize.sm}}) {
+    @media (min-width: ${props.theme.components.screenSize.sm}}) {
       display: inline-block;
       width: auto;
       vertical-align: middle;
@@ -105,7 +107,7 @@ const padding = (props) => {
       padding-right: ${p(props, 'formControl').lgRight};
       padding-left: ${p(props, 'formControl').lgLeft};
       padding: ${p(props, 'formControl').lgPadding};
-    `
+    `;
   } else if (props.sm) {
     return css`
     padding-right: ${p(props, 'formControl').smRight};
@@ -123,7 +125,7 @@ const fontSize = (props) => {
   if (props.lg) {
     return css`
       font-size: ${fs(props, 'formControl').lg};
-    `
+    `;
   } else if (props.sm) {
     return css`
       font-size: ${fs(props, 'formControl').sm};
@@ -173,6 +175,8 @@ const height = (props) => {
       height: ${h(props, 'formControl').select};
     `;
   }
+
+  return '';
 };
 
 const formControlStyle = () => css`

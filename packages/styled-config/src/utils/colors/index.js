@@ -18,6 +18,6 @@ const colors = (props, accessor) => {
   }
 
   return props.theme[accessor].colors.default;
-}
+};
 
 export { colors };

@@ -1,7 +1,7 @@
-import { colors } from "./colors";
-import { utils } from "./utils";
+import { colors } from './colors';
+import { utils } from './utils';
 
-const nav =  {
+const nav = {
   colors: {
     default: {
       borderColorTabs: colors.gray300,

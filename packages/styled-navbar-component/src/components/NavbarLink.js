@@ -57,8 +57,8 @@ const color = (props) => {
     &:focus {
       color: ${colors(props, 'navbarLink').colorHoverFocus};
     };
-  `
-}
+  `;
+};
 
 const display = (props) => (
   props.brand &&

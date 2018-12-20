@@ -1,5 +1,3 @@
-const fontSize = (props, accessor) => {
-  return props.theme[accessor].fontSize;
-};
+const fontSize = (props, accessor) => props.theme[accessor].fontSize;
 
 export { fontSize };

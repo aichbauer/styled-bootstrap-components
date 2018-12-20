@@ -1,4 +1,4 @@
-import { colors } from './colors';
+import { colors } from './colors';
 import { utils } from './utils';
 
 const tooltipInner = {

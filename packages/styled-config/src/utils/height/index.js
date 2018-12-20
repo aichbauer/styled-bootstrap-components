@@ -1,5 +1,3 @@
-const height = (props, accessor) => {
-  return props.theme[accessor].height;
-};
+const height = (props, accessor) => props.theme[accessor].height;
 
 export { height };

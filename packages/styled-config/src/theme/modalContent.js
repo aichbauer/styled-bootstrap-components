@@ -1,4 +1,4 @@
-import { colors } from './colors';
+import { colors } from './colors';
 import { utils } from './utils';
 
 const modalContent = {
@@ -12,4 +12,4 @@ const modalContent = {
   border: utils.border,
 };
 
-export { modalContent };
+export { modalContent };

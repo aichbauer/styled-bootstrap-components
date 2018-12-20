@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import {
   theme,
-  colors, 
+  colors,
   margin,
   padding,
   border,

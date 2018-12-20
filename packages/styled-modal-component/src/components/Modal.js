@@ -8,6 +8,8 @@ const maxWidth = (props) => {
   } else if (props.lg) {
     return css`max-width: 800px;`;
   }
+
+  return '';
 };
 
 const display = (props) => {

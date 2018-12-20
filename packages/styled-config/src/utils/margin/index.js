@@ -1,5 +1,3 @@
-const margin = (props, accessor) => {
-  return props.theme[accessor].margin;
-}
+const margin = (props, accessor) => props.theme[accessor].margin;
 
 export { margin };

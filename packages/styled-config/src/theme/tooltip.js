@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const tooltip = {
   margin: {
     default: '0',

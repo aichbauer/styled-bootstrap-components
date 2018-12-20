@@ -3,7 +3,7 @@ const formControlPlainText = {
     default: {
       backgroundColor: 'transparent',
       borderColor: 'transparent',
-    }
+    },
   },
   padding: {
     top: '0.375rem',

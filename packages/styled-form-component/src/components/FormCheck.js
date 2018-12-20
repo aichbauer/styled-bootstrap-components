@@ -16,7 +16,7 @@ const display = (props) => {
   return css`
     display: block;
   `;
-}
+};
 
 const alignItems = (props) => (
   props.inline &&

@@ -5,7 +5,7 @@ import {
   colors,
   padding,
   border,
-  borderRadius
+  borderRadius,
 } from 'styled-config';
 
 const ModalHeader = styled.div`
