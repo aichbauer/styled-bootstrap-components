@@ -72,8 +72,8 @@ test('test if padding extract padding of theme', () => {
 });
 
 test('test if screenSize extract screenSize of theme', () => {
-  const myScreenSize = screenSize({ theme }, 'button');
-  expect(myScreenSize).toEqual(theme.button.screenSize);
+  const myScreenSize = screenSize({ sm: true });
+  expect(myScreenSize).toEqual(theme.screenSize.sm);
 });
 
 test('test if width extract width of theme', () => {
