@@ -1,4 +1,4 @@
-const theme = {
+const themeFixture = {
   alert: {
     colors: {
       primary: {
@@ -1371,4 +1371,4 @@ const theme = {
   },
 };
 
-export { theme };
+export { themeFixture };
