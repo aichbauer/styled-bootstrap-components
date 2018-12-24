@@ -1,7 +1,5 @@
 {
-  "name": "styled-bootstrap-components",
-  "version": "0.0.0",
-  "description": "The bootstrap components created with styled-components and styled-system",
+  "description": "The bootstrap components made with styled-components",
   "scripts": {
     "precommit": "lint-staged",
     "test": "jest --coverage --collectCoverageFrom=packages/**/src/**/*.js"
@@ -28,9 +26,17 @@
   },
   "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "react-dom": "^16.7.0",
+    "regenerator-runtime": "^0.13.1",
+    "styled-components": "^4.1.3",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.4.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-runtime": "^6.26.0",
@@ -40,11 +46,11 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.2",
-    "jest-styled-components": "^5.0.0",
+    "jest": "^23.6.0",
+    "jest-styled-components": "^6.3.1",
     "lerna": "^2.8.0",
     "lint-staged": "^7.0.0",
-    "react": "^16.2.0",
-    "react-test-renderer": "^16.2.0"
+    "react": "^16.7.0",
+    "react-test-renderer": "^16.7.0"
   }
 }

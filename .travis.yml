@@ -2,8 +2,8 @@ language: node_js
 sudo: true
 dist: trusty
 node_js:
-  - 6
   - 8
+  - 10
 install:
   - yarn
   - npm i -g codecov

@@ -8,6 +8,6 @@ test('Styles matches Modal sm', () => {
   const tree = renderer.create(<Modal sm />).toJSON();
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('max-width', '300px', {
-    media: '(min-width: 576px)'
+    media: '(min-width: 576px)',
   });
 });
