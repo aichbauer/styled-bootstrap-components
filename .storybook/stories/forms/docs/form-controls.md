@@ -2,11 +2,11 @@
 <Container fluid>
   <form>
     <FormGroup>
-      <Label>Email address</Label>
+      <label>Email address</label>
       <FormControl type="email" placeholder="name@example.com" />
     </FormGroup>
     <FormGroup>
-      <Label>Example select</Label>
+      <label>Example select</label>
       <FormControl select>
         <option>1</option>
         <option>2</option>
@@ -16,7 +16,7 @@
       </FormControl>
     </FormGroup>
     <FormGroup>
-      <Label>Example multiple select</Label>
+      <label>Example multiple select</label>
       <FormControl select multiple>
         <option>1</option>
         <option>2</option>
@@ -26,11 +26,11 @@
       </FormControl>
     </FormGroup>
     <FormGroup>
-      <Label>Example textarea</Label>
+      <label>Example textarea</label>
       <FormControl textarea rows="3" />
     </FormGroup>
     <FormGroup>
-      <Label>Example file input</Label>
+      <label>Example file input</label>
       <FormControlFile type="file" />
     </FormGroup>
   </form>

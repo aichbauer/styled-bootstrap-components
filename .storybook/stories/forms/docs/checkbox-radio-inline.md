@@ -3,29 +3,29 @@
   <form>
     <FormCheck inline>
       <FormCheckInput type="checkbox" />
-      <Label>1</Label>
+      <label>1</label>
     </FormCheck>
     <FormCheck inline>
       <FormCheckInput type="checkbox" />
-      <Label>2</Label>
+      <label>2</label>
     </FormCheck>
     <FormCheck inline>
       <FormCheckInput disabled type="checkbox" />
-      <Label>3 (disabled)</Label>
+      <label>3 (disabled)</label>
     </FormCheck>
   </form>
   <form>
     <FormCheck inline>
       <FormCheckInput type="radio" name="exampleRadios" />
-      <Label>1</Label>
+      <label>1</label>
     </FormCheck>
     <FormCheck inline>
       <FormCheckInput type="radio" name="exampleRadios" />
-      <Label>2</Label>
+      <label>2</label>
     </FormCheck>
     <FormCheck inline>
       <FormCheckInput disabled type="radio" name="exampleRadios" />
-      <Label>3 (disabled)</Label>
+      <label>3 (disabled)</label>
     </FormCheck>
   </form>
 </Container>

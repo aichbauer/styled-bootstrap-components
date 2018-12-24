@@ -11,7 +11,6 @@ import {
 } from '../../../../packages/styled-modal-component';
 import { Container } from '../../../../packages/styled-container-component';
 import { Button } from '../../../../packages/styled-button-component';
-import { P } from '../../../../packages/styled-base-components';
 
 export class ClickableModal extends React.Component {
   constructor(props) {
@@ -43,9 +42,9 @@ export class ClickableModal extends React.Component {
                 </Button>
               </ModalHeader>
               <ModalBody textAlign="left">
-                <P>
+                <p>
                 Modal body text goes here.
-                </P>
+                </p>
               </ModalBody>
               <ModalFooter>
                 <Button onClick={() => this.handleModal()}>

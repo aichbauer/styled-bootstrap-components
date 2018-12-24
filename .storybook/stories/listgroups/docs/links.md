@@ -1,11 +1,11 @@
 ```jsx
 <Container>
   <ListGroup>
-    <ListGroupItem active action><A href="#">Cras justo odio</A></ListGroupItem>
-    <ListGroupItem action><A href="#">Dapibus ac facilisis in</A></ListGroupItem>
-    <ListGroupItem action><A href="#">Morbi leo risus</A></ListGroupItem>
-    <ListGroupItem action><A href="#">Porta ac consectetur ac</A></ListGroupItem>
-    <ListGroupItem disabled action><A href="#">Vestibulum at eros</A></ListGroupItem>
+    <ListGroupItem active action><a href="#">Cras justo odio</a></ListGroupItem>
+    <ListGroupItem action><a href="#">Dapibus ac facilisis in</a></ListGroupItem>
+    <ListGroupItem action><a href="#">Morbi leo risus</a></ListGroupItem>
+    <ListGroupItem action><a href="#">Porta ac consectetur ac</a></ListGroupItem>
+    <ListGroupItem disabled action><a href="#">Vestibulum at eros</a></ListGroupItem>
   </ListGroup>
 </Container>
 ```

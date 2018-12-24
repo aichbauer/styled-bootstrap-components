@@ -3,23 +3,23 @@
   <form>
     <FormCheck>
       <FormCheckInput type="checkbox" />
-      <Label>Default checkbox</Label>
+      <label>Default checkbox</label>
     </FormCheck>
     <FormCheck>
       <FormCheckInput disabled type="checkbox" />
-      <Label>Disabled checkbox</Label>
+      <label>Disabled checkbox</label>
     </FormCheck>
     <FormCheck>
       <FormCheckInput type="radio" name="exampleRadios" />
-      <Label>Default radio</Label>
+      <label>Default radio</label>
     </FormCheck>
     <FormCheck>
       <FormCheckInput type="radio" name="exampleRadios" />
-      <Label>Second default radio</Label>
+      <label>Second default radio</label>
     </FormCheck>
     <FormCheck>
       <FormCheckInput disabled type="radio" name="exampleRadios" />
-      <Label>Disabled radio</Label>
+      <label>Disabled radio</label>
     </FormCheck>
   </form>
 </Container>

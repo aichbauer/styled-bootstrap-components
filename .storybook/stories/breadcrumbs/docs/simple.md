@@ -7,7 +7,7 @@
   </Breadcrumb>
   <Breadcrumb>
     <BreadcrumbItem>
-      <A href="#">Home</A>
+      <a href="#">Home</a>
     </BreadcrumbItem>
     <BreadcrumbItem active>
       Library
@@ -15,10 +15,10 @@
   </Breadcrumb>
   <Breadcrumb>
     <BreadcrumbItem>
-    <A href="#">Home</A>
+    <a href="#">Home</a>
     </BreadcrumbItem>
     <BreadcrumbItem>
-    <A href="#">Library</A>
+    <a href="#">Library</a>
     </BreadcrumbItem>
     <BreadcrumbItem active>
       Data

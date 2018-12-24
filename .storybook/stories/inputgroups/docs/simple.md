@@ -12,7 +12,7 @@
       <InputGroupText>@example.com</InputGroupText>
     </InputGroupAppend>
   </InputGroup>
-  <Label>Your vanity URL</Label>
+  <label>Your vanity URL</label>
   <InputGroup>
     <InputGroupPrepend>
       <InputGroupText>https://example.com/users/</InputGroupText>

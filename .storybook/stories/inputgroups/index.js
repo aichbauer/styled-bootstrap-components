@@ -7,7 +7,6 @@ import {
 
 import { Container } from '../../../packages/styled-container-component';
 import { Button } from '../../../packages/styled-button-component';
-import { Label } from '../../../packages/styled-base-components';
 import {
   FormControl,
   FormCheck,
@@ -42,7 +41,7 @@ storiesOf('Input groups', module)
           <InputGroupText>@example.com</InputGroupText>
         </InputGroupAppend>
       </InputGroup>
-      <Label>Your vanity URL</Label>
+      <label>Your vanity URL</label>
       <InputGroup mb="0.5rem">
         <InputGroupPrepend>
           <InputGroupText>https://example.com/users/</InputGroupText>

@@ -8,7 +8,6 @@ import {
 import { Container } from '../../../packages/styled-container-component';
 import { Column } from '../../../packages/styled-grid-system-component';
 import { Button } from '../../../packages/styled-button-component';
-import { Label } from '../../../packages/styled-base-components';
 import {
   FormCheck,
   FormCheckInput,
@@ -42,17 +41,17 @@ storiesOf('Forms', module)
     <Container fluid style={{ textAlign: 'left' }}>
       <form>
         <FormGroup>
-          <Label>Email address</Label>
+          <label>Email address</label>
           <FormControl type="email" placeholder="Enter email" />
           <FormText muted>We&#39;ll never share your email with anyone else.</FormText>
         </FormGroup>
         <FormGroup>
-          <Label>Password</Label>
+          <label>Password</label>
           <FormControl type="password" placeholder="Password" />
         </FormGroup>
         <FormCheck>
           <FormCheckInput type="checkbox" />
-          <Label>Check me out</Label>
+          <label>Check me out</label>
         </FormCheck>
         <FormGroup>
           <Button primary>Submit</Button>
@@ -64,11 +63,11 @@ storiesOf('Forms', module)
     <Container fluid style={{ textAlign: 'left' }}>
       <form>
         <FormGroup>
-          <Label>Email address</Label>
+          <label>Email address</label>
           <FormControl type="email" placeholder="name@example.com" />
         </FormGroup>
         <FormGroup>
-          <Label>Example select</Label>
+          <label>Example select</label>
           <FormControl select>
             <option>1</option>
             <option>2</option>
@@ -78,7 +77,7 @@ storiesOf('Forms', module)
           </FormControl>
         </FormGroup>
         <FormGroup>
-          <Label>Example multiple select</Label>
+          <label>Example multiple select</label>
           <FormControl select multiple>
             <option>1</option>
             <option>2</option>
@@ -88,11 +87,11 @@ storiesOf('Forms', module)
           </FormControl>
         </FormGroup>
         <FormGroup>
-          <Label>Example textarea</Label>
+          <label>Example textarea</label>
           <FormControl textarea rows="3" />
         </FormGroup>
         <FormGroup>
-          <Label>Example file input</Label>
+          <label>Example file input</label>
           <FormControlFile type="file" />
         </FormGroup>
       </form>
@@ -130,7 +129,7 @@ storiesOf('Forms', module)
       <form>
         <FormGroup row>
           <Column sm={3}>
-            <Label>Email</Label>
+            <label>Email</label>
           </Column>
           <Column sm={9}>
             <FormControlPlainText readonly disabled value="email@example.com" />
@@ -138,7 +137,7 @@ storiesOf('Forms', module)
         </FormGroup>
         <FormGroup row>
           <Column sm={3}>
-            <Label>Password</Label>
+            <label>Password</label>
           </Column>
           <Column sm={9}>
             <FormControl type="password" value="Password" />
@@ -167,23 +166,23 @@ storiesOf('Forms', module)
       <form>
         <FormCheck>
           <FormCheckInput type="checkbox" />
-          <Label>Default checkbox</Label>
+          <label>Default checkbox</label>
         </FormCheck>
         <FormCheck>
           <FormCheckInput disabled type="checkbox" />
-          <Label>Disabled checkbox</Label>
+          <label>Disabled checkbox</label>
         </FormCheck>
         <FormCheck>
           <FormCheckInput type="radio" name="exampleRadios" />
-          <Label>Default radio</Label>
+          <label>Default radio</label>
         </FormCheck>
         <FormCheck>
           <FormCheckInput type="radio" name="exampleRadios" />
-          <Label>Second default radio</Label>
+          <label>Second default radio</label>
         </FormCheck>
         <FormCheck>
           <FormCheckInput disabled type="radio" name="exampleRadios" />
-          <Label>Disabled radio</Label>
+          <label>Disabled radio</label>
         </FormCheck>
       </form>
     </Container>
@@ -193,29 +192,29 @@ storiesOf('Forms', module)
       <form>
         <FormCheck inline>
           <FormCheckInput type="checkbox" />
-          <Label>1</Label>
+          <label>1</label>
         </FormCheck>
         <FormCheck inline>
           <FormCheckInput type="checkbox" />
-          <Label>2</Label>
+          <label>2</label>
         </FormCheck>
         <FormCheck inline>
           <FormCheckInput disabled type="checkbox" />
-          <Label>3 (disabled)</Label>
+          <label>3 (disabled)</label>
         </FormCheck>
       </form>
       <form>
         <FormCheck inline>
           <FormCheckInput type="radio" name="exampleRadios" />
-          <Label>1</Label>
+          <label>1</label>
         </FormCheck>
         <FormCheck inline>
           <FormCheckInput type="radio" name="exampleRadios" />
-          <Label>2</Label>
+          <label>2</label>
         </FormCheck>
         <FormCheck inline>
           <FormCheckInput disabled type="radio" name="exampleRadios" />
-          <Label>3 (disabled)</Label>
+          <label>3 (disabled)</label>
         </FormCheck>
       </form>
     </Container>
@@ -236,11 +235,11 @@ storiesOf('Forms', module)
     <Container fluid style={{ textAlign: 'left' }}>
       <form>
         <FormGroup>
-          <Label>Example label</Label>
+          <label>Example label</label>
           <FormControl type="text" placeholder="Example input" />
         </FormGroup>
         <FormGroup>
-          <Label>Another label</Label>
+          <label>Another label</label>
           <FormControl type="text" placeholder="Another input" />
         </FormGroup>
       </form>
@@ -266,13 +265,13 @@ storiesOf('Forms', module)
         <FormGroup row nomb>
           <Column sm={6}>
             <FormGroup>
-              <Label>Email</Label>
+              <label>Email</label>
               <FormControl type="text" placeholder="Email" />
             </FormGroup>
           </Column>
           <Column sm={6}>
             <FormGroup>
-              <Label>Password</Label>
+              <label>Password</label>
               <FormControl type="password" placeholder="Password" />
             </FormGroup>
           </Column>
@@ -280,7 +279,7 @@ storiesOf('Forms', module)
         <FormGroup row nomb>
           <Column sm={12}>
             <FormGroup>
-              <Label>Address</Label>
+              <label>Address</label>
               <FormControl type="text" placeholder="1234 Main St" />
             </FormGroup>
           </Column>
@@ -288,7 +287,7 @@ storiesOf('Forms', module)
         <FormGroup row>
           <Column sm={12}>
             <FormGroup>
-              <Label>Address 2</Label>
+              <label>Address 2</label>
               <FormControl type="text" placeholder="Apartment, Studio, or floor" />
             </FormGroup>
           </Column>
@@ -296,13 +295,13 @@ storiesOf('Forms', module)
         <FormGroup row nomb>
           <Column sm={6}>
             <FormGroup>
-              <Label>City</Label>
+              <label>City</label>
               <FormControl type="text" />
             </FormGroup>
           </Column>
           <Column sm={4}>
             <FormGroup>
-              <Label>State</Label>
+              <label>State</label>
               <FormControl select>
                 <option>Choose...</option>
                 <option>...</option>
@@ -311,7 +310,7 @@ storiesOf('Forms', module)
           </Column>
           <Column sm={2}>
             <FormGroup>
-              <Label>Zip</Label>
+              <label>Zip</label>
               <FormControl type="text" />
             </FormGroup>
           </Column>
@@ -320,7 +319,7 @@ storiesOf('Forms', module)
           <Column sm={12}>
             <FormCheck>
               <FormCheckInput type="checkbox" />
-              <Label>Check me out</Label>
+              <label>Check me out</label>
             </FormCheck>
           </Column>
         </FormGroup>
@@ -337,7 +336,7 @@ storiesOf('Forms', module)
       <form>
         <FormGroup row justify>
           <Column sm={2}>
-            <Label>Email</Label>
+            <label>Email</label>
           </Column>
           <Column sm={10}>
             <FormControl type="email" placeholder="Email" />
@@ -345,7 +344,7 @@ storiesOf('Forms', module)
         </FormGroup>
         <FormGroup row justify>
           <Column sm={2}>
-            <Label>Password</Label>
+            <label>Password</label>
           </Column>
           <Column sm={10}>
             <FormControl type="password" placeholder="Password" />
@@ -353,31 +352,31 @@ storiesOf('Forms', module)
         </FormGroup>
         <FormGroup row>
           <Column sm={2}>
-            <Label>Radios</Label>
+            <label>Radios</label>
           </Column>
           <Column sm={10}>
             <FormCheck>
               <FormCheckInput type="radio" name="exampleRadios" />
-              <Label>First radio</Label>
+              <label>First radio</label>
             </FormCheck>
             <FormCheck>
               <FormCheckInput type="radio" name="exampleRadios" />
-              <Label>Second radio</Label>
+              <label>Second radio</label>
             </FormCheck>
             <FormCheck>
               <FormCheckInput disabled type="radio" name="exampleRadios" />
-              <Label>Third disabled radio</Label>
+              <label>Third disabled radio</label>
             </FormCheck>
           </Column>
         </FormGroup>
         <FormGroup row>
           <Column sm={2}>
-            <Label>Checkbox</Label>
+            <label>Checkbox</label>
           </Column>
           <Column sm={10}>
             <FormCheck>
               <FormCheckInput type="checkbox" name="exampleRadios" />
-              <Label>Example checkbox</Label>
+              <label>Example checkbox</label>
             </FormCheck>
           </Column>
         </FormGroup>
@@ -394,7 +393,7 @@ storiesOf('Forms', module)
       <form>
         <FormGroup row justify sm>
           <Column sm={2}>
-            <Label>Email</Label>
+            <label>Email</label>
           </Column>
           <Column sm={10}>
             <FormControl type="email" placeholder="Email" />
@@ -402,7 +401,7 @@ storiesOf('Forms', module)
         </FormGroup>
         <FormGroup row justify>
           <Column sm={2}>
-            <Label>Email</Label>
+            <label>Email</label>
           </Column>
           <Column sm={10}>
             <FormControl type="email" placeholder="Email" />
@@ -410,7 +409,7 @@ storiesOf('Forms', module)
         </FormGroup>
         <FormGroup row justify lg>
           <Column sm={2}>
-            <Label>Email</Label>
+            <label>Email</label>
           </Column>
           <Column sm={10}>
             <FormControl type="email" placeholder="Email" />

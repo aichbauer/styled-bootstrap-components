@@ -1,12 +1,12 @@
 ```jsx
 <Container fluid>
   <Jumbotron fluid>
-    <H1>
+    <h1>
     Fluid jumbotron
-    </H1>
-    <P>
+    </h1>
+    <p>
       This is a modified jumbotron that occupies the entire horizontal space of its parent.
-    </P>
+    </p>
   </Jumbotron>
 </Container>
 ```

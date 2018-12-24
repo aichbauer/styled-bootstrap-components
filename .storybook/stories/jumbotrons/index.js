@@ -8,11 +8,6 @@ import {
 import { Container } from '../../../packages/styled-container-component';
 import { Button } from '../../../packages/styled-button-component';
 import { Jumbotron } from '../../../packages/styled-jumbotron-component';
-import {
-  H1,
-  Hr,
-  P,
-} from '../../../packages/styled-base-components';
 
 import JumbotronReadme from '../../../packages/styled-jumbotron-component/README.md';
 
@@ -23,22 +18,22 @@ storiesOf('Jumbotrons', module)
   .add('Simple', withReadme(JumbotronReadme, withDocs(JumbotronSimpleDocs, () => (
     <Container fluid style={{ textAlign: 'left' }}>
       <Jumbotron>
-        <H1>
+        <h1>
           Hello, world!
-        </H1>
-        <P>
+        </h1>
+        <p>
           This is a simple hero unit,
           a simple jumbotron-style component
           for calling extra attention to
           featured content or information.
-        </P>
-        <Hr />
-        <P>
+        </p>
+        <hr />
+        <p>
           It uses utility classes for
           typography and spacing to
           space content out within
           the larger container.
-        </P>
+        </p>
         <Button primary lg>Learn more</Button>
       </Jumbotron>
     </Container>
@@ -46,12 +41,12 @@ storiesOf('Jumbotrons', module)
   .add('Fluid jumbotron', withReadme(JumbotronReadme, withDocs(JumbotronFluidDocs, () => (
     <Container fluid style={{ textAlign: 'left' }}>
       <Jumbotron fluid>
-        <H1>
+        <h1>
         Fluid jumbotron
-        </H1>
-        <P>
+        </h1>
+        <p>
           This is a modified jumbotron that occupies the entire horizontal space of its parent.
-        </P>
+        </p>
       </Jumbotron>
     </Container>
   ))));

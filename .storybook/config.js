@@ -1,7 +1,8 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
-import { Button as ButtonBoot } from './../packages/styled-button-component';
+import { Button as ButtonBoot } from '../packages/styled-button-component';
+import { BootstrapBaseCss } from '../packages/styled-base-components';
 
 setOptions({
   addonPanelInRight: true,
@@ -48,6 +49,7 @@ class Button extends React.Component {
 
 const readmeDecorator = (story) => (
   <div>
+    <BootstrapBaseCss />
     <Button />
     {story()}
   </div>
