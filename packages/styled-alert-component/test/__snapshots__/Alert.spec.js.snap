@@ -7,6 +7,9 @@ exports[`Styles matches plane 1`] = `
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
 }
 
 .c0 > a {
@@ -20,6 +23,15 @@ exports[`Styles matches plane 1`] = `
 .c0 > h5,
 .c0 > h6 {
   color: inherit;
+}
+
+.c0 > hr {
+  border-top-color: #c8cbcf;
+}
+
+.c0 > a,
+.c0 > a:hover {
+  color: #202326;
 }
 
 <div

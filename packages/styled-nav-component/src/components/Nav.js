@@ -1,107 +1,110 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { Nav as Navigation } from 'styled-base-components';
-import { screenSize } from 'styled-config';
+  theme,
+  colors,
+  padding,
+  margin as m,
+  border as b,
+  screenSize,
+} from 'styled-config';
 
-const navJustifyContentCenter = (props) => (
-  props.center &&
-  css`
-    justify-content: center !important;
-  `
-);
+const justifyContent = (props) => {
+  if (props.center) {
+    return css`
+      justify-content: center !important;
+    `;
+  } else if (props.end) {
+    return css`
+      justify-content: flex-end !important;
+    `;
+  } else if (props.start) {
+    return css`
+      justify-content: flex-start !important;
+    `;
+  }
 
-const navJustifyContentEnd = (props) => (
-  props.end &&
-  css`
-    justify-content: flex-end !important;
-  `
-);
+  return '';
+};
 
-const navJustifyContentStart = (props) => (
-  props.start &&
-  css`
-    justify-content: flex-start !important;
-  `
-);
-
-const navFlexDirectionColumn = (props) => (
+const flexDirection = (props) => (
   props.vertical &&
   css`
     flex-direction: column !important;
   `
 );
 
-const navJustified = (props) => (
+const flexBasis = (props) => (
   props.justified &&
   css`
     flex-basis: 0;
-    flex-grow: 1;
-    text-align: center;
   `
 );
 
-const navFill = (props) => (
+const flexGrow = (props) => (
+  props.justified &&
+  css`
+    flex-grow: 1;
+  `
+);
+
+const textAlign = (props) => {
+  if (props.justified) {
+    return css`
+      text-align: center;
+    `;
+  } else if (props.fill) {
+    return css`
+      text-align: center;
+      `;
+  }
+
+  return '';
+};
+
+const flex = (props) => (
   props.fill &&
   css`
     flex: 1 1 auto;
-    text-align: center;
   `
 );
 
-const navTabs = (props) => (
+const border = (props) => (
   props.tabs &&
   css`
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: ${b(props, 'nav').default} ${colors(props, 'nav').borderColorTabs};
+  `
+);
+
+const margin = (props) => (
+  props.tabs &&
+  css`
     & > a {
       margin-bottom: -1px;
     }
-    `
+  `
 );
 
 /* istanbul ignore next */
 const navCollapse = (props) => {
-  let thisScreenSize = '';
-
-  if (props.expandSm) {
-    thisScreenSize = screenSize.sm;
-  } else if (props.expandMd) {
-    thisScreenSize = screenSize.md;
-  } else if (props.expandLg) {
-    thisScreenSize = screenSize.lg;
-  } else if (props.expandXl) {
-    thisScreenSize = screenSize.xl;
-  }
-
   if (
     (
-      props.expandSm ||
-      props.expandMd ||
-      props.expandLg ||
-      props.expandXl
-    ) &&
-    props.collapse &&
-    !props.hidden
+      props.expandSm
+      || props.expandMd
+      || props.expandLg
+      || props.expandXl
+    )
+    && props.collapse
+    && !props.hidden
   ) {
     return css`
-      @media (max-width: ${thisScreenSize}) {
+      @media (max-width: ${screenSize(props)}) {
         display: flex;
         flex-basis: auto;
         flex-direction: column;
         & > a {
-          padding-right: 0.5rem;
-          padding-left: 0.5rem;
+          padding-right: ${padding(props, 'nav').collapseNotHiddenARight};
+          padding-left: ${padding(props, 'nav').collapseNotHiddenALeft};
           flex: 1;
           text-align: left;
         };
@@ -109,25 +112,19 @@ const navCollapse = (props) => {
     `;
   } else if (
     (
-      props.expandSm ||
-      props.expandMd ||
-      props.expandLg ||
-      props.expandXl
-    ) &&
-    props.collapse
+      props.expandSm
+      || props.expandMd
+      || props.expandLg
+      || props.expandXl
+    )
+    && props.collapse
     && props.hidden
   ) {
     return css`
-      @media (max-width: ${thisScreenSize}) {
+      @media (max-width: ${screenSize(props)}) {
         display: none;
         flex-basis: auto;
         flex-direction: column;
-        & > a {
-          padding-right: 0.5rem;
-          padding-left: 0.5rem;
-          flex: 1;
-          text-align: left;
-        };
       };
     `;
   }
@@ -135,35 +132,31 @@ const navCollapse = (props) => {
   return '';
 };
 
-export const Nav = styled(Navigation)`
+const Nav = styled.nav`
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
+  padding-left: ${(props) => padding(props, 'nav').left};
+  margin-bottom: ${(props) => m(props, 'nav').bottom};
   list-style: none;
   & > a {
     text-decoration: none;
-    ${navJustified};
-    ${navFill};
+    ${(props) => flex(props)};
+    ${(props) => flexBasis(props)};
+    ${(props) => flexGrow(props)};
+    ${(props) => textAlign(props)};
   };
   &:last-child {
     flex: 1;
   };
-  ${navJustifyContentStart};
-  ${navJustifyContentCenter};
-  ${navJustifyContentEnd};
-  ${navFlexDirectionColumn};
-  ${navTabs};
-  ${navCollapse};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => justifyContent(props)}
+  ${(props) => flexDirection(props)}
+  ${(props) => border(props)}
+  ${(props) => margin(props)}
+  ${(props) => navCollapse(props)};
 `;
+
+Nav.defaultProps = {
+  theme,
+};
+
+export { Nav };

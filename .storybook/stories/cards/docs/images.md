@@ -1,6 +1,6 @@
 ```jsx
 <Container>
-  <Card width="18rem" textAlign="left">
+  <Card style={{ width: '18rem', textAlign: 'left' }}>
     <CardImageHeader src="http://via.placeholder.com/350x150" />
     <CardBody>
       <CardText>

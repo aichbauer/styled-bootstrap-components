@@ -1,416 +1,146 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
+  theme,
+  colors,
+  padding,
+  border,
   borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+} from 'styled-config';
 
-const listGroupItemActive = (props) => {
-  if (props.active) {
-    if (props.primary) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #004085;
-        border-color: #004085;
-      `;
-    } else if (props.secondary) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #383d41;
-        border-color: #383d41;
-      `;
-    } else if (props.success) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #155724;
-        border-color: #155724;
-      `;
-    } else if (props.info) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #0c5460;
-        border-color: #0c5460;
-      `;
-    } else if (props.warning) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #856404;
-        border-color: #856404;
-      `;
-    } else if (props.danger) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #721c24;
-        border-color: #721c24;
-      `;
-    } else if (props.light) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #818182;
-        border-color: #818182;
-      `;
-    } else if (props.dark) {
-      return css`
-        z-index: 2;
-        color: #fff;
-        background-color: #1b1e21;
-        border-color: #1b1e21;
-      `;
-    }
-
+const color = (props) => {
+  if (props.disabled) {
     return css`
-      z-index: 2;
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-    `;
-  }
-
-  return '';
-};
-
-const listGroupItemPrimary = (props) => {
-  if (props.primary) {
-    if (props.action) {
-      return css`
-        color: #004085;
-        background-color: #b8daff;
+      color: ${colors(props, 'listGroupItem').colorDisabled};
+      ${props.action && css`
+        & > a,
         & > a:hover,
         & > a:focus {
-          color: #004085;
-          background-color: #9fcdff;
+          color: ${colors(props, 'listGroupItem').colorDisabled};
         };
-        &:hover,
-        &:focus {
-          background-color: #9fcdff;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
-    return css`
-      color: #004085;
-      background-color: #b8daff;
-      ${listGroupItemActive};
+      `}
     `;
-  }
-
-  return '';
-};
-
-const listGroupItemSecondary = (props) => {
-  if (props.secondary) {
-    if (props.action) {
-      return css`
-        color: #383d41;
-        background-color: #d6d8db;
+  } else if (props.active) {
+    return css`
+      color: ${colors(props, 'listGroupItem').colorActive};
+      ${props.action && css`
+        & > a,
         & > a:hover,
         & > a:focus {
-          color: #383d41;
-          background-color: #c8cbcf;
+          color: ${colors(props, 'listGroupItem').colorActive};
         };
-        &:hover,
-        &:focus {
-          background-color: #c8cbcf;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
-    return css`
-      color: #383d41;
-      background-color: #d6d8db;
-      ${listGroupItemActive};
+      `}
     `;
   }
 
-  return '';
+  return css`
+    color: ${colors(props, 'listGroupItem').color};
+    ${props.action && css`
+      & > a,
+      & > a:hover,
+      & > a:focus {
+        color: ${colors(props, 'listGroupItem').color};
+      };
+    `}
+  `;
 };
 
-const listGroupItemSuccess = (props) => {
-  if (props.success) {
-    if (props.action) {
-      return css`
-        color: #155724;
-        background-color: #c3e6cb;
-        & > a:hover,
-        & > a:focus {
-          color: #155724;
-          background-color: #b1dfbb;
-        };
-        &:hover,
-        &:focus {
-          background-color: #b1dfbb;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
+const backgroundBorderColor = (props) => {
+  if (props.disabled) {
     return css`
-      color: #155724;
-      background-color: #c3e6cb;
-      ${listGroupItemActive};
+      background-color: ${colors(props, 'listGroupItem').backgroundColorDisabled};
     `;
   }
 
-  return '';
+  return css`
+    background-color: ${colors(props, 'listGroupItem').backgroundColor};
+    border-color: ${colors(props, 'listGroupItem').borderColor};
+    ${props.action && css`
+      &:hover,
+      &:focus,
+      & > a:hover,
+      & > a:focus {
+        background-color: ${colors(props, 'listGroupItem').backgroundColorHoverFocusAction};
+      };
+    `}
+    ${props.active && css`
+      background-color: ${colors(props, 'listGroupItem').backgroundColorActive};
+      border-color: ${colors(props, 'listGroupItem').borderColorActive};
+      &:hover,
+      &:focus,
+      & > a:hover,
+      & > a:focus {
+        background-color: ${colors(props, 'listGroupItem').borderColorActive};
+      };
+    `}
+  `;
 };
 
-const listGroupItemInfo = (props) => {
-  if (props.info) {
-    if (props.action) {
-      return css`
-        color: #0c5460;
-        background-color: #bee5eb;
-        & > a:hover,
-        & > a:focus {
-          color: #0c5460;
-          background-color: #abdde5;
-        };
-        &:hover,
-        &:focus {
-          background-color: #abdde5;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
-    return css`
-      color: #0c5460;
-      background-color: #bee5eb;
-      ${listGroupItemActive};
-    `;
-  }
-
-  return '';
-};
-
-const listGroupItemWarning = (props) => {
-  if (props.warning) {
-    if (props.action) {
-      return css`
-        color: #856404;
-        background-color: #ffeeba;
-        & > a:hover,
-        & > a:focus {
-          color: #856404;
-          background-color: #ffe8a1;
-        };
-        &:hover,
-        &:focus {
-          background-color: #ffe8a1;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
-    return css`
-      color: #856404;
-      background-color: #ffeeba;
-      ${listGroupItemActive};
-    `;
-  }
-
-  return '';
-};
-
-const listGroupItemDanger = (props) => {
-  if (props.danger) {
-    if (props.action) {
-      return css`
-        color: #721c24;
-        background-color: #f5c6cb;
-        & > a:hover,
-        & > a:focus {
-          color: #721c24;
-          background-color: #f1b0b7;
-        };
-        &:hover,
-        &:focus {
-          background-color: #f1b0b7;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
-    return css`
-      color: #721c24;
-      background-color: #f5c6cb;
-      ${listGroupItemActive};
-    `;
-  }
-
-  return '';
-};
-
-const listGroupItemLight = (props) => {
-  if (props.light) {
-    if (props.action) {
-      return css`
-        color: #818182;
-        background-color: #fdfdfe;
-        & > a:hover,
-        & > a:focus {
-          color: #818182;
-          background-color: #ececf6;
-        };
-        &:hover,
-        &:focus {
-          background-color: #ececf6;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
-    return css`
-      color: #818182;
-      background-color: #fdfdfe;
-      ${listGroupItemActive};
-    `;
-  }
-
-  return '';
-};
-
-const listGroupItemDark = (props) => {
-  if (props.dark) {
-    if (props.action) {
-      return css`
-        color: #1b1e21;
-        background-color: #c6c8ca;
-        & > a:hover,
-        & > a:focus {
-          color: #1b1e21;
-          background-color: #b9bbbe;
-        };
-        &:hover,
-        &:focus {
-          background-color: #b9bbbe;
-          cursor: pointer;
-        };
-        ${listGroupItemActive};
-      `;
-    }
-
-    return css`
-      color: #1b1e21;
-      background-color: #c6c8ca;
-      ${listGroupItemActive};
-    `;
-  }
-
-  return '';
-};
-
-const listGroupItemDisabled = (props) => (
-  props.disabled &&
+const zIndex = (props) => (
+  props.active &&
   css`
-    color: #6c757d;
-    background-color: #fff;
+    z-index: 2;
   `
 );
 
-const listGroupItemAction = (props) => {
-  if (props.action) {
-    if (props.active) {
-      return css`
-        & > a {
-          color: #fff;
-        };
-        & > a:hover,
-        & > a:focus {
-          color: #fff;
-        };
-        &:hover,
-        &:focus {
-          background-color: #007bff;
-          cursor: pointer;
-        };
-      `;
-    }
-
-    return css`
-      & > a {
-        color: #495057;
-      };
+const cursor = (props) => (
+  !props.disabled &&
+    props.action
+    ? css`
+      &:hover,
+      &:focus,
       & > a:hover,
       & > a:focus {
-        color: #495057;
-      };
-      &:hover,
-      &:focus {
-        background-color: #f8f9fa;
         cursor: pointer;
-      };
-    `;
-  }
+      }
+    `
+    : css`
+      &:hover,
+      &:focus,
+      & > a:hover,
+      & > a:focus {
+        cursor: text;
+      }
+    `
+);
 
-  return '';
-};
-
-export const ListGroupItem = styled.li`
+const ListGroupItem = styled.li`
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: ${(props) => padding(props, 'listGroupItem').default};
+  border: ${(props) => border(props, 'listGroupItem').default} ${(props) => colors(props, 'listGroupItem').borderColor};
+  border-bottom: none;
   margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   &:first-child {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    border-top-left-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
+    border-top-right-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
   };
   &:last-child {
+    border-bottom: ${(props) => border(props, 'listGroupItem').default}
+    ${(props) => {
+    if (props.active) {
+      return colors(props, 'listGroupItem').borderColorActive;
+    }
+
+    return colors(props, 'listGroupItem').borderColor;
+  }};
     margin-bottom: 0;
-    border-bottom-right-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
+    border-bottom-left-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
   };
   & > a:hover, 
   & > a:focus {
     z-index: 1;
     text-decoration: none;
   };
-  ${listGroupItemAction};
-  ${listGroupItemDisabled};
-  ${listGroupItemActive};
-  ${listGroupItemPrimary};
-  ${listGroupItemSecondary};
-  ${listGroupItemSuccess};
-  ${listGroupItemInfo};
-  ${listGroupItemWarning};
-  ${listGroupItemDanger};
-  ${listGroupItemLight};
-  ${listGroupItemDark};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => color(props)}
+  ${(props) => backgroundBorderColor(props)}
+  ${(props) => zIndex(props)}
+  ${(props) => cursor(props)}
 `;
+
+ListGroupItem.defaultProps = {
+  theme,
+};
+
+export { ListGroupItem };

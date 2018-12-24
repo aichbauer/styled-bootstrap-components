@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches ListGroupItem disabled 1`] = `
+.c0 {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-bottom: none;
+  margin-bottom: -1px;
+  color: #6c757d;
+  background-color: #fff;
+}
+
+.c0:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.c0:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c0 > a:hover,
+.c0 > a:focus {
+  z-index: 1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 > a,
+.c0 > a:hover,
+.c0 > a:focus {
+  color: #6c757d;
+}
+
+.c0:hover,
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
+  cursor: text;
+}
+
+<li
+  action={true}
+  className="c0"
+  disabled={true}
+/>
+`;

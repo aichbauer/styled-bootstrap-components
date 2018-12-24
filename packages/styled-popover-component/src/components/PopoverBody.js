@@ -1,30 +1,18 @@
 import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
 
-export const PopoverBody = styled.div`
-  padding: 0.5rem 0.75rem;
-  color: #212529;
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+import {
+  theme,
+  colors,
+  padding,
+} from 'styled-config';
+
+const PopoverBody = styled.div`
+  padding: ${(props) => padding(props, 'popoverBody').default};
+  color: ${(props) => colors(props, 'popoverBody').color};
 `;
+
+PopoverBody.defaultProps = {
+  theme,
+};
+
+export { PopoverBody };

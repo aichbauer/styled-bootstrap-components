@@ -1,16 +1,16 @@
 ```jsx
 <Container>
   <Alert success>
-    <H4>
+    <h4>
       Well done!
-    </H4>
-    <P>
+    </h4>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada ante metus, eu tempus erat ultricies imperdiet.
-    </P>
-    <Hr />
-    <P>
+    </p>
+    <hr />
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </P>
+    </p>
   </Alert>
 </Container>
 ```

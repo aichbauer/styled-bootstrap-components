@@ -2,28 +2,28 @@ Source Code:
 ```jsx
 <Container>
   <Badge pill primary action>
-    <A href="#">Primary</A>
+    <a href="#">Primary</a>
   </Badge>
   <Badge pill secondary action>
-    <A href="#">Secondary</A>
+    <a href="#">Secondary</a>
   </Badge>
   <Badge pill success action>
-    <A href="#">Success</A>
+    <a href="#">Success</a>
   </Badge>
   <Badge pill danger action>
-    <A href="#">Danger</A>
+    <a href="#">Danger</a>
   </Badge>
   <Badge pill warning action>
-    <A href="#">Warning</A>
+    <a href="#">Warning</a>
   </Badge>
   <Badge pill info action>
-    <A href="#">Info</A>
+    <a href="#">Info</a>
   </Badge>
   <Badge pill light action>
-    <A href="#">Light</A>
+    <a href="#">Light</a>
   </Badge>
   <Badge pill dark action>
-    <A href="#">Dark</A>
+    <a href="#">Dark</a>
   </Badge>
 </Container>
 ```

@@ -1,3 +1,32 @@
-import { screenSize } from './config/screen-size';
+import { theme } from './theme';
+import {
+  border,
+  borderRadius,
+  boxShadow,
+  colors,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  height,
+  margin,
+  padding,
+  screenSize,
+  width,
+} from './utils';
 
-export { screenSize };
+export {
+  theme,
+  // utils
+  border,
+  borderRadius,
+  boxShadow,
+  colors,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  height,
+  margin,
+  padding,
+  screenSize,
+  width,
+};

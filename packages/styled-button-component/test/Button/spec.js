@@ -13,7 +13,7 @@ test('Styles matches Button', () => {
   expect(tree).toHaveStyleRule('white-space', 'nowrap');
   expect(tree).toHaveStyleRule('vertical-align', 'middle');
   expect(tree).toHaveStyleRule('user-select', 'none');
-  expect(tree).toHaveStyleRule('border', '1px solid transparent');
+  expect(tree).toHaveStyleRule('border', '1px solid #6c757d');
   expect(tree).toHaveStyleRule('padding', '0.375rem 0.75rem');
   expect(tree).toHaveStyleRule('font-size', '1rem');
   expect(tree).toHaveStyleRule('line-height', '1.5');
@@ -28,7 +28,7 @@ test('Styles matches Button', () => {
   expect(tree).toHaveStyleRule('outline', '0', {
     modifier: '&:focus',
   });
-  expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(0,123,255,0.25)', {
+  expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(108,117,125,0.5)', {
     modifier: '&:focus',
   });
 });

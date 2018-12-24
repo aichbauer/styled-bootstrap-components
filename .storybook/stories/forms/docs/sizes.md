@@ -3,7 +3,7 @@
   <form>
     <FormGroup row justify sm>
       <Column sm={2}>
-        <Label>Email</Label>
+        <label>Email</label>
       </Column>
       <Column sm={10}>
         <FormControl type="email" placeholder="Email" />
@@ -11,7 +11,7 @@
     </FormGroup>
     <FormGroup row justify>
       <Column sm={2}>
-        <Label>Email</Label>
+        <label>Email</label>
       </Column>
       <Column sm={10}>
         <FormControl type="email" placeholder="Email" />
@@ -19,7 +19,7 @@
     </FormGroup>
     <FormGroup row justify lg>
       <Column sm={2}>
-        <Label>Email</Label>
+        <label>Email</label>
       </Column>
       <Column sm={10}>
         <FormControl type="email" placeholder="Email" />

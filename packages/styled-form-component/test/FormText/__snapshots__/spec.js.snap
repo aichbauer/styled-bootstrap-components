@@ -7,7 +7,7 @@ exports[`Styles matches FormText 1`] = `
   box-sizing: border-box;
 }
 
-<strong
-  className="c0 sc-Rmtcm TdETe"
+<small
+  className="c0"
 />
 `;

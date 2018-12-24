@@ -8,6 +8,6 @@ exports[`Styles matches CardImageHeader 1`] = `
 }
 
 <img
-  className="c0 sc-kEYyzF fPtozN"
+  className="c0"
 />
 `;

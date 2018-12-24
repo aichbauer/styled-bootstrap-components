@@ -8,6 +8,6 @@ exports[`Styles matches FormControlFile 1`] = `
 }
 
 <input
-  className="c0 sc-kkGfuU iPhqsl"
+  className="c0"
 />
 `;

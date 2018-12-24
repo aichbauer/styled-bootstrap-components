@@ -15,6 +15,7 @@ exports[`Styles matches InputGroup sm 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   width: 100%;
+  line-height: 1.5;
 }
 
 .c0 > input,
@@ -42,21 +43,21 @@ exports[`Styles matches InputGroup sm 1`] = `
   border-bottom-left-radius: 0;
 }
 
-.c0 > div > span {
-  padding-right: 0;
-  padding-left: 0;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
+.c0 > input {
+  border-radius: 0.2rem;
 }
 
+.c0 > div > span,
+.c0 > input {
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.c0 > div > span,
 .c0 > input {
   padding-right: 0;
   padding-left: 0;
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem;
 }
 
 <div

@@ -1,93 +1,117 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+  theme,
+  borderRadius as br,
+  padding as p,
+  fontSize as fs,
+  margin as m,
+} from 'styled-config';
 
-const inputGroupSmall = (props) => (
-  props.sm &&
-  css`
-    & > div > span {
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.25rem 0.5rem;
-      font-size: 0.875rem;
-      line-height: 1.5;
-    };
+const borderRadius = (props) => {
+  if (props.lg) {
+    return css`
+      & > input {
+        border-radius: ${br(props, 'inputGroup').lg};
+      };
+    `;
+  } else if (props.sm) {
+    return css`
+      & > input {
+        border-radius: ${br(props, 'inputGroup').sm};
+      };
+    `;
+  }
+
+  return css`
+  & > input {
+    border-radius: ${br(props, 'inputGroup').default};
+  };
+`;
+};
+
+const fontSize = (props) => {
+  if (props.lg) {
+    return css`
+      & > div > span,
+      & > input {
+        line-height: 1.5;
+        font-size: ${fs(props, 'inputGroup').lg};
+      };
+    `;
+  } else if (props.sm) {
+    return css`
+      & > div > span,
+      & > input {
+        line-height: 1.5;
+        font-size: ${fs(props, 'inputGroup').sm};
+      };
+    `;
+  }
+
+  return css`
+    & > div > span,
     & > input {
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.25rem 0.5rem;
-      font-size: 0.875rem;
       line-height: 1.5;
-      border-radius: 0.2rem;
+      font-size: ${fs(props, 'inputGroup').default};
     };
-  `
-);
+  `;
+};
 
-const inputGroupLarge = (props) => (
-  props.lg &&
-  css`
-    & > div > span {
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.5rem 1rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-    };
+const padding = (props) => {
+  if (props.lg) {
+    return css`
+    & > div > span,
     & > input {
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.5rem 1rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      border-radius: 0.3rem;
+      padding-right: ${p(props, 'inputGroup').rightLg};
+      padding-left: ${p(props, 'inputGroup').leftLg};
+      padding: ${p(props, 'inputGroup').lg};
     };
-  `
-);
+    `;
+  } else if (props.sm) {
+    return css`
+      & > div > span,
+      & > input {
+        padding-right: ${p(props, 'inputGroup').rightSm};
+        padding-left: ${p(props, 'inputGroup').leftSm};
+        padding: ${p(props, 'inputGroup').sm};
+      };
+    `;
+  }
 
-export const InputGroup = styled.div`
+  return '';
+};
+
+const InputGroup = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
+  line-height: 1.5;
   & > input, 
   & > textarea, 
   & > select {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
-    margin-bottom: 0;
+    margin-bottom: ${(props) => m(props, 'inputGroup').bottom};
     &:not(:last-child) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-top-right-radius: ${(props) => br(props, 'inputGroup').noRadius};
+      border-bottom-right-radius: ${(props) => br(props, 'inputGroup').noRadius};
     };
     &:not(:first-child) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-top-left-radius: ${(props) => br(props, 'inputGroup').noRadius};
+      border-bottom-left-radius: ${(props) => br(props, 'inputGroup').noRadius};
     };
   };
-  ${inputGroupSmall};
-  ${inputGroupLarge};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => borderRadius(props)};
+  ${(props) => fontSize(props)};
+  ${(props) => padding(props)};
 `;
+
+InputGroup.defaultProps = {
+  theme,
+};
+
+export { InputGroup };

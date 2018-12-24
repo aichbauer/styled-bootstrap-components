@@ -1,6 +1,6 @@
 ```jsx
 <Table>
-  <Caption>List of users</Caption>
+  <caption>List of users</caption>
   <thead>
     <tr>
       <th scope="col">#</th>

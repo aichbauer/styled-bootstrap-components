@@ -9,3 +9,14 @@ test('Styles matches FormGroup nomb', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('margin-bottom', '0');
 });
+
+test('Styles matches FormGroup nomb row', () => {
+  const tree = renderer.create(<FormGroup nomb row />).toJSON();
+  expect(tree).toMatchSnapshot();
+  expect(tree).toHaveStyleRule('margin-right', '-5px');
+  expect(tree).toHaveStyleRule('margin-left', '-5px');
+  expect(tree).toHaveStyleRule('margin-bottom', '0');
+  expect(tree).toHaveStyleRule('margin-bottom', '0', {
+    modifier: '& > div > label',
+  });
+});

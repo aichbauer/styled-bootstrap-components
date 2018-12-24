@@ -9,14 +9,14 @@ test('Styles matches Button warning disabled', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#212529');
   expect(tree).toHaveStyleRule('background-color', '#ffc107');
-  expect(tree).toHaveStyleRule('border-color', '#ffc107');
+  expect(tree).toHaveStyleRule('border', '1px solid #ffc107');
   expect(tree).toHaveStyleRule('color', '#212529', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('background-color', '#ffc107', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#ffc107', {
+  expect(tree).toHaveStyleRule('border', '1px solid #ffc107', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(255,193,7,0.5)', {
@@ -29,14 +29,14 @@ test('Styles matches Button warning', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#212529');
   expect(tree).toHaveStyleRule('background-color', '#ffc107');
-  expect(tree).toHaveStyleRule('border-color', '#ffc107');
+  expect(tree).toHaveStyleRule('border', '1px solid #ffc107');
   expect(tree).toHaveStyleRule('color', '#212529', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('background-color', '#e0a800', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#d39e00', {
+  expect(tree).toHaveStyleRule('border', '1px solid #d39e00', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(255,193,7,0.5)', {

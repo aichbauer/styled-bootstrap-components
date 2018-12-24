@@ -1,19 +1,6 @@
 import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
 
-export const InputGroupPrepend = styled.div`
+const InputGroupPrepend = styled.div`
   display: flex;
   margin-right: -1px;
   & > button {
@@ -30,15 +17,6 @@ export const InputGroupPrepend = styled.div`
       border-bottom-left-radius: 0;
     };
   };
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
 `;
+
+export { InputGroupPrepend };

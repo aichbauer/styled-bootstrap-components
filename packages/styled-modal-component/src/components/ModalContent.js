@@ -1,38 +1,35 @@
-import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+import styled, { css } from 'styled-components';
 
-export const ModalContent = styled.div`
+import {
+  theme,
+  colors,
+  border,
+  borderRadius as br,
+} from 'styled-config';
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`border-radius: ${br(props, 'modalContent').noRadius};`;
+  }
+
+  return css`border-radius: ${br(props, 'modalContent').lg};`;
+};
+
+const ModalContent = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: ${(props) => colors(props, 'modalContent').backgroundColor};
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border: ${(props) => border(props, 'modalContent').default} ${(props) => colors(props, 'modalContent').borderColor};
   outline: 0;
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => borderRadius(props)}
 `;
+
+ModalContent.defaultProps = {
+  theme,
+};
+
+export { ModalContent };

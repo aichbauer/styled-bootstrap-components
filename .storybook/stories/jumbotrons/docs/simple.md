@@ -1,16 +1,16 @@
 ```jsx
 <Container fluid>
   <Jumbotron>
-    <H1>
+    <h1>
       Hello, world!
-    </H1>
-    <P>
+    </h1>
+    <p>
       This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-    </P>
-    <Hr />
-    <P>
+    </p>
+    <hr />
+    <p>
       It uses utility classes for typography and spacing to space content out within the larger container.
-    </P>
+    </p>
     <Button primary lg>Learn more</Button>
   </Jumbotron>
 </Container>

@@ -9,7 +9,7 @@ test('Styles matches Button success outline disabled', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#28a745');
   expect(tree).toHaveStyleRule('background-color', 'transparent');
-  expect(tree).toHaveStyleRule('border-color', '#28a745');
+  expect(tree).toHaveStyleRule('border', '1px solid #28a745');
   expect(tree).toHaveStyleRule('background-image', 'none');
   expect(tree).toHaveStyleRule('background-image', 'none', {
     modifier: '&:hover',
@@ -20,7 +20,7 @@ test('Styles matches Button success outline disabled', () => {
   expect(tree).toHaveStyleRule('background-color', 'transparent', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#28a745', {
+  expect(tree).toHaveStyleRule('border', '1px solid #28a745', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(40,167,69,0.5)', {
@@ -34,14 +34,14 @@ test('Styles matches Button success outline', () => {
   expect(tree).toHaveStyleRule('color', '#28a745');
   expect(tree).toHaveStyleRule('background-color', 'transparent');
   expect(tree).toHaveStyleRule('background-image', 'none');
-  expect(tree).toHaveStyleRule('border-color', '#28a745');
+  expect(tree).toHaveStyleRule('border', '1px solid #28a745');
   expect(tree).toHaveStyleRule('color', '#fff', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('background-color', '#28a745', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#28a745', {
+  expect(tree).toHaveStyleRule('border', '1px solid #28a745', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(40,167,69,0.5)', {

@@ -10,7 +10,6 @@ exports[`Styles matches PopoverArrow right 1`] = `
   width: 0.5rem;
   height: 100%;
   margin: 0.3rem 0;
-  top: 42%;
 }
 
 .c0::before,
@@ -24,6 +23,7 @@ exports[`Styles matches PopoverArrow right 1`] = `
 
 .c0::before,
 .c0::after {
+  top: calc(50% - 0.75rem);
   border-width: 0.5rem 0.5rem 0.5rem 0;
 }
 

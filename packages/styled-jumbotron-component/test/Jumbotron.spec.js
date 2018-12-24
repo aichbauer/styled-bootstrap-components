@@ -4,7 +4,6 @@ import 'jest-styled-components';
 
 import { Jumbotron } from '../src';
 
-// TODO: how to check @media queries
 test('Styles matches Jumbotron', () => {
   const tree = renderer.create(<Jumbotron />).toJSON();
   expect(tree).toMatchSnapshot();

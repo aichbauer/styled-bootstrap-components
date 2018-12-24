@@ -1,40 +1,27 @@
 import styled, { css } from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { Small } from 'styled-base-components';
 
-const formTextMuted = (props) => (
+import {
+  theme,
+  colors,
+  margin,
+} from 'styled-config';
+
+const color = (props) => (
   props.muted &&
   css`
-    color: #6c757d;
+    color: ${colors(props, 'formText').colorMuted};
   `
 );
 
-export const FormText = styled(Small)`
+const FormText = styled.small`
   display: block;
-  margin-top: 0.25rem;
+  margin-top: ${(props) => margin(props, 'formText').top};
   box-sizing: border-box;
-  ${formTextMuted};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => color(props)};
 `;
+
+FormText.defaultProps = {
+  theme,
+};
+
+export { FormText };

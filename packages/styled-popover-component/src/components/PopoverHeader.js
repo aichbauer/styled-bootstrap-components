@@ -1,106 +1,108 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
+  theme,
+  colors,
+  padding,
+  margin,
+  border,
   fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-} from 'styled-base-components';
+} from 'styled-config';
 
 const popoverHeaderBottom = (props) => (
   props.bottom &&
   css`
-    position: absolute;
+    padding: ${padding(props, 'popoverHeader').default};
+    margin-bottom: ${margin(props, 'popoverHeader').bottom};
+    font-size:  ${fontSize(props, 'popoverHeader').default};
+    color: inherit;
+    background-color: ${colors(props, 'popoverHeader').backgrondColor};
+    border-bottom: 0;
+    border-top: ${border(props, 'popoverHeader').default} ${colors(props, 'popoverHeader').borderBottomColor};
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: calc(0.3rem - 1px);
+    border-bottom-right-radius: calc(0.3rem - 1px);
+  `
+);
+
+const popoverHeaderStyle = (props) => (
+  css`
     top: 0;
     left: 50%;
     display: block;
-    width: 1rem;
-    margin-left: -0.5rem;
     content: "";
-    border-bottom: 1px solid #f7f7f7;
-  `
-);
-
-const popoverHeaderStyle = () => (
-  css`
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 0;
-    font-size: 1rem;
+    padding: ${padding(props, 'popoverHeader').default};
+    margin-bottom: ${margin(props, 'popoverHeader').bottom};
+    margin-top: ${margin(props, 'popoverHeader').top};
+    font-size: ${fontSize(props, 'popoverHeader').default};
     color: inherit;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #ebebeb;
+    background-color: ${colors(props, 'popoverHeader').backgrondColor};
+    border-bottom: ${border(props, 'popoverHeader').default} ${colors(props, 'popoverHeader').borderBottomColor};
     border-top-left-radius: calc(0.3rem - 1px);
     border-top-right-radius: calc(0.3rem - 1px);
-    ${popoverHeaderBottom};
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      width: 1rem;
+      margin-left: ${margin(props, 'popoverHeader').beforeLeft};
+      content: "";
+      border-bottom: ${border(props, 'popoverHeader').default} ${colors(props, 'popoverHeader').backgrondColor};
+    }
+    ${popoverHeaderBottom(props)};
     &:empty {
       display: none;
     };
-    ${space};
-    ${width};
-    ${color};
-    ${fontSize};
-    ${fontWeight};
-    ${textAlign};
-    ${lineHeight};
-    ${display};
-    ${borderRadius};
-    ${borderColor};
-    ${borders};
   `
 );
 
-const PopoverHeaderH1 = styled(H1)`
-  ${popoverHeaderStyle};
+const PopoverHeaderH1 = styled.h1`
+  ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH2 = styled(H2)`
-  ${popoverHeaderStyle};
+const PopoverHeaderH2 = styled.h2`
+  ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH3 = styled(H3)`
-  ${popoverHeaderStyle};
+const PopoverHeaderH3 = styled.h3`
+  ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH4 = styled(H4)`
-  ${popoverHeaderStyle};
+const PopoverHeaderH4 = styled.h4`
+  ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH5 = styled(H5)`
-  ${popoverHeaderStyle};
+const PopoverHeaderH5 = styled.h5`
+  ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH6 = styled(H6)`
-  ${popoverHeaderStyle};
+const PopoverHeaderH6 = styled.h6`
+  ${(props) => popoverHeaderStyle(props)};
 `;
 
-export const PopoverHeader = (props) => {
+const PopoverHeader = (props) => {
   if (props.h1) {
-    return new PopoverHeaderH1(props);
+    return <PopoverHeaderH1 {...props} />;
   } else if (props.h2) {
-    return new PopoverHeaderH2(props);
+    return <PopoverHeaderH2 {...props} />;
   } else if (props.h3) {
-    return new PopoverHeaderH3(props);
+    return <PopoverHeaderH3 {...props} />;
   } else if (props.h4) {
-    return new PopoverHeaderH4(props);
+    return <PopoverHeaderH4 {...props} />;
   } else if (props.h5) {
-    return new PopoverHeaderH5(props);
+    return <PopoverHeaderH5 {...props} />;
   } else if (props.h6) {
-    return new PopoverHeaderH6(props);
+    return <PopoverHeaderH6 {...props} />;
   }
 
-  return new PopoverHeaderH4(props);
+  return <PopoverHeaderH4 {...props} />;
 };
+
+PopoverHeader.defaultProps = {
+  theme,
+};
+
+export { PopoverHeader };

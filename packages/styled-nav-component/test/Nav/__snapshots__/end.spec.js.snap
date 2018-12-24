@@ -30,7 +30,7 @@ exports[`Styles matches Nav end 1`] = `
 }
 
 <nav
-  className="c0 sc-jWBwVP fAZsB"
+  className="c0"
   end={true}
 />
 `;

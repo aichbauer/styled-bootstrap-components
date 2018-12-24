@@ -2,17 +2,17 @@
 <Container fluid>
   <form>
     <FormGroup>
-      <Label>Email address</Label>
+      <label>Email address</label>
       <FormControl type="email" placeholder="Enter email" />
       <FormText muted>We'll never share your email with anyone else.</FormText>
     </FormGroup>
     <FormGroup>
-      <Label>Password</Label>
+      <label>Password</label>
       <FormControl type="password" placeholder="Password" />
     </FormGroup>
     <FormCheck>
       <FormCheckInput type="checkbox" />
-      <Label>Check me out</Label>
+      <label>Check me out</label>
     </FormCheck>
     <FormGroup>
       <Button primary>Submit</Button>

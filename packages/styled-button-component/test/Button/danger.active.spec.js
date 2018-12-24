@@ -9,14 +9,14 @@ test('Styles matches Button danger active', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#fff');
   expect(tree).toHaveStyleRule('background-color', '#bd2130');
-  expect(tree).toHaveStyleRule('border-color', '#b21f2d');
+  expect(tree).toHaveStyleRule('border', '1px solid #b21f2d');
   expect(tree).toHaveStyleRule('color', '#fff', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('background-color', '#bd2130', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#b21f2d', {
+  expect(tree).toHaveStyleRule('border', '1px solid #b21f2d', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(220,53,69,0.5)', {

@@ -1,47 +1,40 @@
 import styled from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
+  theme,
+  colors,
+  padding,
   fontSize,
   fontWeight,
-  textAlign,
-  lineHeight,
-  display,
+  margin,
   borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+  border,
+} from 'styled-config';
 
-export const InputGroupText = styled.span`
+const InputGroupText = styled.span`
   display: flex;
   align-items: center;
-  padding: 0.375rem 0.75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
+  padding: ${(props) => padding(props, 'inputGroupText').default};
+  margin-bottom: ${(props) => margin(props, 'inputGroupText').bottom};
+  font-size: ${(props) => fontSize(props, 'inputGroupText').default};
+  font-weight: ${(props) => fontWeight(props, 'inputGroupText').default};
   line-height: 1.5;
-  color: #495057;
+  color: ${(props) => colors(props, 'inputGroupText').color};
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  background-color: ${(props) => colors(props, 'inputGroupText').backgroundColor};
+  border: ${(props) => border(props, 'inputGroupText').default} ${(props) => colors(props, 'inputGroupText').borderColor};
+  border-radius: ${(props) => borderRadius(props, 'inputGroupText').default};
   & input[type="radio"],
   & input[type="checkbox"] {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0.4125rem;
+    margin-top: ${(props) => margin(props, 'inputGroupText').radioCheckboxTop};
+    margin-right: ${(props) => margin(props, 'inputGroupText').radioCheckboxRight};
+    margin-bottom: ${(props) => margin(props, 'inputGroupText').radioCheckboxBottom};
   };
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
 `;
+
+InputGroupText.defaultProps = {
+  theme,
+};
+
+export { InputGroupText };

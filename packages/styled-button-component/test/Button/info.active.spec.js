@@ -9,17 +9,17 @@ test('Styles matches Button info active', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#fff');
   expect(tree).toHaveStyleRule('background-color', '#117a8b');
-  expect(tree).toHaveStyleRule('border-color', '#10707f');
+  expect(tree).toHaveStyleRule('border', '1px solid #10707f');
   expect(tree).toHaveStyleRule('color', '#fff', {
     modifier: '&:hover',
   });
   expect(tree).toHaveStyleRule('background-color', '#117a8b', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('border-color', '#10707f', {
+  expect(tree).toHaveStyleRule('border', '1px solid #10707f', {
     modifier: '&:hover',
   });
-  expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(0,123,255,0.5)', {
+  expect(tree).toHaveStyleRule('box-shadow', '0 0 0 0.2rem rgba(23,162,184,0.5)', {
     modifier: '&:focus',
   });
 });

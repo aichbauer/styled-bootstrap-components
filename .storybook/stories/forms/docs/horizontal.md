@@ -3,7 +3,7 @@
   <form>
     <FormGroup row justify>
       <Column sm={2}>
-        <Label>Email</Label>
+        <label>Email</label>
       </Column>
       <Column sm={10}>
         <FormControl type="email" placeholder="Email" />
@@ -11,7 +11,7 @@
     </FormGroup>
     <FormGroup row justify>
       <Column sm={2}>
-        <Label>Password</Label>
+        <label>Password</label>
       </Column>
       <Column sm={10}>
         <FormControl type="password" placeholder="Password" />
@@ -19,31 +19,31 @@
     </FormGroup>
     <FormGroup row>
       <Column sm={2}>
-        <Label>Radios</Label>
+        <label>Radios</label>
       </Column>
       <Column sm={10}>
         <FormCheck>
           <FormCheckInput type="radio" name="exampleRadios" />
-          <Label>First radio</Label>
+          <label>First radio</label>
         </FormCheck>
         <FormCheck>
           <FormCheckInput type="radio" name="exampleRadios" />
-          <Label>Second radio</Label>
+          <label>Second radio</label>
         </FormCheck>
         <FormCheck>
           <FormCheckInput disabled type="radio" name="exampleRadios" />
-          <Label>Third disabled radio</Label>
+          <label>Third disabled radio</label>
         </FormCheck>
       </Column>
     </FormGroup>
     <FormGroup row>
       <Column sm={2}>
-        <Label>Checkbox</Label>
+        <label>Checkbox</label>
       </Column>
       <Column sm={10}>
         <FormCheck>
           <FormCheckInput type="checkbox" name="exampleRadios" />
-          <Label>Example checkbox</Label>
+          <label>Example checkbox</label>
         </FormCheck>
       </Column>
     </FormGroup>

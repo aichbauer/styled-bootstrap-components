@@ -28,7 +28,6 @@ import { TheadContextual, TbodyContextual } from './table/InnerTableContextual';
 import { TheadLong, TbodyLong } from './table/InnerTableLong';
 
 import { Container } from '../../../packages/styled-container-component';
-import { Caption } from '../../../packages/styled-base-components';
 import { Table } from '../../../packages/styled-table-component';
 
 storiesOf('Table', module)
@@ -135,7 +134,7 @@ storiesOf('Table', module)
   .add('Caption', withReadme(TableReadme, withDocs(TableCaptionDocs, () => (
     <Container fluid>
       <Table>
-        <Caption>List of users</Caption>
+        <caption>List of users</caption>
         <Thead />
         <Tbody />
       </Table>

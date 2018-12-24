@@ -14,7 +14,6 @@ import {
 } from '../../../packages/styled-card-component';
 import { Container } from '../../../packages/styled-container-component';
 import { Button } from '../../../packages/styled-button-component';
-import { A } from '../../../packages/styled-base-components';
 
 import CardReadme from '../../../packages/styled-card-component/README.md';
 
@@ -27,7 +26,7 @@ import CardImagesDocs from './docs/images.md';
 storiesOf('Cards', module)
   .add('Simple', withReadme(CardReadme, withDocs(CardSimpleDocs, () => (
     <Container>
-      <Card width="18rem" textAlign="left">
+      <Card style={{ width: '18rem', textAlign: 'left' }}>
         <CardImageHeader src="http://via.placeholder.com/350x150" />
         <CardBody>
           <CardTitle h5>
@@ -55,7 +54,7 @@ storiesOf('Cards', module)
   ))))
   .add('Titles, text, and links', withReadme(CardReadme, withDocs(CardTitlesTextLinksDocs, () => (
     <Container>
-      <Card width="18rem" textAlign="left">
+      <Card style={{ width: '18rem', textAlign: 'left' }}>
         <CardBody>
           <CardTitle h5>
             Card title
@@ -69,15 +68,15 @@ storiesOf('Cards', module)
             make up the bulk of the card&#39;s
             content.
           </CardText>
-          <A href="#">Card Link</A>
-          <A href="#">Another link</A>
+          <a href="#">Card Link</a>
+          <a href="#">Another link</a>
         </CardBody>
       </Card>
     </Container>
   ))))
   .add('Images', withReadme(CardReadme, withDocs(CardImagesDocs, () => (
     <Container>
-      <Card width="18rem" textAlign="left">
+      <Card style={{ width: '18rem', textAlign: 'left' }}>
         <CardImageHeader src="http://via.placeholder.com/350x150" />
         <CardBody>
           <CardText>

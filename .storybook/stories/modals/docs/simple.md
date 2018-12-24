@@ -29,9 +29,9 @@ export class ClickableModal extends React.Component {
               </Button>
               </ModalHeader>
               <ModalBody>
-                <P>
+                <p>
                   Modal Body
-                </P>
+                </p>
               </ModalBody>
               <ModalFooter>
                 <Button onClick={() => this.handleModal()}>

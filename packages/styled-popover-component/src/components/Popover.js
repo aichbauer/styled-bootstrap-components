@@ -1,65 +1,55 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
-  fontSize,
+  theme,
+  colors,
   fontWeight,
-  textAlign,
-  lineHeight,
-  display,
+  margin as m,
+  fontFamily,
   borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+  border,
+  fontSize,
+} from 'styled-config';
 
-const popoverTop = (props) => (
-  props.top &&
-  css`
-    margin-bottom: 0.5rem;
-  `
-);
-
-const popoverRight = (props) => (
-  props.right &&
-  css`
-    margin-left: 0.5rem;
-  `
-);
-
-const popoverBottom = (props) => (
-  props.bottom &&
-  css`
-    margin-top: 0.5rem;
-  `
-);
-
-const popoverLeft = (props) => (
-  props.left &&
-  css`
-    margin-right: 0.5rem;
-  `
-);
-
-const popoverHidden = (props) => (
+const display = (props) => (
   props.hidden
     ? css`
-      display: none;
-    `
+        display: none;
+      `
     : css`
-      display: block;
-    `
+        display: block;
+      `
 );
 
-export const Popover = styled.div`
+const margin = (props) => {
+  if (props.top) {
+    return css`
+      margin-bottom: ${m(props, 'popover').topBottom};
+    `;
+  } else if (props.left) {
+    return css`
+      margin-right: ${m(props, 'popover').leftRight};
+    `;
+  } else if (props.bottom) {
+    return css`
+      margin-top: ${m(props, 'popover').bottomTop};
+    `;
+  }
+
+  return css`
+    margin-left: ${m(props, 'popover').rightLeft};
+  `;
+};
+
+const Popover = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1060;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: ${(props) => fontFamily(props, 'popover').default};
   font-style: normal;
-  font-weight: 400;
+  font-weight: ${(props) => fontWeight(props, 'popover').default};
   line-height: 1.5;
   text-align: left;
   text-decoration: none;
@@ -70,26 +60,18 @@ export const Popover = styled.div`
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: ${(props) => fontSize(props, 'popover').sm};
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: ${(props) => colors(props, 'popover').backgroundColor};
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  ${popoverTop};
-  ${popoverRight};
-  ${popoverBottom};
-  ${popoverLeft};
-  ${popoverHidden};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  border: ${(props) => border(props, 'popover').default} ${(props) => colors(props, 'popover').borderColor};
+  border-radius: ${(props) => borderRadius(props, 'popover').lg};
+  ${(props) => margin(props)};
+  ${(props) => display(props)};
 `;
+
+Popover.defaultProps = {
+  theme,
+};
+
+export { Popover };

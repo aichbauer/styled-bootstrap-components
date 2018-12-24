@@ -10,7 +10,6 @@ import {
   Breadcrumb,
   BreadcrumbItem,
 } from '../../../packages/styled-breadcrumb-component';
-import { A } from '../../../packages/styled-base-components';
 
 import BreadcrumbReadme from '../../../packages/styled-breadcrumb-component/README.md';
 
@@ -26,7 +25,7 @@ storiesOf('Breadcrumbs', module)
       </Breadcrumb>
       <Breadcrumb>
         <BreadcrumbItem>
-          <A href="#">Home</A>
+          <a href="#">Home</a>
         </BreadcrumbItem>
         <BreadcrumbItem active>
           Library
@@ -34,10 +33,10 @@ storiesOf('Breadcrumbs', module)
       </Breadcrumb>
       <Breadcrumb>
         <BreadcrumbItem>
-          <A href="#">Home</A>
+          <a href="#">Home</a>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <A href="#">Library</A>
+          <a href="#">Library</a>
         </BreadcrumbItem>
         <BreadcrumbItem active>
           Data

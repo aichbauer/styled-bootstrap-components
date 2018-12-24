@@ -1,62 +1,99 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import {
-  Input as Ipt,
-  Textarea as TA,
-  Select as S,
-} from 'styled-base-components';
-import { screenSize } from 'styled-config';
 
-const formControlDisabledReadonly = (props) => (
-  (props.disabled || props.readonly) &&
-  css`
-    background-color: #e9ecef;
-    opacity: 1;
+import {
+  theme,
+  colors,
+  border as b,
+  boxShadow as bs,
+  padding as p,
+  fontSize as fs,
+  borderRadius as br,
+  height as h,
+} from 'styled-config';
+
+const backgroundColor = (props) => {
+  if (props.disabled || props.readonly) {
+    return css`
+      background-color: ${colors(props, 'formControl').backgroundColorDisabledReadonly};
+      &:focus {
+        background-color: ${colors(props, 'formControl').backgroundColorDisabledReadonly};
+      }
+    `;
+  }
+
+  return css`
+    background-color: ${colors(props, 'formControl').background};
     &:focus {
-      background-color: #e9ecef;
+      background-color: ${colors(props, 'formControl').background};
+    }
+  `;
+};
+
+const border = (props) => {
+  if (props.valid) {
+    return css`
+      border-color: ${colors(props, 'formControl').borderValid};
+      &:focus {
+        border-color: ${colors(props, 'formControl').borderValid};
+      };
+    `;
+  } else if (props.invalid) {
+    return css`
+      border-color: ${colors(props, 'formControl').borderInvalid};
+      &:focus {
+        border-color: ${colors(props, 'formControl').borderInvalid};
+      };
+    `;
+  }
+
+  return css`
+    border: ${b(props, 'formControl').default} ${colors(props, 'formControl').border};
+    &:focus {
+      border-color: ${colors(props, 'formControl').border};
+    };
+  `;
+};
+
+const boxShadow = (props) => {
+  if (props.valid) {
+    return css`
+      &:focus {
+        box-shadow: ${bs(props, 'formControl').default} ${colors(props, 'formControl').formControlBoxShadowValid};
+      };
+    `;
+  } else if (props.invalid) {
+    return css`
+      &:focus {
+        box-shadow: ${bs(props, 'formControl').default} ${colors(props, 'formControl').formControlBoxShadowInvalid};
+      };
+    `;
+  }
+
+  return css`
+    &:focus {
+      box-shadow: 0;
+    };
+  `;
+};
+
+const opacity = (props) => {
+  if (props.disabled || props.readonly) {
+    return css`
       opacity: 1;
-    };
-  `
-);
+      &:focus {
+        opacity: 1;
+      }
+    `;
+  }
 
-const formControlValid = (props) => (
-  props.valid &&
-  css`
-    border-color: #28a745;
-    &:focus {
-      border-color: #28a745;
-      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-    };
-  `
-);
-
-const formControlInvalid = (props) => (
-  props.invalid &&
-  css`
-    border-color: #dc3545;
-    &:focus {
-      border-color: #dc3545;
-      box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-    };
-  `
-);
+  return '';
+};
 
 const formControlFormInline = (props) => (
   props.formInline &&
   css`
-    @media (min-width: ${screenSize.sm}) {
+    @media (min-width: ${props.theme.screenSize.sm}) {
       display: inline-block;
       width: auto;
       vertical-align: middle;
@@ -64,54 +101,78 @@ const formControlFormInline = (props) => (
   `
 );
 
-const formControlSmall = (props) => {
-  if (props.sm) {
-    if (!props.multiple && props.select) {
-      return css`
-        padding-right: 0;
-        padding-left: 0;
-        padding: 0.25rem 0.5rem;
-        font-size: 0.875rem;
-        line-height: 1.5;
-        border-radius: 0.2rem;
-        height: calc(1.8125rem + 2px);
-      `;
-    }
-
+const padding = (props) => {
+  if (props.lg) {
     return css`
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.25rem 0.5rem;
-      font-size: 0.875rem;
-      line-height: 1.5;
-      border-radius: 0.2rem;
+      padding-right: ${p(props, 'formControl').lgRight};
+      padding-left: ${p(props, 'formControl').lgLeft};
+      padding: ${p(props, 'formControl').lgPadding};
+    `;
+  } else if (props.sm) {
+    return css`
+    padding-right: ${p(props, 'formControl').smRight};
+    padding-left: ${p(props, 'formControl').smLeft};
+    padding: ${p(props, 'formControl').smPadding};
     `;
   }
 
-  return '';
+  return css`
+    padding: ${p(props, 'formControl').defaultPadding};
+  `;
 };
 
-const formControlLarge = (props) => {
+const fontSize = (props) => {
   if (props.lg) {
-    if (!props.multiple && props.select) {
-      return css`
-        padding-right: 0;
-        padding-left: 0;
-        padding: 0.5rem 1rem;
-        font-size: 1.25rem;
-        line-height: 1.5;
-        border-radius: 0.3rem;
-        height: calc(2.875rem + 2px);
-      `;
-    }
-
     return css`
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.5rem 1rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      border-radius: 0.3rem;
+      font-size: ${fs(props, 'formControl').lg};
+    `;
+  } else if (props.sm) {
+    return css`
+      font-size: ${fs(props, 'formControl').sm};
+    `;
+  }
+
+  return css`
+    font-size: ${fs(props, 'formControl').default};
+  `;
+};
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`
+      border-radius: ${br(props, 'formControl').noRadius};
+    `;
+  } else if (props.pill) {
+    return css`
+      border-radius: ${br(props, 'formControl').pill};
+    `;
+  } else if (props.lg) {
+    return css`
+      border-radius: ${br(props, 'formControl').lg};
+    `;
+  } else if (props.sm) {
+    return css`
+      border-radius: ${br(props, 'formControl').sm};
+    `;
+  }
+
+  return css`
+    border-radius: ${br(props, 'formControl').default};
+  `;
+};
+
+const height = (props) => {
+  if (props.lg && !props.multiple && props.select) {
+    return css`
+      height: ${h(props, 'formControl').selectLg};
+    `;
+  } else if (props.sm && !props.multiple && props.select) {
+    return css`
+      height: ${h(props, 'formControl').selectSm};
+    `;
+  } else if (!props.multiple && props.select) {
+    return css`
+      height: ${h(props, 'formControl').select};
     `;
   }
 
@@ -121,14 +182,9 @@ const formControlLarge = (props) => {
 const formControlStyle = () => css`
     display: block;
     width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
     line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
+    color: ${(props) => colors(props, 'formControl').color};
     background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     box-sizing: border-box;
     &::-ms-expand {
@@ -136,65 +192,53 @@ const formControlStyle = () => css`
       border: 0;
     };
     &:focus {
-      color: #495057;
-      background-color: #fff;
-      border-color: #80bdff;
+      color: ${(props) => colors(props, 'formControl').color};
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      box-shadow: 0 0 0 0.2rem ${(props) => colors(props, 'formControl').boxShadowFocus};
     };
     &::placeholder {
-      color: #6c757d;
+      color: ${(props) => colors(props, 'formControl').placeholder};
       opacity: 1;
     };
-    ${formControlDisabledReadonly};
-    ${formControlInvalid};
-    ${formControlValid};
-    ${formControlFormInline};
-    ${formControlSmall};
-    ${formControlLarge};
-    ${space};
-    ${width};
-    ${color};
-    ${fontSize};
-    ${fontWeight};
-    ${textAlign};
-    ${lineHeight};
-    ${display};
-    ${borderRadius};
-    ${borderColor};
-    ${borders};
+    ${(props) => backgroundColor(props)}
+    ${(props) => border(props)}
+    ${(props) => boxShadow(props)}
+    ${(props) => opacity(props)}
+    ${(props) => formControlFormInline(props)}
+    ${(props) => padding(props)}
+    ${(props) => fontSize(props)}
+    ${(props) => borderRadius(props)}
+    ${(props) => height(props)}
   `;
 
-const formControlSelect = (props) => (
-  !props.multiple &&
-  css`
-    height: calc(2.25rem + 2px);
-  `
-);
-
-const FormControlInput = styled(Ipt)`
+const FormControlInput = styled.input`
   ${formControlStyle};
 `;
 
-const FormControlTextarea = styled(TA)`
+const FormControlTextarea = styled.textarea`
   ${formControlStyle};
 `;
 
-const FormControlSelect = styled(S)`
-  ${formControlSelect};
+const FormControlSelect = styled.select`
   ${formControlStyle};
   &:focus::-ms-value {
-    color: #495057;
-    background-color: #fff;
-  }
+    color: ${(props) => colors(props, 'formControl').color};
+    background-color: ${(props) => colors(props, 'formControl').background};
+  };
 `;
 
-export const FormControl = (props) => {
+const FormControl = (props) => {
   if (props.textarea) {
-    return new FormControlTextarea(props);
+    return <FormControlTextarea {...props} />;
   } else if (props.select) {
-    return new FormControlSelect(props);
+    return <FormControlSelect {...props} />;
   }
 
-  return new FormControlInput(props);
+  return <FormControlInput {...props} />;
 };
+
+FormControl.defaultProps = {
+  theme,
+};
+
+export { FormControl };

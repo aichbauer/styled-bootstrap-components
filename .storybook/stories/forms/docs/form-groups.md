@@ -2,11 +2,11 @@
 <Container fluid>
   <form>
     <FormGroup>
-      <Label>Example label</Label>
+      <label>Example label</label>
       <FormControl type="text" placeholder="Example input" />
     </FormGroup>
     <FormGroup>
-      <Label>Another label</Label>
+      <label>Another label</label>
       <FormControl type="text" placeholder="Another input" />
     </FormGroup>
   </form>

@@ -25,6 +25,7 @@ exports[`Styles matches Tooltip hidden 1`] = `
   line-break: auto;
   font-size: 0.875rem;
   word-wrap: break-word;
+  padding: 0.4rem 0;
   opacity: 0;
 }
 

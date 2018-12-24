@@ -17,6 +17,6 @@ exports[`Styles matches Breadcrumb 1`] = `
 }
 
 <ol
-  className="c0 sc-brqgnP bkLfOv"
+  className="c0"
 />
 `;

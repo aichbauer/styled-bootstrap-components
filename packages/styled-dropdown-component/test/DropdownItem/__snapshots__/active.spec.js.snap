@@ -10,9 +10,9 @@ exports[`Styles matches DropdownItem active 1`] = `
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-  color: #fff;
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #fff;
   background-color: #007bff;
 }
 

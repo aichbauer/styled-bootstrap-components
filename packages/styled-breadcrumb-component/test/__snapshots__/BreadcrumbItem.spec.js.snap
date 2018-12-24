@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches BreadcrumbItem 1`] = `
-.c0:not(:first-child)::before {
+.c1:not(:first-child)::before {
   display: inline-block;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
@@ -9,22 +9,27 @@ exports[`Styles matches BreadcrumbItem 1`] = `
   content: "/";
 }
 
-.c0 + .c0:hover::before {
+.c1 + .c0:hover::before {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <li
-  className="c0"
+  className="c0 c1"
 />
 `;
 
 exports[`Styles matches BreadcrumbItem active 1`] = `
-.c0 {
+.c2 + .c0:hover::before {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 {
   color: #6c757d;
 }
 
-.c0:not(:first-child)::before {
+.c1:not(:first-child)::before {
   display: inline-block;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
@@ -32,12 +37,12 @@ exports[`Styles matches BreadcrumbItem active 1`] = `
   content: "/";
 }
 
-.c0 + .c0:hover::before {
+.c1 + .c0:hover::before {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <li
-  className="c0"
+  className="c0 c1"
 />
 `;

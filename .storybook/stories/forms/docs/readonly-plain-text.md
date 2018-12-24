@@ -3,7 +3,7 @@
   <form>
     <FormGroup row>
       <Column sm={3}>
-        <Label>Email</Label>
+        <label>Email</label>
       </Column>
       <Column sm={9}>
         <FormControlPlainText readonly disabled value="email@example.com" />
@@ -11,7 +11,7 @@
     </FormGroup>
     <FormGroup row>
       <Column sm={3}>
-        <Label>Password</Label>
+        <label>Password</label>
       </Column>
       <Column sm={9}>
         <FormControl type="password" value="Password" />

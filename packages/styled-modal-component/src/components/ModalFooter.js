@@ -1,33 +1,22 @@
 import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
 
-export const ModalFooter = styled.div`
+import {
+  theme,
+  colors,
+  padding,
+  border,
+} from 'styled-config';
+
+const ModalFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  padding: ${(props) => padding(props, 'modalFooter').default}
+  border-top: ${(props) => border(props, 'modalFooter').default} ${(props) => colors(props, 'modalFooter').borderColor};
 `;
+
+ModalFooter.defaultProps = {
+  theme,
+};
+
+export { ModalFooter };

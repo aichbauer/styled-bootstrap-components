@@ -8,12 +8,6 @@ import {
 import { DismissAlert } from './alerts/DismissAlert';
 import { Alert } from '../../../packages/styled-alert-component';
 import { Container } from '../../../packages/styled-container-component';
-import {
-  A,
-  Hr,
-  H4,
-  P,
-} from '../../../packages/styled-base-components';
 import AlertReadme from '../../../packages/styled-alert-component/README.md';
 
 import AlertSimpleDocs from './docs/simple.md';
@@ -36,33 +30,33 @@ storiesOf('Alerts', module)
   ))))
   .add('Link color', withReadme(AlertReadme, withDocs(AlertLinkColorDocs, () => (
     <Container style={{ textAlign: 'left' }}>
-      <Alert primary>This is a primary alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
-      <Alert secondary>This is a secondary alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
-      <Alert success>This is a success alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
-      <Alert danger>This is a danger alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
-      <Alert warning>This is a warning alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
-      <Alert info>This is a info alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
-      <Alert light>This is a light alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
-      <Alert dark>This is a dark alert with <A href="#">an example link</A >. Give it a click if you like.</Alert>
+      <Alert primary>This is a primary alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
+      <Alert secondary>This is a secondary alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
+      <Alert success>This is a success alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
+      <Alert danger>This is a danger alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
+      <Alert warning>This is a warning alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
+      <Alert info>This is a info alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
+      <Alert light>This is a light alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
+      <Alert dark>This is a dark alert with <a href="#">an example link</a>. Give it a click if you like.</Alert>
     </Container>
   ))))
   .add('Additional content', withReadme(AlertReadme, withDocs(AlertAdditionalContentDocs, () => (
     <Container style={{ textAlign: 'left' }}>
       <Alert success>
-        <H4>
+        <h4>
           Well done!
-        </H4>
-        <P>
+        </h4>
+        <p>
           Lorem ipsum dolor sit amet,
           consectetur adipiscing elit.
           Proin malesuada ante metus,
           eu tempus erat ultricies imperdiet.
-        </P>
-        <Hr />
-        <P>
+        </p>
+        <hr />
+        <p>
           Lorem ipsum dolor sit amet,
           consectetur adipiscing elit.
-        </P>
+        </p>
       </Alert>
     </Container>
   ))))

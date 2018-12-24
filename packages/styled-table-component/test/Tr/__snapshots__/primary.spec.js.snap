@@ -6,10 +6,9 @@ exports[`Styles matches Tr primary hover 1`] = `
   background-color: #b8daff;
 }
 
-.c0 tbody tr:hover {
-  background-color: #9fcdff;
-}
-
+.c0:hover > td,
+.c0:hover > th,
+.c0 tbody tr:hover,
 .c0 tbody tr:hover > th,
 .c0 tbody tr:hover > td {
   background-color: #9fcdff;

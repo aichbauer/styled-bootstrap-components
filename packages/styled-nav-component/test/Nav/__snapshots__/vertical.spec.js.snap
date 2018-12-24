@@ -29,6 +29,6 @@ exports[`Styles matches Nav vertical 1`] = `
 }
 
 <nav
-  className="c0 sc-jWBwVP fAZsB"
+  className="c0"
 />
 `;

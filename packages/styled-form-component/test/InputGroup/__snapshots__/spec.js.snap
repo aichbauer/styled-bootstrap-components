@@ -15,6 +15,7 @@ exports[`Styles matches InputGroup 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   width: 100%;
+  line-height: 1.5;
 }
 
 .c0 > input,
@@ -40,6 +41,16 @@ exports[`Styles matches InputGroup 1`] = `
 .c0 > select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.c0 > input {
+  border-radius: 0.25rem;
+}
+
+.c0 > div > span,
+.c0 > input {
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 <div

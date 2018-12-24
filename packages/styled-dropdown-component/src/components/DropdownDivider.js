@@ -1,33 +1,23 @@
 import styled from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
 
-export const DropdownDivider = styled.div`
+import {
+  theme,
+  colors,
+  border,
+  margin,
+  padding,
+} from 'styled-config';
+
+const DropdownDivider = styled.div`
   height: 0;
-  padding-top: 0.5rem;
-  margin-top: 0.6rem;
+  padding-top: ${(props) => padding(props, 'dropdownDivider').top};
+  margin-top: ${(props) => margin(props, 'dropdownDivider').top};
   overflow: hidden;
-  border-top: 1px solid #e9ecef;
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  border-top: ${(props) => border(props, 'dropdownDivider').default} ${(props) => colors(props, 'dropdownDivider').borderTop};
 `;
+
+DropdownDivider.defaultProps = {
+  theme,
+};
+
+export { DropdownDivider };

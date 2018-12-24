@@ -1,56 +1,48 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { Input as Ipt } from 'styled-base-components';
+  theme,
+  colors,
+  padding as p,
+  margin,
+} from 'styled-config';
 
-const formcontrolPlainTextInline = (props) => (
-  props.inline &&
-  css`
-    display: inline-block;
-  `
-);
+const display = (props) => {
+  if (props.inline) {
+    return css`
+      display: inline-block;
+    `;
+  }
 
-const formControllPlainTextSmallLarge = (props) => (
+  return css`
+    display: block;
+  `;
+};
+
+const padding = (props) => (
   (props.sm || props.lg) &&
   css`
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: ${p(props, 'formControlPlainText').smRight};
+    padding-left: ${p(props, 'formControlPlainText').smLeft};
   `
 );
 
-export const FormControlPlainText = styled(Ipt)`
-  display: block;
+const FormControlPlainText = styled.input`
   width: 100%;
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-  margin-bottom: 0;
+  padding-top: ${(props) => p(props, 'formControlPlainText').top};
+  padding-bottom: ${(props) => p(props, 'formControlPlainText').bottom};
+  margin-bottom: ${(props) => margin(props, 'formControlPlainText').bottom};
   line-height: 1.5;
-  background-color: transparent;
-  border: solid transparent;
+  background-color: ${(props) => colors(props, 'formControlPlainText').backgroundColor};
+  border: solid ${(props) => colors(props, 'formControlPlainText').borderColor};
   border-width: 1px 0;
   box-sizing: border-box;
-  ${formcontrolPlainTextInline};
-  ${formControllPlainTextSmallLarge};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => display(props)};
+  ${(props) => padding(props)};
 `;
+
+FormControlPlainText.defaultProps = {
+  theme,
+};
+
+export { FormControlPlainText };

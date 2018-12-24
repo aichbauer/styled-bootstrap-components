@@ -1,118 +1,211 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { screenSize } from 'styled-config';
+  theme,
+  margin as m,
+  padding as p,
+  borderRadius as br,
+  fontSize as fs,
+} from 'styled-config';
 
 const formGroupFormInline = (props) => (
   props.formInline &&
   css`
-    @media (min-width: ${screenSize.sm}) {
+    @media (min-width: ${props.theme.screenSize.sm}) {
       display: flex;
       flex: 0 0 auto;
       flex-flow: row wrap;
       align-items: center;
-      margin-bottom: 0;
+      margin-bottom: ${m(props, 'formGroup').inlineBottom}
     };
   `
 );
 
-const formGroupRow = (props) => (
+const display = (props) => (
   props.row &&
   css`
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -5px;
-    margin-left: -5px;
-    & > div > label {
-      margin-bottom: 0;
-    };
   `
 );
 
-const formGroupNoMarginBottom = (props) => (
-  props.nomb &&
+const flexWrap = (props) => (
+  props.row &&
   css`
-    margin-bottom: 0;
+    flex-wrap: wrap;
   `
 );
 
-const formGroupAlignItemsJustifyContentCenter = (props) => (
+const margin = (props) => {
+  if (props.nomb && !props.row) {
+    return css`
+      margin-bottom: ${m(props, 'formGroup').nombNoRow};
+    `;
+  } if (props.nomb && props.row) {
+    return css`
+      margin-right: ${m(props, 'formGroup').nombRowRight};
+      margin-left: ${m(props, 'formGroup').nombRowLeft};
+      & > div > label {
+        margin-bottom: ${m(props, 'formGroup').nombRowDivLabelBottom};
+      };
+      margin-bottom: ${m(props, 'formGroup').nombRowBottom};
+    `;
+  } else if (props.row) {
+    return css`
+      margin-right: ${m(props, 'formGroup').rowRight};
+      margin-left: ${m(props, 'formGroup').rowLeft};
+      & > div > label {
+        margin-bottom: ${m(props, 'formGroup').rowDivLabel};
+      };
+      margin-bottom: ${m(props, 'formGroup').bottom};
+    `;
+  }
+
+  return css`
+    margin-bottom: ${m(props, 'formGroup').bottom};
+  `;
+};
+
+const justifyContent = (props) => (
   props.justify &&
   css`
-    align-items: center;
     justify-content: center;
   `
 );
 
-const formGroupSmall = (props) => (
-  props.sm &&
+const alignItems = (props) => (
+  props.justify &&
   css`
-    & > label, & > div > label {
-      padding-top: calc(0.25rem + 1px);
-      padding-bottom: calc(0.25rem + 1px);
-      font-size: 0.875rem;
-      line-height: 1.5;
+    align-items: center;
+  `
+);
+
+const borderRadius = (props) => {
+  if (props.noRadius) {
+    return css`
+      & > input, 
+      & > div > input,
+      & > :not(input[type=file]),
+      & > div > :not(input[type=file]) {
+        border-radius: ${br(props, 'formGroup').noRadius};
+      };
+    `;
+  }
+  if (props.lg) {
+    return css`
+      & > input, 
+      & > div > input,
+      & > :not(input[type=file]),
+      & > div > :not(input[type=file]) {
+        border-radius: ${br(props, 'formGroup').lg};
+      };
+    `;
+  } else if (props.sm) {
+    return css`
+      & > input, 
+      & > div > input,
+      & > :not(input[type=file]),
+      & > div > :not(input[type=file]) {
+        border-radius: ${br(props, 'formGroup').sm};
+      };
+    `;
+  }
+
+  return css`
+    & > input,
+    & > div > input,
+    & > :not(input[type=file]),
+    & > div > :not(input[type=file]) {
+      border-radius: ${br(props, 'formGroup').default};
     };
-    & > input, & > div > input {
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.25rem 0.5rem;
-      font-size: 0.875rem;
+  `;
+};
+
+const lineHeight = () => (
+  css`
+    & > input, & > div > input,
+    & > label, & > div > label {
       line-height: 1.5;
-      border-radius: 0.2rem;
     };
   `
 );
 
-const formGroupLarge = (props) => (
-  props.lg &&
-  css`
-    & > label, & > div > label {
-      padding-top: calc(0.5rem + 1px);
-      padding-bottom: calc(0.5rem + 1px);
-      font-size: 1.25rem;
-      line-height: 1.5;
-    };
-    & > input, & > div > input {
-      padding-right: 0;
-      padding-left: 0;
-      padding: 0.5rem 1rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      border-radius: 0.3rem;
-    };
-  `
-);
+const fontSize = (props) => {
+  if (props.lg) {
+    return css`
+      & > input,
+      & > div > input,
+      & > label,
+      & > div > label {
+        font-size: ${fs(props, 'formGroup').lg};
+      };
+    `;
+  } else if (props.sm) {
+    return css`
+      & > input,
+      & > div > input,
+      & > label,
+      & > div > label {
+        font-size: ${fs(props, 'formGroup').sm};
+      };
+    `;
+  }
 
-export const FormGroup = styled.div`
-  margin-bottom: 1rem;
+  return css`
+    & > input, 
+    & > div > input,
+    & > label,
+    & > div > label {
+      font-size: ${fs(props, 'formGroup').default};
+    };
+  `;
+};
+
+const padding = (props) => {
+  if (props.lg) {
+    return css`
+      & > label, & > div > label {
+        padding-top: ${p(props, 'formGroup').labelTopLg};
+        padding-bottom: ${p(props, 'formGroup').labelBottomLg};
+      };
+      & > input, & > div > input {
+        padding-right: ${p(props, 'formGroup').inputRightLg};
+        padding-left: ${p(props, 'formGroup').inputLeftLg};
+        padding: ${p(props, 'formGroup').inputLg};
+      };
+    `;
+  } else if (props.sm) {
+    return css`
+      & > label, & > div > label {
+        padding-top: ${p(props, 'formGroup').labelTopSm};
+        padding-bottom: ${p(props, 'formGroup').labelBottomSm};
+      };
+      & > input, & > div > input {
+        padding-right: ${p(props, 'formGroup').inputRightSm};
+        padding-left: ${p(props, 'formGroup').inputLeftSm};
+        padding: ${p(props, 'formGroup').inputSm};
+      };
+    `;
+  }
+
+  return '';
+};
+
+const FormGroup = styled.div`
   box-sizing: border-box;
-  ${formGroupFormInline};
-  ${formGroupRow};
-  ${formGroupNoMarginBottom};
-  ${formGroupAlignItemsJustifyContentCenter};
-  ${formGroupSmall};
-  ${formGroupLarge};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => display(props)} 
+  ${(props) => flexWrap(props)} 
+  ${(props) => margin(props)} 
+  ${(props) => justifyContent(props)} 
+  ${(props) => alignItems(props)} 
+  ${(props) => borderRadius(props)} 
+  ${(props) => lineHeight(props)} 
+  ${(props) => fontSize(props)} 
+  ${(props) => padding(props)} 
+  ${(props) => formGroupFormInline(props)}
 `;
+
+FormGroup.defaultProps = {
+  theme,
+};
+
+export { FormGroup };

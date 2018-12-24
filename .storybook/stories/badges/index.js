@@ -8,15 +8,6 @@ import {
 import { Badge } from '../../../packages/styled-badge-component';
 import { Button } from '../../../packages/styled-button-component';
 import { Container } from '../../../packages/styled-container-component';
-import {
-  A,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-} from '../../../packages/styled-base-components';
 import BadgeReadme from '../../../packages/styled-badge-component/README.md';
 
 
@@ -29,12 +20,12 @@ import BadgeLinksDocs from './docs/links.md';
 storiesOf('Badges', module)
   .add('Simple', withReadme(BadgeReadme, withDocs(BadgeSimpleDocs, () => (
     <Container style={{ textAlign: 'left' }}>
-      <H1>Example heading <Badge secondary>New</Badge></H1>
-      <H2>Example heading <Badge secondary>New</Badge></H2>
-      <H3>Example heading <Badge secondary>New</Badge></H3>
-      <H4>Example heading <Badge secondary>New</Badge></H4>
-      <H5>Example heading <Badge secondary>New</Badge></H5>
-      <H6>Example heading <Badge secondary>New</Badge></H6>
+      <h1>Example heading <Badge secondary>New</Badge></h1>
+      <h2>Example heading <Badge secondary>New</Badge></h2>
+      <h3>Example heading <Badge secondary>New</Badge></h3>
+      <h4>Example heading <Badge secondary>New</Badge></h4>
+      <h5>Example heading <Badge secondary>New</Badge></h5>
+      <h6>Example heading <Badge secondary>New</Badge></h6>
     </Container>
   ))))
   .add('Buttons', withReadme(BadgeReadme, withDocs(BadgeButtonsDocs, () => (
@@ -69,28 +60,28 @@ storiesOf('Badges', module)
   .add('Links', withReadme(BadgeReadme, withDocs(BadgeLinksDocs, () => (
     <Container style={{ textAlign: 'left' }}>
       <Badge pill primary action m="0.5rem">
-        <A href="#">Primary</A>
+        <a href="#">Primary</a>
       </Badge>
       <Badge pill secondary action m="0.5rem">
-        <A href="#">Secondary</A>
+        <a href="#">Secondary</a>
       </Badge>
       <Badge pill success action m="0.5rem">
-        <A href="#">Success</A>
+        <a href="#">Success</a>
       </Badge>
       <Badge pill danger action m="0.5rem">
-        <A href="#">Danger</A>
+        <a href="#">Danger</a>
       </Badge>
       <Badge pill warning action m="0.5rem">
-        <A href="#">Warning</A>
+        <a href="#">Warning</a>
       </Badge>
       <Badge pill info action m="0.5rem">
-        <A href="#">Info</A>
+        <a href="#">Info</a>
       </Badge>
       <Badge pill light action m="0.5rem">
-        <A href="#">Light</A>
+        <a href="#">Light</a>
       </Badge>
       <Badge pill dark action m="0.5rem">
-        <A href="#">Dark</A>
+        <a href="#">Dark</a>
       </Badge>
     </Container>
   ))));

@@ -1,44 +1,31 @@
 import styled, { css } from 'styled-components';
-import {
-  space,
-  color,
-  width,
-  fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
-import { Input as Ipt } from 'styled-base-components';
 
-const formCheckInputDisabled = (props) => (
+import {
+  theme,
+  colors,
+  margin,
+} from 'styled-config';
+
+const color = (props) => (
   props.disabled &&
   css`
-    color: #6c757d;
+    color: ${colors(props, 'formCheckInput').colorDisabled};
     & + label {
-      color: #6c757d;
+      color: ${colors(props, 'formCheckInput').colorDisabledLabel};
     };
   `
 );
 
-export const FormCheckInput = styled(Ipt)`
+const FormCheckInput = styled.input`
   position: absolute;
-  margin-top: 0.3rem;
-  margin-left: -1.25rem;
+  margin-top: ${(props) => margin(props, 'formCheckInput').top};
+  margin-left: ${(props) => margin(props, 'formCheckInput').left};
   box-sizing: border-box;
-  ${formCheckInputDisabled};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => color(props)};
 `;
+
+FormCheckInput.defaultProps = {
+  theme,
+};
+
+export { FormCheckInput };

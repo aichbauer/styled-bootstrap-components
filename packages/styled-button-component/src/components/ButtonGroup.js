@@ -1,60 +1,69 @@
 import styled, { css } from 'styled-components';
+
 import {
-  space,
-  color,
-  width,
+  theme,
+  padding as p,
   fontSize,
-  fontWeight,
-  textAlign,
-  lineHeight,
-  display,
-  borderRadius,
-  borderColor,
-  borders,
-} from 'styled-system';
+} from 'styled-config';
 
-import {
-  buttonSmall,
-  buttonLarge,
-} from './Button';
+const size = (props) => {
+  if (props.lg) {
+    return css`
+      padding: ${p(props, 'buttonGroup').lg};
+      font-size: ${fontSize(props, 'buttonGroup').lg};
+      line-height: 1.5;
+    `;
+  } else if (props.sm) {
+    return css`
+      padding:  ${p(props, 'buttonGroup').sm};
+      font-size: ${fontSize(props, 'buttonGroup').sm};
+      line-height: 1.5;
+    `;
+  }
 
-const buttonGroupVertical = (props) => (
-  props.vertical &&
-  css`
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+  return css`
+    padding: ${p(props, 'buttonGroup').default};
+    font-size: ${fontSize(props, 'buttonGroup').default};
+    line-height: 1.5;
+  `;
+};
+
+const vertical = (props) => {
+  if (props.vertical) {
+    return css`
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      & > button {
+        width: 100%;
+        &:not(:last-child) {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        };
+        &:not(:first-child) {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        };
+      };
+    `;
+  }
+
+  return css`
     & > button {
-      width: 100%;
       &:not(:last-child) {
+        border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
       };
       &:not(:first-child) {
         border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      };
-    };
-  `
-);
-
-const buttonGroupNormal = (props) => (
-  !props.vertical &&
-  css`
-    & > button {
-      &:not(:last-child) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      };
-      &:not(:first-child) {
-        border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       };
     };
-  `
-);
+  `;
+};
 
-export const ButtonGroup = styled.div`
+
+const ButtonGroup = styled.div`
   position: relative;
   display: inline-flex;
   vertical-align: middle;
@@ -65,20 +74,13 @@ export const ButtonGroup = styled.div`
     &:hover {
       z-index: 1;
     };
-    ${buttonSmall};
-    ${buttonLarge};
+    ${(props) => size(props)};
   };
-  ${buttonGroupVertical};
-  ${buttonGroupNormal};
-  ${space};
-  ${width};
-  ${color};
-  ${fontSize};
-  ${fontWeight};
-  ${textAlign};
-  ${lineHeight};
-  ${display};
-  ${borderRadius};
-  ${borderColor};
-  ${borders};
+  ${(props) => vertical(props)};
 `;
+
+ButtonGroup.defaultProps = {
+  theme,
+};
+
+export { ButtonGroup };
