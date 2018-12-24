@@ -1,6 +1,6 @@
 {
   "name": "styled-card-component",
-  "version": "1.3.0",
+  "version": "3.0.0",
   "description": "The bootstrap card component created with styled-components",
   "main": "./lib/index.js",
   "private": false,
@@ -35,7 +35,7 @@
     }
   },
   "dependencies": {
-    "styled-config": "^2.0.0"
+    "styled-config": "^3.0.0"
   },
   "peerDependencies": {
     "react": "^16.7.0",
