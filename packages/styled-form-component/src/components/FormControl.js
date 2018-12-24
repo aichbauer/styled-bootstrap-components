@@ -93,7 +93,7 @@ const opacity = (props) => {
 const formControlFormInline = (props) => (
   props.formInline &&
   css`
-    @media (min-width: ${props.theme.components.screenSize.sm}}) {
+    @media (min-width: ${props.theme.screenSize.sm}) {
       display: inline-block;
       width: auto;
       vertical-align: middle;

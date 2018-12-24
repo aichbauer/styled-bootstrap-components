@@ -29,12 +29,9 @@ const popoverHeaderBottom = (props) => (
 
 const popoverHeaderStyle = (props) => (
   css`
-    position: absolute;
     top: 0;
     left: 50%;
     display: block;
-    width: 1rem;
-    margin-left: ${margin(props, 'popoverHeader').beforeLeft};
     content: "";
     padding: ${padding(props, 'popoverHeader').default};
     margin-bottom: ${margin(props, 'popoverHeader').bottom};

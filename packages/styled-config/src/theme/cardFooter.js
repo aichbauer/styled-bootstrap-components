@@ -12,7 +12,7 @@ const cardFooter = {
     default: '0.75rem 1.25rem',
   },
   borderRadius: {
-    noRadius: utils.border.noRadius,
+    noRadius: utils.borderRadius.noRadius,
     default: '0 0 calc(0.25rem - 1px) calc(0.25rem - 1px)',
   },
   border: utils.border,

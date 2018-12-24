@@ -11,7 +11,7 @@ import {
 const color = (props) => {
   if (props.disabled) {
     return css`
-      color: ${colors(props, 'listGroupItem').colorDisabled} !important;
+      color: ${colors(props, 'listGroupItem').colorDisabled};
       ${props.action && css`
         & > a,
         & > a:hover,
