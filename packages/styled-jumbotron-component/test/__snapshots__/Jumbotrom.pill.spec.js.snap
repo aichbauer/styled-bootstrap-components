@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches Jumbotron pill 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  padding: 2rem 8rem;
+  border-radius: 10rem;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    padding: 4rem 8rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c0 {
+    padding: 4rem 4rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;

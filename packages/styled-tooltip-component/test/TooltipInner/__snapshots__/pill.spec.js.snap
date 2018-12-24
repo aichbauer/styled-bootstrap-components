@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches TooltipInner pill 1`] = `
+.c0 {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 10rem;
+  margin: -2px;
+}
+
+<div
+  className="c0"
+/>
+`;

@@ -31,6 +31,12 @@ exports[`Styles matches ListGroupItem disabled 1`] = `
   text-decoration: none;
 }
 
+.c0 > a,
+.c0 > a:hover,
+.c0 > a:focus {
+  color: #6c757d;
+}
+
 .c0:hover,
 .c0:focus,
 .c0 > a:hover,
@@ -39,6 +45,7 @@ exports[`Styles matches ListGroupItem disabled 1`] = `
 }
 
 <li
+  action={true}
   className="c0"
   disabled={true}
 />

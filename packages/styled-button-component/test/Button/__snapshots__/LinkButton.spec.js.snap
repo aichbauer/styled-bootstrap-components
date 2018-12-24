@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches LinkButton 1`] = `
+.c0 {
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  border: 1px solid #6c757d;
+  background-color: #6c757d;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.375rem 0.75rem;
+}
+
+.c0:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(108,117,125,0.5);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #6c757d;
+  background-color: #6c757d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.c0:hover:focus,
+.c0:focus:focus,
+.c0:hover:hover,
+.c0:focus:hover {
+  border: 1px solid #545b62;
+}
+
+.c0:hover:focus,
+.c0:focus:focus,
+.c0:hover:hover,
+.c0:focus:hover {
+  background-color: #5a6268;
+}
+
+.c0:focus,
+.c0:hover {
+  border: 1px solid #545b62;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: #5a6268;
+}
+
+<a
+  className="c0"
+/>
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches FormGroup noRadius 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.c0 > input,
+.c0 > div > input,
+.c0 > :not(input[type=file]),
+.c0 > div > :not(input[type=file]) {
+  border-radius: 0;
+}
+
+.c0 > input,
+.c0 > div > input,
+.c0 > label,
+.c0 > div > label {
+  line-height: 1.5;
+}
+
+.c0 > input,
+.c0 > div > input,
+.c0 > label,
+.c0 > div > label {
+  font-size: 1rem;
+}
+
+<div
+  className="c0"
+/>
+`;

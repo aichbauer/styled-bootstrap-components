@@ -1,4 +1,4 @@
-const themeFixture = {
+const theme = {
   alert: {
     colors: {
       primary: {
@@ -421,6 +421,7 @@ const themeFixture = {
       default: '0.75rem 1.25rem',
     },
     borderRadius: {
+      noRadius: '0',
       default: '0 0 calc(0.25rem - 1px) calc(0.25rem - 1px)',
     },
     border: {
@@ -438,6 +439,7 @@ const themeFixture = {
       default: '0.75rem 1.25rem',
     },
     borderRadius: {
+      noRadius: '0',
       topLeftRight: 'calc(0.25rem - 1px)',
     },
     border: {
@@ -446,6 +448,7 @@ const themeFixture = {
   },
   cardImageHeader: {
     borderRadius: {
+      noRadius: '0',
       topLeftRight: 'calc(0.25rem - 1px)',
     },
   },
@@ -1368,4 +1371,4 @@ const themeFixture = {
   },
 };
 
-export { themeFixture };
+export { theme };

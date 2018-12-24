@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches FormControl noRadius 1`] = `
+.c0 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+.c0::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.c0:focus {
+  color: #495057;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.c0::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0:focus {
+  background-color: #fff;
+}
+
+.c0:focus {
+  border-color: #ced4da;
+}
+
+.c0:focus {
+  box-shadow: 0;
+}
+
+<input
+  className="c0"
+/>
+`;

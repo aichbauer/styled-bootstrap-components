@@ -33,11 +33,25 @@ test('test if boxShadow extracts boxShadow of theme', () => {
 });
 
 test('test if colors extracts colors of theme', () => {
-  const cd = colors({ theme }, 'button');
-  const cp = colors({ theme, primary: true }, 'button');
+  const cDefault = colors({ theme }, 'button');
+  const cPrimary = colors({ theme, primary: true }, 'button');
+  const cSecondary = colors({ theme, secondary: true }, 'button');
+  const cSuccess = colors({ theme, success: true }, 'button');
+  const cDanger = colors({ theme, danger: true }, 'button');
+  const cWarning = colors({ theme, warning: true }, 'button');
+  const cInfo = colors({ theme, info: true }, 'button');
+  const cLight = colors({ theme, light: true }, 'button');
+  const cDark = colors({ theme, dark: true }, 'button');
 
-  expect(cd).toEqual(theme.button.colors.default);
-  expect(cp).toEqual(theme.button.colors.primary);
+  expect(cDefault).toEqual(theme.button.colors.default);
+  expect(cPrimary).toEqual(theme.button.colors.primary);
+  expect(cSecondary).toEqual(theme.button.colors.secondary);
+  expect(cSuccess).toEqual(theme.button.colors.success);
+  expect(cDanger).toEqual(theme.button.colors.danger);
+  expect(cWarning).toEqual(theme.button.colors.warning);
+  expect(cInfo).toEqual(theme.button.colors.info);
+  expect(cLight).toEqual(theme.button.colors.light);
+  expect(cDark).toEqual(theme.button.colors.dark);
 });
 
 test('test if fontFamily extracts fontFamily of theme', () => {
@@ -72,8 +86,20 @@ test('test if padding extract padding of theme', () => {
 });
 
 test('test if screenSize extract screenSize of theme', () => {
-  const myScreenSize = screenSize({ theme, sm: true });
-  expect(myScreenSize).toEqual(theme.screenSize.sm);
+  const myScreenSizeSm = screenSize({ theme, sm: true });
+  expect(myScreenSizeSm).toEqual(theme.screenSize.sm);
+
+  const myScreenSizeMd = screenSize({ theme, md: true });
+  expect(myScreenSizeMd).toEqual(theme.screenSize.md);
+
+  const myScreenSizeLg = screenSize({ theme, lg: true });
+  expect(myScreenSizeLg).toEqual(theme.screenSize.lg);
+
+  const myScreenSizeXl = screenSize({ theme, xl: true });
+  expect(myScreenSizeXl).toEqual(theme.screenSize.xl);
+
+  const myScreenSizeDefault = screenSize({ theme });
+  expect(myScreenSizeDefault).toEqual('');
 });
 
 test('test if width extract width of theme', () => {

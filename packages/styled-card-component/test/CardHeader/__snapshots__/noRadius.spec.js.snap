@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches CardHeader noRadius 1`] = `
+.c0 {
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+<div
+  className="c0"
+/>
+`;

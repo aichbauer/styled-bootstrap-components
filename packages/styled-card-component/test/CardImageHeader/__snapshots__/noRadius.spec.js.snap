@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches CardImageHeader noRadius 1`] = `
+.c0 {
+  width: 100%;
+  border-radius: 0;
+}
+
+<img
+  className="c0"
+/>
+`;

@@ -2,12 +2,9 @@
 
 exports[`Styles matches PopoverHeader bottom 1`] = `
 .c0 {
-  position: absolute;
   top: 0;
   left: 50%;
   display: block;
-  width: 1rem;
-  margin-left: -0.5rem;
   content: "";
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;

@@ -19,8 +19,8 @@ exports[`Styles matches TooltipArrow left 1`] = `
 }
 
 .c0::before {
-  left: 0.4rem;
-  top: calc(50% - 0.4rem);
+  left: 0;
+  top: calc(50% - 0.35rem);
   border-width: 0.4rem 0 0.4rem 0.4rem;
   border-left-color: #000;
 }

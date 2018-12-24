@@ -34,7 +34,7 @@ exports[`Styles matches NavbarLink brand 1`] = `
 }
 
 <a
-  className="sc-bwzfXH c0"
+  className="c0"
 />
 `;
 
@@ -66,7 +66,7 @@ exports[`Styles matches NavbarLink dark active 1`] = `
 }
 
 <a
-  className="sc-bwzfXH c0"
+  className="c0"
 />
 `;
 
@@ -98,7 +98,7 @@ exports[`Styles matches NavbarLink dark disabled 1`] = `
 }
 
 <a
-  className="sc-bwzfXH c0"
+  className="c0"
   disabled={true}
 />
 `;
@@ -131,7 +131,7 @@ exports[`Styles matches NavbarLink dark disabled 2`] = `
 }
 
 <a
-  className="sc-bwzfXH c0"
+  className="c0"
 />
 `;
 
@@ -163,7 +163,7 @@ exports[`Styles matches NavbarLink light active 1`] = `
 }
 
 <a
-  className="sc-bwzfXH c0"
+  className="c0"
 />
 `;
 
@@ -195,7 +195,7 @@ exports[`Styles matches NavbarLink light disabled 1`] = `
 }
 
 <a
-  className="sc-bwzfXH c0"
+  className="c0"
   disabled={true}
 />
 `;
@@ -228,6 +228,6 @@ exports[`Styles matches NavbarLink light disabled 2`] = `
 }
 
 <a
-  className="sc-bwzfXH c0"
+  className="c0"
 />
 `;

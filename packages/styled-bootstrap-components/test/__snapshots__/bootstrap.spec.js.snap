@@ -1,14 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Simply check if all components are imported and exported correctly 1`] = `
+.c0 {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+
+.c0 > a {
+  font-weight: 700;
+}
+
+.c0 > h1,
+.c0 > h2,
+.c0 > h3,
+.c0 > h4,
+.c0 > h5,
+.c0 > h6 {
+  color: inherit;
+}
+
+.c0 > hr {
+  border-top-color: #c8cbcf;
+}
+
+.c0 > a,
+.c0 > a:hover {
+  color: #202326;
+}
+
 <div
-  className="sc-bdVaJa rHqun"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 2`] = `
+.c0 {
+  display: inline-block;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  position: relative;
+  top: -1px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.4rem;
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.c0:empty {
+  display: none;
+}
+
+.c0 > a {
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #6c757d;
+}
+
 <span
-  className="sc-bdVaJa dKlqkM"
+  className="c0"
 />
 `;
 
@@ -376,327 +436,1407 @@ exports[`Simply check if all components are imported and exported correctly 3`] 
 `;
 
 exports[`Simply check if all components are imported and exported correctly 4`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
 <ol
-  className="sc-bdVaJa cWSDRz"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 5`] = `
+.c1:not(:first-child)::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #6c757d;
+  content: "/";
+}
+
+.c1 + .c0:hover::before {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <li
-  className="sc-bwzfXH iFobhq"
+  className="c0 c1"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 6`] = `
+.c0 {
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  border: 1px solid #6c757d;
+  background-color: #6c757d;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.375rem 0.75rem;
+}
+
+.c0:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(108,117,125,0.5);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #6c757d;
+  background-color: #6c757d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.c0:hover:focus,
+.c0:focus:focus,
+.c0:hover:hover,
+.c0:focus:hover {
+  border: 1px solid #545b62;
+}
+
+.c0:hover:focus,
+.c0:focus:focus,
+.c0:hover:hover,
+.c0:focus:hover {
+  background-color: #5a6268;
+}
+
+.c0:focus,
+.c0:hover {
+  border: 1px solid #545b62;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: #5a6268;
+}
+
 <button
-  className="sc-bdVaJa jPYkkm"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 7`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.c0 > button {
+  line-height: 1.5;
+  position: relative;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.c0 > button:hover {
+  z-index: 1;
+}
+
+.c0 > button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c0 > button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 <div
-  className="sc-htpNat eJCMxi"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 8`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: auto;
+}
+
 <div
-  className="sc-bxivhb mgvVF"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 9`] = `
+.c0 {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 0.25rem;
+}
+
 <div
-  className="sc-bdVaJa fTPpxS"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 10`] = `
+.c0 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.c0 > a:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 > a + a {
+  margin-left: 1.25rem;
+}
+
 <div
-  className="sc-bwzfXH hdmyaK"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 11`] = `
+.c0 {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0,0,0,0.03);
+  border-top: 1px solid rgba(0,0,0,0.125);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: -3px;
+}
+
+.c0:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
 <div
-  className="sc-htpNat dCwzkn"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 12`] = `
+.c0 {
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
 <div
-  className="sc-bxivhb jxjrXr"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 13`] = `
+.c0 {
+  width: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
 <img
-  className="sc-ifAKCX iyVREG"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 14`] = `
+.c0 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
 <p
-  className="sc-EHOje fUEkTs"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 15`] = `
+.c0 {
+  margin-bottom: 0.75rem;
+}
+
 <h4
-  className="sc-dnqmqq bDeTkm"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 16`] = `"{\\"alert\\":{\\"colors\\":{\\"primary\\":{\\"text\\":\\"#004085\\",\\"background\\":\\"#cce5ff\\",\\"border\\":\\"#b8daff\\",\\"borderTop\\":\\"#9fcdff\\",\\"hover\\":\\"#002752\\"},\\"secondary\\":{\\"text\\":\\"#383d41\\",\\"background\\":\\"#e2e3e5\\",\\"border\\":\\"#d6d8db\\",\\"borderTop\\":\\"#c8cbcf\\",\\"hover\\":\\"#202326\\"},\\"success\\":{\\"text\\":\\"#155724\\",\\"background\\":\\"#d4edda\\",\\"border\\":\\"#c3e6cb\\",\\"borderTop\\":\\"#b1dfbb\\",\\"hover\\":\\"#0b2e13\\"},\\"danger\\":{\\"text\\":\\"#721c24\\",\\"background\\":\\"#f8d7da\\",\\"border\\":\\"#f5c6cb\\",\\"borderTop\\":\\"#f1b0b7\\",\\"hover\\":\\"#491217\\"},\\"warning\\":{\\"text\\":\\"#856404\\",\\"background\\":\\"#fff3cd\\",\\"border\\":\\"#ffeeba\\",\\"borderTop\\":\\"#ffe8a1\\",\\"hover\\":\\"#533f03\\"},\\"info\\":{\\"text\\":\\"#0c5460\\",\\"background\\":\\"#d1ecf1\\",\\"border\\":\\"#bee5eb\\",\\"borderTop\\":\\"#abdde5\\",\\"hover\\":\\"#062c33\\"},\\"light\\":{\\"text\\":\\"#818182\\",\\"background\\":\\"#fefefe\\",\\"border\\":\\"#fdfdfe\\",\\"borderTop\\":\\"#ececf6\\",\\"hover\\":\\"#686868\\"},\\"dark\\":{\\"text\\":\\"#1b1e21\\",\\"background\\":\\"#d6d8d9\\",\\"border\\":\\"#c6c8ca\\",\\"borderTop\\":\\"#b9bbbe\\",\\"hover\\":\\"#040505\\"},\\"default\\":{\\"text\\":\\"#383d41\\",\\"background\\":\\"#e2e3e5\\",\\"border\\":\\"#d6d8db\\",\\"borderTop\\":\\"#c8cbcf\\",\\"hover\\":\\"#202326\\"}},\\"margin\\":{\\"bottom\\":\\"1rem\\"},\\"padding\\":{\\"default\\":\\"0.75rem 1.25rem\\",\\"dismissibleRight\\":\\"4rem\\"},\\"border\\":{\\"default\\":\\"1px solid transparent\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"fontWeight\\":{\\"default\\":\\"700\\"}},\\"badge\\":{\\"colors\\":{\\"primary\\":{\\"backgroundColor\\":\\"#007bff\\",\\"backgroundColorHoverFocus\\":\\"#0062cc\\",\\"color\\":\\"#fff\\",\\"linkColor\\":\\"#fff\\"},\\"secondary\\":{\\"backgroundColor\\":\\"#6c757d\\",\\"backgroundColorHoverFocus\\":\\"#545b62\\",\\"color\\":\\"#fff\\",\\"linkColor\\":\\"#fff\\"},\\"success\\":{\\"backgroundColor\\":\\"#28a745\\",\\"backgroundColorHoverFocus\\":\\"#1e7e34\\",\\"color\\":\\"#fff\\",\\"linkColor\\":\\"#fff\\"},\\"danger\\":{\\"backgroundColor\\":\\"#dc3545\\",\\"backgroundColorHoverFocus\\":\\"#bd2130\\",\\"color\\":\\"#fff\\",\\"linkColor\\":\\"#fff\\"},\\"warning\\":{\\"backgroundColor\\":\\"#ffc107\\",\\"backgroundColorHoverFocus\\":\\"#d39e00\\",\\"color\\":\\"#212529\\",\\"linkColor\\":\\"#212529\\"},\\"info\\":{\\"backgroundColor\\":\\"#17a2b8\\",\\"backgroundColorHoverFocus\\":\\"#117a8b\\",\\"color\\":\\"#fff\\",\\"linkColor\\":\\"#fff\\"},\\"light\\":{\\"backgroundColor\\":\\"#f8f9fa\\",\\"backgroundColorHoverFocus\\":\\"#dae0e5\\",\\"color\\":\\"#212529\\",\\"linkColor\\":\\"#212529\\"},\\"dark\\":{\\"backgroundColor\\":\\"#343a40\\",\\"backgroundColorHoverFocus\\":\\"#1d2124\\",\\"color\\":\\"#fff\\",\\"linkColor\\":\\"#fff\\"},\\"default\\":{\\"backgroundColor\\":\\"#6c757d\\",\\"backgroundColorHoverFocus\\":\\"#545b62\\",\\"color\\":\\"#fff\\",\\"linkColor\\":\\"#fff\\"}},\\"padding\\":{\\"pill\\":\\"0.25rem 0.6rem\\",\\"default\\":\\"0.25rem 0.4rem\\"},\\"fontWeight\\":{\\"default\\":\\"700\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"breadcrumb\\":{\\"colors\\":{\\"default\\":{\\"backgroundColor\\":\\"#e9ecef\\"}},\\"padding\\":{\\"default\\":\\"0.75rem 1rem\\"},\\"margin\\":{\\"bottom\\":\\"1rem\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"breadcrumbItem\\":{\\"colors\\":{\\"default\\":{\\"color\\":\\"#6c757d\\"}},\\"padding\\":{\\"right\\":\\"0.5rem\\",\\"left\\":\\"0.5rem\\"},\\"margin\\":{\\"bottom\\":\\"1rem\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"button\\":{\\"colors\\":{\\"primary\\":{\\"color\\":\\"#fff\\",\\"colorOutline\\":\\"#007bff\\",\\"colorOutlineHover\\":\\"#fff\\",\\"backgroundColor\\":\\"#007bff\\",\\"backgroundColorDisabled\\":\\"#007bff\\",\\"backgroundColorHoverFocus\\":\\"#0069d9\\",\\"backgroundColorActive\\":\\"#0062cc\\",\\"borderColor\\":\\"#007bff\\",\\"borderColorDisabled\\":\\"#007bff\\",\\"borderColorActive\\":\\"#005cbf\\",\\"borderColorHoverFocus\\":\\"#0062cc\\",\\"boxShadow\\":\\"rgba(0, 123, 255, 0.5)\\"},\\"secondary\\":{\\"color\\":\\"#fff\\",\\"colorOutline\\":\\"#6c757d\\",\\"colorOutlineHover\\":\\"#fff\\",\\"backgroundColor\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#6c757d\\",\\"backgroundColorHoverFocus\\":\\"#5a6268\\",\\"backgroundColorActive\\":\\"#545b62\\",\\"borderColor\\":\\"#6c757d\\",\\"borderColorDisabled\\":\\"#6c757d\\",\\"borderColorActive\\":\\"#4e555b\\",\\"borderColorHoverFocus\\":\\"#545b62\\",\\"boxShadow\\":\\"rgba(108, 117, 125, 0.5)\\"},\\"success\\":{\\"color\\":\\"#fff\\",\\"colorOutline\\":\\"#28a745\\",\\"colorOutlineHover\\":\\"#fff\\",\\"backgroundColor\\":\\"#28a745\\",\\"backgroundColorDisabled\\":\\"#28a745\\",\\"backgroundColorHoverFocus\\":\\"#218838\\",\\"backgroundColorActive\\":\\"#1e7e34\\",\\"borderColor\\":\\"#28a745\\",\\"borderColorDisabled\\":\\"#28a745\\",\\"borderColorActive\\":\\"#1c7430\\",\\"borderColorHoverFocus\\":\\"#1e7e34\\",\\"boxShadow\\":\\"rgba(40, 167, 69, 0.5)\\"},\\"danger\\":{\\"color\\":\\"#fff\\",\\"colorOutline\\":\\"#dc3545\\",\\"colorOutlineHover\\":\\"#fff\\",\\"backgroundColor\\":\\"#dc3545\\",\\"backgroundColorDisabled\\":\\"#dc3545\\",\\"backgroundColorHoverFocus\\":\\"#c82333\\",\\"backgroundColorActive\\":\\"#bd2130\\",\\"borderColor\\":\\"#dc3545\\",\\"borderColorDisabled\\":\\"#dc3545\\",\\"borderColorActive\\":\\"#b21f2d\\",\\"borderColorHoverFocus\\":\\"#bd2130\\",\\"boxShadow\\":\\"rgba(220, 53, 69, 0.5)\\"},\\"warning\\":{\\"color\\":\\"#212529\\",\\"colorOutline\\":\\"#ffc107\\",\\"colorOutlineHover\\":\\"#212529\\",\\"backgroundColor\\":\\"#ffc107\\",\\"backgroundColorDisabled\\":\\"#ffc107\\",\\"backgroundColorHoverFocus\\":\\"#e0a800\\",\\"backgroundColorActive\\":\\"#d39e00\\",\\"borderColor\\":\\"#ffc107\\",\\"borderColorDisabled\\":\\"#ffc107\\",\\"borderColorActive\\":\\"#c69500\\",\\"borderColorHoverFocus\\":\\"#d39e00\\",\\"boxShadow\\":\\"rgba(255, 193, 7, 0.5)\\"},\\"info\\":{\\"color\\":\\"#fff\\",\\"colorOutline\\":\\"#17a2b8\\",\\"colorOutlineHover\\":\\"#fff\\",\\"backgroundColor\\":\\"#17a2b8\\",\\"backgroundColorDisabled\\":\\"#17a2b8\\",\\"backgroundColorHoverFocus\\":\\"#138496\\",\\"backgroundColorActive\\":\\"#117a8b\\",\\"borderColor\\":\\"#17a2b8\\",\\"borderColorDisabled\\":\\"#17a2b8\\",\\"borderColorActive\\":\\"#10707f\\",\\"borderColorHoverFocus\\":\\"#117a8b\\",\\"boxShadow\\":\\"rgba(23, 162, 184, 0.5)\\"},\\"light\\":{\\"color\\":\\"#212529\\",\\"colorOutline\\":\\"#f8f9fa\\",\\"colorOutlineHover\\":\\"#212529\\",\\"backgroundColor\\":\\"#f8f9fa\\",\\"backgroundColorDisabled\\":\\"#f8f9fa\\",\\"backgroundColorHoverFocus\\":\\"#e2e6ea\\",\\"backgroundColorActive\\":\\"#dae0e5\\",\\"borderColor\\":\\"#f8f9fa\\",\\"borderColorDisabled\\":\\"#f8f9fa\\",\\"borderColorActive\\":\\"#d3d9df\\",\\"borderColorHoverFocus\\":\\"#dae0e5\\",\\"boxShadow\\":\\"rgba(248, 249, 250, 0.5)\\",\\"toggle\\":{\\"color\\":\\"rgba(0, 0, 0, 0.5)\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.1)\\",\\"colorHoverFous\\":\\"rgba(0, 0, 0, 0.5)\\",\\"borderColorHoverFous\\":\\"rgba(0, 0, 0, 0.1)\\"}},\\"dark\\":{\\"color\\":\\"#fff\\",\\"colorOutline\\":\\"#343a40\\",\\"colorOutlineHover\\":\\"#fff\\",\\"backgroundColor\\":\\"#343a40\\",\\"backgroundColorDisabled\\":\\"#343a40\\",\\"backgroundColorHoverFocus\\":\\"#23272b\\",\\"backgroundColorActive\\":\\"#1d2124\\",\\"borderColor\\":\\"#343a40\\",\\"borderColorDisabled\\":\\"#343a40\\",\\"borderColorActive\\":\\"#171a1d\\",\\"borderColorHoverFocus\\":\\"#1d2124\\",\\"boxShadow\\":\\"rgba(52, 58, 64, 0.5)\\",\\"toggle\\":{\\"color\\":\\"rgba(255, 255, 255, 0.5)\\",\\"borderColor\\":\\"rgba(255, 255, 255, 0.1)\\",\\"colorHoverFous\\":\\"rgba(255, 255, 255, 0.5)\\",\\"borderColorHoverFous\\":\\"rgba(255, 255, 255, 0.1)\\"}},\\"default\\":{\\"color\\":\\"#fff\\",\\"colorOutline\\":\\"#6c757d\\",\\"colorOutlineHover\\":\\"#fff\\",\\"backgroundColor\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#6c757d\\",\\"backgroundColorHoverFocus\\":\\"#5a6268\\",\\"backgroundColorActive\\":\\"#545b62\\",\\"borderColor\\":\\"#6c757d\\",\\"borderColorDisabled\\":\\"#6c757d\\",\\"borderColorActive\\":\\"#4e555b\\",\\"borderColorHoverFocus\\":\\"#545b62\\",\\"boxShadow\\":\\"rgba(108, 117, 125, 0.5)\\"}},\\"margin\\":{\\"blockTop\\":\\"0.5rem\\",\\"dropDownToggleLeft\\":\\"0255rem\\"},\\"padding\\":{\\"sm\\":\\"0.25rem 0.5rem\\",\\"lg\\":\\"0.5rem 1rem\\",\\"default\\":\\"0.375rem 0.75rem\\",\\"splitSmRight\\":\\"0.375rem\\",\\"splitSmLeft\\":\\"0.375rem\\",\\"splitLgRight\\":\\"0.75rem\\",\\"splitLgLeft\\":\\"0.75rem\\",\\"splitDefaultRight\\":\\"0.5625rem\\",\\"splitDefaultLeft\\":\\"0.5625rem\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\",\\"toggle\\":\\"1.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"buttonGroup\\":{\\"padding\\":{\\"sm\\":\\"0.25rem 0.5rem\\",\\"lg\\":\\"0.5rem 1rem\\",\\"default\\":\\"0.375rem 0.75rem\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"}},\\"card\\":{\\"colors\\":{\\"default\\":{\\"backgroundColor\\":\\"#fff\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"}},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"cardBody\\":{\\"padding\\":{\\"default\\":\\"1.25rem\\"},\\"margin\\":{\\"leftA\\":\\"1.25rem\\"}},\\"cardFooter\\":{\\"colors\\":{\\"default\\":{\\"background\\":\\"rgba(0, 0, 0, 0.03)\\",\\"borderTop\\":\\"rgba(0, 0, 0, 0.125)\\"}},\\"padding\\":{\\"default\\":\\"0.75rem 1.25rem\\"},\\"borderRadius\\":{\\"default\\":\\"0 0 calc(0.25rem - 1px) calc(0.25rem - 1px)\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"cardHeader\\":{\\"colors\\":{\\"default\\":{\\"background\\":\\"#fff\\",\\"borderBottom\\":\\"rgba(0, 0, 0, 0.125)\\"}},\\"padding\\":{\\"default\\":\\"0.75rem 1.25rem\\"},\\"borderRadius\\":{\\"topLeftRight\\":\\"calc(0.25rem - 1px)\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"cardImageHeader\\":{\\"borderRadius\\":{\\"topLeftRight\\":\\"calc(0.25rem - 1px)\\"}},\\"cardText\\":{\\"margin\\":{\\"top\\":\\"0\\",\\"bottom\\":\\"1rem\\",\\"lastChildBottom\\":\\"0\\"}},\\"cardTitle\\":{\\"colors\\":{\\"default\\":{\\"colorMuted\\":\\"#6c757d\\"}},\\"margin\\":{\\"bottom\\":\\"0.75rem\\",\\"subtitleTop\\":\\"-0.375rem\\",\\"subtitleBottom\\":\\"0\\"}},\\"container\\":{\\"width\\":{\\"default\\":\\"100%\\",\\"fluid\\":{\\"sm\\":\\"540px\\",\\"md\\":\\"720px\\",\\"lg\\":\\"960px\\",\\"xl\\":\\"1140px\\"}},\\"fontSize\\":{\\"default\\":\\"1rem\\"},\\"fontWeight\\":{\\"default\\":\\"400\\"},\\"fontFamily\\":{\\"default\\":\\"-apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, \\\\\\"Helvetica Neue\\\\\\", Arial, sans-serif, \\\\\\"Apple Color Emoji\\\\\\", \\\\\\"Segoe UI Emoji\\\\\\", \\\\\\"Segoe UI Symbol\\\\\\"\\"}},\\"dropdownDivider\\":{\\"colors\\":{\\"default\\":{\\"borderTop\\":\\"#e9ecef\\"}},\\"padding\\":{\\"top\\":\\"0.5rem\\"},\\"margin\\":{\\"top\\":\\"0.6rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"dropdownItem\\":{\\"colors\\":{\\"default\\":{\\"color\\":\\"#212529\\",\\"colorHoverFocus\\":\\"#16181b\\",\\"colorActive\\":\\"#fff\\",\\"backgroundColorActive\\":\\"#007bff\\",\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorHoverFocus\\":\\"#f8f9fa\\"}},\\"fontWeight\\":{\\"default\\":\\"400\\"},\\"padding\\":{\\"default\\":\\"0.25rem 1.5rem\\"}},\\"dropdownMenu\\":{\\"colors\\":{\\"default\\":{\\"color\\":\\"#212529\\",\\"backgroundColor\\":\\"#fff\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.15)\\"}},\\"fontSize\\":{\\"default\\":\\"1rem\\"},\\"padding\\":{\\"default\\":\\"0.5rem 0\\"},\\"margin\\":{\\"default\\":\\"0.125rem 0 0\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"formCheck\\":{\\"margin\\":{\\"labelBottom\\":\\"0\\",\\"inputLeft\\":\\"0\\",\\"inputTop\\":\\"0\\",\\"inputRight\\":\\"0.3125rem\\",\\"inlineRight\\":\\"0.75rem\\"},\\"padding\\":{\\"inlineLeft\\":\\"0\\"}},\\"formCheckInput\\":{\\"colors\\":{\\"default\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"colorDisabledLabel\\":\\"#6c757d\\"}},\\"margin\\":{\\"top\\":\\"0.3rem\\",\\"left\\":\\"-1.25rem\\"}},\\"formControl\\":{\\"colors\\":{\\"default\\":{\\"color\\":\\"#495057\\",\\"background\\":\\"#fff\\",\\"border\\":\\"#ced4da\\",\\"borderFocus\\":\\"#80bdff\\",\\"boxShadowFocus\\":\\"rgba(0, 123, 255, 0.25)\\",\\"placeholder\\":\\"#6c757d\\",\\"backgroundColorDisabledReadonly\\":\\"#e9ecef\\",\\"borderValid\\":\\"#28a745\\",\\"formControlBoxShadowValid\\":\\"rgba(40, 167, 69, 0.25)\\",\\"borderInvalid\\":\\"#dc3545\\",\\"formControlBoxShadowInvalid\\":\\"rgba(220, 53, 69, 0.25)\\"}},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"},\\"boxShadow\\":{\\"default\\":\\"0 0 0 0.2rem\\"},\\"padding\\":{\\"smRight\\":\\"0\\",\\"smLeft\\":\\"0\\",\\"lgRight\\":\\"0\\",\\"lgLeft\\":\\"0\\",\\"smPadding\\":\\"0.25rem 0.5rem\\",\\"lgPadding\\":\\"0.5rem 1rem\\",\\"defaultPadding\\":\\"0.375rem 0.75rem\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"},\\"height\\":{\\"select\\":\\"calc(2.25rem + 2px)\\",\\"selectLg\\":\\"calc(2.875rem + 2px)\\",\\"selectSm\\":\\"calc(1.8125rem + 2px)\\"}},\\"formControlPlainText\\":{\\"colors\\":{\\"default\\":{\\"backgroundColor\\":\\"transparent\\",\\"borderColor\\":\\"transparent\\"}},\\"padding\\":{\\"top\\":\\"0.375rem\\",\\"bottom\\":\\"0.375rem\\",\\"smRight\\":\\"0\\",\\"smLeft\\":\\"0\\"},\\"margin\\":{\\"bottom\\":\\"0\\"}},\\"formGroup\\":{\\"margin\\":{\\"inlineBottom\\":\\"0\\",\\"nombNoRow\\":\\"0\\",\\"nombRowRight\\":\\"-5px\\",\\"nombRowLeft\\":\\"-5px\\",\\"nombRowDivLabelBottom\\":\\"0\\",\\"nombRowBottom\\":\\"0\\",\\"rowRight\\":\\"-5px\\",\\"rowLeft\\":\\"-5px\\",\\"rowDivLabel\\":\\"0\\",\\"bottom\\":\\"1rem\\"},\\"padding\\":{\\"labelTopLg\\":\\"calc(0.5rem + 1px)\\",\\"labelBottomLg\\":\\"calc(0.5rem + 1px)\\",\\"inputRightLg\\":\\"0\\",\\"inputLeftLg\\":\\"0\\",\\"inputLg\\":\\"0.5rem 1rem\\",\\"labelTopSm\\":\\"calc(0.25rem + 1px)\\",\\"labelBottomSm\\":\\"calc(0.25rem + 1px)\\",\\"inputRightSm\\":\\"0\\",\\"inputLeftSm\\":\\"0\\",\\"inputSm\\":\\"0.25rem 0.5rem\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"}},\\"formText\\":{\\"colors\\":{\\"default\\":{\\"colorMuted\\":\\"#6c757d\\"}},\\"margin\\":{\\"top\\":\\"0.25rem\\"}},\\"inputGroup\\":{\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"},\\"padding\\":{\\"leftLg\\":\\"0\\",\\"rightLg\\":\\"0\\",\\"lg\\":\\"0.5rem 1rem\\",\\"leftSm\\":\\"0\\",\\"rightSm\\":\\"0\\",\\"sm\\":\\"0.25rem 0.5rem\\"},\\"margin\\":{\\"bottom\\":\\"0\\"}},\\"inputGroupText\\":{\\"colors\\":{\\"default\\":{\\"color\\":\\"#495057\\",\\"backgroundColor\\":\\"#e9ecef\\",\\"borderColor\\":\\"#ced4da\\"}},\\"margin\\":{\\"bottom\\":\\"0\\",\\"radioCheckboxTop\\":\\"0\\",\\"radioCheckboxRight\\":\\"0\\",\\"radioCheckboxBottom\\":\\"0.4125rem\\"},\\"padding\\":{\\"default\\":\\"0.375rem 0.75rem\\"},\\"fontWeight\\":{\\"default\\":\\"400\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"jumbotron\\":{\\"colors\\":{\\"default\\":{\\"backgroundColor\\":\\"#e9ecef\\"}},\\"padding\\":{\\"sm\\":\\"4rem 2rem\\",\\"fluidRight\\":\\"0\\",\\"fluidLeft\\":\\"0\\",\\"pill\\":\\"2rem 8rem\\",\\"lgPill\\":\\"4rem 8rem\\",\\"smPill\\":\\"4rem 4rem\\",\\"default\\":\\"2rem 1rem\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"listGroup\\":{\\"padding\\":{\\"left\\":\\"0\\"},\\"margin\\":{\\"bottom\\":\\"0\\"},\\"border\\":{\\"aLiFlushRight\\":\\"0\\",\\"aLiFlushLeft\\":\\"0\\",\\"aLiFlushFirstChildTop\\":\\"0\\",\\"aLiFlushLastChildBottom\\":\\"0\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"listGroupItem\\":{\\"colors\\":{\\"primary\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#004085\\",\\"backgroundColor\\":\\"#b8daff\\",\\"backgroundColorHoverFocusAction\\":\\"#9fcdff\\",\\"backgroundColorActive\\":\\"#004085\\",\\"backgroundColorHoverFocusActive\\":\\"#004085\\",\\"borderColorActive\\":\\"#004085\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"secondary\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#383d41\\",\\"backgroundColor\\":\\"#d6d8db\\",\\"backgroundColorHoverFocusAction\\":\\"#c8cbcf\\",\\"backgroundColorActive\\":\\"#383d41\\",\\"backgroundColorHoverFocusActive\\":\\"#383d41\\",\\"borderColorActive\\":\\"#383d41\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"success\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#155724\\",\\"backgroundColor\\":\\"#c3e6cb\\",\\"backgroundColorHoverFocusAction\\":\\"#b1dfbb\\",\\"backgroundColorActive\\":\\"#155724\\",\\"backgroundColorHoverFocusActive\\":\\"#155724\\",\\"borderColorActive\\":\\"#155724\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"info\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#0c5460\\",\\"backgroundColor\\":\\"#bee5eb\\",\\"backgroundColorHoverFocusAction\\":\\"#abdde5\\",\\"backgroundColorActive\\":\\"#0c5460\\",\\"backgroundColorHoverFocusActive\\":\\"#0c5460\\",\\"borderColorActive\\":\\"#0c5460\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"warning\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#856404\\",\\"backgroundColor\\":\\"#ffeeba\\",\\"backgroundColorHoverFocusAction\\":\\"#ffe8a1\\",\\"backgroundColorActive\\":\\"#856404\\",\\"backgroundColorHoverFocusActive\\":\\"#856404\\",\\"borderColorActive\\":\\"#856404\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"danger\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#721c24\\",\\"backgroundColor\\":\\"#f5c6cb\\",\\"backgroundColorHoverFocusAction\\":\\"#f1b0b7\\",\\"backgroundColorActive\\":\\"#721c24\\",\\"backgroundColorHoverFocusActive\\":\\"#721c24\\",\\"borderColorActive\\":\\"#721c24\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"light\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#818182\\",\\"backgroundColor\\":\\"#fdfdfe\\",\\"backgroundColorHoverFocusAction\\":\\"#ececf6\\",\\"backgroundColorActive\\":\\"#818182\\",\\"backgroundColorHoverFocusActive\\":\\"#818182\\",\\"borderColorActive\\":\\"#818182\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"dark\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"colorActive\\":\\"#fff\\",\\"color\\":\\"#1b1e21\\",\\"backgroundColor\\":\\"#c6c8ca\\",\\"backgroundColorHoverFocusAction\\":\\"#b9bbbe\\",\\"backgroundColorActive\\":\\"#1b1e21\\",\\"backgroundColorHoverFocusActive\\":\\"#1b1e21\\",\\"borderColorActive\\":\\"#1b1e21\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"},\\"default\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"backgroundColor\\":\\"#fff\\",\\"backgroundColorDisabled\\":\\"#fff\\",\\"backgroundColorAction\\":\\"#f8f9fa\\",\\"backgroundColorHoverFocusAction\\":\\"#f8f9fa\\",\\"color\\":\\"#495057\\",\\"colorActive\\":\\"#fff\\",\\"colorAction\\":\\"#495057\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\",\\"borderColorActive\\":\\"#007bff\\",\\"backgroundColorActive\\":\\"#007bff\\"}},\\"padding\\":{\\"default\\":\\"0.75rem 1.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"modalBody\\":{\\"padding\\":{\\"default\\":\\"1rem\\"}},\\"modalContent\\":{\\"colors\\":{\\"default\\":{\\"backgroundColor\\":\\"#fff\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.2)\\"}},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"modalFooter\\":{\\"colors\\":{\\"default\\":{\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"}},\\"padding\\":{\\"default\\":\\"1rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"modalHeader\\":{\\"colors\\":{\\"default\\":{\\"borderColor\\":\\"rgba(0, 0, 0, 0.125)\\"}},\\"padding\\":{\\"default\\":\\"1rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}},\\"nav\\":{\\"colors\\":{\\"default\\":{\\"borderColorTabs\\":\\"#dee2e6\\"}},\\"padding\\":{\\"collapseNotHiddenARight\\":\\"0.5rem\\",\\"collapseNotHiddenALeft\\":\\"0.5rem\\",\\"left\\":\\"0\\"},\\"margin\\":{\\"bottom\\":\\"0\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"navLink\\":{\\"colors\\":{\\"default\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"colorDisabledHoverFocus\\":\\"#6c757d\\",\\"colorTabsActive\\":\\"#495057\\",\\"colorTabsActiveHoverFocus\\":\\"#495057\\",\\"colorPillsActive\\":\\"#fff\\",\\"colorPillsActiveHoverFocus\\":\\"#fff\\",\\"color\\":\\"#007bff\\",\\"colorHoverFocus\\":\\"#0056b3\\",\\"backgroundColorPillsActive\\":\\"#007bff\\",\\"borderColorTabsActive\\":\\"#e9ecef #e9ecef #fff\\",\\"borderColorTabsHoverFocus\\":\\"#e9ecef #e9ecef #dee2e6\\",\\"borderColorTabsDisabled\\":\\"transparent\\",\\"borderColorPillsActive\\":\\"#007bff\\",\\"borderColor\\":\\"transparent\\"},\\"light\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"colorDisabledHoverFocus\\":\\"#6c757d\\",\\"colorTabsActive\\":\\"#495057\\",\\"colorTabsActiveHoverFocus\\":\\"#495057\\",\\"colorPillsActive\\":\\"#fff\\",\\"colorPillsActiveHoverFocus\\":\\"#fff\\",\\"color\\":\\"#007bff\\",\\"colorHoverFocus\\":\\"#0056b3\\",\\"backgroundColorPillsActive\\":\\"#007bff\\",\\"borderColorTabsActive\\":\\"#e9ecef #e9ecef #fff\\",\\"borderColorTabsHoverFocus\\":\\"#e9ecef #e9ecef #dee2e6\\",\\"borderColorTabsDisabled\\":\\"transparent\\",\\"borderColorPillsActive\\":\\"#007bff\\",\\"borderColor\\":\\"transparent\\"},\\"dark\\":{\\"colorDisabled\\":\\"#6c757d\\",\\"colorDisabledHoverFocus\\":\\"#6c757d\\",\\"colorTabsActive\\":\\"#495057\\",\\"colorTabsActiveHoverFocus\\":\\"#495057\\",\\"colorPillsActive\\":\\"#fff\\",\\"colorPillsActiveHoverFocus\\":\\"#fff\\",\\"color\\":\\"#007bff\\",\\"colorHoverFocus\\":\\"#0056b3\\",\\"backgroundColorPillsActive\\":\\"#007bff\\",\\"borderColorTabsActive\\":\\"#e9ecef #e9ecef #fff\\",\\"borderColorTabsHoverFocus\\":\\"#e9ecef #e9ecef #dee2e6\\",\\"borderColorTabsDisabled\\":\\"transparent\\",\\"borderColorPillsActive\\":\\"#007bff\\",\\"borderColor\\":\\"transparent\\"}},\\"padding\\":{\\"default\\":\\"0.5rem\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"}},\\"navbar\\":{\\"colors\\":{\\"dark\\":{\\"color\\":\\"rgba(255, 255, 255, 0.5)\\",\\"borderColor\\":\\"rgba(255, 255, 255, 0.1)\\",\\"backgroundColor\\":\\"#343a40\\"},\\"light\\":{\\"color\\":\\"rgba(0, 0, 0, 0.5)\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.1)\\",\\"backgroundColor\\":\\"#f8f9fa\\"},\\"default\\":{\\"color\\":\\"rgba(0, 0, 0, 0.5)\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.1)\\",\\"backgroundColor\\":\\"#f8f9fa\\"}},\\"padding\\":{\\"default\\":\\"0.5rem 1rem\\"}},\\"navbarLink\\":{\\"colors\\":{\\"dark\\":{\\"colorDisabled\\":\\"rgba(255, 255, 255, 0.25)\\",\\"colorDisabledHoverFocus\\":\\"rgba(255, 255, 255, 0.25)\\",\\"colorActive\\":\\"rgba(255, 255, 255, 0.9)\\",\\"colorActiveHoverFocus\\":\\"rgba(255, 255, 255, 0.9)\\",\\"color\\":\\"rgba(255, 255, 255, 0.5)\\",\\"colorHoverFocus\\":\\"rgba(255, 255, 255, 0.75)\\"},\\"light\\":{\\"colorDisabled\\":\\"rgba(0, 0, 0, 0.3)\\",\\"colorDisabledHoverFocus\\":\\"rgba(0, 0, 0, 0.3)\\",\\"colorActive\\":\\"rgba(0, 0, 0, 0.9)\\",\\"colorActiveHoverFocus\\":\\"rgba(0, 0, 0, 0.9)\\",\\"color\\":\\"rgba(0, 0, 0, 0.5)\\",\\"colorHoverFocus\\":\\"rgba(0, 0, 0, 0.7)\\"},\\"default\\":{\\"colorDisabled\\":\\"rgba(0, 0, 0, 0.3)\\",\\"colorDisabledHoverFocus\\":\\"rgba(0, 0, 0, 0.3)\\",\\"colorActive\\":\\"rgba(0, 0, 0, 0.9)\\",\\"colorActiveHoverFocus\\":\\"rgba(0, 0, 0, 0.9)\\",\\"color\\":\\"rgba(0, 0, 0, 0.5)\\",\\"colorHoverFocus\\":\\"rgba(0, 0, 0, 0.7)\\"}},\\"padding\\":{\\"brandTop\\":\\"0.3125rem\\",\\"brandBottom\\":\\"0.3125rem\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"}},\\"popover\\":{\\"colors\\":{\\"default\\":{\\"backgroundColor\\":\\"#fff\\",\\"borderColor\\":\\"rgba(0, 0, 0, 0.2)\\"}},\\"fontWeight\\":{\\"default\\":\\"400\\"},\\"margin\\":{\\"topBottom\\":\\"0.5rem\\",\\"leftRight\\":\\"0.5rem\\",\\"bottomTop\\":\\"0.5rem\\",\\"rightLeft\\":\\"0.5rem\\"},\\"fontFamily\\":{\\"default\\":\\" -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, \\\\\\"Helvetica Neue\\\\\\", Arial, sans-serif, \\\\\\"Apple Color Emoji\\\\\\", \\\\\\"Segoe UI Emoji\\\\\\", \\\\\\"Segoe UI Symbol\\\\\\"\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"}},\\"popoverArrow\\":{\\"colors\\":{\\"default\\":{\\"borderColor\\":\\"rgba(0, 0, 0, 0.25)\\",\\"borderColorWhite\\":\\"#fff\\"}}},\\"popoverBody\\":{\\"colors\\":{\\"default\\":{\\"color\\":\\"#212529\\"}},\\"padding\\":{\\"default\\":\\"0.5rem 0.75rem\\"}},\\"popoverHeader\\":{\\"colors\\":{\\"default\\":{\\"backgrondColor\\":\\"#f7f7f7\\",\\"borderBottomColor\\":\\"#ebebeb\\"}},\\"padding\\":{\\"default\\":\\"0.5rem 0.75rem\\"},\\"margin\\":{\\"bottom\\":\\"0\\",\\"top\\":\\"0\\",\\"beforeLeft\\":\\"-0.5rem\\"},\\"border\\":{\\"default\\":\\"1px solid\\"},\\"fontSize\\":{\\"sm\\":\\"0.875rem\\",\\"lg\\":\\"1.25rem\\",\\"default\\":\\"1rem\\"}},\\"screenSize\\":{\\"sm\\":\\"576px\\",\\"md\\":\\"768px\\",\\"lg\\":\\"992px\\",\\"xl\\":\\"1200px\\"},\\"table\\":{\\"colors\\":{\\"light\\":{\\"borderedBorderColor\\":\\"#dee2e6\\",\\"stripedBackgroundColor\\":\\"rgba(0, 0, 0, 0.05)\\",\\"backgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\",\\"darkColor\\":\\"#fff\\",\\"darkBackgroundColor\\":\\"#212529\\",\\"darkBorderColor\\":\\"#32383e\\",\\"theadDarkColor\\":\\"#fff\\",\\"theadDarkBackgroundColor\\":\\"#212529\\",\\"theadDarkBorderColor\\":\\"#32383e\\",\\"stripedDarkBackgroundColor\\":\\"rgba(255, 255, 255, 0.05)\\",\\"darkBackgroundColorHoverFocus\\":\\"rgba(255, 255, 255, 0.075)\\",\\"theadLightColor\\":\\"#495057\\",\\"theadLightBackgroundColor\\":\\"#e9ecef\\",\\"theadLightBorderColor\\":\\"#dee2e6\\",\\"borderColor\\":\\"#dee2e6\\",\\"backgroundColor\\":\\"#fff\\"},\\"dark\\":{\\"borderedBorderColor\\":\\"#dee2e6\\",\\"stripedBackgroundColor\\":\\"rgba(0, 0, 0, 0.05)\\",\\"backgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\",\\"darkColor\\":\\"#fff\\",\\"darkBackgroundColor\\":\\"#212529\\",\\"darkBorderColor\\":\\"#32383e\\",\\"theadDarkColor\\":\\"#fff\\",\\"theadDarkBackgroundColor\\":\\"#212529\\",\\"theadDarkBorderColor\\":\\"#32383e\\",\\"stripedDarkBackgroundColor\\":\\"rgba(255, 255, 255, 0.05)\\",\\"darkBackgroundColorHoverFocus\\":\\"rgba(255, 255, 255, 0.075)\\",\\"theadLightColor\\":\\"#495057\\",\\"theadLightBackgroundColor\\":\\"#e9ecef\\",\\"theadLightBorderColor\\":\\"#dee2e6\\",\\"borderColor\\":\\"#dee2e6\\",\\"backgroundColor\\":\\"#fff\\"},\\"default\\":{\\"borderedBorderColor\\":\\"#dee2e6\\",\\"stripedBackgroundColor\\":\\"rgba(0, 0, 0, 0.05)\\",\\"backgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\",\\"darkColor\\":\\"#fff\\",\\"darkBackgroundColor\\":\\"#212529\\",\\"darkBorderColor\\":\\"#32383e\\",\\"theadDarkColor\\":\\"#fff\\",\\"theadDarkBackgroundColor\\":\\"#212529\\",\\"theadDarkBorderColor\\":\\"#32383e\\",\\"stripedDarkBackgroundColor\\":\\"rgba(255, 255, 255, 0.05)\\",\\"darkBackgroundColorHoverFocus\\":\\"rgba(255, 255, 255, 0.075)\\",\\"theadLightColor\\":\\"#495057\\",\\"theadLightBackgroundColor\\":\\"#e9ecef\\",\\"theadLightBorderColor\\":\\"#dee2e6\\",\\"borderColor\\":\\"#dee2e6\\",\\"backgroundColor\\":\\"#fff\\"},\\"padding\\":{\\"sm\\":\\"0.3rem\\"}},\\"border\\":{\\"default\\":\\"1px solid\\",\\"bottomTop\\":\\"2px solid\\"}},\\"tr\\":{\\"colors\\":{\\"primary\\":{\\"backgroundColor\\":\\"#b8daff\\",\\"backgroundColorHoverFocus\\":\\"#9fcdff\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"secondary\\":{\\"backgroundColor\\":\\"#d6d8db\\",\\"backgroundColorHoverFocus\\":\\"#c8cbcf\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"success\\":{\\"backgroundColor\\":\\"#c3e6cb\\",\\"backgroundColorHoverFocus\\":\\"#b1dfbb\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"info\\":{\\"backgroundColor\\":\\"#bee5eb\\",\\"backgroundColorHoverFocus\\":\\"#abdde5\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"warning\\":{\\"backgroundColor\\":\\"#ffeeba\\",\\"backgroundColorHoverFocus\\":\\"#ffe8a1\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"danger\\":{\\"backgroundColor\\":\\"#f5c6cb\\",\\"backgroundColorHoverFocus\\":\\"#f1b0b7\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"light\\":{\\"backgroundColor\\":\\"#fdfdfe\\",\\"backgroundColorHoverFocus\\":\\"#ececf6\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"dark\\":{\\"backgroundColor\\":\\"#c6c8ca\\",\\"backgroundColorHoverFocus\\":\\"#b9bbbe\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"},\\"default\\":{\\"backgroundColor\\":\\"#d6d8db\\",\\"backgroundColorHoverFocus\\":\\"#c8cbcf\\",\\"activeBackgroundColor\\":\\"rgba(0, 0, 0, 0.075)\\",\\"activeBackgroundColorHoverFocus\\":\\"rgba(0, 0, 0, 0.075)\\"}}},\\"tooltip\\":{\\"margin\\":{\\"default\\":\\"0\\"},\\"fontWeight\\":{\\"default\\":\\"400\\"},\\"padding\\":{\\"leftRight\\":\\"0 0.4rem\\",\\"topBottom\\":\\"0.4rem 0\\"},\\"fontFamily\\":{\\"default\\":\\"-apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, \\\\\\"Helvetica Neue\\\\\\", Arial, sans-serif, \\\\\\"Apple Color Emoji\\\\\\", \\\\\\"Segoe UI Emoji\\\\\\", \\\\\\"Segoe UI Symbol\\\\\\"\\"},\\"fontSize\\":{\\"default\\":\\"0.875rem\\"}},\\"tooltipArrow\\":{\\"colors\\":{\\"default\\":{\\"borderColor\\":\\"#000\\"}}},\\"tooltipInner\\":{\\"colors\\":{\\"default\\":{\\"color\\":\\"#fff\\",\\"backgroundColor\\":\\"#000\\"}},\\"padding\\":{\\"default\\":\\"0.25rem 0.5rem\\"},\\"borderRadius\\":{\\"noRadius\\":\\"0\\",\\"pill\\":\\"10rem\\",\\"sm\\":\\"0.2rem\\",\\"lg\\":\\"0.3rem\\",\\"default\\":\\"0.25rem\\"}}}"`;
 
 exports[`Simply check if all components are imported and exported correctly 17`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+@media (min-width:) {
+  .c0 {
+    max-width: 540px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width:) {
+  .c0 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width:) {
+  .c0 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width:) {
+  .c0 {
+    max-width: 1140px;
+  }
+}
+
 <div
-  className="sc-bdVaJa mYxAK"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 18`] = `
+.c0 {
+  position: relative;
+}
+
 <div
-  className="sc-bdVaJa EXKLM"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 19`] = `
+.c0 {
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #16181b;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
 <div
-  className="sc-bwzfXH iLmniZ"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 20`] = `
+.c0 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 0.25rem;
+  display: block;
+}
+
 <div
-  className="sc-htpNat csAdsq"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 21`] = `
+.c0 {
+  height: 0;
+  padding-top: 0.5rem;
+  margin-top: 0.6rem;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
 <div
-  className="sc-bxivhb eSlRCC"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 22`] = `
+.c0 {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+}
+
+.c0 > label {
+  margin-bottom: 0;
+}
+
+.c0 > input {
+  position: static;
+  margin-top: 0;
+  margin-right: 0.3125rem;
+  margin-left: 0;
+}
+
 <div
-  className="sc-bdVaJa cwphjy"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 23`] = `
+.c0 {
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: -1.25rem;
+  box-sizing: border-box;
+}
+
 <input
-  className="sc-bwzfXH kIlXBL"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 24`] = `
+.c0 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.c0::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.c0:focus {
+  color: #495057;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.c0::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.c0:focus {
+  background-color: #fff;
+}
+
+.c0:focus {
+  border-color: #ced4da;
+}
+
+.c0:focus {
+  box-shadow: 0;
+}
+
 <input
-  className="sc-htpNat eGNcQh"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 25`] = `
+.c0 {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 <input
-  className="sc-EHOje giIecT"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 26`] = `
+.c0 {
+  width: 100%;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+  box-sizing: border-box;
+  display: block;
+}
+
 <input
-  className="sc-bZQynM gfHLck"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 27`] = `
+.c0 {
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.c0 > input,
+.c0 > div > input,
+.c0 > :not(input[type=file]),
+.c0 > div > :not(input[type=file]) {
+  border-radius: 0.25rem;
+}
+
+.c0 > input,
+.c0 > div > input,
+.c0 > label,
+.c0 > div > label {
+  line-height: 1.5;
+}
+
+.c0 > input,
+.c0 > div > input,
+.c0 > label,
+.c0 > div > label {
+  font-size: 1rem;
+}
+
 <div
-  className="sc-gzVnrw dHCPJX"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 28`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
 <form
-  className="sc-htoDjs jtTcOG"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 29`] = `
+.c0 {
+  display: block;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+
 <small
-  className="sc-dnqmqq jwLenN"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 30`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.c0 > input,
+.c0 > textarea,
+.c0 > select {
+  position: relative;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+
+.c0 > input:not(:last-child),
+.c0 > textarea:not(:last-child),
+.c0 > select:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c0 > input:not(:first-child),
+.c0 > textarea:not(:first-child),
+.c0 > select:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c0 > input {
+  border-radius: 0.25rem;
+}
+
+.c0 > div > span,
+.c0 > input {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
 <div
-  className="sc-iwsKbI grBCDE"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 31`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -1px;
+}
+
+.c0 > button {
+  position: relative;
+  z-index: 2;
+}
+
+.c0 > span,
+.c0 > button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c0 > span:not(:last-child),
+.c0 > button:not(:last-child) {
+  margin-right: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 <div
-  className="sc-gZMcBi fJeGhH"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 32`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -1px;
+}
+
+.c0 > button {
+  position: relative;
+  z-index: 2;
+}
+
+.c0 > span,
+.c0 > button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c0 > span:not(:first-child),
+.c0 > button:not(:first-child) {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 <div
-  className="sc-gqjmRU iOlFCh"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 33`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.c0 input[type="radio"],
+.c0 input[type="checkbox"] {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0.4125rem;
+}
+
 <span
-  className="sc-VigVT eonixX"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 34`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width:1200px) {
+  .c0 {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
+
 <div
-  className="sc-bdVaJa hEMnQx"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 35`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
 <div
-  className="sc-bwzfXH dPavLm"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 36`] = `
+.c0 {
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  padding: 2rem 1rem;
+  border-radius: 0.3rem;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c0 {
+    padding: 4rem 2rem;
+  }
+}
+
 <div
-  className="sc-bdVaJa kVzAgc"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 37`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
 <ul
-  className="sc-bdVaJa hUKeLb"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 38`] = `
+.c0 {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-bottom: none;
+  margin-bottom: -1px;
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(0,0,0,0.125);
+}
+
+.c0:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.c0:last-child {
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c0 > a:hover,
+.c0 > a:focus {
+  z-index: 1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus,
+.c0 > a:hover,
+.c0 > a:focus {
+  cursor: text;
+}
+
 <li
-  className="sc-bwzfXH juJhKF"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 39`] = `
+.c0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  overflow: hidden;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+}
+
 <div
-  className="sc-bdVaJa kYkmgF"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 40`] = `
+.c0 {
+  position: relative;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
 <div
-  className="sc-bwzfXH kXaBbS"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 41`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  outline: 0;
+  border-radius: 0.3rem;
+}
+
 <div
-  className="sc-htpNat aaSkq"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 42`] = `
+.c0 {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
+
 <div
-  className="sc-bxivhb bltDpd"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 43`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.125);
+}
+
 <div
-  className="sc-ifAKCX hmzTEF"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 44`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
 <div
-  className="sc-EHOje kUpNPp"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 45`] = `
+.c0 {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
 <h4
-  className="sc-bZQynM gqfnJq"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 46`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.c0 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:last-child {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 <nav
-  className="sc-bdVaJa eNoySv"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 47`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #007bff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #0056b3;
+}
+
 <a
-  className="sc-bwzfXH iIDGBC"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 48`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  color: rgba(0,0,0,0.5);
+  border-color: rgba(0,0,0,0.1);
+  background-color: #f8f9fa !important;
+}
+
 <nav
-  className="sc-bdVaJa fwSuFZ"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 49`] = `
+.c0 {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  color: #007bff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: rgba(0,0,0,0.5);
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  color: #0056b3;
+}
+
+.c0:hover,
+.c0:focus {
+  color: rgba(0,0,0,0.7);
+}
+
 <a
-  className="sc-bwzfXH sc-bwzfXH euYXjM"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 50`] = `
+.c0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  max-width: 276px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 0.875rem;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 0.3rem;
+  margin-left: 0.5rem;
+  display: block;
+}
+
 <div
-  className="sc-bdVaJa dHwxmL"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 51`] = `
+.c0 {
+  position: absolute;
+  display: block;
+  width: 1rem;
+  margin: 0 0.3rem;
+}
+
+.c0::before,
+.c0::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
 <div
-  className="sc-bwzfXH jfMKbJ"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 52`] = `
+.c0 {
+  padding: 0.5rem 0.75rem;
+  color: #212529;
+}
+
 <div
-  className="sc-htpNat fScNsA"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 53`] = `
+.c0 {
+  top: 0;
+  left: 50%;
+  display: block;
+  content: "";
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1rem;
+  color: inherit;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.c0::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 1rem;
+  margin-left: -0.5rem;
+  content: "";
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.c0:empty {
+  display: none;
+}
+
 <h4
-  className="sc-bZQynM cPvniZ"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 54`] = `
+.c1 {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.c1 th,
+.c1 td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.c1 thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.c1 tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.c1 + .c0 {
+  background-color: #fff;
+}
+
 <table
-  className="sc-bdVaJa jlLowL"
+  className="c0 c1"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 55`] = `
+.c0 > th,
+.c0 > td {
+  background-color: #d6d8db;
+}
+
 <tr
-  className="sc-bwzfXH kcLpK"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 56`] = `
+.c0 {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 0.875rem;
+  word-wrap: break-word;
+  padding: 0.4rem 0;
+  opacity: 0.9;
+}
+
 <div
-  className="sc-bdVaJa gGwylu"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 57`] = `
+.c0 {
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.4rem;
+}
+
+.c0::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
 <div
-  className="sc-bwzfXH hYMTzV"
+  className="c0"
 />
 `;
 
 exports[`Simply check if all components are imported and exported correctly 58`] = `
+.c0 {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 0.25rem;
+}
+
 <div
-  className="sc-htpNat lajWXs"
+  className="c0"
 />
 `;
