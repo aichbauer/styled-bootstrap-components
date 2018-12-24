@@ -24,7 +24,7 @@ This is a modular approach to use [bootstrap](https://getbootstrap.com) componen
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` and `styled-system`. To use this component you also need to `npm i styled-components styled-system -S`.
+> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
 
 ```sh
 $ npm i styled-button-component -S
@@ -40,6 +40,9 @@ $ yarn add styled-button-component
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
+To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
+.
+
 ```jsx
 /*
   if you installed `styled-bootstrap-components` use
@@ -50,6 +53,7 @@ For detailed information take a look at the [documentation](https://aichbauer.gi
 */
 import {
   Button,
+  LinkButton,
   ButtonGroups,
   ButtonToolbar,
 } from 'styled-button-component';
@@ -72,18 +76,18 @@ const MyButtonToolbarComponent = (props) => (
   {/* use different props to change the visual appearance */}
   <ButtonToolbar>
     <ButtonGroup mr="0.5rem">
-      <Button secondary>1</Button>
-      <Button secondary>2</Button>
-      <Button secondary>3</Button>
-      <Button secondary>4</Button>
+      <LinkButton secondary>1</LinkButton>
+      <LinkButton secondary>2</LinkButton>
+      <LinkButton secondary>3</LinkButton>
+      <LinkButton secondary>4</LinkButton>
     </ButtonGroup>
     <ButtonGroup mr="0.5rem">
-      <Button secondary>5</Button>
-      <Button secondary>6</Button>
-      <Button secondary>7</Button>
+      <LinkButton secondary>5</LinkButton>
+      <LinkButton secondary>6</LinkButton>
+      <LinkButton secondary>7</LinkButton>
     </ButtonGroup>
     <ButtonGroup>
-      <Button secondary>8</Button>
+      <LinkButton secondary>8</LinkButton>
     </ButtonGroup>
   </ButtonToolbar>
 );
@@ -91,8 +95,10 @@ const MyButtonToolbarComponent = (props) => (
 
 ## Properties
 
-Properties which can be added to the component to change the visual appearance. This component uses [styled-system](http://jxnblk.com/styled-system/).
+Properties which can be added to the component to change the visual appearance.
 
+* `pill` only on Button, LinkButton **Type**: boolean
+* `noRadius` only on Button, LinkButton **Type**: boolean
 * `primary` **Type**: boolean
 * `secondary` **Type**: boolean
 * `success` **Type**: boolean
@@ -108,40 +114,11 @@ Properties which can be added to the component to change the visual appearance. 
 * `sm` small **Type**: boolean
 * `lg` large **Type**: boolean
 * `vertical` only on ButtonGroup **Type**: boolean
-* `m`  margin **Type**: string
-* `mt` margin-top **Type**: string
-* `mr` margin-right **Type**: string
-* `mb` margin-bottom **Type**: string
-* `ml` margin-left **Type**: string
-* `mx` margin-left and margin-right **Type**: string
-* `my` margin-top and margin-bottom **Type**: string
-* `p`  padding **Type**: string
-* `pt` padding-top **Type**: string
-* `pr` padding-right **Type**: string
-* `pb` padding-bottom **Type**: string
-* `pl` padding-left **Type**: string
-* `px` padding-left and padding-right **Type**: string
-* `py` padding-top and padding-bottom **Type**: string
-* `width` **Type**: string
-* `fontSize` **Type**: string
-* `fontWeight` **Type**: string
-* `textAlign` **Type**: string
-* `lineHeight` **Type**: string
-* `display` **Type**: string
-* `color` **Type**: string
-* `borderRadius` **Type**: string
-* `borderColor` **Type**: string
-* `border` **Type**: string
-* `borderTop` **Type**: string
-* `borderRight` **Type**: string
-* `borderBottom` **Type**: string
-* `borderLeft` **Type**: string
 
 ## Related
 
 * [bootstrap](https://getbootstrap.com)
 * [styled-components](https://styled-components.com)
-* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 

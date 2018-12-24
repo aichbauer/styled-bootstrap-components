@@ -24,7 +24,7 @@ This is a modular approach to use [bootstrap](https://getbootstrap.com) componen
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` and `styled-system`. To use this component you also need to `npm i styled-components styled-system -S`.
+> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
 
 ```sh
 $ npm i styled-base-components -S
@@ -44,80 +44,33 @@ $ yarn add styled-base-components
 /*
   if you installed `styled-bootstrap-components` use
 
-    import { ... } from 'styled-bootstrap-components'
+    import { BootstrapBaseCss } from 'styled-bootstrap-components'
 
   instead.
 */
-import {
-  A,
-  Abbr,
-  Address,
-  Article,
-  Aside,
-  B,
-  Blockquote,
-  Button,
-  Caption,
-  Code,
-  Dd,
-  Dfn,
-  Dialog,
-  Dl,
-  Dt,
-  Fieldset,
-  Figcaption,
-  Figure,
-  Footer,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  Header,
-  Hgroup,
-  Hr,
-  Img,
-  Input,
-  Kbd,
-  Label,
-  Main,
-  Nav,
-  Ol,
-  Optgroup,
-  Output,
-  P,
-  Pre,
-  Progress,
-  Samp,
-  Section,
-  Select,
-  Small,
-  Strong,
-  Sub,
-  Summary,
-  Sup,
-  Svg,
-  Table,
-  Textarea,
-  Th,
-  Ul,
-} from 'styled-base-components';
+import { BootstrapBaseCss } from 'styled-base-components';
 
-const MyComponent = (props) => (
-  {/* use the base components */}
+const App = (props) => (
+  <div>
+    <BootstrapBaseCss />
+    {/*
+      Use plain HTML
+      e.g. <h4>Hello World</h4>
+      these HTML uses the bootstrap
+      styles for h4 now
+    */}
+  <div>
 );
 ```
 
 ## Properties
 
-This components do not have any specific props, they are just pre-styled html elements to work with the bootstrap layout. They use the styles from bootstrap.
+This component do not have any specific props, this is just the pre-styled html to work with the bootstrap layout.
 
 ## Related
 
 * [bootstrap](https://getbootstrap.com)
 * [styled-components](https://styled-components.com)
-* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 

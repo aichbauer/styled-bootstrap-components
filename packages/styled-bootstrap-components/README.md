@@ -28,16 +28,16 @@ I also wanted to learn a bit more on how CSS works and on how to build a CSS UI 
 
 You can install all bootstrap components with...
 
-> Note: every component has a peer dependency on `styled-components` and `styled-system`. To use this components you also need to `npm i styled-components styled-system -S`.
+> Note: every component has a peer dependency on `styled-components` > v4. To use this components you also need to `npm i styled-components -S`.
 
 ```sh
-$ npm i styled-bootstrap-components -S
+$ npm i styled-bootstrap-components styled-components -S
 ```
 
 or
 
 ```sh
-$ yarn add styled-bootstrap-components
+$ yarn add styled-bootstrap-components styled-components
 ```
 
 or you can install just the components that you need by following the installation guides in the [components section](#components).
@@ -45,8 +45,6 @@ or you can install just the components that you need by following the installati
 ## Usage
 
 For detailed information (also on how to customize this components) take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
-
-Most of this components are using [styled-system](http://jxnblk.com/styled-system/).
 
 To see which components are available take a look at the [components section](#components).
 
@@ -86,7 +84,6 @@ For detailed information take a look at the [documentation](https://aichbauer.gi
 
 * [bootstrap](https://getbootstrap.com)
 * [styled-components](https://styled-components.com)
-* [styled-system](http://jxnblk.com/styled-system/)
 
 ## License
 
