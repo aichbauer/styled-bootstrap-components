@@ -1,6 +1,6 @@
 {
   "name": "styled-navbar-component",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The bootstrap navbar component created with styled-components",
   "main": "./lib/index.js",
   "private": false,
@@ -35,8 +35,8 @@
     }
   },
   "dependencies": {
-    "styled-config": "^3.0.0",
-    "styled-nav-component": "^3.0.0"
+    "styled-config": "^3.0.1",
+    "styled-nav-component": "^3.0.1"
   },
   "peerDependencies": {
     "react": "^16.7.0",

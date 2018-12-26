@@ -1,6 +1,6 @@
 {
   "name": "styled-tooltip-component",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The bootstrap tooltip component created with styled-components",
   "main": "./lib/index.js",
   "private": false,
@@ -35,7 +35,7 @@
     }
   },
   "dependencies": {
-    "styled-config": "^3.0.0"
+    "styled-config": "^3.0.1"
   },
   "peerDependencies": {
     "react": "^16.7.0",
