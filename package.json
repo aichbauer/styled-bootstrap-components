@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/aichbauer/styled-bootstrap-components",
   "lint-staged": {
-    "./**/*.js": [
+    "./packages/**/*.js": [
       "eslint --fix",
       "git add"
     ]
