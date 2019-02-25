@@ -1,6 +1,6 @@
 {
   "name": "styled-bootstrap-components",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The bootstrap components created with styled-components",
   "main": "./lib/index.js",
   "private": false,
@@ -42,7 +42,7 @@
     "styled-button-component": "^3.0.1",
     "styled-card-component": "^3.0.1",
     "styled-config": "^3.0.1",
-    "styled-container-component": "^3.0.1",
+    "styled-container-component": "^3.0.2",
     "styled-dropdown-component": "^3.0.1",
     "styled-form-component": "^3.0.1",
     "styled-grid-system-component": "^3.0.1",

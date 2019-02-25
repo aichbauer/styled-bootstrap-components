@@ -1,6 +1,6 @@
 {
   "name": "styled-container-component",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The bootstrap container component created with styled-components",
   "main": "./lib/index.js",
   "private": false,
