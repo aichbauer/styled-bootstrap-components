@@ -12,26 +12,26 @@ exports[`Styles matches Container 1`] = `
   box-sizing: border-box;
 }
 
-@media (min-width:) {
+@media (min-width:576px) {
   .c0 {
     max-width: 540px;
     box-sizing: border-box;
   }
 }
 
-@media (min-width:) {
+@media (min-width:768px) {
   .c0 {
     max-width: 720px;
   }
 }
 
-@media (min-width:) {
+@media (min-width:992px) {
   .c0 {
     max-width: 960px;
   }
 }
 
-@media (min-width:) {
+@media (min-width:1200px) {
   .c0 {
     max-width: 1140px;
   }
@@ -54,26 +54,26 @@ exports[`Styles matches Container 2`] = `
   box-sizing: border-box;
 }
 
-@media (min-width:) {
+@media (min-width:576px) {
   .c0 {
     max-width: 100%;
     box-sizing: border-box;
   }
 }
 
-@media (min-width:) {
+@media (min-width:768px) {
   .c0 {
     max-width: 100%;
   }
 }
 
-@media (min-width:) {
+@media (min-width:992px) {
   .c0 {
     max-width: 100%;
   }
 }
 
-@media (min-width:) {
+@media (min-width:1200px) {
   .c0 {
     max-width: 100%;
   }

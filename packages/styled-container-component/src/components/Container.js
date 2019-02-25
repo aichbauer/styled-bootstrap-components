@@ -18,7 +18,14 @@ const Container = styled.div`
   font-weight: ${(props) => fontWeight(props, 'container').default};
   line-height: 1.5;
   box-sizing: border-box;
-  @media (min-width: ${(props) => screenSize(props)}) {
+  @media (min-width: ${(props) => {
+    const screenWidth = screenSize({
+      ...props,
+      sm: true,
+    });
+
+    return screenWidth;
+  }}) {
     max-width: ${(props) => (
     props.fluid
       ? width(props, 'container').default
@@ -26,21 +33,42 @@ const Container = styled.div`
   )};
     box-sizing: border-box;
   };
-  @media (min-width: ${(props) => screenSize(props)}) {
+  @media (min-width: ${(props) => {
+    const screenWidth = screenSize({
+      ...props,
+      md: true,
+    });
+
+    return screenWidth;
+  }}) {
     max-width: ${(props) => (
     props.fluid
       ? width(props, 'container').default
       : width(props, 'container').fluid.md
   )};
   };
-  @media (min-width: ${(props) => screenSize(props)}) {
+  @media (min-width: ${(props) => {
+    const screenWidth = screenSize({
+      ...props,
+      lg: true,
+    });
+
+    return screenWidth;
+  }}) {
     max-width: ${(props) => (
     props.fluid
       ? width(props, 'container').default
       : width(props, 'container').fluid.lg
   )};
   };
-  @media (min-width: ${(props) => screenSize(props)}) {
+  @media (min-width: ${(props) => {
+    const screenWidth = screenSize({
+      ...props,
+      xl: true,
+    });
+
+    return screenWidth;
+  }}) {
     max-width: ${(props) => (
     props.fluid
       ? width(props, 'container').default
