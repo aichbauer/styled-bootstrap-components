@@ -7,16 +7,16 @@
 		"storybook-build": "build-storybook -c . -o ../docs"
 	},
 	"devDependencies": {
-		"@storybook/addon-options": "^4.1.3",
-		"@storybook/addons": "^4.1.3",
-		"@storybook/react": "^4.1.3",
+		"@storybook/addon-options": "^5.0.0",
+		"@storybook/addons": "^5.0.0",
+		"@storybook/react": "^5.0.0",
 		"babel-core": "^6.26.3",
-		"babel-loader": "^8.0.4",
+		"babel-loader": "^8.0.5",
 		"fs-extra": "^7.0.1",
-		"react": "^16.7.0",
-		"react-dom": "^16.7.0",
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4",
 		"read-dir-names": "^1.0.0",
-		"storybook-readme": "^4.0.2"
+		"storybook-readme": "^4.0.5"
 	},
 	"dependencies": {
 		"styled-components": "^4.1.3"
