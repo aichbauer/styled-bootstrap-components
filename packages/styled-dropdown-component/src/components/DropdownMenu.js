@@ -10,6 +10,16 @@ import {
   border,
 } from 'styled-config';
 
+const isLeftOrRight = (props) => (
+  props.right
+    ? css`
+      right: 0;
+    `
+    : css`
+      left: 0;
+    `
+);
+
 const dropdownMenuHidden = (props) => (
   props.hidden
     ? css`
@@ -35,7 +45,7 @@ const borderRadius = (props) => {
 const DropdownMenu = styled.div`
   position: absolute;
   top: 100%;
-  left: 0;
+  ${(props) => isLeftOrRight(props)};
   z-index: 1000;
   float: left;
   min-width: 10rem;
@@ -48,7 +58,7 @@ const DropdownMenu = styled.div`
   background-color: ${(props) => colors(props, 'dropdownMenu').backgroundColor};
   background-clip: padding-box;
   border: ${(props) => border(props, 'dropdownMenu').default} ${(props) => colors(props, 'dropdownMenu').borderColor};
-  ${(props) => borderRadius(props)}
+  ${(props) => borderRadius(props)};
   ${(props) => dropdownMenuHidden(props)};
 `;
 
