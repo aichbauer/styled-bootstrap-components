@@ -66,12 +66,14 @@ import {
 } from 'styled-listgroup-component';
 import {
   Modal,
+  ModalWrapper,
   ModalBody,
   ModalContent,
   ModalDialog,
   ModalFooter,
   ModalHeader,
   ModalTitle,
+  ModalBackdrop,
 } from 'styled-modal-component';
 import {
   Nav,
@@ -149,12 +151,14 @@ export {
   ListGroup,
   ListGroupItem,
   Modal,
+  ModalWrapper,
   ModalBody,
   ModalContent,
   ModalDialog,
   ModalFooter,
   ModalHeader,
   ModalTitle,
+  ModalBackdrop,
   Nav,
   NavLink,
   Navbar,
