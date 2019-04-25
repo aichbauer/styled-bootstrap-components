@@ -54,12 +54,14 @@ import {
   ListGroup,
   ListGroupItem,
   Modal,
+  ModalWrapper,
   ModalBody,
   ModalContent,
   ModalDialog,
   ModalFooter,
   ModalHeader,
   ModalTitle,
+  ModalBackdrop,
   Nav,
   NavLink,
   Navbar,
@@ -203,8 +205,11 @@ test('Simply check if all components are imported and exported correctly', () =>
   const listGroupItem = renderer.create(<ListGroupItem />).toJSON();
   expect(listGroupItem).toMatchSnapshot();
 
-  const modal = renderer.create(<Modal />).toJSON();
+  const modal = renderer.create(<Modal />, { createNodeMock: () => ({}) }).toJSON();
   expect(modal).toMatchSnapshot();
+
+  const modalWrapper = renderer.create(<ModalWrapper />).toJSON();
+  expect(modalWrapper).toMatchSnapshot();
 
   const modalBody = renderer.create(<ModalBody />).toJSON();
   expect(modalBody).toMatchSnapshot();
@@ -223,6 +228,9 @@ test('Simply check if all components are imported and exported correctly', () =>
 
   const modalTitle = renderer.create(<ModalTitle />).toJSON();
   expect(modalTitle).toMatchSnapshot();
+
+  const modalBackdrop = renderer.create(<ModalBackdrop />).toJSON();
+  expect(modalBackdrop).toMatchSnapshot();
 
   const nav = renderer.create(<Nav />).toJSON();
   expect(nav).toMatchSnapshot();

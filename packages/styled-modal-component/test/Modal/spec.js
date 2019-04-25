@@ -4,19 +4,22 @@ import 'jest-styled-components';
 
 import { Modal } from '../../src';
 
+function createNodeMock() {
+  return {
+    current: {},
+    focus: () => {},
+  };
+}
+
 // TODO: how to check @media queries
-test('Styles matches Modal', () => {
-  const tree = renderer.create(<Modal />).toJSON();
+test('Styles matches visible Modal', () => {
+  const tree = renderer.create(<Modal />, { createNodeMock }).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('position', 'fixed');
-  expect(tree).toHaveStyleRule('top', '0');
-  expect(tree).toHaveStyleRule('right', '0');
-  expect(tree).toHaveStyleRule('bottom', '0');
-  expect(tree).toHaveStyleRule('left', '0');
-  expect(tree).toHaveStyleRule('z-index', '1050');
+  expect(tree).toHaveStyleRule('visibility', undefined);
+  expect(tree).toHaveStyleRule('opacity', undefined);
   expect(tree).toHaveStyleRule('display', 'block');
-  expect(tree).toHaveStyleRule('overflow', 'hidden');
-  expect(tree).toHaveStyleRule('outline', '0');
-  expect(tree).toHaveStyleRule('overflow-x', 'hidden');
-  expect(tree).toHaveStyleRule('overflow-y', 'auto');
+  expect(tree).toHaveStyleRule('transition', 'visibility 0.5s,opacity 0.5s ease-out');
+
+  // eslint-disable-next-line no-undef
+  expect(document.body.style.overflow).toBe('hidden');
 });
