@@ -9,7 +9,6 @@ import { ModalDialog } from './ModalDialog';
 import { ModalBackdrop } from './ModalBackdrop';
 import { ModalWrapper } from './ModalWrapper';
 
-
 const Fade = styled.div`
   display: block;
   transition: visibility 0.5s, opacity 0.5s ease-out;
@@ -159,7 +158,7 @@ Modal.defaultProps = {
   theme,
   backdrop: true,
   returnFocusAfterClose: true,
-  toggle: () => {},
+  toggle: /* istanbul ignore next */ () => {},
 };
 
 export { Modal };

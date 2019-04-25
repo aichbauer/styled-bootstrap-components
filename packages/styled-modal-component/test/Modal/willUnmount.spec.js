@@ -19,3 +19,17 @@ test('Modal closed on unmount', () => {
 
   expect(modal.close).toBeCalled();
 });
+
+test('Modal does nothing on unmount if hidden', () => {
+  const tree = renderer.create(<Modal />, { createNodeMock });
+
+  const modal = tree.getInstance();
+
+  modal.close = jest.fn();
+
+  modal.state = { hidden: true };
+
+  modal.componentWillUnmount();
+
+  expect(modal.close).not.toBeCalled();
+});

@@ -10,7 +10,7 @@ function createNodeMock() {
   return {};
 }
 
-test('Modal skip toggle on backdrop click if no backdrop', () => {
+test('Modal skips toggle on backdrop click if no backdrop', () => {
   const element = {
     focus: jest.fn(),
   };
@@ -26,4 +26,22 @@ test('Modal skip toggle on backdrop click if no backdrop', () => {
   jest.runAllTimers();
 
   expect(element.focus).toBeCalled();
+});
+
+test('Modal skips focus if returnFocusAfterClose is false', () => {
+  const element = {
+    focus: jest.fn(),
+  };
+
+  const tree = renderer.create(<Modal returnFocusAfterClose={false} />, { createNodeMock });
+
+  const modal = tree.getInstance();
+
+  modal.elementTriggeredOpen = element;
+
+  modal.close();
+
+  jest.runAllTimers();
+
+  expect(element.focus).not.toBeCalled();
 });
