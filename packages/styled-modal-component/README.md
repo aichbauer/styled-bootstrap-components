@@ -57,8 +57,6 @@ import React from 'react';
 import {
   Modal,
   ModalBody,
-  ModalContent,
-  ModalDialog,
   ModalFooter,
   ModalHeader,
   ModalTitle,
@@ -66,15 +64,18 @@ import {
 import { Container } from 'styled-container-component';
 import { Button } from 'styled-button-component';
 
-export class MyModal extends React.Component {
+export class ModalExample extends React.Component {
   constructor(props) {
-    super();
+    super(props);
+
     this.state = {
       hidden: true,
     };
+
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
-  handleModal() {
+  toggleModal() {
     this.setState({
       hidden: !this.state.hidden,
     });
@@ -82,39 +83,34 @@ export class MyModal extends React.Component {
 
   render() {
     const { hidden } = this.state;
+
     return (
-      <div>
-        <Modal hidden={hidden}>
-          <ModalDialog>
-            <ModalContent>
-              <ModalHeader>
-                <ModalTitle>
-                  Modal Title
-                </ModalTitle>
-                <Button outline onClick={() => this.handleModal()}>
-                  <span aria-hidden="true">&times;</span>
-                </Button>
-              </ModalHeader>
-              <ModalBody>
-                <p>
-                  Modal Body
-                </p>
-              </ModalBody>
-              <ModalFooter>
-                <Button onClick={() => this.handleModal()}>
-                  Close
-                </Button>
-              </ModalFooter>
-            </ModalContent>
-          </ModalDialog>
+      <Container>
+        <Modal hidden={hidden} toggle={this.toggleModal}>
+          <ModalHeader>
+            <ModalTitle>Modal Title</ModalTitle>
+
+            <Button outline onClick={this.toggleModal}>
+              <span aria-hidden="true">&times;</span>
+            </Button>
+          </ModalHeader>
+
+          <ModalBody textAlign="left">
+            Modal body text goes here.
+          </ModalBody>
+
+          <ModalFooter>
+            <Button onClick={this.toggleModal}>Close</Button>
+          </ModalFooter>
         </Modal>
-        <Button onClick={() => this.handleModal()} >
+
+        <Button block danger onClick={this.toggleModal}>
           Launch Modal
         </Button>
-      </div>
+      </Container>
     );
   }
-};
+}
 ```
 
 ## Properties
@@ -124,8 +120,14 @@ Properties which can be added to the component to change the visual appearance.
 * `sm` only on Modal **Type**: boolean
 * `lg` only on Modal **Type**: boolean
 * `hidden` only on Modal **Type**: boolean
-* `centered` only on ModalDialog **Type**: boolean
-* `noRadius` only on ModalContent **Type**: boolean
+* `toggle` only on Modal **Type**: function
+* `centered` only on Modal **Type**: boolean
+* `backdrop` only on Modal **Type**: boolean or string
+* `noRadius` only on Modal **Type**: boolean
+* `returnFocusAfterClose` only on Modal **Type**: boolean
+
+> Property `backdrop` can be set to false or 'static' to prevent dialog from
+> closing on click outsite of the window.
 
 ## Related
 
