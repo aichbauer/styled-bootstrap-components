@@ -1,4 +1,15 @@
-```jsx
+import React from 'react';
+
+import {
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  ModalTitle,
+} from '../../../../packages/styled-modal-component';
+import { Container } from '../../../../packages/styled-container-component';
+import { Button } from '../../../../packages/styled-button-component';
+
 export class ModalExample extends React.Component {
   constructor(props) {
     super(props);
@@ -46,4 +57,3 @@ export class ModalExample extends React.Component {
     );
   }
 }
-```

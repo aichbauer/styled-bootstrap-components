@@ -2,27 +2,34 @@ import styled, { css } from 'styled-components';
 
 import { theme } from 'styled-config';
 
+const maxWidth = (props) => {
+  if (props.sm) {
+    return css`max-width: 300px;`;
+  } else if (props.lg) {
+    return css`max-width: 800px;`;
+  }
+
+  return css`
+    max-width: 500px;
+  `;
+};
+
 const dialogCentered = (props) => (
   props.centered && css`
     display: flex;
     align-items: center;
-    min-height: calc(100% - (0.5rem * 2));
-    @media (min-width: ${props.theme.screenSize.sm}) { 
-      min-height: calc(100% - (1.75rem * 2));
-    };
   `
 );
 
 const ModalDialog = styled.div`
   position: relative;
-  width: auto;
-  margin: 0.5rem;
+  margin: auto;
+  padding: 0.5rem;
+  min-height: calc(100% - (0.5rem * 2));
   pointer-events: none;
-  @media (min-width: ${(props) => props.theme.screenSize.sm}) {
-    max-width: 500px;
-    margin: 1.75rem auto;
-  };
+
   ${(props) => dialogCentered(props)};
+  ${(props) => maxWidth(props)}
 `;
 
 ModalDialog.defaultProps = {

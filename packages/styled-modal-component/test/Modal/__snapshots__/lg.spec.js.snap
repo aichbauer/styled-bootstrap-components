@@ -1,7 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches Modal lg 1`] = `
-.c0 {
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  outline: 0;
+  border-radius: 0.3rem;
+}
+
+.c2 {
+  position: relative;
+  margin: auto;
+  padding: 0.5rem;
+  min-height: calc(100% - (0.5rem * 2));
+  pointer-events: none;
+  max-width: 800px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  opacity: 0.7;
+  display: block;
+}
+
+.c1 {
   position: fixed;
   top: 0;
   right: 0;
@@ -15,19 +54,30 @@ exports[`Styles matches Modal lg 1`] = `
   display: block;
 }
 
-@media (min-width:576px) {
-  .c0 {
-    max-width: 800px;
-  }
-}
-
-@media (min-width:992px) {
-  .c0 {
-    max-width: 800px;
-  }
+.c0 {
+  display: block;
+  -webkit-transition: visibility 0.5s,opacity 0.5s ease-out;
+  transition: visibility 0.5s,opacity 0.5s ease-out;
 }
 
 <div
   className="c0"
-/>
+>
+  <div
+    className="c1"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      />
+    </div>
+  </div>
+  <div
+    className="c4"
+  />
+</div>
 `;

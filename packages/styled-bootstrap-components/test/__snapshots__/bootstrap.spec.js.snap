@@ -1339,6 +1339,88 @@ exports[`Simply check if all components are imported and exported correctly 38`]
 `;
 
 exports[`Simply check if all components are imported and exported correctly 39`] = `
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  outline: 0;
+  border-radius: 0.3rem;
+}
+
+.c2 {
+  position: relative;
+  margin: auto;
+  padding: 0.5rem;
+  min-height: calc(100% - (0.5rem * 2));
+  pointer-events: none;
+  max-width: 500px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  opacity: 0.7;
+  display: block;
+}
+
+.c1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  overflow: hidden;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+}
+
+.c0 {
+  display: block;
+  -webkit-transition: visibility 0.5s,opacity 0.5s ease-out;
+  transition: visibility 0.5s,opacity 0.5s ease-out;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      />
+    </div>
+  </div>
+  <div
+    className="c4"
+  />
+</div>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 40`] = `
 .c0 {
   position: fixed;
   top: 0;
@@ -1358,7 +1440,7 @@ exports[`Simply check if all components are imported and exported correctly 39`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 40`] = `
+exports[`Simply check if all components are imported and exported correctly 41`] = `
 .c0 {
   position: relative;
   -webkit-flex: 1 1 auto;
@@ -1372,7 +1454,7 @@ exports[`Simply check if all components are imported and exported correctly 40`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 41`] = `
+exports[`Simply check if all components are imported and exported correctly 42`] = `
 .c0 {
   position: relative;
   display: -webkit-box;
@@ -1396,19 +1478,14 @@ exports[`Simply check if all components are imported and exported correctly 41`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 42`] = `
+exports[`Simply check if all components are imported and exported correctly 43`] = `
 .c0 {
   position: relative;
-  width: auto;
-  margin: 0.5rem;
+  margin: auto;
+  padding: 0.5rem;
+  min-height: calc(100% - (0.5rem * 2));
   pointer-events: none;
-}
-
-@media (min-width:576px) {
-  .c0 {
-    max-width: 500px;
-    margin: 1.75rem auto;
-  }
+  max-width: 500px;
 }
 
 <div
@@ -1416,7 +1493,7 @@ exports[`Simply check if all components are imported and exported correctly 42`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 43`] = `
+exports[`Simply check if all components are imported and exported correctly 44`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1439,7 +1516,7 @@ exports[`Simply check if all components are imported and exported correctly 43`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 44`] = `
+exports[`Simply check if all components are imported and exported correctly 45`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1464,7 +1541,7 @@ exports[`Simply check if all components are imported and exported correctly 44`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 45`] = `
+exports[`Simply check if all components are imported and exported correctly 46`] = `
 .c0 {
   margin-bottom: 0;
   line-height: 1.5;
@@ -1475,7 +1552,25 @@ exports[`Simply check if all components are imported and exported correctly 45`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 46`] = `
+exports[`Simply check if all components are imported and exported correctly 47`] = `
+.c0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  opacity: 0.7;
+  display: block;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Simply check if all components are imported and exported correctly 48`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1505,7 +1600,7 @@ exports[`Simply check if all components are imported and exported correctly 46`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 47`] = `
+exports[`Simply check if all components are imported and exported correctly 49`] = `
 .c0 {
   display: block;
   padding: 0.5rem;
@@ -1531,7 +1626,7 @@ exports[`Simply check if all components are imported and exported correctly 47`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 48`] = `
+exports[`Simply check if all components are imported and exported correctly 50`] = `
 .c0 {
   position: relative;
   display: -webkit-box;
@@ -1560,7 +1655,7 @@ exports[`Simply check if all components are imported and exported correctly 48`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 49`] = `
+exports[`Simply check if all components are imported and exported correctly 51`] = `
 .c0 {
   display: block;
   padding: 0.5rem;
@@ -1592,7 +1687,7 @@ exports[`Simply check if all components are imported and exported correctly 49`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 50`] = `
+exports[`Simply check if all components are imported and exported correctly 52`] = `
 .c0 {
   position: absolute;
   top: 0;
@@ -1631,7 +1726,7 @@ exports[`Simply check if all components are imported and exported correctly 50`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 51`] = `
+exports[`Simply check if all components are imported and exported correctly 53`] = `
 .c0 {
   position: absolute;
   display: block;
@@ -1653,7 +1748,7 @@ exports[`Simply check if all components are imported and exported correctly 51`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 52`] = `
+exports[`Simply check if all components are imported and exported correctly 54`] = `
 .c0 {
   padding: 0.5rem 0.75rem;
   color: #212529;
@@ -1664,7 +1759,7 @@ exports[`Simply check if all components are imported and exported correctly 52`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 53`] = `
+exports[`Simply check if all components are imported and exported correctly 55`] = `
 .c0 {
   top: 0;
   left: 50%;
@@ -1701,7 +1796,7 @@ exports[`Simply check if all components are imported and exported correctly 53`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 54`] = `
+exports[`Simply check if all components are imported and exported correctly 56`] = `
 .c1 {
   width: 100%;
   max-width: 100%;
@@ -1734,7 +1829,7 @@ exports[`Simply check if all components are imported and exported correctly 54`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 55`] = `
+exports[`Simply check if all components are imported and exported correctly 57`] = `
 .c0 > th,
 .c0 > td {
   background-color: #d6d8db;
@@ -1745,7 +1840,7 @@ exports[`Simply check if all components are imported and exported correctly 55`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 56`] = `
+exports[`Simply check if all components are imported and exported correctly 58`] = `
 .c0 {
   position: absolute;
   z-index: 1070;
@@ -1779,7 +1874,7 @@ exports[`Simply check if all components are imported and exported correctly 56`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 57`] = `
+exports[`Simply check if all components are imported and exported correctly 59`] = `
 .c0 {
   position: absolute;
   display: block;
@@ -1799,7 +1894,7 @@ exports[`Simply check if all components are imported and exported correctly 57`]
 />
 `;
 
-exports[`Simply check if all components are imported and exported correctly 58`] = `
+exports[`Simply check if all components are imported and exported correctly 60`] = `
 .c0 {
   max-width: 200px;
   padding: 0.25rem 0.5rem;

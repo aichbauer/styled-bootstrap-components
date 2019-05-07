@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches ModalBackdrop 1`] = `
+.c0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  opacity: 0.7;
+  display: block;
+  pointer-events: none;
+}
+
+<div
+  className="c0"
+/>
+`;

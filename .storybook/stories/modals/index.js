@@ -5,17 +5,20 @@ import {
   withDocs,
 } from 'storybook-readme';
 
-import { ClickableModal } from './modal/ClickableModal';
+import { ModalExample } from './modal/ModalExample';
+import { ModalShowcase } from './modal/ModalShowcase';
 
 import ModalReadme from '../../../packages/styled-modal-component/README.md';
 
 import ModalSimpleDocs from './docs/simple.md';
+import ModalAdvancedDocs from './docs/advanced.md';
 
 
 storiesOf('Modals', module)
   .add('Simple', withReadme(ModalReadme, withDocs(ModalSimpleDocs, () => (
-    <div>
-      <ClickableModal />
-    </div>
+    <ModalExample />
+  ))))
+  .add('Advanced', withReadme(ModalReadme, withDocs(ModalAdvancedDocs, () => (
+    <ModalShowcase />
   ))));
 

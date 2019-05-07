@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styles matches ModalDialog 1`] = `
+exports[`Styles matches ModalDialog sm 1`] = `
 .c0 {
   position: relative;
   margin: auto;
   padding: 0.5rem;
   min-height: calc(100% - (0.5rem * 2));
   pointer-events: none;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 <div

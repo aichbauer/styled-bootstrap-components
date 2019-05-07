@@ -3,8 +3,9 @@
 exports[`Styles matches ModalDialog 1`] = `
 .c0 {
   position: relative;
-  width: auto;
-  margin: 0.5rem;
+  margin: auto;
+  padding: 0.5rem;
+  min-height: calc(100% - (0.5rem * 2));
   pointer-events: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -14,20 +15,7 @@ exports[`Styles matches ModalDialog 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: calc(100% - (0.5rem * 2));
-}
-
-@media (min-width:576px) {
-  .c0 {
-    max-width: 500px;
-    margin: 1.75rem auto;
-  }
-}
-
-@media (min-width:576px) {
-  .c0 {
-    min-height: calc(100% - (1.75rem * 2));
-  }
+  max-width: 500px;
 }
 
 <div

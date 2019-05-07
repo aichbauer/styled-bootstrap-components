@@ -1,47 +1,164 @@
+/* eslint-env browser */
+
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { theme } from 'styled-config';
+import { ModalContent } from './ModalContent';
+import { ModalDialog } from './ModalDialog';
+import { ModalBackdrop } from './ModalBackdrop';
+import { ModalWrapper } from './ModalWrapper';
 
-const maxWidth = (props) => {
-  if (props.sm) {
-    return css`max-width: 300px;`;
-  } else if (props.lg) {
-    return css`max-width: 800px;`;
-  }
+const Fade = styled.div`
+  display: block;
+  transition: visibility 0.5s, opacity 0.5s ease-out;
 
-  return '';
-};
-
-const display = (props) => {
-  if (props.hidden) {
-    return css`display: none;`;
-  }
-
-  return css`display: block;`;
-};
-
-const Modal = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1050;
-  overflow: hidden;
-  outline: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  @media (min-width: ${(props) => props.theme.screenSize.sm}) {
-    ${(props) => maxWidth(props)}
-  };
-  @media (min-width: ${(props) => props.theme.screenSize.lg}) {
-    ${(props) => maxWidth(props)}
-  };
-  ${(props) => display(props)}
+  ${({ hidden }) =>
+    hidden && css`
+      visibility: hidden;
+      opacity: 0;
+    `}
 `;
+
+class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { hidden: props.hidden };
+
+    this.elementMouseDown = null;
+    this.elementTriggeredOpen = null;
+
+    this.refModal = React.createRef();
+    this.refFade = React.createRef();
+
+    this.handleBackdropMouseDown = this.handleBackdropMouseDown.bind(this);
+    this.handleBackdropClick = this.handleBackdropClick.bind(this);
+
+    if (!props.hidden) {
+      this.elementTriggeredOpen = document.activeElement;
+    }
+  }
+
+  componentDidMount() {
+    if (!this.state.hidden) {
+      this.open();
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.hidden !== prevProps.hidden) {
+      if (!this.props.hidden) {
+        this.elementTriggeredOpen = document.activeElement;
+      }
+
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ hidden: this.props.hidden });
+
+      return;
+    }
+
+    if (this.state.hidden && !prevState.hidden) {
+      this.close();
+    } else if (!this.state.hidden && prevState.hidden) {
+      this.open();
+    }
+  }
+
+  componentWillUnmount() {
+    if (!this.state.hidden) {
+      this.close();
+    }
+  }
+
+  open() {
+    this.refModal.current.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+  }
+
+  close() {
+    setTimeout(() => {
+      document.body.style.overflow = '';
+
+      const { returnFocusAfterClose } = this.props;
+
+      if (returnFocusAfterClose && this.elementTriggeredOpen !== null) {
+        this.elementTriggeredOpen.focus();
+        this.elementTriggeredOpen = null;
+      }
+    }, 500 /* Fade delay */);
+  }
+
+  canToggle() {
+    const { backdrop } = this.props;
+
+    if (backdrop === 'static' || backdrop === false) {
+      return false;
+    }
+
+    const { opacity } = window.getComputedStyle(this.refFade.current);
+
+    return opacity <= 0.1 || opacity >= 0.9;
+  }
+
+  handleBackdropClick(e) {
+    if (e.target !== this.elementMouseDown) {
+      return;
+    }
+
+    e.stopPropagation();
+
+    if (this.canToggle() && e.target === this.refModal.current) {
+      this.props.toggle();
+    }
+  }
+
+  handleBackdropMouseDown(e) {
+    this.elementMouseDown = e.target;
+  }
+
+  render() {
+    const {
+      centered,
+      noRadius,
+      children,
+      backdrop,
+      sm,
+      lg,
+    } = this.props;
+
+    const { hidden } = this.state;
+
+    return (
+      <Fade hidden={hidden} ref={this.refFade}>
+        <ModalWrapper
+          theme={this.props.theme}
+          ref={this.refModal}
+          onMouseDown={this.handleBackdropMouseDown}
+          onClick={this.handleBackdropClick}
+        >
+          <ModalDialog
+            theme={this.props.theme}
+            lg={lg}
+            sm={sm}
+            centered={centered}
+            noRadius={noRadius}
+          >
+            <ModalContent theme={this.props.theme}>{children}</ModalContent>
+          </ModalDialog>
+        </ModalWrapper>
+
+        {!!backdrop && <ModalBackdrop theme={this.props.theme} backdrop={backdrop} />}
+      </Fade>
+    );
+  }
+}
 
 Modal.defaultProps = {
   theme,
+  backdrop: true,
+  returnFocusAfterClose: true,
+  toggle: /* istanbul ignore next */ () => {},
 };
 
 export { Modal };
