@@ -1,6 +1,6 @@
 {
   "name": "styled-modal-component",
-  "version": "3.0.1",
+  "version": "4.0.0-alpha.0",
   "description": "The bootstrap modal component created with styled-components",
   "main": "./lib/index.js",
   "private": false,
