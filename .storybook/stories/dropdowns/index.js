@@ -10,7 +10,7 @@ import { ContextualVariationsDropdown } from './dropdown/ContextualVariationsDro
 import { DropdownWithDivider } from './dropdown/DropdownWithDivider';
 import { DropdownSplit } from './dropdown/DropdownSplit';
 import { DropdownRight } from './dropdown/DropdownRight';
-import { DropdownFill } from './dropdown/DropdownFill';
+import { DropdownFullWidth } from './dropdown/DropdownFullWidth';
 
 import DropdownReadme from '../../../packages/styled-dropdown-component/README.md';
 
@@ -19,7 +19,7 @@ import DropdownContextualVariationsDoc from './docs/contextual-variations.md';
 import DropdownDividerDoc from './docs/dropdown-divider.md';
 import DropdownSplitDoc from './docs/dropdown-split.md';
 import DropdownRightDoc from './docs/dropdown-right.md';
-import DropdownFillDoc from './docs/dropdown-fill.md';
+import DropdownFullWidthDoc from './docs/dropdown-full-width.md';
 
 storiesOf('Dropdowns', module)
   .add('Simple', withReadme(DropdownReadme, withDocs(DropdownSimpleDoc, () => (
@@ -37,6 +37,6 @@ storiesOf('Dropdowns', module)
   .add('Dropdown right', withReadme(DropdownReadme, withDocs(DropdownRightDoc, () => (
     <DropdownRight />
   ))))
-  .add('Dropdown fill', withReadme(DropdownReadme, withDocs(DropdownFillDoc, () => (
-    <DropdownFill />
+  .add('Dropdown full width', withReadme(DropdownReadme, withDocs(DropdownFullWidthDoc, () => (
+    <DropdownFullWidth />
   ))));

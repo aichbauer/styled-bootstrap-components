@@ -41,7 +41,7 @@ export class ContextualVariationsDropdown extends React.Component {
     } = this.state;
     return (
       <div>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button primary dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenPrimary')}>
             Primary
           </Button>
@@ -51,7 +51,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button secondary dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenSecondary')}>
             Secondary
           </Button>
@@ -61,7 +61,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button success dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenSuccess')}>
             Success
           </Button>
@@ -71,7 +71,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button info dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenInfo')}>
             Info
           </Button>
@@ -81,41 +81,41 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button warning dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenWarning')}>
             Warning
           </Button>
-          <DropdownMenu hidden={hiddenWarning} toggle={() => this.handleOpenCloseDropdown('hiddenWarning')}>
+          <DropdownMenu right hidden={hiddenWarning} toggle={() => this.handleOpenCloseDropdown('hiddenWarning')}>
             <DropdownItem>Action</DropdownItem>
             <DropdownItem>Another action</DropdownItem>
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button danger dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenDanger')}>
             Danger
           </Button>
-          <DropdownMenu hidden={hiddenDanger} toggle={() => this.handleOpenCloseDropdown('hiddenDanger')}>
+          <DropdownMenu right hidden={hiddenDanger} toggle={() => this.handleOpenCloseDropdown('hiddenDanger')}>
             <DropdownItem>Action</DropdownItem>
             <DropdownItem>Another action</DropdownItem>
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button light dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenLight')}>
             Light
           </Button>
-          <DropdownMenu hidden={hiddenLight} toggle={() => this.handleOpenCloseDropdown('hiddenLight')}>
+          <DropdownMenu right hidden={hiddenLight} toggle={() => this.handleOpenCloseDropdown('hiddenLight')}>
             <DropdownItem>Action</DropdownItem>
             <DropdownItem>Another action</DropdownItem>
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button dark dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenDark')}>
             Dark
           </Button>
-          <DropdownMenu hidden={hiddenDark} toggle={() => this.handleOpenCloseDropdown('hiddenDark')}>
+          <DropdownMenu right hidden={hiddenDark} toggle={() => this.handleOpenCloseDropdown('hiddenDark')}>
             <DropdownItem>Action</DropdownItem>
             <DropdownItem>Another action</DropdownItem>
             <DropdownItem>Something else here</DropdownItem>

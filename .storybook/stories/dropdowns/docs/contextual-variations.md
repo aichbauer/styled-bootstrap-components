@@ -33,7 +33,7 @@ export class ContextualVariationsDropdown extends React.Component {
     } = this.state;
     return (
       <div>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button primary dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenPrimary')}>
             Primary
           </Button>
@@ -43,7 +43,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button secondary dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenSecondary')}>
             Secondary
           </Button>
@@ -53,7 +53,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button success dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenSuccess')}>
             Success
           </Button>
@@ -63,7 +63,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button info dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenInfo')}>
             Info
           </Button>
@@ -73,7 +73,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button warning dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenWarning')}>
             Warning
           </Button>
@@ -83,7 +83,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button danger dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenDanger')}>
             Danger
           </Button>
@@ -93,7 +93,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button light dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenLight')}>
             Light
           </Button>
@@ -103,7 +103,7 @@ export class ContextualVariationsDropdown extends React.Component {
             <DropdownItem>Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown style={{ marginRight: "0.5rem" }}>
+        <Dropdown style={{ margin: "0.5rem" }}>
           <Button dark dropdownToggle onClick={() => this.handleOpenCloseDropdown('hiddenDark')}>
             Dark
           </Button>

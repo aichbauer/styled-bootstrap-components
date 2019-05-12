@@ -7,7 +7,7 @@ import {
   DropdownMenu,
 } from '../../../../packages/styled-dropdown-component';
 
-export class DropdownFill extends React.Component {
+export class DropdownFullWidth extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +29,7 @@ export class DropdownFill extends React.Component {
         <Button dropdownToggle onClick={() => this.handleOpenCloseDropdown()}>
           Long Long Long Long Long Long Long Button
         </Button>
-        <DropdownMenu fill hidden={hidden} toggle={() => this.handleOpenCloseDropdown()}>
+        <DropdownMenu fullWidth hidden={hidden} toggle={() => this.handleOpenCloseDropdown()}>
           <DropdownItem>Action</DropdownItem>
           <DropdownItem>Another action</DropdownItem>
           <DropdownItem>Something else here</DropdownItem>
