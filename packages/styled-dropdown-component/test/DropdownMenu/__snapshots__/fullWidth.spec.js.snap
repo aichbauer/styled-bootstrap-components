@@ -24,7 +24,6 @@ exports[`Styles matches DropdownMenu fill 1`] = `
 
 <div
   className="c0"
-  fill={true}
   hidden={false}
 />
 `;

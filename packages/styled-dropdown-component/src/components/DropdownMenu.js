@@ -33,8 +33,8 @@ const dropdownMenuHidden = (props) => (
     `
 );
 
-const isFilling = (props) => (
-  props.fill
+const isFullWidth = (props) => (
+  props.fullWidth
     ? css`
       min-width: 100%;
     `
@@ -71,8 +71,14 @@ const StyledDiv = styled.div`
   ${(props) => borderRadius(props)};
   ${(props) => dropdownMenuHidden(props)};
   ${(props) => isLeftOrRight(props)};
-  ${(props) => isFilling(props)};
+  ${(props) => isFullWidth(props)};
 `;
+
+StyledDiv.defaultProps = {
+  theme: DefaultTheme,
+  hidden: false,
+  fullWidth: false,
+};
 
 class DropdownMenu extends React.Component {
   constructor(props) {
@@ -129,9 +135,7 @@ class DropdownMenu extends React.Component {
 }
 
 DropdownMenu.defaultProps = {
-  theme: DefaultTheme,
   hidden: false,
-  fill: false,
   toggle: /* istanbul ignore next */ () => {},
 };
 

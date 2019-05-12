@@ -105,7 +105,7 @@ Properties which can be added to the component to change the visual appearance.
 * `hidden` only on DropdownMenu **Type**: boolean
 * `noRadius` only on DropdownMenu **Type**: boolean
 * `right` only on DropdownMenu **Type**: boolean
-* `fill` only on DropdownMenu **Type**: boolean
+* `fullWidth` only on DropdownMenu **Type**: boolean
 * `toggle` only on DropdownMenu **Type**: boolean
 
 ## Related
