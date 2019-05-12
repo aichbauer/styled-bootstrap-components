@@ -16,21 +16,19 @@ export class DropdownSplit extends React.Component {
   render() {
     const { hidden } = this.state;
     return (
-      <Container style={{ textAlign: 'left' }}>
-        <Dropdown>
-          <ButtonGroup>
-            <Button secondary>
-              Large button
-            </Button>
-            <Button secondary dropdownToggle split onClick={() => this.handleOpenCloseDropdown()} />
-          </ButtonGroup>
-          <DropdownMenu hidden={hidden}>
-            <DropdownItem>Action</DropdownItem>
-            <DropdownItem>Another action</DropdownItem>
-            <DropdownItem>Something else here</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-      </Container>
+      <Dropdown>
+        <ButtonGroup>
+          <Button secondary>
+            Large button
+          </Button>
+          <Button secondary dropdownToggle split onClick={() => this.handleOpenCloseDropdown()} />
+        </ButtonGroup>
+        <DropdownMenu hidden={hidden} toggle={() => this.handleOpenCloseDropdown()}>
+          <DropdownItem>Action</DropdownItem>
+          <DropdownItem>Another action</DropdownItem>
+          <DropdownItem>Something else here</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
     );
   }
 };

@@ -16,16 +16,16 @@ export class DropdownWithDivider extends React.Component {
   render() {
     const { hidden } = this.state;
     return (
-      <Container style={{ textAlign: 'left' }}>
+      <div>
         <Dropdown>
-          <Button 
-            secondary 
-            dropdownToggle 
+          <Button
+            secondary
+            dropdownToggle
             onClick={() => this.handleOpenCloseDropdown()}
           >
             Dropdown Button
           </Button>
-          <DropdownMenu hidden={hidden}>
+          <DropdownMenu hidden={hidden} toggle={() => this.handleOpenCloseDropdown()}>
             <DropdownItem>Action</DropdownItem>
             <DropdownItem>Another action</DropdownItem>
             <DropdownItem>Something else here</DropdownItem>
@@ -33,7 +33,7 @@ export class DropdownWithDivider extends React.Component {
             <DropdownItem>Seperated link</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-      </Container>
+      </div>
     );
   }
 };

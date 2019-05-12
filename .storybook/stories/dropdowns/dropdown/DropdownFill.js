@@ -7,11 +7,11 @@ import {
   DropdownMenu,
 } from '../../../../packages/styled-dropdown-component';
 
-export class SimpleDropdown extends React.Component {
+export class DropdownFill extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true,
+      hidden: true
     };
   }
 
@@ -23,16 +23,13 @@ export class SimpleDropdown extends React.Component {
 
   render() {
     const { hidden } = this.state;
+
     return (
       <Dropdown>
-        <Button
-          secondary
-          dropdownToggle
-          onClick={() => this.handleOpenCloseDropdown()}
-        >
-          Dropdown Button
+        <Button dropdownToggle onClick={() => this.handleOpenCloseDropdown()}>
+          Long Long Long Long Long Long Long Button
         </Button>
-        <DropdownMenu hidden={hidden} toggle={() => this.handleOpenCloseDropdown()}>
+        <DropdownMenu fill hidden={hidden} toggle={() => this.handleOpenCloseDropdown()}>
           <DropdownItem>Action</DropdownItem>
           <DropdownItem>Another action</DropdownItem>
           <DropdownItem>Something else here</DropdownItem>
