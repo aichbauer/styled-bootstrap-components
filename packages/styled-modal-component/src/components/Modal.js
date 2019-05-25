@@ -119,6 +119,11 @@ class Modal extends React.Component {
 
   render() {
     const {
+      fadeProps,
+      wrapperProps,
+      dialogProps,
+      contentProps,
+      backdropProps,
       centered,
       noRadius,
       children,
@@ -130,12 +135,17 @@ class Modal extends React.Component {
     const { hidden } = this.state;
 
     return (
-      <Fade hidden={hidden} ref={this.refFade}>
+      <Fade
+        hidden={hidden}
+        ref={this.refFade}
+        {...fadeProps}
+      >
         <ModalWrapper
           theme={this.props.theme}
           ref={this.refModal}
           onMouseDown={this.handleBackdropMouseDown}
           onClick={this.handleBackdropClick}
+          {...wrapperProps}
         >
           <ModalDialog
             theme={this.props.theme}
@@ -143,12 +153,19 @@ class Modal extends React.Component {
             sm={sm}
             centered={centered}
             noRadius={noRadius}
+            {...dialogProps}
           >
-            <ModalContent theme={this.props.theme}>{children}</ModalContent>
+            <ModalContent theme={this.props.theme} {...contentProps}>
+              {children}
+            </ModalContent>
           </ModalDialog>
         </ModalWrapper>
 
-        {!!backdrop && <ModalBackdrop theme={this.props.theme} backdrop={backdrop} />}
+        {!!backdrop && <ModalBackdrop
+          theme={this.props.theme}
+          backdrop={backdrop}
+          {...backdropProps}
+        />}
       </Fade>
     );
   }

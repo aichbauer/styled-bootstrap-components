@@ -125,6 +125,11 @@ Properties which can be added to the component to change the visual appearance.
 * `backdrop` only on Modal **Type**: boolean or string
 * `noRadius` only on Modal **Type**: boolean
 * `returnFocusAfterClose` only on Modal **Type**: boolean
+* `fadeProps` only on Modal **Type**: object
+* `wrapperProps` only on Modal **Type**: object
+* `dialogProps` only on Modal **Type**: object
+* `contentProps` only on Modal **Type**: object
+* `backdropProps` only on Modal **Type**: object
 
 > Property `backdrop` can be set to false or 'static' to prevent dialog from
 > closing on click outsite of the window.
