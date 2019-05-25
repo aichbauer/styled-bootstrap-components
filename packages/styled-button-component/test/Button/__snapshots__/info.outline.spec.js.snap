@@ -39,8 +39,6 @@ exports[`Styles matches Button info outline 1`] = `
   cursor: pointer;
 }
 
-.c0:hover:focus,
-.c0:focus:focus,
 .c0:hover:hover,
 .c0:focus:hover {
   background-color: #17a2b8;
@@ -51,7 +49,6 @@ exports[`Styles matches Button info outline 1`] = `
   color: #fff;
 }
 
-.c0:focus,
 .c0:hover {
   background-color: #17a2b8;
 }
@@ -104,14 +101,11 @@ exports[`Styles matches Button info outline disabled 1`] = `
   color: #17a2b8;
 }
 
-.c0:hover:focus,
-.c0:focus:focus,
 .c0:hover:hover,
 .c0:focus:hover {
   background-color: transparent;
 }
 
-.c0:focus,
 .c0:hover {
   background-color: transparent;
 }

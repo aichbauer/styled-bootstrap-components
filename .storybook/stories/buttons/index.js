@@ -20,56 +20,56 @@ import ButtonDisabledDoc from './docs/disabled.md';
 
 storiesOf('Buttons', module)
   .add('Simple', withReadme(ButtonReadme, withDocs(ButtonSimpleDoc, () => (
-    <Container style={{ textAlign: 'left' }}>
-      <Button primary mr="0.5rem">Primary</Button>
-      <Button secondary mr="0.5rem">Secondary</Button>
-      <Button success mr="0.5rem">Success</Button>
-      <Button danger mr="0.5rem">Danger</Button>
-      <Button warning mr="0.5rem">Warning</Button>
-      <Button info mr="0.5rem">Info</Button>
-      <Button ligh mr="0.5rem"t>Light</Button>
-      <Button dark mr="0.5rem">Dark</Button>
+    <Container>
+      <Button primary>Primary</Button>
+      <Button secondary>Secondary</Button>
+      <Button success>Success</Button>
+      <Button danger>Danger</Button>
+      <Button warning>Warning</Button>
+      <Button info>Info</Button>
+      <Button light>Light</Button>
+      <Button dark>Dark</Button>
     </Container>
   ))))
   .add('Outline', withReadme(ButtonReadme, withDocs(ButtonOutlineDoc, () => (
-    <Container style={{ textAlign: 'left' }}>
-      <Button primary outline mr="0.5rem">Primary</Button>
-      <Button secondary outline mr="0.5rem">Secondary</Button>
-      <Button success outline mr="0.5rem">Success</Button>
-      <Button danger outline mr="0.5rem">Danger</Button>
-      <Button warning outline mr="0.5rem">Warning</Button>
-      <Button info outline mr="0.5rem">Info</Button>
-      <Button light outline mr="0.5rem">Light</Button>
-      <Button dark outline mr="0.5rem">Dark</Button>
+    <Container>
+      <Button primary outline>Primary</Button>
+      <Button secondary outline>Secondary</Button>
+      <Button success outline>Success</Button>
+      <Button danger outline>Danger</Button>
+      <Button warning outline>Warning</Button>
+      <Button info outline>Info</Button>
+      <Button light outline>Light</Button>
+      <Button dark outline>Dark</Button>
     </Container>
   ))))
   .add('Sizes', withReadme(ButtonReadme, withDocs(ButtonSizesDoc, () => (
-    <Container style={{ textAlign: 'left' }}>
+    <Container>
       <Row style={{ marginBottom: '0.5rem' }}>
-        <Button primary lg mr="0.5rem">Large button</Button>
-        <Button secondary lg mr="0.5rem">Large button</Button>
+        <Button primary lg>Large button</Button>
+        <Button secondary lg>Large button</Button>
       </Row>
       <Row>
-        <Button primary sm mr="0.5rem">Small button</Button>
-        <Button secondary sm mr="0.5rem">Small button</Button>
+        <Button primary sm>Small button</Button>
+        <Button secondary sm>Small button</Button>
       </Row>
     </Container>
   ))))
   .add('Block', withReadme(ButtonReadme, withDocs(ButtonBlockDoc, () => (
-    <Container style={{ textAlign: 'left' }}>
+    <Container>
       <Button primary block mb="0.5rem">Block level button</Button>
       <Button secondary block>Block level button</Button>
     </Container>
   ))))
   .add('Active', withReadme(ButtonReadme, withDocs(ButtonActiveDoc, () => (
-    <Container style={{ textAlign: 'left' }}>
-      <Button primary active mr="0.5rem">Primary button</Button>
-      <Button secondary active mr="0.5rem">Secondary Button</Button>
+    <Container>
+      <Button primary active>Primary button</Button>
+      <Button secondary active>Secondary Button</Button>
     </Container>
   ))))
   .add('Disabled', withReadme(ButtonReadme, withDocs(ButtonDisabledDoc, () => (
-    <Container style={{ textAlign: 'left' }}>
-      <Button primary disabled mr="0.5rem">Primary button</Button>
-      <Button secondary disabled mr="0.5rem">Secondary Button</Button>
+    <Container>
+      <Button primary disabled>Primary button</Button>
+      <Button secondary disabled>Secondary Button</Button>
     </Container>
   ))));

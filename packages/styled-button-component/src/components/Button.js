@@ -108,13 +108,13 @@ const dropdownToggle = (props) => (
       border-right: 0.3em solid transparent;
       border-bottom: 0;
       border-left: 0.3em solid transparent;
-    };
+    }
     &:empty::after {
       margin-left: 0;
-    };
+    }
     &::after {
       margin-left: 0.255em;
-    };
+    }
   `
 );
 
@@ -127,9 +127,9 @@ const disabled = (props) => (
 
 const border = (props) => {
   if (props.active) {
-    return css`border: ${b(props, 'button').default} ${colors(props, 'button').borderColorActive}`;
+    return css`border: ${b(props, 'button').default} ${colors(props, 'button').borderColorActive};`;
   } else if (props.disabled) {
-    return css`border: ${b(props, 'button').default} ${colors(props, 'button').borderColorDisabled}`;
+    return css`border: ${b(props, 'button').default} ${colors(props, 'button').borderColorDisabled};`;
   }
 
   return css`
@@ -139,7 +139,7 @@ const border = (props) => {
       &:focus,
       &:hover {
         border: 1px solid ${colors(props, 'button').borderColorHoverFocus};
-      };
+      }
     `}
   `;
 };
@@ -154,10 +154,9 @@ const backgroundColor = (props) => {
     return css`
       background-image: none;
       background-color: transparent;
-      &:focus,
       &:hover {
         background-color: ${props.disabled ? 'transparent' : colors(props, 'button').backgroundColor};
-      };
+      }
     `;
   } else if (props.disabled) {
     return css`
@@ -171,7 +170,7 @@ const backgroundColor = (props) => {
     &:focus,
     &:hover {
       background-color: ${colors(props, 'button').backgroundColorHoverFocus};
-    };
+    }
   `;
 };
 
@@ -196,7 +195,7 @@ const buttonToggler = (props) => (
     &:hover, &:focus {
       color: ${colors(props, 'button').toggle.color};
       border-color: ${colors(props, 'button').toggle.borderColor};
-    };
+    }
   `
 );
 
@@ -214,9 +213,9 @@ const buttonToggleCollapse = (props) => {
       display: none;
       @media (max-width: ${screenSize(props)}) {
         display: block;
-        font-size: ${fontSize(props, 'button').toggle};
+        font-size: ${fontSize(props).toggle};
         ${buttonToggler};
-      };
+      }
     `;
   }
 
@@ -235,7 +234,7 @@ const color = (props) => {
       color: ${colors(props, 'button').colorOutline};
       &:hover {
         color: ${colors(props, 'button').colorOutlineHover};
-      };
+      }
     `;
   }
 
@@ -259,30 +258,30 @@ const buttonStyle = (props) => css`
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   &:focus {
     outline: 0;
-    ${boxShadow}
-  };
+    ${boxShadow};
+  }
   &:hover,
   &:focus {
     text-decoration: none;
-    ${border(props)}
-    ${backgroundColor(props)}
-    ${color(props)}
-    ${cursor(props)}
-  };
-  ${border(props)}
-  ${backgroundColor(props)}
-  ${borderRadius(props)}
-  ${block(props)}
-  ${dropdownToggle(props)}
-  ${buttonToggleCollapse(props)}
-  ${disabled(props)}
-  ${fontSize(props)}
-  ${color(props)}
-  ${padding(props)}
+    ${border(props)};
+    ${backgroundColor(props)};
+    ${color(props)};
+    ${cursor(props)};
+  }
+  ${border(props)};
+  ${backgroundColor(props)};
+  ${borderRadius(props)};
+  ${block(props)};
+  ${dropdownToggle(props)};
+  ${buttonToggleCollapse(props)};
+  ${disabled(props)};
+  ${fontSize(props)};
+  ${color(props)};
+  ${padding(props)};
 `;
 
 const Button = styled.button`
-  ${(props) => buttonStyle(props)}
+  ${(props) => buttonStyle(props)};
 `;
 
 Button.defaultProps = {
@@ -290,7 +289,7 @@ Button.defaultProps = {
 };
 
 const LinkButton = styled.a`
-  ${(props) => buttonStyle(props)}
+  ${(props) => buttonStyle(props)};
 `;
 
 LinkButton.defaultProps = {
