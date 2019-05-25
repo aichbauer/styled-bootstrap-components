@@ -785,7 +785,6 @@ exports[`Simply check if all components are imported and exported correctly 17`]
 exports[`Simply check if all components are imported and exported correctly 18`] = `
 .c0 {
   position: relative;
-  display: inline-block;
 }
 
 <div
@@ -822,6 +821,7 @@ exports[`Simply check if all components are imported and exported correctly 20`]
 .c0 {
   position: absolute;
   top: 100%;
+  left: 0;
   z-index: 1000;
   float: left;
   min-width: 10rem;
@@ -836,12 +836,10 @@ exports[`Simply check if all components are imported and exported correctly 20`]
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 0.25rem;
   display: block;
-  left: 0;
 }
 
 <div
   className="c0"
-  hidden={false}
 />
 `;
 
@@ -1220,14 +1218,20 @@ exports[`Simply check if all components are imported and exported correctly 34`]
   padding-left: 15px;
   overflow: hidden;
   word-break: break-all;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
 }
 
 <div
