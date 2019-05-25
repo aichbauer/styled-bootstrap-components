@@ -63,16 +63,16 @@ import {
 
 export class SimpleDropdown extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       hidden: true,
     };
   }
 
   handleOpenCloseDropdown() {
-      this.setState({
-        hidden: !this.state.hidden,
-      });
+    this.setState({
+      hidden: !this.state.hidden,
+    });
   }
 
   render() {
@@ -86,7 +86,7 @@ export class SimpleDropdown extends React.Component {
         >
           Dropdown Button
         </Button>
-        <DropdownMenu hidden={hidden}>
+        <DropdownMenu hidden={hidden} toggle={() => this.handleOpenCloseDropdown()}>
           <DropdownItem>Action</DropdownItem>
           <DropdownItem>Another action</DropdownItem>
           <DropdownItem>Something else here</DropdownItem>
@@ -104,6 +104,9 @@ Properties which can be added to the component to change the visual appearance.
 * `active` only on DropdownItem **Type**: boolean
 * `hidden` only on DropdownMenu **Type**: boolean
 * `noRadius` only on DropdownMenu **Type**: boolean
+* `right` only on DropdownMenu **Type**: boolean
+* `fullWidth` only on DropdownMenu **Type**: boolean
+* `toggle` only on DropdownMenu **Type**: boolean
 
 ## Related
 

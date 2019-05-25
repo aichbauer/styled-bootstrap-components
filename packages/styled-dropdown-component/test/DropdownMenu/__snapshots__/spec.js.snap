@@ -4,7 +4,6 @@ exports[`Styles matches DropdownMenu 1`] = `
 .c0 {
   position: absolute;
   top: 100%;
-  left: 0;
   z-index: 1000;
   float: left;
   min-width: 10rem;
@@ -19,9 +18,11 @@ exports[`Styles matches DropdownMenu 1`] = `
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 0.25rem;
   display: block;
+  left: 0;
 }
 
 <div
   className="c0"
+  hidden={false}
 />
 `;

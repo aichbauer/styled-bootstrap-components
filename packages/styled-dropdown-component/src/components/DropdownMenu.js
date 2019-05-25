@@ -1,7 +1,10 @@
+/* eslint-env browser */
+
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 import {
-  theme,
+  theme as DefaultTheme,
   colors,
   borderRadius as br,
   padding,
@@ -9,6 +12,16 @@ import {
   fontSize,
   border,
 } from 'styled-config';
+
+const isLeftOrRight = (props) => (
+  props.right
+    ? css`
+      right: 0;
+    `
+    : css`
+      left: 0;
+    `
+);
 
 const dropdownMenuHidden = (props) => (
   props.hidden
@@ -18,6 +31,14 @@ const dropdownMenuHidden = (props) => (
     : css`
       display: block;
     `
+);
+
+const isFullWidth = (props) => (
+  props.fullWidth
+    ? css`
+      min-width: 100%;
+    `
+    : null
 );
 
 const borderRadius = (props) => {
@@ -32,10 +53,9 @@ const borderRadius = (props) => {
   `;
 };
 
-const DropdownMenu = styled.div`
+const StyledDiv = styled.div`
   position: absolute;
   top: 100%;
-  left: 0;
   z-index: 1000;
   float: left;
   min-width: 10rem;
@@ -48,12 +68,75 @@ const DropdownMenu = styled.div`
   background-color: ${(props) => colors(props, 'dropdownMenu').backgroundColor};
   background-clip: padding-box;
   border: ${(props) => border(props, 'dropdownMenu').default} ${(props) => colors(props, 'dropdownMenu').borderColor};
-  ${(props) => borderRadius(props)}
+  ${(props) => borderRadius(props)};
   ${(props) => dropdownMenuHidden(props)};
+  ${(props) => isLeftOrRight(props)};
+  ${(props) => isFullWidth(props)};
 `;
 
+StyledDiv.defaultProps = {
+  theme: DefaultTheme,
+  hidden: false,
+  fullWidth: false,
+};
+
+class DropdownMenu extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleDocumentClick = this.handleDocumentClick.bind(this);
+
+    this.container = React.createRef();
+  }
+
+  componentDidMount() {
+    this.addEvents();
+  }
+
+  componentWillUnmount() {
+    this.removeEvents();
+  }
+
+  addEvents() {
+    document.addEventListener('click', this.handleDocumentClick, true);
+  }
+
+  removeEvents() {
+    document.removeEventListener('click', this.handleDocumentClick, true);
+  }
+
+  handleDocumentClick(e) {
+    const container = this.container.current;
+
+    if (this.props.hidden || container === null) {
+      return;
+    }
+
+    const containerParent = container.parentNode;
+
+    if (
+      (containerParent === e.target || !containerParent.contains(e.target))
+      && container !== e.target
+      && !container.contains(e.target)
+    ) {
+      this.props.toggle();
+    }
+  }
+
+  render() {
+    const { children, ...rest } = this.props;
+
+    return (
+      <StyledDiv ref={this.container} {...rest}>
+        {children}
+      </StyledDiv>
+    );
+  }
+}
+
 DropdownMenu.defaultProps = {
-  theme,
+  hidden: false,
+  toggle: /* istanbul ignore next */ () => {},
 };
 
 export { DropdownMenu };

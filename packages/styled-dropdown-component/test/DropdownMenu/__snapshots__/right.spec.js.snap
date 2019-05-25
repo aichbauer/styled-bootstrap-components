@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styles matches DropdownMenu noRadius 1`] = `
+exports[`Styles matches DropdownMenu right 1`] = `
 .c0 {
   position: absolute;
   top: 100%;
@@ -16,9 +16,9 @@ exports[`Styles matches DropdownMenu noRadius 1`] = `
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 0;
+  border-radius: 0.25rem;
   display: block;
-  left: 0;
+  right: 0;
 }
 
 <div
