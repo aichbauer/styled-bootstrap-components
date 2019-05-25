@@ -785,6 +785,7 @@ exports[`Simply check if all components are imported and exported correctly 17`]
 exports[`Simply check if all components are imported and exported correctly 18`] = `
 .c0 {
   position: relative;
+  display: inline-block;
 }
 
 <div
@@ -821,7 +822,6 @@ exports[`Simply check if all components are imported and exported correctly 20`]
 .c0 {
   position: absolute;
   top: 100%;
-  left: 0;
   z-index: 1000;
   float: left;
   min-width: 10rem;
@@ -836,10 +836,12 @@ exports[`Simply check if all components are imported and exported correctly 20`]
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 0.25rem;
   display: block;
+  left: 0;
 }
 
 <div
   className="c0"
+  hidden={false}
 />
 `;
 
