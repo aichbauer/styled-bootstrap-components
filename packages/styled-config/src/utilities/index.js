@@ -1,17 +1,25 @@
 import { css } from 'styled-components';
 import { theme } from '../theme';
 
-/*
-TODO: Vertical align
-*/
-
 /* Constants and helpers */
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 const colors = [
-  'primary', 'secondary', 'success', 'danger', 'warning',
-  'info', 'light', 'dark', 'darker',
+  'primary', 'secondary', 'success', 'danger',
+  'warning', 'info', 'light', 'dark', 'darker',
 ];
+
+/* Vertical align --------------------------------------------------------- */
+const verticalAlign = (size) => css`
+  vertical-align: ${(props) => {
+    if (props[`text${size}Baseline`]) { return 'baseline'; }
+    if (props[`text${size}Top`]) { return 'top'; }
+    if (props[`text${size}Bottom`]) { return 'bottom'; }
+    if (props[`text${size}TextTop`]) { return 'text-top'; }
+    if (props[`text${size}TextBottom`]) { return 'text-bottom'; }
+    return null;
+  }};
+`;
 
 /* Text ------------------------------------------------------------------- */
 const textAlign = (size) => css`
@@ -62,26 +70,24 @@ const textStyle = (size) => css`
 `;
 
 const textMonospace = (size) => css`
-  ${(props) => {
+  font-family: ${(props) => {
     if (props[`text${size}Monospace`]) {
-      return css`
-        font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-      `;
+      return 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace';
     }
     return null;
   }};
 `;
 
 const textReset = (size) => css`
-  ${(props) => {
-    if (props[`text${size}Reset`]) { return css`color: inherit;`; }
+  color: ${(props) => {
+    if (props[`text${size}Reset`]) { return 'inherit'; }
     return null;
   }};
 `;
 
 const textDecoration = (size) => css`
-  ${(props) => {
-    if (props[`textDecoration${size}None`]) { return css`text-decoration: none;`; }
+  text-decoration: ${(props) => {
+    if (props[`textDecoration${size}None`]) { return 'none'; }
     return null;
   }};
 `;
@@ -234,8 +240,6 @@ const roundedPill = (size) => css`
 `;
 
 /* Spacing ---------------------------------------------------------------- */
-const spacingSizes = [0, 1, 2, 3, 4, 5];
-
 const normalizeSpacingValue = (value, allowAuto = false) => {
   // allowed value
   if (allowAuto && value === 'Auto') {
@@ -327,11 +331,11 @@ const alignContent = (size) => css`
     || null};
 `;
 
-const orders = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const flexOrder = (size) => css`
-  ${(props) => orders.map((order) => props[`order${size}${order}`] && css`
-    order: ${order};
-  `)};
+  ${(props) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((order) =>
+    props[`order${size}${order}`] && css`
+      order: ${order};
+    `)};
 `;
 
 const flexGrow = (size) => css`
@@ -400,7 +404,7 @@ const makeUtilitiesForScreenSize = (size) => css`
   ${float(size)};
 
   ${spacingMargin(size, 'Auto')};
-  ${() => spacingSizes.map((s) => css`
+  ${() => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => css`
     ${spacingMargin(size, s)};
     ${spacingMargin(size, s, true)};
     ${spacingPadding(size, s)};
@@ -416,6 +420,7 @@ const makeUtilitiesForScreenSize = (size) => css`
   ${textDecoration(size)};
   ${textWordBreak(size)};
   ${textTruncate(size)};
+  ${verticalAlign(size)};
 
   ${flexDirection(size)};
   ${justifyContent(size)};
