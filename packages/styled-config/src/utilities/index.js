@@ -2,25 +2,239 @@ import { css } from 'styled-components';
 import { theme } from '../theme';
 
 /*
-TODO: Borders
-TODO: Clearfix
-TODO: Close icon
-TODO: Colors
-TODO: Display
-TODO: Embed
-TODO: Flex[Order]
-TODO: Float
-TODO: Image replacement
-TODO: Overflow
-TODO: Position
-TODO: Shadows
-TODO: Sizing
-TODO: Text
 TODO: Vertical align
 */
 
+/* Constants and helpers */
+const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
+const colors = [
+  'primary', 'secondary', 'success', 'danger', 'warning',
+  'info', 'light', 'dark', 'darker',
+];
+
+/* Text ------------------------------------------------------------------- */
+const textAlign = (size) => css`
+  text-align: ${(props) => {
+    if (props[`text${size}Justify`]) { return 'justify'; }
+    if (props[`text${size}Left`]) { return 'left'; }
+    if (props[`text${size}Right`]) { return 'right'; }
+    if (props[`text${size}Center`]) { return 'center'; }
+    return null;
+  }};
+`;
+
+const textWrap = (size) => css`
+  white-space: ${(props) => {
+    if (props[`text${size}Wrap`]) { return 'normal'; }
+    if (props[`text${size}NoWrap`]) { return 'nowrap'; }
+    if (props[`text${size}Right`]) { return 'right'; }
+    if (props[`text${size}Center`]) { return 'center'; }
+    return null;
+  }};
+`;
+
+const textTransform = (size) => css`
+  text-transform: ${(props) => {
+    if (props[`text${size}Lowercase`]) { return 'lowercase'; }
+    if (props[`text${size}Uppercase`]) { return 'uppercase'; }
+    if (props[`text${size}Capitalize`]) { return 'capitalize'; }
+    return null;
+  }};
+`;
+
+const textWeight = (size) => css`
+  font-weight: ${(props) => {
+    if (props[`text${size}WeightBold`]) { return 'bold'; }
+    if (props[`text${size}WeightBolder`]) { return 'bolder'; }
+    if (props[`text${size}WeightNormal`]) { return 'normal'; }
+    if (props[`text${size}WeightLight`]) { return 'light'; }
+    if (props[`text${size}WeightLighter`]) { return 'lighter'; }
+    return null;
+  }};
+`;
+
+const textStyle = (size) => css`
+  font-style: ${(props) => {
+    if (props[`text${size}Italic`]) { return 'italic'; }
+    return null;
+  }};
+`;
+
+const textMonospace = (size) => css`
+  ${(props) => {
+    if (props[`text${size}Monospace`]) {
+      return css`
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      `;
+    }
+    return null;
+  }};
+`;
+
+const textReset = (size) => css`
+  ${(props) => {
+    if (props[`text${size}Reset`]) { return css`color: inherit;`; }
+    return null;
+  }};
+`;
+
+const textDecoration = (size) => css`
+  ${(props) => {
+    if (props[`textDecoration${size}None`]) { return css`text-decoration: none;`; }
+    return null;
+  }};
+`;
+
+const textWordBreak = (size) => css`
+  ${(props) => {
+    if (props[`text${size}WordBreak`]) {
+      return css`
+        word-break: break-word;
+        overflow-wrap: break-word;
+      `;
+    }
+    return null;
+  }};
+`;
+
+const textTruncate = (size) => css`
+  ${(props) => {
+    if (props[`text${size}Truncate`]) {
+      return css`
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      `;
+    }
+    return null;
+  }};
+`;
+
+/* Sizing ----------------------------------------------------------------- */
+const sizing = (size) =>
+  ['max-', ''].map((m) =>
+    ['width', 'height'].map((a) =>
+      ['25', '50', '75', '100', 'auto'].map((p) =>
+        css`${(props) => props[`${m.slice(0, 1)}${a[0]}${size}${p}`] && css`
+          ${m}${a}: ${p === 'auto' ? p : `${p}%`};
+        `}`)));
+
+/* Shadows ---------------------------------------------------------------- */
+const shadow = (size) => css`
+  box-shadow: ${(props) => {
+    if (props[`shadow${size}None`]) { return 'none'; }
+    if (props[`shadow${size}Small`]) { return '0 .125rem .25rem rgba(0,0,0,.075)'; }
+    if (props[`shadow${size}`]) { return '0 .5rem 1rem rgba(0,0,0,.15)!important'; }
+    if (props[`shadow${size}Large`]) { return '0 1rem 3rem rgba(0,0,0,.175)!important'; }
+    return null;
+  }};
+`;
+
+/* Position --------------------------------------------------------------- */
+const position = (size) => css`
+  position: ${(props) => {
+    if (props[`position${size}Static`]) { return 'static'; }
+    if (props[`position${size}Relative`]) { return 'relative'; }
+    if (props[`position${size}Absolute`]) { return 'absolute'; }
+    if (props[`position${size}Fixed`]) { return 'fixed'; }
+    if (props[`position${size}Sticky`]) { return 'sticky'; }
+    return null;
+  }};
+`;
+
+/* Overflow --------------------------------------------------------------- */
+const overflow = (size) => css`
+  overflow: ${(props) => {
+    if (props[`overflow${size}Auto`]) { return 'auto'; }
+    if (props[`overflow${size}Hidden`]) { return 'hidden'; }
+    return null;
+  }};
+`;
+
+/* Text hide ------------------------------------------------------------- */
+const textHide = (size) => css`
+  ${(props) => {
+    if (props[`text${size}Hide`]) {
+      return css`
+          font: 0/0 a;
+          color: transparent;
+          text-shadow: none;
+          background-color: transparent;
+          border: 0;
+      `;
+    }
+    return null;
+  }}
+`;
+
+/* Float ----------------------------------------------------------------- */
+const float = (size) => css`
+  float: ${(props) => {
+    if (props[`float${size}Right`]) { return 'right'; }
+    if (props[`float${size}Left`]) { return 'left'; }
+    if (props[`float${size}None`]) { return 'none'; }
+    return null;
+  }};
+`;
+
+/* Colors ---------------------------------------------------------------- */
+const textColors = (size) => css`
+  ${(props) => colors.map((color) => props[`text${size}${capitalizeFirstLetter(color)}`] && css`
+    color: ${(props.theme.colorScheme || theme.colorScheme)[color]};
+  `)};
+`;
+
+const backgroundColors = (size) => css`
+  ${(props) => colors.map((color) => props[`bg${size}${capitalizeFirstLetter(color)}`] && css`
+    background-color: ${(props.theme.colorScheme || theme.colorScheme)[color]};
+  `)};
+`;
+
+/* Borders ---------------------------------------------------------------- */
+const normalizeBorderValue = (value) => {
+  if (value === '0') { return '0'; }
+  return '1px solid #111';
+};
+
+const border = (size, value) => {
+  const suffix = `${size}${value}`;
+
+  return css`
+    border-left: ${(props) => (props[`borderLeft${suffix}`] || props[`border${suffix}`]) && normalizeBorderValue(value)};
+    border-right: ${(props) => (props[`borderRight${suffix}`] || props[`border${suffix}`]) && normalizeBorderValue(value)};
+    border-top: ${(props) => (props[`borderTop${suffix}`] || props[`border${suffix}`]) && normalizeBorderValue(value)};
+    border-bottom: ${(props) => (props[`borderBottom${suffix}`] || props[`border${suffix}`]) && normalizeBorderValue(value)};
+
+    ${(props) => colors.map((color) => props[`border${capitalizeFirstLetter(color)}`] && css`
+      border-color: ${(props.theme.colorScheme || theme.colorScheme)[color]};
+    `)};
+  `;
+};
+
+const borderColor = (size) => css`
+  ${(props) => colors.map((color) => props[`border${size}${capitalizeFirstLetter(color)}`] && css`
+    border-color: ${(props.theme.colorScheme || theme.colorScheme)[color]};
+  `)};
+`;
+
+const rounded = (size) => css`
+  border-top-left-radius: ${(props) => (props[`roundedTop${size}`] || props[`roundedLeft${size}`] || props[`rounded${size}`] ? '.25rem' : null)};
+  border-top-right-radius: ${(props) => (props[`roundedTop${size}`] || props[`roundedRight${size}`] || props[`rounded${size}`] ? '.25rem' : null)};
+  border-bottom-left-radius: ${(props) => (props[`roundedBottom${size}`] || props[`roundedLeft${size}`] || props[`rounded${size}`] ? '.25rem' : null)};
+  border-bottom-right-radius: ${(props) => (props[`roundedBottom${size}`] || props[`roundedRight${size}`] || props[`rounded${size}`] ? '.25rem' : null)};
+`;
+
+const roundedCircle = (size) => css`
+  border-radius: ${(props) => (props[`rounded${size}Circle`] ? '50%' : null)};
+`;
+
+const roundedPill = (size) => css`
+  border-radius: ${(props) => (props[`rounded${size}Pill`] ? '50rem' : null)};
+`;
+
 /* Spacing ---------------------------------------------------------------- */
-const spacingSizes = [1, 2, 3, 4, 5];
+const spacingSizes = [0, 1, 2, 3, 4, 5];
 
 const normalizeSpacingValue = (value, allowAuto = false) => {
   // allowed value
@@ -34,24 +248,34 @@ const normalizeSpacingValue = (value, allowAuto = false) => {
   }
 
   // rem value
-  return `${value}rem`;
+  return `${value * 0.25}rem`;
 };
 
 // Margin
-const spacingMargin = (size, value) => css`
-  margin-left: ${(props) => (props[`ml${size}${value}`] || props[`mx${size}${value}`] || props[`m${size}${value}`]) && normalizeSpacingValue(value, true)};
-  margin-right: ${(props) => (props[`mr${size}${value}`] || props[`mx${size}${value}`] || props[`m${size}${value}`]) && normalizeSpacingValue(value, true)};
-  margin-top: ${(props) => (props[`mt${size}${value}`] || props[`my${size}${value}`] || props[`m${size}${value}`]) && normalizeSpacingValue(value, true)};
-  margin-bottom: ${(props) => (props[`mb${size}${value}`] || props[`my${size}${value}`] || props[`m${size}${value}`]) && normalizeSpacingValue(value, true)};
-`;
+const spacingMargin = (size, value, negative = false) => {
+  const suffix = `${size}${negative ? 'n' : ''}${value}`;
+
+  const val = negative ? -value : value;
+
+  return css`
+    margin-left: ${(props) => (props[`ml${suffix}`] || props[`mx${suffix}`] || props[`m${suffix}`]) && normalizeSpacingValue(val, true)};
+    margin-right: ${(props) => (props[`mr${suffix}`] || props[`mx${suffix}`] || props[`m${suffix}`]) && normalizeSpacingValue(val, true)};
+    margin-top: ${(props) => (props[`mt${suffix}`] || props[`my${suffix}`] || props[`m${suffix}`]) && normalizeSpacingValue(val, true)};
+    margin-bottom: ${(props) => (props[`mb${suffix}`] || props[`my${suffix}`] || props[`m${suffix}`]) && normalizeSpacingValue(val, true)};
+  `;
+};
 
 // Padding
-const spacingPadding = (size, value) => css`
-  padding-left: ${(props) => (props[`pl${size}${value}`] || props[`px${size}${value}`] || props[`p${size}${value}`]) && normalizeSpacingValue(value)};
-  padding-right: ${(props) => (props[`pr${size}${value}`] || props[`px${size}${value}`] || props[`p${size}${value}`]) && normalizeSpacingValue(value)};
-  padding-top: ${(props) => (props[`pt${size}${value}`] || props[`py${size}${value}`] || props[`p${size}${value}`]) && normalizeSpacingValue(value)};
-  padding-bottom: ${(props) => (props[`pb${size}${value}`] || props[`py${size}${value}`] || props[`p${size}${value}`]) && normalizeSpacingValue(value)};
-`;
+const spacingPadding = (size, value) => {
+  const suffix = `${size}${value}`;
+
+  return css`
+    padding-left: ${(props) => (props[`pl${suffix}`] || props[`px${suffix}`] || props[`p${suffix}`]) && normalizeSpacingValue(value)};
+    padding-right: ${(props) => (props[`pr${suffix}`] || props[`px${suffix}`] || props[`p${suffix}`]) && normalizeSpacingValue(value)};
+    padding-top: ${(props) => (props[`pt${suffix}`] || props[`py${suffix}`] || props[`p${suffix}`]) && normalizeSpacingValue(value)};
+    padding-bottom: ${(props) => (props[`pb${suffix}`] || props[`py${suffix}`] || props[`p${suffix}`]) && normalizeSpacingValue(value)};
+  `;
+};
 
 /* Flex ------------------------------------------------------------------- */
 const flexDirection = (size) => css`
@@ -103,6 +327,13 @@ const alignContent = (size) => css`
     || null};
 `;
 
+const orders = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const flexOrder = (size) => css`
+  ${(props) => orders.map((order) => props[`order${size}${order}`] && css`
+    order: ${order};
+  `)};
+`;
+
 const flexGrow = (size) => css`
   flex-grow: ${(props) => {
     if (props[`flexGrow${size}1`] !== undefined) { return '1'; }
@@ -152,14 +383,40 @@ const display = (size) => css`
     || null};
 `;
 
+/* Clearfix --------------------------------------------------------------- */
+const clearfix = (size) => css`
+  ${(props) => props[`clearfix${size}`] && css`
+    display: block;
+    content: "";
+    clear: both;
+  `}
+`;
+
 /* Aggregation ------------------------------------------------------------ */
 const makeUtilitiesForScreenSize = (size) => css`
   ${display(size)};
+  ${sizing(size)};
+
+  ${float(size)};
+
   ${spacingMargin(size, 'Auto')};
   ${() => spacingSizes.map((s) => css`
     ${spacingMargin(size, s)};
+    ${spacingMargin(size, s, true)};
     ${spacingPadding(size, s)};
   `)}
+
+  ${textTransform(size)};
+  ${textAlign(size)};
+  ${textWrap(size)};
+  ${textWeight(size)};
+  ${textStyle(size)};
+  ${textMonospace(size)};
+  ${textReset(size)};
+  ${textDecoration(size)};
+  ${textWordBreak(size)};
+  ${textTruncate(size)};
+
   ${flexDirection(size)};
   ${justifyContent(size)};
   ${alignContent(size)};
@@ -168,14 +425,33 @@ const makeUtilitiesForScreenSize = (size) => css`
   ${flexGrow(size)};
   ${flexShrink(size)};
   ${flexWrap(size)};
+  ${flexOrder(size)};
+
   ${visibility(size)};
+
+  ${border(size, '')};
+  ${border(size, '0')};
+  ${borderColor(size)};
+
+  ${rounded(size)};
+  ${roundedCircle(size)};
+  ${roundedPill(size)};
+
+  ${textColors(size)};
+  ${backgroundColors(size)};
+
+  ${clearfix(size)};
+  ${textHide(size)};
+  ${overflow(size)};
+  ${position(size)};
+  ${shadow(size)};
 `;
 
 export const Utilities = css`
   ${makeUtilitiesForScreenSize('')};
 
-  ${['sm', 'md', 'lg', 'xl'].map((size) => css`
-    @media (min-width: ${(props) => (props.theme.screenSize || theme.screenSize)[size]}) {
+  ${['Sm', 'Md', 'Lg', 'Xl'].map((size) => css`
+    @media (min-width: ${(props) => (props.theme.screenSize || theme.screenSize)[size.toLowerCase()]}) {
       ${makeUtilitiesForScreenSize(size)};
     }
   `)};
