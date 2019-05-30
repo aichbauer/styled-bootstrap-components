@@ -260,10 +260,10 @@ Possible values for `{size}`:
   * `order{size}11`
   * `order{size}12`
 * flex-grow:
-  * `flexGrow{size}1`
+  * `flexGrow{size}`
   * `flexGrow{size}0`
 * flex-shrink:
-  * `flexShrink{size}1`
+  * `flexShrink{size}`
   * `flexShrink{size}0`
 * flex-wrap:
   * `flexWrap{size}`

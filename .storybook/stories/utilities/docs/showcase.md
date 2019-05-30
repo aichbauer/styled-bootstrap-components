@@ -1,8 +1,8 @@
 ```jsx
 const ShowcaseContainer = styled(Container)`
-  background: #e0e0e0;
-  margin-bottom: 0.25rem;
-  padding: 0.25rem;
+  background: #dddddd;
+  margin-bottom: 1rem;
+  padding: .5rem;
 
   ${Utilities};
 `;
@@ -49,23 +49,25 @@ const Showcase = () => (
       <Span m1 textWeightLight>light</Span>
       <Span m1 textWeightLighter>lighter</Span>
       <Span m1 textItalic>italic</Span>
-      <Span m1 textMonospace>italic</Span>
+      <Span m1 textMonospace>monospace</Span>
     </ShowcaseContainer>
 
     <ShowcaseContainer>
-      <Div mb1 bgPrimary w100>100%</Div>
-      <Div mb1 bgPrimary w75>75%</Div>
-      <Div mb1 bgPrimary w50>50%</Div>
-      <Div mb1 bgPrimary w25>25%</Div>
+      <Div mb2 bgPrimary w100>100%</Div>
+      <Div mb2 bgPrimary w75>75%</Div>
+      <Div mb2 bgPrimary w50>50%</Div>
+      <Div bgPrimary w25>25%</Div>
     </ShowcaseContainer>
 
-    <ShowcaseContainer>
-      <Div borderRight borderDanger>Red border on the right</Div>
+    <ShowcaseContainer borderRight borderBottom borderDanger>
+      Red border on the right and in the bottom
     </ShowcaseContainer>
 
-    <ShowcaseContainer shadow>
-      Shadow
+    <ShowcaseContainer dFlex justifyContentCenter>
+      <Div m4 p2 bgLight flexGrow shadowSmall>Shadow</Div>
+      <Div m4 ml2 p2 bgLight flexGrow shadow>Shadow</Div>
+      <Div m4 ml2 p2 bgLight flexGrow shadowLarge>Shadow</Div>
     </ShowcaseContainer>
   </div>
-);
+)
 ```

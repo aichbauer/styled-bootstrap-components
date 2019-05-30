@@ -120,18 +120,18 @@ const textTruncate = (size) => css`
 const sizing = (size) =>
   ['max-', ''].map((m) =>
     ['width', 'height'].map((a) =>
-      ['25', '50', '75', '100', 'auto'].map((p) =>
+      ['25', '50', '75', '100', 'Auto'].map((p) =>
         css`${(props) => props[`${m.slice(0, 1)}${a[0]}${size}${p}`] && css`
-          ${m}${a}: ${p === 'auto' ? p : `${p}%`};
+          ${m}${a}: ${p === 'Auto' ? 'auto' : `${p}%`};
         `}`)));
 
 /* Shadows ---------------------------------------------------------------- */
 const shadow = (size) => css`
   box-shadow: ${(props) => {
     if (props[`shadow${size}None`]) { return 'none'; }
-    if (props[`shadow${size}Small`]) { return '0 .125rem .25rem rgba(0,0,0,.075)'; }
-    if (props[`shadow${size}`]) { return '0 .5rem 1rem rgba(0,0,0,.15)!important'; }
-    if (props[`shadow${size}Large`]) { return '0 1rem 3rem rgba(0,0,0,.175)!important'; }
+    if (props[`shadow${size}Small`]) { return '0 .25rem .5rem rgba(0,0,0,.1)'; }
+    if (props[`shadow${size}`]) { return '0 .75rem 1.5rem rgba(0,0,0,.2)'; }
+    if (props[`shadow${size}Large`]) { return '0 1.25rem 3.5rem rgba(0,0,0,.25)'; }
     return null;
   }};
 `;
@@ -211,7 +211,7 @@ const border = (size, value) => {
     border-top: ${(props) => (props[`borderTop${suffix}`] || props[`border${suffix}`]) && normalizeBorderValue(value)};
     border-bottom: ${(props) => (props[`borderBottom${suffix}`] || props[`border${suffix}`]) && normalizeBorderValue(value)};
 
-    ${(props) => colors.map((color) => props[`border${capitalizeFirstLetter(color)}`] && css`
+    ${(props) => colors.map((color) => props[`border${size}${capitalizeFirstLetter(color)}`] && css`
       border-color: ${(props.theme.colorScheme || theme.colorScheme)[color]};
     `)};
   `;
@@ -243,11 +243,6 @@ const normalizeSpacingValue = (value, allowAuto = false) => {
   // allowed value
   if (allowAuto && value === 'Auto') {
     return 'auto';
-  }
-
-  // missing or unknown value
-  if (value === undefined || Number.isNaN(parseFloat(value))) {
-    return null;
   }
 
   // rem value
@@ -339,7 +334,7 @@ const flexOrder = (size) => css`
 
 const flexGrow = (size) => css`
   flex-grow: ${(props) => {
-    if (props[`flexGrow${size}1`] !== undefined) { return '1'; }
+    if (props[`flexGrow${size}`] !== undefined) { return '1'; }
     if (props[`flexGrow${size}0`] !== undefined) { return '0'; }
     return null;
   }};
@@ -347,7 +342,7 @@ const flexGrow = (size) => css`
 
 const flexShrink = (size) => css`
   flex-shrink: ${(props) => {
-    if (props[`flexShrink${size}1`] !== undefined) { return '1'; }
+    if (props[`flexShrink${size}`] !== undefined) { return '1'; }
     if (props[`flexShrink${size}0`] !== undefined) { return '0'; }
     return null;
   }};
@@ -356,8 +351,8 @@ const flexShrink = (size) => css`
 const flexWrap = (size) => css`
   flex-wrap: ${(props) => {
     if (props[`flexWrap${size}`] !== undefined) { return 'wrap'; }
+    if (props[`flexWrap${size}Reverse`] !== undefined) { return 'wrap-reverse'; }
     if (props[`flexNoWrap${size}`] !== undefined) { return 'nowrap'; }
-    if (props[`flexNoWrap${size}Reverse`] !== undefined) { return 'wrap-reverse'; }
     return null;
   }};
 `;
