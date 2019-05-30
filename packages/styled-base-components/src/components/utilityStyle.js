@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { theme } from '../theme';
+import { theme } from 'styled-config';
 
 /* Constants and helpers */
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
@@ -7,6 +7,7 @@ const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + strin
 const colors = [
   'primary', 'secondary', 'success', 'danger',
   'warning', 'info', 'light', 'dark', 'darker',
+  'white', 'transparent',
 ];
 
 /* Vertical align --------------------------------------------------------- */
@@ -36,8 +37,6 @@ const textWrap = (size) => css`
   white-space: ${(props) => {
     if (props[`text${size}Wrap`]) { return 'normal'; }
     if (props[`text${size}NoWrap`]) { return 'nowrap'; }
-    if (props[`text${size}Right`]) { return 'right'; }
-    if (props[`text${size}Center`]) { return 'center'; }
     return null;
   }};
 `;
@@ -87,7 +86,7 @@ const textReset = (size) => css`
 
 const textDecoration = (size) => css`
   text-decoration: ${(props) => {
-    if (props[`textDecoration${size}None`]) { return 'none'; }
+    if (props[`textDecoration${size}None`]) { return 'none!important'; }
     return null;
   }};
 `;
@@ -200,7 +199,7 @@ const backgroundColors = (size) => css`
 /* Borders ---------------------------------------------------------------- */
 const normalizeBorderValue = (value) => {
   if (value === '0') { return '0'; }
-  return '1px solid #111';
+  return '1px solid';
 };
 
 const border = (size, value) => {

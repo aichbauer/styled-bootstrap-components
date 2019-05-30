@@ -1,5 +1,4 @@
 import { theme } from './theme';
-import { Utilities } from './utilities';
 import {
   border,
   borderRadius,
@@ -17,8 +16,6 @@ import {
 
 export {
   theme,
-  // utilities
-  Utilities,
   // utils
   border,
   borderRadius,

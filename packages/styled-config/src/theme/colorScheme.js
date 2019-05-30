@@ -10,6 +10,8 @@ const colorScheme = {
   light: colors.gray100,
   dark: colors.gray800,
   darker: colors.gray900,
+  white: colors.white,
+  transparent: 'transparent',
 };
 
 export { colorScheme };
