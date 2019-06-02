@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -8,7 +10,7 @@ import {
   padding,
 } from 'styled-config';
 
-const DropdownDivider = styled.div`
+const DropdownDivider = styled(Div)`
   height: 0;
   padding-top: ${(props) => padding(props, 'dropdownDivider').top};
   margin-top: ${(props) => margin(props, 'dropdownDivider').top};

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import { theme } from 'styled-config';
 
 const colums = 12;
@@ -11,7 +13,7 @@ export const columnStyleForSize = (size) => css`
   max-width: ${percentage(size / colums)};
 `;
 
-const Column = styled.div`
+const Column = styled(Div)`
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;

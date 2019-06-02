@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -20,7 +22,7 @@ const borderRadius = (props) => {
   `;
 };
 
-const CardFooter = styled.div`
+const CardFooter = styled(Div)`
   padding: ${(props) => padding(props, 'cardFooter').default};
   background-color: ${(props) => colors(props, 'cardFooter').background};
   border-top: ${(props) => border(props, 'cardFooter').default} ${(props) => colors(props, 'cardFooter').borderTop};

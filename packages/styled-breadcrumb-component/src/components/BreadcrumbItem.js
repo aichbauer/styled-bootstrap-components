@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Li } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -13,7 +15,7 @@ const active = (props) => (
   `
 );
 
-const BreadcrumbItem = styled.li`
+const BreadcrumbItem = styled(Li)`
   &:not(:first-child)::before {
     display: inline-block;
     padding-right: ${(props) => padding(props, 'breadcrumbItem').right};

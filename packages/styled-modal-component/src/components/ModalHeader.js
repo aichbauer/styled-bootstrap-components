@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -8,7 +10,7 @@ import {
   borderRadius,
 } from 'styled-config';
 
-const ModalHeader = styled.div`
+const ModalHeader = styled(Div)`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

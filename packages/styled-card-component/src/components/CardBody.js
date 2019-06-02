@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   padding,
   margin,
 } from 'styled-config';
 
-const CardBody = styled.div`
+const CardBody = styled(Div)`
   flex: 1 1 auto;
   padding: ${(props) => padding(props, 'cardBody').default};
   & > a {

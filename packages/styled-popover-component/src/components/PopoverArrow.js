@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -93,7 +95,7 @@ const popoverArrowLeft = (props) => (
   `
 );
 
-const PopoverArrow = styled.div`
+const PopoverArrow = styled(Div)`
   position: absolute;
   display: block;
   width: 1rem;

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Table as BaseTable } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -177,7 +179,7 @@ const tableResponsive = (props) => (
   `
 );
 
-const Table = styled.table`
+const Table = styled(BaseTable)`
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;

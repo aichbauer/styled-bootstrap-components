@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   margin as m,
@@ -82,7 +84,7 @@ const alignItems = (props) => (
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      & > input, 
+      & > input,
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
@@ -92,7 +94,7 @@ const borderRadius = (props) => {
   }
   if (props.lg) {
     return css`
-      & > input, 
+      & > input,
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
@@ -101,7 +103,7 @@ const borderRadius = (props) => {
     `;
   } else if (props.sm) {
     return css`
-      & > input, 
+      & > input,
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
@@ -151,7 +153,7 @@ const fontSize = (props) => {
   }
 
   return css`
-    & > input, 
+    & > input,
     & > div > input,
     & > label,
     & > div > label {
@@ -190,17 +192,17 @@ const padding = (props) => {
   return '';
 };
 
-const FormGroup = styled.div`
+const FormGroup = styled(Div)`
   box-sizing: border-box;
-  ${(props) => display(props)} 
-  ${(props) => flexWrap(props)} 
-  ${(props) => margin(props)} 
-  ${(props) => justifyContent(props)} 
-  ${(props) => alignItems(props)} 
-  ${(props) => borderRadius(props)} 
-  ${(props) => lineHeight(props)} 
-  ${(props) => fontSize(props)} 
-  ${(props) => padding(props)} 
+  ${(props) => display(props)}
+  ${(props) => flexWrap(props)}
+  ${(props) => margin(props)}
+  ${(props) => justifyContent(props)}
+  ${(props) => alignItems(props)}
+  ${(props) => borderRadius(props)}
+  ${(props) => lineHeight(props)}
+  ${(props) => fontSize(props)}
+  ${(props) => padding(props)}
   ${(props) => formGroupFormInline(props)}
 `;
 

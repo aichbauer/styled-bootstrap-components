@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -40,7 +42,7 @@ const borderRadius = (props) => {
   `;
 };
 
-const Jumbotron = styled.div`
+const Jumbotron = styled(Div)`
   margin-bottom: 2rem;
   background-color: ${(props) => colors(props, 'jumbotron').backgroundColor};
   @media(min-width: ${(props) => props.theme.screenSize.sm}) {

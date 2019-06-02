@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -15,7 +17,7 @@ const tooltipArrowTop = (props) => (
       left: calc(50% - 0.35rem);
       border-width: 0.4rem 0.4rem 0;
       border-top-color: ${colors(props, 'tooltipArrow').borderColor};
-    };
+    }
   `
 );
 
@@ -29,7 +31,7 @@ const tooltipArrowBottom = (props) => (
         left: calc(50% - 0.35rem);
         border-width: 0 0.4rem 0.4rem;
         border-bottom-color: ${colors(props, 'tooltipArrow').borderColor};
-      };
+      }
     `
 );
 
@@ -44,7 +46,7 @@ const tooltipArrowRight = (props) => (
       top: calc(50% - 0.35rem);
       border-width: 0.4rem 0.4rem 0.4rem 0;
       border-right-color: ${colors(props, 'tooltipArrow').borderColor};
-    };
+    }
   `
 );
 
@@ -59,11 +61,11 @@ const tooltipArrowLeft = (props) => (
       top: calc(50% - 0.35rem);
       border-width: 0.4rem 0 0.4rem 0.4rem;
       border-left-color: ${colors(props, 'tooltipArrow').borderColor};
-    };
+    }
   `
 );
 
-const TooltipArrow = styled.div`
+const TooltipArrow = styled(Div)`
   position: absolute;
   display: block;
   width: 0.8rem;
@@ -73,7 +75,7 @@ const TooltipArrow = styled.div`
     content: "";
     border-color: transparent;
     border-style: solid;
-  };
+  }
   ${tooltipArrowTop};
   ${tooltipArrowRight};
   ${tooltipArrowBottom};

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { Input, Textarea, Select } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -211,15 +213,15 @@ const formControlStyle = () => css`
     ${(props) => height(props)}
   `;
 
-const FormControlInput = styled.input`
+const FormControlInput = styled(Input)`
   ${formControlStyle};
 `;
 
-const FormControlTextarea = styled.textarea`
+const FormControlTextarea = styled(Textarea)`
   ${formControlStyle};
 `;
 
-const FormControlSelect = styled.select`
+const FormControlSelect = styled(Select)`
   ${formControlStyle};
   &:focus::-ms-value {
     color: ${(props) => colors(props, 'formControl').color};

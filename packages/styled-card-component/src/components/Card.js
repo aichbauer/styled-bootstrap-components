@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -19,7 +21,7 @@ const borderRadius = (props) => {
   `;
 };
 
-const Card = styled.div`
+const Card = styled(Div)`
   height: 100%;
   position: relative;
   display: flex;

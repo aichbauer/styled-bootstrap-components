@@ -36,7 +36,8 @@
   },
   "dependencies": {
     "styled-config": "^3.0.1",
-    "styled-nav-component": "^3.0.1"
+    "styled-nav-component": "^3.0.1",
+    "styled-base-components": "^3.0.1"
   },
   "peerDependencies": {
     "react": "^16.7.0",

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import { Img } from 'styled-base-components';
 
 import {
   theme,
@@ -19,7 +20,7 @@ const borderRadius = (props) => {
   `;
 };
 
-const CardImageHeader = styled.img`
+const CardImageHeader = styled(Img)`
   width: 100%;
   ${(props) => borderRadius(props)}
 `;

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   padding as p,
@@ -29,7 +31,7 @@ const opacity = (props) => (
     `
 );
 
-const Tooltip = styled.div`
+const Tooltip = styled(Div)`
   position: absolute;
   z-index: 1070;
   display: block;

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import { theme } from 'styled-config';
 
 const display = (props) => {
@@ -10,7 +12,7 @@ const display = (props) => {
   return css`display: block;`;
 };
 
-const ModalWrapper = styled.div`
+const ModalWrapper = styled(Div)`
   position: fixed;
   top: 0;
   right: 0;

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const InputGroupAppend = styled.div`
+import { Div } from 'styled-base-components';
+
+const InputGroupAppend = styled(Div)`
   display: flex;
   margin-left: -1px;
   & > button {
