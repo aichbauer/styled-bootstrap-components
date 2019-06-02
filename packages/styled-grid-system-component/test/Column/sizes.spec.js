@@ -14,8 +14,6 @@ test('Styles matches Column with specified xs size', () => {
   expect(tree).toHaveStyleRule('flex-basis', undefined);
   expect(tree).toHaveStyleRule('flex-grow', undefined);
   expect(tree).toHaveStyleRule('width', '100%');
-  expect(tree).toHaveStyleRule('overflow', 'hidden');
-  expect(tree).toHaveStyleRule('word-break', 'break-all');
 });
 
 test('Styles matches Column with specified sm size', () => {

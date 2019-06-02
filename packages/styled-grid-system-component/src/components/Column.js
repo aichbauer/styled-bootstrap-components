@@ -23,10 +23,9 @@ const hasSize = (props) => props.xs
 
 const Column = styled.div`
   box-sizing: border-box;
+  position: relative;
   padding-right: 15px;
   padding-left: 15px;
-  overflow: hidden;
-  word-break: break-all;
   width: 100%;
 
   ${(props) => props.xs && columnStyleForSize(props.xs)}
@@ -36,7 +35,6 @@ const Column = styled.div`
     ${(props) => !hasSize(props) && css`
       flex-basis: 0;
       flex-grow: 1;
-      max-width: 100%;
     `}
 
     ${(props) => props.sm && columnStyleForSize(props.sm)}

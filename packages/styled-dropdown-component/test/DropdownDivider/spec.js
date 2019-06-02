@@ -10,6 +10,5 @@ test('Styles matches DropdownDivider', () => {
   expect(tree).toHaveStyleRule('height', '0');
   expect(tree).toHaveStyleRule('padding-top', '0.5rem');
   expect(tree).toHaveStyleRule('margin-top', '0.6rem');
-  expect(tree).toHaveStyleRule('overflow', 'hidden');
   expect(tree).toHaveStyleRule('border-top', '1px solid #e9ecef');
 });
