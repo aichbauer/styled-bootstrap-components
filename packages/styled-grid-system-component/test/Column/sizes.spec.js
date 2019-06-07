@@ -5,8 +5,8 @@ import 'jest-styled-components';
 import { Column } from '../../src';
 
 // TODO: how to check @media queries
-test('Styles matches Column with specified sm size', () => {
-  const tree = renderer.create(<Column sm={6} />).toJSON();
+test('Styles matches Column with specified xs size', () => {
+  const tree = renderer.create(<Column xs={6} />).toJSON();
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('box-sizing', 'border-box');
   expect(tree).toHaveStyleRule('padding-right', '15px');
@@ -16,6 +16,11 @@ test('Styles matches Column with specified sm size', () => {
   expect(tree).toHaveStyleRule('width', '100%');
   expect(tree).toHaveStyleRule('overflow', 'hidden');
   expect(tree).toHaveStyleRule('word-break', 'break-all');
+});
+
+test('Styles matches Column with specified sm size', () => {
+  const tree = renderer.create(<Column sm={6} />).toJSON();
+  expect(tree).toMatchSnapshot();
 });
 
 test('Styles matches Column with specified md size', () => {
