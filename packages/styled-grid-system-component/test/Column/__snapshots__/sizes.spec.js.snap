@@ -95,3 +95,22 @@ exports[`Styles matches Column with specified xl size 1`] = `
   className="c0"
 />
 `;
+
+exports[`Styles matches Column with specified xs size 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow: hidden;
+  word-break: break-all;
+  width: 100%;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+<div
+  className="c0"
+/>
+`;

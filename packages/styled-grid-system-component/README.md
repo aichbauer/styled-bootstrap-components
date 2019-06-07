@@ -59,150 +59,37 @@ import {
 } from 'styled-grid-system-component';
 
 const MyGridComponent = (props) => (
-  {/* fixed width for small, medium, large and xlarge screen width */}
   <Container fluid>
-    {/* column grows to 100% width at screen width 576px */}
     <Row>
-      <Column sm={4}>
-        <p>
-          {'<Column sm={4}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column xs={6}>
+        {'xs={6}'}
       </Column>
-      <Column sm={4}>
-        <p>
-          {'<Column sm={4}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
-      </Column>
-      <Column sm={4}>
-        <p>
-          {'<Column sm={4}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column xs={6}>
+        {'xs={6}'}
       </Column>
     </Row>
-    {/* column grows to 100% width at screen width 768px */}
+
     <Row>
-      <Column md={4}>
-        <p>
-          {'<Column md={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column>
+        {'no props'}
       </Column>
-      <Column md={4}>
-        <p>
-          {'<Column md={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column>
+        {'no props'}
       </Column>
-      <Column md={4}>
-        <p>
-          {'<Column md={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column>
+        {'no props'}
       </Column>
     </Row>
-    {/* column grows to 100% width at screen width 992px */}
+
     <Row>
-      <Column lg={4}>
-        <p>
-          {'<Column lg={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column xs={3}>
+        {'xs={3}'}
       </Column>
-      <Column lg={4}>
-        <p>
-          {'<Column lg={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column xs={3}>
+        {'xs={3}'}
       </Column>
-      <Column lg={4}>
-        <p>
-          {'<Column lg={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
-      </Column>
-    </Row>
-    {/* column grows to 100% width at screen width 1200px */}
-    <Row>
-      <Column xl={4}>
-        <p>
-          {'<Column xl={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
-      </Column>
-      <Column xl={4}>
-        <p>
-          {'<Column xl={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
-      </Column>
-      <Column xl={4}>
-        <p>
-          {'<Column xl={3}>'}
-        </p>
-        <p>
-          ...
-        </p>
-        <p>
-          {'</Column>'}
-        </p>
+      <Column xs={6}>
+        {'xs={6}'}
       </Column>
     </Row>
   </Container>
@@ -215,10 +102,16 @@ Properties which can be added to the component to change the visual appearance.
 
 Every row consists of maximum of 12 columns.
 
+* `xs` **Type:** only on Column, number (between 1 and 12)
 * `sm` **Type:** only on Column, number (between 1 and 12)
 * `md` **Type:** only on Column, number (between 1 and 12)
 * `lg` **Type:** only on Column, number (between 1 and 12)
 * `xl` **Type:** only on Column, number (between 1 and 12)
+* `xsOffset` **Type:** only on Column, number (between 1 and 12)
+* `smOffset` **Type:** only on Column, number (between 1 and 12)
+* `mdOffset` **Type:** only on Column, number (between 1 and 12)
+* `lgOffset` **Type:** only on Column, number (between 1 and 12)
+* `xlOffset` **Type:** only on Column, number (between 1 and 12)
 
 ## Related
 
