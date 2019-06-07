@@ -130,6 +130,7 @@ class Modal extends React.Component {
       backdrop,
       sm,
       lg,
+      ...rest
     } = this.props;
 
     const { hidden } = this.state;
@@ -138,6 +139,7 @@ class Modal extends React.Component {
       <Fade
         hidden={hidden}
         ref={this.refFade}
+        {...rest}
         {...fadeProps}
       >
         <ModalWrapper
