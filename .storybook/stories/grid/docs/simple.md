@@ -1,43 +1,35 @@
 ```jsx
 <Container fluid>
-  <Row>
-    <p>
-      The blue background color, the white color and the white border are just for demonstration purposes. Actually a container does not have a background color, a color or a border.
-    </p>
+  <Row style={RowStyle}>
+    <Column md={6} style={ColumnStyle}>
+      {'md={6}'}
+    </Column>
+    <Column md={6} style={ColumnStyle}>
+      {'md={6}'}
+    </Column>
   </Row>
-  <Row>
-    <Column sm={3} style={{ backgroundColor: '#007bff', color: 'white', border: '1px solid white' }}>
-      <p>
-        {'<Column sm={3}>'}
-      </p>
-      <p>
-        ...
-      </p>
-      <p>
-        {'</Column>'}
-      </p>
+
+  <Row style={RowStyle}>
+    <Column style={ColumnStyle}>
+      {'no props'}
     </Column>
-    <Column sm={6} style={{ backgroundColor: '#007bff', color: 'white', border: '1px solid white' }}>
-      <p>
-        {'<Column sm={6}>'}
-      </p>
-      <p>
-        ...
-      </p>
-      <p>
-        {'</Column>'}
-      </p>
+    <Column style={ColumnStyle}>
+      {'no props'}
     </Column>
-    <Column sm={3} style={{ backgroundColor: '#007bff', color: 'white', border: '1px solid white' }}>
-      <p>
-        {'<Column sm={3}>'}
-      </p>
-      <p>
-        ...
-      </p>
-      <p>
-        {'</Column>'}
-      </p>
+    <Column style={ColumnStyle}>
+      {'no props'}
+    </Column>
+  </Row>
+
+  <Row style={RowStyle}>
+    <Column sm={3} style={ColumnStyle}>
+      {'sm={3}'}
+    </Column>
+    <Column sm={3} style={ColumnStyle}>
+      {'sm={3}'}
+    </Column>
+    <Column sm={6} style={ColumnStyle}>
+      {'sm={6}'}
     </Column>
   </Row>
 </Container>

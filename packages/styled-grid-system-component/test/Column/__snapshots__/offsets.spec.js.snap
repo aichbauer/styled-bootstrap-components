@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles matches Column with specified lg offset 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow: hidden;
+  word-break: break-all;
+  width: 100%;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:992px) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles matches Column with specified md offset 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow: hidden;
+  word-break: break-all;
+  width: 100%;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles matches Column with specified sm offset 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow: hidden;
+  word-break: break-all;
+  width: 100%;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-left: 50%;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles matches Column with specified xl offset 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow: hidden;
+  word-break: break-all;
+  width: 100%;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1200px) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles matches Column with specified xs offset 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow: hidden;
+  word-break: break-all;
+  width: 100%;
+  margin-left: 50%;
+}
+
+@media (min-width:576px) {
+  .c0 {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
