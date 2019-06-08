@@ -119,6 +119,11 @@ class Modal extends React.Component {
 
   render() {
     const {
+      FadeComponent,
+      ModalWrapperComponent,
+      ModalDialogComponent,
+      ModalBackdropComponent,
+      ModalContentComponent,
       fadeProps,
       wrapperProps,
       dialogProps,
@@ -136,20 +141,20 @@ class Modal extends React.Component {
     const { hidden } = this.state;
 
     return (
-      <Fade
+      <FadeComponent
         hidden={hidden}
         ref={this.refFade}
         {...rest}
         {...fadeProps}
       >
-        <ModalWrapper
+        <ModalWrapperComponent
           theme={this.props.theme}
           ref={this.refModal}
           onMouseDown={this.handleBackdropMouseDown}
           onClick={this.handleBackdropClick}
           {...wrapperProps}
         >
-          <ModalDialog
+          <ModalDialogComponent
             theme={this.props.theme}
             lg={lg}
             sm={sm}
@@ -160,21 +165,26 @@ class Modal extends React.Component {
             <ModalContent theme={this.props.theme} {...contentProps}>
               {children}
             </ModalContent>
-          </ModalDialog>
-        </ModalWrapper>
+          </ModalDialogComponent>
+        </ModalWrapperComponent>
 
-        {!!backdrop && <ModalBackdrop
+        {!!backdrop && <ModalBackdropComponent
           theme={this.props.theme}
           backdrop={backdrop}
           {...backdropProps}
         />}
-      </Fade>
+      </FadeComponent>
     );
   }
 }
 
 Modal.defaultProps = {
   theme,
+  FadeComponent: Fade,
+  ModalWrapperComponent: ModalWrapper,
+  ModalDialogComponent: ModalDialog,
+  ModalBackdropComponent: ModalBackdrop,
+  ModalContentComponent: ModalContent,
   backdrop: true,
   returnFocusAfterClose: true,
   toggle: /* istanbul ignore next */ () => {},
