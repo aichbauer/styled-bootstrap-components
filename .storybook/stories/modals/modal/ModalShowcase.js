@@ -19,6 +19,7 @@ export class ModalShowcase extends React.Component {
       centered: false,
       longBody: false,
       backdrop: true,
+      backdropColor: "",
     };
   }
 
@@ -34,6 +35,7 @@ export class ModalShowcase extends React.Component {
       centered: false,
       longBody: false,
       backdrop: true,
+      backdropColor: "",
     });
   }
 
@@ -43,6 +45,7 @@ export class ModalShowcase extends React.Component {
       centered: true,
       longBody: false,
       backdrop: true,
+      backdropColor: "",
     });
   }
 
@@ -52,6 +55,7 @@ export class ModalShowcase extends React.Component {
       centered: false,
       longBody: true,
       backdrop: true,
+      backdropColor: "",
     });
   }
 
@@ -61,17 +65,29 @@ export class ModalShowcase extends React.Component {
       centered: false,
       longBody: false,
       backdrop: 'static',
+      backdropColor: "",
+    });
+  }
+
+  launchColoredBackdropModal() {
+    this.setState({
+      hidden: false,
+      centered: false,
+      longBody: false,
+      backdrop: true,
+      backdropColor: "#2ecc40",
     });
   }
 
   render() {
-    const { hidden, centered, longBody, backdrop } = this.state;
+    const { hidden, centered, longBody, backdrop, backdropColor } = this.state;
 
     return (
       <Container>
         <Modal
           centered={centered}
           backdrop={backdrop}
+          backdropProps={{style: { backgroundColor: backdropColor }}}
           hidden={hidden}
           toggle={() => this.toggleModal()
         }>
@@ -106,6 +122,10 @@ export class ModalShowcase extends React.Component {
 
         <Button block danger onClick={() => this.launchStaticBackdropModal()}>
           Launch Modal With Static Backdrop
+        </Button>
+
+        <Button block danger onClick={() => this.launchColoredBackdropModal()}>
+          Launch Modal With Colored Backdrop
         </Button>
       </Container>
     );
