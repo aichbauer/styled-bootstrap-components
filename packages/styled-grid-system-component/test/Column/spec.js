@@ -11,9 +11,7 @@ test('Styles matches Column', () => {
   expect(tree).toHaveStyleRule('box-sizing', 'border-box');
   expect(tree).toHaveStyleRule('padding-right', '15px');
   expect(tree).toHaveStyleRule('padding-left', '15px');
-  expect(tree).toHaveStyleRule('flex-basis', '0');
-  expect(tree).toHaveStyleRule('flex-grow', '1');
-  expect(tree).toHaveStyleRule('max-width', '100%');
+  expect(tree).toHaveStyleRule('width', '100%');
   expect(tree).toHaveStyleRule('overflow', 'hidden');
   expect(tree).toHaveStyleRule('word-break', 'break-all');
 });
