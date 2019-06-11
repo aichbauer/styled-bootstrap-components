@@ -121,43 +121,72 @@ class Modal extends React.Component {
 
   render() {
     const {
+      FadeComponent,
+      ModalWrapperComponent,
+      ModalDialogComponent,
+      ModalBackdropComponent,
+      ModalContentComponent,
+      fadeProps,
+      wrapperProps,
+      dialogProps,
+      contentProps,
+      backdropProps,
       centered,
       noRadius,
       children,
       backdrop,
       sm,
       lg,
+      ...rest
     } = this.props;
 
     const { hidden } = this.state;
 
     return (
-      <Fade hidden={hidden} ref={this.refFade}>
-        <ModalWrapper
+      <FadeComponent
+        hidden={hidden}
+        ref={this.refFade}
+        {...rest}
+        {...fadeProps}
+      >
+        <ModalWrapperComponent
           theme={this.props.theme}
           ref={this.refModal}
           onMouseDown={this.handleBackdropMouseDown}
           onClick={this.handleBackdropClick}
+          {...wrapperProps}
         >
-          <ModalDialog
+          <ModalDialogComponent
             theme={this.props.theme}
             lg={lg}
             sm={sm}
             centered={centered}
             noRadius={noRadius}
+            {...dialogProps}
           >
-            <ModalContent theme={this.props.theme}>{children}</ModalContent>
-          </ModalDialog>
-        </ModalWrapper>
+            <ModalContent theme={this.props.theme} {...contentProps}>
+              {children}
+            </ModalContent>
+          </ModalDialogComponent>
+        </ModalWrapperComponent>
 
-        {!!backdrop && <ModalBackdrop theme={this.props.theme} backdrop={backdrop} />}
-      </Fade>
+        {!!backdrop && <ModalBackdropComponent
+          theme={this.props.theme}
+          backdrop={backdrop}
+          {...backdropProps}
+        />}
+      </FadeComponent>
     );
   }
 }
 
 Modal.defaultProps = {
   theme,
+  FadeComponent: Fade,
+  ModalWrapperComponent: ModalWrapper,
+  ModalDialogComponent: ModalDialog,
+  ModalBackdropComponent: ModalBackdrop,
+  ModalContentComponent: ModalContent,
   backdrop: true,
   returnFocusAfterClose: true,
   toggle: /* istanbul ignore next */ () => {},
