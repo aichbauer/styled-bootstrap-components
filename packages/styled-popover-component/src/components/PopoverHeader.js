@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { H1, H2, H3, H4, H5, H6 } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -59,27 +61,27 @@ const popoverHeaderStyle = (props) => (
   `
 );
 
-const PopoverHeaderH1 = styled.h1`
+const PopoverHeaderH1 = styled(H1)`
   ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH2 = styled.h2`
+const PopoverHeaderH2 = styled(H2)`
   ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH3 = styled.h3`
+const PopoverHeaderH3 = styled(H3)`
   ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH4 = styled.h4`
+const PopoverHeaderH4 = styled(H4)`
   ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH5 = styled.h5`
+const PopoverHeaderH5 = styled(H5)`
   ${(props) => popoverHeaderStyle(props)};
 `;
 
-const PopoverHeaderH6 = styled.h6`
+const PopoverHeaderH6 = styled(H6)`
   ${(props) => popoverHeaderStyle(props)};
 `;
 

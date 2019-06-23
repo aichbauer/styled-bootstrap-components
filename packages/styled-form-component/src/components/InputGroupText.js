@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Span } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -11,7 +13,7 @@ import {
   border,
 } from 'styled-config';
 
-const InputGroupText = styled.span`
+const InputGroupText = styled(Span)`
   display: flex;
   align-items: center;
   padding: ${(props) => padding(props, 'inputGroupText').default};

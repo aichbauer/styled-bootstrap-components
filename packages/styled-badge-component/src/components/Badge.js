@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Span } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -48,7 +50,7 @@ const badgeLink = (props) => {
         background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
       };
     };
-    &:hover, 
+    &:hover,
     &:focus {
       cursor: pointer;
       background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
@@ -68,7 +70,7 @@ const badgeLink = (props) => {
   `;
 };
 
-const Badge = styled.span`
+const Badge = styled(Span)`
   display: inline-block;
   font-size: 75%;
   font-weight: ${(props) => fontWeight(props, 'badge').default};

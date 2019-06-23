@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Nav as BaseNav } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -132,7 +134,7 @@ const navCollapse = (props) => {
   return '';
 };
 
-const Nav = styled.nav`
+const Nav = styled(BaseNav)`
   display: flex;
   flex-wrap: wrap;
   padding-left: ${(props) => padding(props, 'nav').left};

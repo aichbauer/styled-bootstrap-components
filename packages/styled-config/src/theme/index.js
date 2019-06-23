@@ -44,8 +44,10 @@ import { tr } from './tr';
 import { tooltip } from './tooltip';
 import { tooltipArrow } from './tooltipArrow';
 import { tooltipInner } from './tooltipInner';
+import { colorScheme } from './colorScheme';
 
 const theme = {
+  colorScheme,
   alert,
   badge,
   breadcrumb,

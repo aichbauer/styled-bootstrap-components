@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { A } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -93,7 +95,7 @@ const borderRadius = (props) => {
   `;
 };
 
-const NavLink = styled.a`
+const NavLink = styled(A)`
   display: block;
   padding: ${(props) => padding(props, 'navLink').default};
   border: ${(props) => b(props, 'navLink').default} ${(props) => colors(props, 'navLink').borderColor};

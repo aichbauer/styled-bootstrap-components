@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Li } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -104,7 +106,7 @@ const cursor = (props) => (
     `
 );
 
-const ListGroupItem = styled.li`
+const ListGroupItem = styled(Li)`
   position: relative;
   display: block;
   padding: ${(props) => padding(props, 'listGroupItem').default};
@@ -128,7 +130,7 @@ const ListGroupItem = styled.li`
     border-bottom-right-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
     border-bottom-left-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
   };
-  & > a:hover, 
+  & > a:hover,
   & > a:focus {
     z-index: 1;
     text-decoration: none;

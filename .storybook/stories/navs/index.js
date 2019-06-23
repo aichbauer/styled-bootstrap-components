@@ -21,6 +21,7 @@ import NavTabsDocs from './docs/tabs.md';
 import NavPillsDocs from './docs/pills.md';
 import NavJustifiedDocs from './docs/justified.md';
 import NavFillDocs from './docs/fill.md';
+import NavPulledDocs from './docs/pulled.md';
 
 
 storiesOf('Navs', module)
@@ -31,6 +32,17 @@ storiesOf('Navs', module)
         <NavLink href="#">Link</NavLink>
         <NavLink href="#">Link</NavLink>
         <NavLink disabled href="#">Disabled</NavLink>
+      </Nav>
+    </Container>
+  ))))
+  .add('Pulled', withReadme(NavReadme, withDocs(NavPulledDocs, () => (
+    <Container fluid>
+      <Nav>
+        <NavLink href="#">Link</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink href="#">Link</NavLink>
+        <NavLink mlAuto href="#">Pulled Link</NavLink>
+        <NavLink href="#">Pulled link</NavLink>
       </Nav>
     </Container>
   ))))
