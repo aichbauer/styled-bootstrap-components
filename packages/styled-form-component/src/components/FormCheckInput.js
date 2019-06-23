@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Input } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -16,7 +18,7 @@ const color = (props) => (
   `
 );
 
-const FormCheckInput = styled.input`
+const FormCheckInput = styled(Input)`
   position: absolute;
   margin-top: ${(props) => margin(props, 'formCheckInput').top};
   margin-left: ${(props) => margin(props, 'formCheckInput').left};

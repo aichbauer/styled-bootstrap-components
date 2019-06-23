@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Ul } from 'styled-base-components';
+
 import {
   theme,
   padding,
@@ -11,7 +13,7 @@ import {
 const border = (props) => (
   props.flush &&
   css`
-    & > a, 
+    & > a,
     & > li {
       border-right: ${b(props, 'listGroup').aLiFlushRight};
       border-left: ${b(props, 'listGroup').aLiFlushLeft};
@@ -26,7 +28,7 @@ const border = (props) => (
   `
 );
 
-const ListGroup = styled.ul`
+const ListGroup = styled(Ul)`
   display: flex;
   flex-direction: column;
   padding-left: ${(props) => padding(props, 'listGroup').left};

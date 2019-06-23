@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Tr as BaseTr } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -36,7 +38,7 @@ const color = (props) => {
     `;
 };
 
-const Tr = styled.tr`
+const Tr = styled(BaseTr)`
   ${(props) => color(props)};
 `;
 

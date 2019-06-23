@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -56,7 +58,7 @@ const borderRadius = (props) => {
   return css`border-radius: ${br(props, 'alert').default}`;
 };
 
-const Alert = styled.div`
+const Alert = styled(Div)`
   position: relative;
   padding: ${(props) => padding(props, 'alert').default};
   margin-bottom: ${(props) => margin(props, 'alert').bottom};

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import { theme } from 'styled-config';
 
 const maxWidth = (props) => {
@@ -21,7 +23,7 @@ const dialogCentered = (props) => (
   `
 );
 
-const ModalDialog = styled.div`
+const ModalDialog = styled(Div)`
   position: relative;
   margin: auto;
   padding: 0.5rem;

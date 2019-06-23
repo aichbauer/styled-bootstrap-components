@@ -3,6 +3,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme as DefaultTheme,
   colors,
@@ -53,7 +55,7 @@ const borderRadius = (props) => {
   `;
 };
 
-const StyledDiv = styled.div`
+const StyledDiv = styled(Div)`
   position: absolute;
   top: 100%;
   z-index: 1000;

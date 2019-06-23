@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -41,7 +43,7 @@ const margin = (props) => {
   `;
 };
 
-const Popover = styled.div`
+const Popover = styled(Div)`
   position: absolute;
   top: 0;
   left: 0;

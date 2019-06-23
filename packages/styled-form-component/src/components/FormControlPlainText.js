@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Input } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -27,7 +29,7 @@ const padding = (props) => (
   `
 );
 
-const FormControlPlainText = styled.input`
+const FormControlPlainText = styled(Input)`
   width: 100%;
   padding-top: ${(props) => p(props, 'formControlPlainText').top};
   padding-bottom: ${(props) => p(props, 'formControlPlainText').bottom};

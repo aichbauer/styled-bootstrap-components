@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -7,7 +9,7 @@ import {
   border,
 } from 'styled-config';
 
-const ModalFooter = styled.div`
+const ModalFooter = styled(Div)`
   display: flex;
   align-items: center;
   justify-content: flex-end;

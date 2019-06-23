@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const FormInline = styled.form`
+import { Form } from 'styled-base-components';
+
+const FormInline = styled(Form)`
   display: flex;
   flex-flow: row wrap;
   align-items: center;

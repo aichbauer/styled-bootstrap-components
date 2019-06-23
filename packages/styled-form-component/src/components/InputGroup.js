@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   borderRadius as br,
@@ -82,15 +84,15 @@ const padding = (props) => {
   return '';
 };
 
-const InputGroup = styled.div`
+const InputGroup = styled(Div)`
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
   line-height: 1.5;
-  & > input, 
-  & > textarea, 
+  & > input,
+  & > textarea,
   & > select {
     position: relative;
     flex: 1 1 auto;
