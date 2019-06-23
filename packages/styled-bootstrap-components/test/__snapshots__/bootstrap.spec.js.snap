@@ -850,7 +850,6 @@ exports[`Simply check if all components are imported and exported correctly 21`]
   height: 0;
   padding-top: 0.5rem;
   margin-top: 0.6rem;
-  overflow: hidden;
   border-top: 1px solid #e9ecef;
 }
 
@@ -1216,10 +1215,9 @@ exports[`Simply check if all components are imported and exported correctly 33`]
 exports[`Simply check if all components are imported and exported correctly 34`] = `
 .c0 {
   box-sizing: border-box;
+  position: relative;
   padding-right: 15px;
   padding-left: 15px;
-  overflow: hidden;
-  word-break: break-all;
   width: 100%;
 }
 
@@ -1232,7 +1230,6 @@ exports[`Simply check if all components are imported and exported correctly 34`]
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    max-width: 100%;
   }
 }
 

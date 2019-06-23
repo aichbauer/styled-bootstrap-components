@@ -3,10 +3,9 @@
 exports[`Styles matches Column with specified lg size 1`] = `
 .c0 {
   box-sizing: border-box;
+  position: relative;
   padding-right: 15px;
   padding-left: 15px;
-  overflow: hidden;
-  word-break: break-all;
   width: 100%;
 }
 
@@ -27,10 +26,9 @@ exports[`Styles matches Column with specified lg size 1`] = `
 exports[`Styles matches Column with specified md size 1`] = `
 .c0 {
   box-sizing: border-box;
+  position: relative;
   padding-right: 15px;
   padding-left: 15px;
-  overflow: hidden;
-  word-break: break-all;
   width: 100%;
 }
 
@@ -51,10 +49,9 @@ exports[`Styles matches Column with specified md size 1`] = `
 exports[`Styles matches Column with specified sm size 1`] = `
 .c0 {
   box-sizing: border-box;
+  position: relative;
   padding-right: 15px;
   padding-left: 15px;
-  overflow: hidden;
-  word-break: break-all;
   width: 100%;
 }
 
@@ -75,10 +72,9 @@ exports[`Styles matches Column with specified sm size 1`] = `
 exports[`Styles matches Column with specified xl size 1`] = `
 .c0 {
   box-sizing: border-box;
+  position: relative;
   padding-right: 15px;
   padding-left: 15px;
-  overflow: hidden;
-  word-break: break-all;
   width: 100%;
 }
 
@@ -99,10 +95,9 @@ exports[`Styles matches Column with specified xl size 1`] = `
 exports[`Styles matches Column with specified xs size 1`] = `
 .c0 {
   box-sizing: border-box;
+  position: relative;
   padding-right: 15px;
   padding-left: 15px;
-  overflow: hidden;
-  word-break: break-all;
   width: 100%;
   -webkit-flex: 0 0 50%;
   -ms-flex: 0 0 50%;
