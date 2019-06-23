@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -12,7 +14,7 @@ const dropdownItemActive = (props) => (
   css`
     text-decoration: none;
     color: ${colors(props, 'dropdownItem').colorActive};
-    background-color: ${colors(props, 'dropdownItem').backgroundColorActive}
+    background-color: ${colors(props, 'dropdownItem').backgroundColorActive};
   `
 );
 
@@ -24,7 +26,7 @@ const dropdownItemDisabled = (props) => (
   `
 );
 
-const DropdownItem = styled.div`
+const DropdownItem = styled(Div)`
   padding: ${(props) => padding(props, 'dropdownItem').default};
   clear: both;
   font-weight: ${(props) => fontWeight(props, 'dropdownItem').default};
@@ -37,7 +39,7 @@ const DropdownItem = styled.div`
     color: ${(props) => colors(props, 'dropdownItem').colorHoverFocus};
     text-decoration: none;
     background-color: ${(props) => colors(props, 'dropdownItem').backgroundColorHoverFocus};
-  };
+  }
   ${(props) => dropdownItemActive(props)};
   ${(props) => dropdownItemDisabled(props)};
 `;

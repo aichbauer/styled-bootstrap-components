@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Nav } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -44,7 +46,7 @@ const navbarExpand = (props) => (
   `
 );
 
-const Navbar = styled.nav`
+const Navbar = styled(Nav)`
   position: relative;
   display: flex;
   flex-wrap: wrap;

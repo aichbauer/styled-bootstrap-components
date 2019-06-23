@@ -1,0 +1,1093 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles match Div 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Styles match Div with 0 border 1`] = `
+.c0 {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with align 1`] = `
+.c0 {
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with align 2`] = `
+.c0 {
+  -webkit-align-content: end;
+  -ms-flex-line-pack: end;
+  align-content: end;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with align 3`] = `
+.c0 {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with align 4`] = `
+.c0 {
+  -webkit-align-content: baseline;
+  -ms-flex-line-pack: baseline;
+  align-content: baseline;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with align 5`] = `
+.c0 {
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with auto margin 1`] = `
+.c0 {
+  margin-left: auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with clearfix 1`] = `
+.c0 {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with colored border 1`] = `
+.c0 {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #007bff;
+  border-color: #007bff;
+  border-color: #007bff;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with colored text and background 1`] = `
+.c0 {
+  color: #f8f9fa;
+  background-color: #343a40;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with flex grow 1`] = `
+.c0 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with flex grow 2`] = `
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with flex shrink 1`] = `
+.c0 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with flex shrink 2`] = `
+.c0 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with flex wrap 1`] = `
+.c0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with flex wrap 2`] = `
+.c0 {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with flex wrap 3`] = `
+.c0 {
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with hidden text 1`] = `
+.c0 {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+<div
+  className="c0"
+>
+  text
+</div>
+`;
+
+exports[`Styles match Div with italic 1`] = `
+.c0 {
+  font-style: italic;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with margin and size 1`] = `
+.c0 {
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with monospace 1`] = `
+.c0 {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with order 1`] = `
+.c0 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with padding and margin 1`] = `
+.c0 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with roundedCircle 1`] = `
+.c0 {
+  border-radius: 50%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with roundedPill 1`] = `
+.c0 {
+  border-radius: 50rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with text decoration 1`] = `
+.c0 {
+  -webkit-text-decoration: none!important;
+  text-decoration: none!important;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with text reset 1`] = `
+.c0 {
+  color: inherit;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with truncated text 1`] = `
+.c0 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div
+  className="c0"
+>
+  text
+</div>
+`;
+
+exports[`Styles match Div with visibilities 1`] = `
+.c0 {
+  visibility: visible;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with visibilities 2`] = `
+.c0 {
+  visibility: hidden;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with word break 1`] = `
+.c0 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+<div
+  className="c0"
+>
+  text
+</div>
+`;
+
+exports[`Styles match Divs with displays 1`] = `
+.c0 {
+  display: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 2`] = `
+.c0 {
+  display: inline;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 3`] = `
+.c0 {
+  display: inline-block;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 4`] = `
+.c0 {
+  display: block;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 5`] = `
+.c0 {
+  display: table;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 6`] = `
+.c0 {
+  display: table-cell;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 7`] = `
+.c0 {
+  display: table-row;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 8`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with displays 9`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with flex direction 1`] = `
+.c0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with flex direction 2`] = `
+.c0 {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with flex direction 3`] = `
+.c0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with flex direction 4`] = `
+.c0 {
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with float 1`] = `
+.c0 {
+  float: right;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with float 2`] = `
+.c0 {
+  float: left;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with float 3`] = `
+.c0 {
+  float: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with justify content 1`] = `
+.c0 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with justify content 2`] = `
+.c0 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with justify content 3`] = `
+.c0 {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with justify content 4`] = `
+.c0 {
+  -webkit-box-pack: between;
+  -webkit-justify-content: between;
+  -ms-flex-pack: between;
+  justify-content: between;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with justify content 5`] = `
+.c0 {
+  -webkit-box-pack: around;
+  -webkit-justify-content: around;
+  -ms-flex-pack: around;
+  justify-content: around;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with overflow 1`] = `
+.c0 {
+  overflow: auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with overflow 2`] = `
+.c0 {
+  overflow: hidden;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with paddings 1`] = `
+.c0 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with paddings 2`] = `
+.c0 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with paddings 3`] = `
+.c0 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with position 1`] = `
+.c0 {
+  position: static;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with position 2`] = `
+.c0 {
+  position: relative;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with position 3`] = `
+.c0 {
+  position: absolute;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with position 4`] = `
+.c0 {
+  position: fixed;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with position 5`] = `
+.c0 {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with rounded 1`] = `
+.c0 {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with rounded 2`] = `
+.c0 {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with rounded 3`] = `
+.c0 {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with shadow 1`] = `
+.c0 {
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with shadow 2`] = `
+.c0 {
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,.1);
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with shadow 3`] = `
+.c0 {
+  box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.2);
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with shadow 4`] = `
+.c0 {
+  box-shadow: 0 1.25rem 3.5rem rgba(0,0,0,.25);
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text align 1`] = `
+.c0 {
+  text-align: center;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text align 2`] = `
+.c0 {
+  text-align: left;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text align 3`] = `
+.c0 {
+  text-align: right;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text align 4`] = `
+.c0 {
+  text-align: justify;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text weight 1`] = `
+.c0 {
+  font-weight: bold;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text weight 2`] = `
+.c0 {
+  font-weight: bolder;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text weight 3`] = `
+.c0 {
+  font-weight: normal;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text weight 4`] = `
+.c0 {
+  font-weight: light;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text weight 5`] = `
+.c0 {
+  font-weight: lighter;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text wrap 1`] = `
+.c0 {
+  white-space: normal;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with text wrap 2`] = `
+.c0 {
+  white-space: nowrap;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with transform 1`] = `
+.c0 {
+  text-transform: lowercase;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with transform 2`] = `
+.c0 {
+  text-transform: uppercase;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with transform 3`] = `
+.c0 {
+  text-transform: capitalize;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with vertical align 1`] = `
+.c0 {
+  vertical-align: baseline;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with vertical align 2`] = `
+.c0 {
+  vertical-align: top;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with vertical align 3`] = `
+.c0 {
+  vertical-align: bottom;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with vertical align 4`] = `
+.c0 {
+  vertical-align: text-top;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with vertical align 5`] = `
+.c0 {
+  vertical-align: text-bottom;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with width/height 1`] = `
+.c0 {
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with width/height 2`] = `
+.c0 {
+  height: 50%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with width/height 3`] = `
+.c0 {
+  max-width: 75%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with width/height 4`] = `
+.c0 {
+  max-height: 25%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with width/height 5`] = `
+.c0 {
+  width: auto;
+}
+
+<div
+  className="c0"
+/>
+`;

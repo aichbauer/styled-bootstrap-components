@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -15,7 +17,7 @@ const borderRadius = (props) => {
   return css`border-radius: ${br(props, 'modalContent').lg};`;
 };
 
-const ModalContent = styled.div`
+const ModalContent = styled(Div)`
   position: relative;
   display: flex;
   flex-direction: column;

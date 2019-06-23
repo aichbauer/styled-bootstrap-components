@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   width,
@@ -9,7 +11,7 @@ import {
   screenSize,
 } from 'styled-config';
 
-const Container = styled.div`
+const Container = styled(Div)`
   font-family: ${(props) => fontFamily(props, 'container').default};
   width: ${(props) => width(props, 'container').default};
   margin-right: auto;

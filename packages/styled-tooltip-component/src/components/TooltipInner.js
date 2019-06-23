@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   padding,
@@ -10,16 +12,16 @@ import {
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'tooltipInner').noRadius}
+      border-radius: ${br(props, 'tooltipInner').noRadius};
     `;
   } else if (props.pill) {
     return css`
-      border-radius: ${br(props, 'tooltipInner').pill}
+      border-radius: ${br(props, 'tooltipInner').pill};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'tooltipInner').default}
+    border-radius: ${br(props, 'tooltipInner').default};
   `;
 };
 
@@ -30,14 +32,14 @@ const pill = (props) => (
   `
 );
 
-const TooltipInner = styled.div`
+const TooltipInner = styled(Div)`
   max-width: 200px;
-  padding: ${(props) => padding(props, 'tooltipInner').default}
+  padding: ${(props) => padding(props, 'tooltipInner').default};
   color: ${(props) => colors(props, 'tooltipInner').color};
   text-align: center;
   background-color: ${(props) => colors(props, 'tooltipInner').backgroundColor};
-  ${(props) => borderRadius(props)}
-  ${(props) => pill(props)}
+  ${(props) => borderRadius(props)};
+  ${(props) => pill(props)};
 `;
 
 TooltipInner.defaultProps = {

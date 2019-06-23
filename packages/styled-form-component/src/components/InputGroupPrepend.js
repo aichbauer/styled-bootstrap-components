@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const InputGroupPrepend = styled.div`
+import { Div } from 'styled-base-components';
+
+const InputGroupPrepend = styled(Div)`
   display: flex;
   margin-right: -1px;
   & > button {

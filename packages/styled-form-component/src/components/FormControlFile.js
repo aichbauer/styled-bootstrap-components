@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const FormControlFile = styled.input`
+import { Input } from 'styled-base-components';
+
+const FormControlFile = styled(Input)`
   display: block;
   width: 100%;
   box-sizing: border-box;

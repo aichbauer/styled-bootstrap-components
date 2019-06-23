@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Utilities, Button as BaseButton, A } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -280,7 +282,7 @@ const buttonStyle = (props) => css`
   ${padding(props)};
 `;
 
-const Button = styled.button`
+const Button = styled(BaseButton)`
   ${(props) => buttonStyle(props)};
 `;
 
@@ -288,7 +290,8 @@ Button.defaultProps = {
   theme,
 };
 
-const LinkButton = styled.a`
+const LinkButton = styled(A)`
+  ${Utilities}
   ${(props) => buttonStyle(props)};
 `;
 

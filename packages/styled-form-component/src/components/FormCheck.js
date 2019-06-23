@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   margin,
@@ -39,7 +41,7 @@ const marginRight = (props) => (
   `
 );
 
-const FormCheck = styled.div`
+const FormCheck = styled(Div)`
   position: relative;
   box-sizing: border-box;
   & > label {

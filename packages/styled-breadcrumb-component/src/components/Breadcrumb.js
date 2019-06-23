@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Ol } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -18,7 +20,7 @@ const borderRadius = (props) => {
   return css`border-radius: ${br(props, 'breadcrumb').default};`;
 };
 
-const Breadcrumb = styled.ol`
+const Breadcrumb = styled(Ol)`
   display: flex;
   flex-wrap: wrap;
   padding: ${(props) => padding(props, 'breadcrumb').default};

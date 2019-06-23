@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { H1, H2, H3, H4, H5, H6 } from 'styled-base-components';
+
 import {
   theme,
   colors,
@@ -28,27 +30,27 @@ const cardTitleStyle = () => css`
     ${(props) => color(props)};
   `;
 
-const CardTitleH1 = styled.h1`
+const CardTitleH1 = styled(H1)`
   ${cardTitleStyle};
 `;
 
-const CardTitleH2 = styled.h2`
+const CardTitleH2 = styled(H2)`
   ${cardTitleStyle};
 `;
 
-const CardTitleH3 = styled.h3`
+const CardTitleH3 = styled(H3)`
   ${cardTitleStyle};
 `;
 
-const CardTitleH4 = styled.h4`
+const CardTitleH4 = styled(H4)`
   ${cardTitleStyle};
 `;
 
-const CardTitleH5 = styled.h5`
+const CardTitleH5 = styled(H5)`
   ${cardTitleStyle};
 `;
 
-const CardTitleH6 = styled.h6`
+const CardTitleH6 = styled(H6)`
   ${cardTitleStyle};
 `;
 

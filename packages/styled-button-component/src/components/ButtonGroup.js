@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import {
   theme,
   padding as p,
@@ -63,7 +65,7 @@ const vertical = (props) => {
 };
 
 
-const ButtonGroup = styled.div`
+const ButtonGroup = styled(Div)`
   position: relative;
   display: inline-flex;
   vertical-align: middle;

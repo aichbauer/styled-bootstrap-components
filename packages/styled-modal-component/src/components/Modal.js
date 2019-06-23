@@ -3,13 +3,15 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { Div } from 'styled-base-components';
+
 import { theme } from 'styled-config';
 import { ModalContent } from './ModalContent';
 import { ModalDialog } from './ModalDialog';
 import { ModalBackdrop } from './ModalBackdrop';
 import { ModalWrapper } from './ModalWrapper';
 
-const Fade = styled.div`
+const Fade = styled(Div)`
   display: block;
   transition: visibility 0.5s, opacity 0.5s ease-out;
 

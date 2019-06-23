@@ -12,6 +12,4 @@ test('Styles matches Column', () => {
   expect(tree).toHaveStyleRule('padding-right', '15px');
   expect(tree).toHaveStyleRule('padding-left', '15px');
   expect(tree).toHaveStyleRule('width', '100%');
-  expect(tree).toHaveStyleRule('overflow', 'hidden');
-  expect(tree).toHaveStyleRule('word-break', 'break-all');
 });
