@@ -46,7 +46,7 @@ export const UNMOUNTED = 'unmounted';
 export const EXIT = 'exit';
 export const ENTER = 'enter';
 
-export class Transition extends React.Component {
+export class TransitionRaw extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -82,6 +82,7 @@ export class Transition extends React.Component {
 
   render() {
     const {
+      innerRef,
       TransitionComponent,
       children,
       noExit,
@@ -100,15 +101,21 @@ export class Transition extends React.Component {
         ? 1
         : 0;
 
+    console.log(transitionProps);
+
     return (
-      <TransitionComponent {...transitionProps}>{children}</TransitionComponent>
+      <TransitionComponent ref={innerRef} {...transitionProps}>{children}</TransitionComponent>
     );
   }
 }
 
-Transition.defaultProps = {
+TransitionRaw.defaultProps = {
   TransitionComponent: TransitionFade,
   // You can use `transitionComponentProps` to pass props to transition
   // component in order to customize it.
   transitionComponentProps: {},
 };
+
+export const Transition = React.forwardRef((props, ref) => (
+  <TransitionRaw innerRef={ref} {...props} />
+));
