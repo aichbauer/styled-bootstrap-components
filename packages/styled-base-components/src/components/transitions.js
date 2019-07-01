@@ -43,10 +43,8 @@ export const TransitionFade = styled.div`
 `;
 
 export const UNMOUNTED = 'unmounted';
-export const EXITED = 'exited';
-export const ENTERING = 'entering';
-export const ENTERED = 'entered';
-export const EXITING = 'exiting';
+export const EXIT = 'exit';
+export const ENTER = 'enter';
 
 export class Transition extends React.Component {
   constructor(props) {
@@ -60,7 +58,7 @@ export class Transition extends React.Component {
   componentDidMount() {
     const { initiallyVisible } = this.state;
     // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({ status: initiallyVisible ? ENTERING : EXITED });
+    this.setState({ status: initiallyVisible ? ENTER : EXIT });
   }
 
   componentDidUpdate(prevProps) {
@@ -69,11 +67,11 @@ export class Transition extends React.Component {
       const { status } = this.state;
 
       if (this.props.visible) {
-        if (status !== ENTERING && status !== ENTERED) {
-          nextStatus = ENTERING;
+        if (status !== ENTER) {
+          nextStatus = ENTER;
         }
-      } else if (status === ENTERING || status === ENTERED) {
-        nextStatus = EXITING;
+      } else if (status === ENTER) {
+        nextStatus = EXIT;
       }
     }
     if (nextStatus != null) {
@@ -94,11 +92,11 @@ export class Transition extends React.Component {
 
     const { status, initiallyVisible } = this.state;
 
-    transitionProps.visible = status === ENTERED || status === ENTERING ? 1 : 0;
+    transitionProps.visible = status === ENTER ? 1 : 0;
     transitionProps.animation = initiallyVisible && !noInitialEnter && !noEnter;
     transitionProps.transition =
-      ((status === ENTERED || status === ENTERING) && !noEnter) ||
-      ((status === EXITING || status === EXITED) && !noExit)
+      ((status === ENTER) && !noEnter) ||
+      ((status === EXIT) && !noExit)
         ? 1
         : 0;
 
