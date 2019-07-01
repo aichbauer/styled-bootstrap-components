@@ -60,6 +60,7 @@ const loadStories = () => {
   require('./stories/alerts');
   require('./stories/badges');
   require('./stories/utilities');
+  require('./stories/transitions');
   require('./stories/breadcrumbs');
   require('./stories/buttons');
   require('./stories/buttongroups');
