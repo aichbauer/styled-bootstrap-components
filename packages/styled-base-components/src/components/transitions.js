@@ -1,5 +1,14 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const fadeInKeyframes = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const getDelay = ({ delay }) => delay || 0;
 const getDuration = ({ duration }) => duration || 500;
@@ -8,22 +17,18 @@ const getTimingFunction = ({ timingFunc }) => timingFunc || 'ease-out';
 // TransitionFade is default transition component using opacity and
 // visibility.
 export const TransitionFade = styled.div`
-  transition: visibility ${getDuration}ms ${getDelay}ms,
-    opacity ${getDuration}ms ${getTimingFunction} ${getDelay}ms;
+  ${(props) =>
+    (props.transition ?
+      css`
+      transition: visibility ${getDuration}ms ${getTimingFunction} ${getDelay}ms,
+        opacity ${getDuration}ms ${getTimingFunction} ${getDelay}ms;
+      ` : '')}
 
   ${(props) =>
-    props.animated &&
-    css`
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      animation: fadeIn ${getDuration}ms ${getTimingFunction} none ${getDelay}ms;
-    `}
+    (props.animation ?
+      css`
+        animation: ${fadeInKeyframes} ${getDuration}ms ${getTimingFunction} ${getDelay}ms;
+      ` : '')}
 
   ${(props) =>
     (props.visible
@@ -43,9 +48,6 @@ export const ENTERING = 'entering';
 export const ENTERED = 'entered';
 export const EXITING = 'exiting';
 
-// TODO: Add callbacks for status changes
-// TODO: Add props for disabling enter/exit transitions
-// TODO: Add prop for disabling initial animation
 export class Transition extends React.Component {
   constructor(props) {
     super(props);
@@ -81,12 +83,24 @@ export class Transition extends React.Component {
   }
 
   render() {
-    const { TransitionComponent, children, ...transitionProps } = this.props;
+    const {
+      TransitionComponent,
+      children,
+      noExit,
+      noEnter,
+      noInitialEnter,
+      ...transitionProps
+    } = this.props;
 
     const { status, initiallyVisible } = this.state;
 
-    transitionProps.animated = initiallyVisible;
     transitionProps.visible = status === ENTERED || status === ENTERING ? 1 : 0;
+    transitionProps.animation = initiallyVisible && !noInitialEnter && !noEnter;
+    transitionProps.transition =
+      ((status === ENTERED || status === ENTERING) && !noEnter) ||
+      ((status === EXITING || status === EXITED) && !noExit)
+        ? 1
+        : 0;
 
     return (
       <TransitionComponent {...transitionProps}>{children}</TransitionComponent>
@@ -95,10 +109,6 @@ export class Transition extends React.Component {
 }
 
 Transition.defaultProps = {
-  // You can use other components with custom `transition` and `animation`
-  // properties. Component should have animation only if it was passed true
-  // animated prop and should be visible only if it was passed true
-  // visible prop.
   TransitionComponent: TransitionFade,
   // You can use `transitionComponentProps` to pass props to transition
   // component in order to customize it.

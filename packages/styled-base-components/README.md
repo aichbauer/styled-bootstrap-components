@@ -84,6 +84,9 @@ const App = (props) => (
 * delay **Type**: millisecods
 * duration **Type**: milliseconds
 * timingFunc **Type**: string
+* noExit **Type**: boolean
+* noEnter **Type**: boolean
+* noInitialEnter **Type**: boolean
 
 ### Utilities
 
