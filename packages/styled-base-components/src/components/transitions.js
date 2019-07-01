@@ -101,8 +101,6 @@ export class TransitionRaw extends React.Component {
         ? 1
         : 0;
 
-    console.log(transitionProps);
-
     return (
       <TransitionComponent ref={innerRef} {...transitionProps}>{children}</TransitionComponent>
     );

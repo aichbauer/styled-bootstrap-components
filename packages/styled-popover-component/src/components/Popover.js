@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { Div } from 'styled-base-components';
+import { Transition, Div } from 'styled-base-components';
 
 import {
   theme,
@@ -43,7 +44,7 @@ const margin = (props) => {
   `;
 };
 
-const Popover = styled(Div)`
+const PopoverRaw = styled(Div)`
   position: absolute;
   top: 0;
   left: 0;
@@ -72,8 +73,26 @@ const Popover = styled(Div)`
   ${(props) => display(props)};
 `;
 
-Popover.defaultProps = {
+PopoverRaw.defaultProps = {
   theme,
 };
 
-export { Popover };
+export const Popover = React.forwardRef((props, ref) => {
+  const {
+    hidden, children, transitionProps, ...rest
+  } = props;
+
+  return (
+    <Transition
+      noInitialEnter
+      visible={!hidden}
+      duration={250}
+      ref={ref}
+      {...transitionProps}
+    >
+      <PopoverRaw {...rest}>
+        {children}
+      </PopoverRaw>
+    </Transition>
+  );
+});

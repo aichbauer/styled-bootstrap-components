@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { Div } from 'styled-base-components';
+import { Transition, Div } from 'styled-base-components';
 
 import {
   theme,
@@ -31,7 +32,7 @@ const opacity = (props) => (
     `
 );
 
-const Tooltip = styled(Div)`
+const TooltipRaw = styled(Div)`
   position: absolute;
   z-index: 1070;
   display: block;
@@ -55,8 +56,26 @@ const Tooltip = styled(Div)`
   ${(props) => opacity(props)};
 `;
 
-Tooltip.defaultProps = {
+TooltipRaw.defaultProps = {
   theme,
 };
 
-export { Tooltip };
+export const Tooltip = React.forwardRef((props, ref) => {
+  const {
+    hidden, children, transitionProps, ...rest
+  } = props;
+
+  return (
+    <Transition
+      noInitialEnter
+      visible={!hidden}
+      duration={150}
+      ref={ref}
+      {...transitionProps}
+    >
+      <TooltipRaw {...rest}>
+        {children}
+      </TooltipRaw>
+    </Transition>
+  );
+});
