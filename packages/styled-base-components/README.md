@@ -87,6 +87,7 @@ const App = (props) => (
 * noExit **Type**: boolean
 * noEnter **Type**: boolean
 * noInitialEnter **Type**: boolean
+* hideOnExit **Type**: boolean
 
 ### Utilities
 
