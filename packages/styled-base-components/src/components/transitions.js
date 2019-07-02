@@ -14,8 +14,8 @@ const getDelay = ({ delay }) => delay || 0;
 const getDuration = ({ duration }) => duration || 500;
 const getTimingFunction = ({ timingFunc }) => timingFunc || 'ease-out';
 
-// TransitionFade is default transition component using opacity and
-// visibility.
+// TransitionFade is default transition component using
+// opacity and visibility.
 export const TransitionFade = styled.div`
   ${(props) =>
     (props.transition ?
@@ -46,12 +46,12 @@ export const UNMOUNTED = 'unmounted';
 export const EXIT = 'exit';
 export const ENTER = 'enter';
 
-export class TransitionRaw extends React.Component {
+export class TransitionWithoutForwardingRef extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       status: UNMOUNTED,
-      initiallyVisible: props.visible,
+      initiallyVisible: !props.hidden,
     };
   }
 
@@ -66,12 +66,12 @@ export class TransitionRaw extends React.Component {
     if (prevProps !== this.props) {
       const { status } = this.state;
 
-      if (this.props.visible) {
-        if (status !== ENTER) {
-          nextStatus = ENTER;
+      if (this.props.hidden) {
+        if (status === ENTER) {
+          nextStatus = EXIT;
         }
-      } else if (status === ENTER) {
-        nextStatus = EXIT;
+      } else if (status === EXIT) {
+        nextStatus = ENTER;
       }
     }
     if (nextStatus != null) {
@@ -93,6 +93,8 @@ export class TransitionRaw extends React.Component {
 
     const { status, initiallyVisible } = this.state;
 
+    delete transitionProps.hidden; /* We can't use `hidden` as it just hides element */
+
     transitionProps.visible = status === ENTER ? 1 : 0;
     transitionProps.animation = initiallyVisible && !noInitialEnter && !noEnter;
     transitionProps.transition =
@@ -102,12 +104,14 @@ export class TransitionRaw extends React.Component {
         : 0;
 
     return (
-      <TransitionComponent ref={innerRef} {...transitionProps}>{children}</TransitionComponent>
+      <TransitionComponent ref={innerRef} {...transitionProps}>
+        {children}
+      </TransitionComponent>
     );
   }
 }
 
-TransitionRaw.defaultProps = {
+TransitionWithoutForwardingRef.defaultProps = {
   TransitionComponent: TransitionFade,
   // You can use `transitionComponentProps` to pass props to transition
   // component in order to customize it.
@@ -115,5 +119,5 @@ TransitionRaw.defaultProps = {
 };
 
 export const Transition = React.forwardRef((props, ref) => (
-  <TransitionRaw innerRef={ref} {...props} />
+  <TransitionWithoutForwardingRef innerRef={ref} {...props} />
 ));

@@ -14,16 +14,6 @@ import {
   fontSize,
 } from 'styled-config';
 
-const display = (props) => (
-  props.hidden
-    ? css`
-        display: none;
-      `
-    : css`
-        display: block;
-      `
-);
-
 const margin = (props) => {
   if (props.top) {
     return css`
@@ -70,7 +60,6 @@ export const PopoverWithoutTransition = styled(Div)`
   border: ${(props) => border(props, 'popover').default} ${(props) => colors(props, 'popover').borderColor};
   border-radius: ${(props) => borderRadius(props, 'popover').lg};
   ${(props) => margin(props)};
-  ${(props) => display(props)};
 `;
 
 PopoverWithoutTransition.defaultProps = {
@@ -85,7 +74,7 @@ export const Popover = React.forwardRef((props, ref) => {
   return (
     <Transition
       noInitialEnter
-      visible={!hidden}
+      hidden={hidden}
       duration={250}
       ref={ref}
       {...transitionProps}

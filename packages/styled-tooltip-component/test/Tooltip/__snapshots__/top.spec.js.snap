@@ -2,6 +2,13 @@
 
 exports[`Styles matches Tooltip top 1`] = `
 .c0 {
+  -webkit-transition: visibility 150ms ease-out 0ms, opacity 150ms ease-out 0ms;
+  transition: visibility 150ms ease-out 0ms, opacity 150ms ease-out 0ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.c1 {
   position: absolute;
   z-index: 1070;
   display: block;
@@ -25,11 +32,15 @@ exports[`Styles matches Tooltip top 1`] = `
   line-break: auto;
   font-size: 0.875rem;
   word-wrap: break-word;
-  padding: 0.4rem 0;
   opacity: 0.9;
+  padding: 0.4rem 0;
 }
 
 <div
   className="c0"
-/>
+>
+  <div
+    className="c1"
+  />
+</div>
 `;

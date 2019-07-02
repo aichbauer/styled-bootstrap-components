@@ -1344,6 +1344,15 @@ exports[`Simply check if all components are imported and exported correctly 38`]
 `;
 
 exports[`Simply check if all components are imported and exported correctly 39`] = `
+.c0 {
+  -webkit-transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  -webkit-animation: eMLfYp 500ms ease-out 0ms;
+  animation: eMLfYp 500ms ease-out 0ms;
+  visibility: visible;
+  opacity: 1;
+}
+
 .c3 {
   position: relative;
   display: -webkit-box;
@@ -1395,12 +1404,6 @@ exports[`Simply check if all components are imported and exported correctly 39`]
   overflow-x: hidden;
   overflow-y: auto;
   display: block;
-}
-
-.c0 {
-  display: block;
-  -webkit-transition: visibility 0.5s,opacity 0.5s ease-out;
-  transition: visibility 0.5s,opacity 0.5s ease-out;
 }
 
 <div
@@ -1694,6 +1697,13 @@ exports[`Simply check if all components are imported and exported correctly 51`]
 
 exports[`Simply check if all components are imported and exported correctly 52`] = `
 .c0 {
+  -webkit-transition: visibility 250ms ease-out 0ms, opacity 250ms ease-out 0ms;
+  transition: visibility 250ms ease-out 0ms, opacity 250ms ease-out 0ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.c1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1728,7 +1738,11 @@ exports[`Simply check if all components are imported and exported correctly 52`]
 
 <div
   className="c0"
-/>
+>
+  <div
+    className="c1"
+  />
+</div>
 `;
 
 exports[`Simply check if all components are imported and exported correctly 53`] = `
@@ -1847,6 +1861,13 @@ exports[`Simply check if all components are imported and exported correctly 57`]
 
 exports[`Simply check if all components are imported and exported correctly 58`] = `
 .c0 {
+  -webkit-transition: visibility 150ms ease-out 0ms, opacity 150ms ease-out 0ms;
+  transition: visibility 150ms ease-out 0ms, opacity 150ms ease-out 0ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.c1 {
   position: absolute;
   z-index: 1070;
   display: block;
@@ -1876,7 +1897,11 @@ exports[`Simply check if all components are imported and exported correctly 58`]
 
 <div
   className="c0"
-/>
+>
+  <div
+    className="c1"
+  />
+</div>
 `;
 
 exports[`Simply check if all components are imported and exported correctly 59`] = `

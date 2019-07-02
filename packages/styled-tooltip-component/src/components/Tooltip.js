@@ -22,16 +22,6 @@ const padding = (props) => (
     `
 );
 
-const opacity = (props) => (
-  props.hidden
-    ? css`
-      opacity: 0;
-    `
-    : css`
-      opacity: 0.9;
-    `
-);
-
 export const TooltipWithoutTransition = styled(Div)`
   position: absolute;
   z-index: 1070;
@@ -52,8 +42,8 @@ export const TooltipWithoutTransition = styled(Div)`
   line-break: auto;
   font-size: ${(props) => fontSize(props, 'tooltip').default};
   word-wrap: break-word;
+  opacity: 0.9;
   ${(props) => padding(props)};
-  ${(props) => opacity(props)};
 `;
 
 TooltipWithoutTransition.defaultProps = {
@@ -68,7 +58,7 @@ export const Tooltip = React.forwardRef((props, ref) => {
   return (
     <Transition
       noInitialEnter
-      visible={!hidden}
+      hidden={hidden}
       duration={150}
       ref={ref}
       {...transitionProps}

@@ -131,16 +131,16 @@ class Modal extends React.Component {
 
     return (
       <TransitionComponent
-        visible={!this.state.hidden}
+        hidden={this.state.hidden}
         ref={this.refTransition}
         {...rest}
         {...transitionProps}
       >
         <ModalWrapperComponent
           theme={this.props.theme}
-          ref={this.refModal}
           onMouseDown={this.handleBackdropMouseDown}
           onClick={this.handleBackdropClick}
+          ref={this.refModal}
           {...wrapperProps}
         >
           <ModalDialogComponent
