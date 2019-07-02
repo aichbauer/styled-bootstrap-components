@@ -1091,3 +1091,14 @@ exports[`Styles match Divs with width/height 5`] = `
   className="c0"
 />
 `;
+
+exports[`Styles match hidden Div 1`] = `
+.c0 {
+  display: none;
+}
+
+<div
+  className="c0"
+  hidden={true}
+/>
+`;

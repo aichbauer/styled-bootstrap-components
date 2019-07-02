@@ -4,14 +4,42 @@ exports[`Animation present when initially visible 1`] = `
 .c0 {
   -webkit-transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
   transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
-  -webkit-animation: eMLfYp 500ms ease-out 0ms;
-  animation: eMLfYp 500ms ease-out 0ms;
   visibility: visible;
   opacity: 1;
 }
 
 <div
   className="c0"
+  hidden={false}
+/>
+`;
+
+exports[`Transition with hide on exit 1`] = `
+.c0 {
+  display: none;
+  -webkit-transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+<div
+  className="c0"
+  hidden={true}
+/>
+`;
+
+exports[`Transition with hide on exit 2`] = `
+.c0 {
+  -webkit-transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+<div
+  className="c0"
+  hidden={false}
 />
 `;
 
@@ -23,6 +51,7 @@ exports[`Transition with no enter animation 1`] = `
 
 <div
   className="c0"
+  hidden={false}
 />
 `;
 
@@ -36,6 +65,7 @@ exports[`Transition with no enter animation 2`] = `
 
 <div
   className="c0"
+  hidden={false}
 />
 `;
 
@@ -49,6 +79,7 @@ exports[`Transition with no exit animation 1`] = `
 
 <div
   className="c0"
+  hidden={false}
 />
 `;
 
@@ -73,6 +104,7 @@ exports[`Transition with no initial enter animation 1`] = `
 
 <div
   className="c0"
+  hidden={false}
 />
 `;
 
@@ -86,6 +118,7 @@ exports[`Transition with no initial enter animation 2`] = `
 
 <div
   className="c0"
+  hidden={false}
 />
 `;
 
@@ -112,6 +145,7 @@ exports[`Transition works when toggling visiblity 2`] = `
 
 <div
   className="c0"
+  hidden={false}
 />
 `;
 
@@ -125,5 +159,6 @@ exports[`Transition works when toggling visiblity 3`] = `
 
 <div
   className="c0"
+  hidden={false}
 />
 `;

@@ -42,6 +42,7 @@ exports[`Styles matches Popover left 1`] = `
 
 <div
   className="c0"
+  hidden={false}
 >
   <div
     className="c1"

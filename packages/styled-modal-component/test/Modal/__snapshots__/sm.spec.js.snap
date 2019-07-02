@@ -4,8 +4,6 @@ exports[`Styles matches Modal sm 1`] = `
 .c0 {
   -webkit-transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
   transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
-  -webkit-animation: eMLfYp 500ms ease-out 0ms;
-  animation: eMLfYp 500ms ease-out 0ms;
   visibility: visible;
   opacity: 1;
 }
@@ -65,6 +63,7 @@ exports[`Styles matches Modal sm 1`] = `
 
 <div
   className="c0"
+  hidden={false}
 >
   <div
     className="c1"

@@ -2,6 +2,7 @@
 
 exports[`Styles matches ModalWrapper hidden 1`] = `
 .c0 {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;

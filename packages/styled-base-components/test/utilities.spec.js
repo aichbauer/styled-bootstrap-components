@@ -395,3 +395,8 @@ test('Styles match Divs with displays', () => {
   div = renderer.create(<Div dInlineFlex />).toJSON();
   expect(div).toMatchSnapshot();
 });
+
+test('Styles match hidden Div', () => {
+  const div = renderer.create(<Div hidden />).toJSON();
+  expect(div).toMatchSnapshot();
+});

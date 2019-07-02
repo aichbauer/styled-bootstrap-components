@@ -1347,8 +1347,6 @@ exports[`Simply check if all components are imported and exported correctly 39`]
 .c0 {
   -webkit-transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
   transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
-  -webkit-animation: eMLfYp 500ms ease-out 0ms;
-  animation: eMLfYp 500ms ease-out 0ms;
   visibility: visible;
   opacity: 1;
 }
@@ -1408,6 +1406,7 @@ exports[`Simply check if all components are imported and exported correctly 39`]
 
 <div
   className="c0"
+  hidden={false}
 >
   <div
     className="c1"
@@ -1733,11 +1732,11 @@ exports[`Simply check if all components are imported and exported correctly 52`]
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 0.3rem;
   margin-left: 0.5rem;
-  display: block;
 }
 
 <div
   className="c0"
+  hidden={false}
 >
   <div
     className="c1"
@@ -1891,12 +1890,13 @@ exports[`Simply check if all components are imported and exported correctly 58`]
   line-break: auto;
   font-size: 0.875rem;
   word-wrap: break-word;
-  padding: 0.4rem 0;
   opacity: 0.9;
+  padding: 0.4rem 0;
 }
 
 <div
   className="c0"
+  hidden={false}
 >
   <div
     className="c1"

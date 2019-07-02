@@ -38,6 +38,7 @@ exports[`Styles matches Tooltip right 1`] = `
 
 <div
   className="c0"
+  hidden={false}
 >
   <div
     className="c1"

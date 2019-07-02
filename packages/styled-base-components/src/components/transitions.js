@@ -1,38 +1,24 @@
 import React from 'react';
-import styled, { css, keyframes } from 'styled-components';
-
-import { Utilities } from './utilityStyle';
-
-const fadeInKeyframes = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+import styled, { css } from 'styled-components';
 
 const getDelay = ({ delay }) => delay || 0;
 const getDuration = ({ duration }) => duration || 500;
 const getTimingFunction = ({ timingFunc }) => timingFunc || 'ease-out';
+const getStatusChangeDelay = (props) => getDelay(props) + getDuration(props);
 
 // TransitionFade is default transition component using
 // opacity and visibility.
 export const TransitionFade = styled.div`
-  ${Utilities}
+  ${(props) => (
+    props.hidden ? css`
+      display: none;
+    ` : null)}
 
   ${(props) =>
     (props.transition ?
       css`
       transition: visibility ${getDuration}ms ${getTimingFunction} ${getDelay}ms,
         opacity ${getDuration}ms ${getTimingFunction} ${getDelay}ms;
-      ` : '')}
-
-  ${(props) =>
-    (props.animation ?
-      css`
-        animation: ${fadeInKeyframes} ${getDuration}ms ${getTimingFunction}
-          ${getDelay}ms 1 normal backwards;
       ` : '')}
 
   ${(props) =>
@@ -61,48 +47,112 @@ export class TransitionWithoutForwardingRef extends React.Component {
       initiallyVisible: !props.hidden,
     };
     this.refTransition = this.props.innerRef || React.createRef();
-    this.animationOrTransitionEnded = this.animationOrTransitionEnded.bind(this);
+    this.nextCallback = null;
   }
 
   componentDidMount() {
-    this.refTransition.current.addEventListener('transitionend', this.animationOrTransitionEnded);
-    this.refTransition.current.addEventListener('animationend', this.animationOrTransitionEnded);
-
     const { initiallyVisible } = this.state;
-    // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({ status: initiallyVisible ? ENTERING : EXITED });
+    const { noInitialEnter } = this.props;
+
+    if (initiallyVisible) {
+      if (noInitialEnter) {
+        // eslint-disable-next-line react/no-did-mount-set-state
+        this.setState({ status: ENTERED });
+      } else {
+        this.forceUpdate();
+
+        // eslint-disable-next-line react/no-did-mount-set-state
+        this.setState({ status: ENTERING }, () => {
+          this.setNextCallback(
+            () => this.setState({ status: ENTERED }),
+            getStatusChangeDelay(this.props),
+          );
+        });
+      }
+    } else {
+      // eslint-disable-next-line react/no-did-mount-set-state
+      this.setState({ status: EXITED });
+    }
   }
 
   componentDidUpdate(prevProps) {
+    const { noEnter, noExit, hideOnExit } = this.props;
+
     let nextStatus = null;
+    let nextStatusCallback = null;
     if (prevProps !== this.props) {
       const { status } = this.state;
 
       if (this.props.hidden) {
         if (status === ENTERING || status === ENTERED) {
-          nextStatus = EXITING;
+          if (noExit) {
+            nextStatus = EXITED;
+          } else {
+            nextStatus = EXITING;
+            nextStatusCallback = () => this.setState({ status: EXITED });
+          }
         }
       } else if (status === EXITING || status === EXITED) {
-        nextStatus = ENTERING;
+        if (noEnter) {
+          nextStatus = ENTERED;
+        } else if (hideOnExit) {
+          // Render not visible transition without(!) hidden and skip delays.
+          // eslint-disable-next-line react/no-did-update-set-state
+          this.setState({ status: UNMOUNTED }, () => {
+            this.setNextCallback(() => this.setState({ status: ENTERING }), 0);
+          });
+          return;
+        } else {
+          nextStatus = ENTERING;
+          nextStatusCallback = () => this.setState({ status: ENTERED });
+        }
       }
     }
     if (nextStatus != null) {
       // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({ status: nextStatus });
+      this.setState({ status: nextStatus }, () => {
+        this.setNextCallback(nextStatusCallback, getStatusChangeDelay(this.props));
+      });
     }
   }
 
   componentWillUnmount() {
-    this.refTransition.current.removeEventListener('transitionend', this.animationOrTransitionEnded);
-    this.refTransition.current.removeEventListener('animationend', this.animationOrTransitionEnded);
+    if (this.nextCallback != null) {
+      this.nextCallback.cancel();
+    }
   }
 
-  animationOrTransitionEnded() {
-    if (this.state.status === EXITING) {
-      this.setState({ status: EXITED });
-    } else if (this.state.status === ENTERING) {
-      this.setState({ status: ENTERED });
+  setNextCallback(callback, delay) {
+    if (this.nextCallback != null) {
+      this.nextCallback.cancel();
     }
+
+    let active = true;
+
+    this.nextCallback = () => {
+      if (!active) { return; }
+
+      active = false;
+      this.nextCallback = null;
+
+      if (callback != null) {
+        callback();
+      }
+    };
+
+    this.nextCallback.cancel = () => {
+      active = false;
+    };
+
+    setTimeout(this.nextCallback, delay);
+
+    return this.nextCallback;
+  }
+
+  forceUpdate() {
+    // Force repaint for transitions to work
+    // eslint-disable-next-line no-unused-expressions
+    this.refTransition.current && this.refTransition.current.scrollTop;
   }
 
   render() {
@@ -117,13 +167,12 @@ export class TransitionWithoutForwardingRef extends React.Component {
       ...transitionProps
     } = this.props;
 
-    const { status, initiallyVisible } = this.state;
+    const { status } = this.state;
 
     delete transitionProps.hidden; /* We can't use `hidden` as it just hides element */
 
     transitionProps.hidden = status === EXITED && hideOnExit;
     transitionProps.visible = (status === ENTERING || status === ENTERED) ? 1 : 0;
-    transitionProps.animation = initiallyVisible && !noInitialEnter && !noEnter;
     transitionProps.transition =
       ((status === ENTERING || status === ENTERED) && !noEnter) ||
       ((status === EXITING || status === EXITED) && !noExit)
@@ -140,9 +189,6 @@ export class TransitionWithoutForwardingRef extends React.Component {
 
 TransitionWithoutForwardingRef.defaultProps = {
   TransitionComponent: TransitionFade,
-  // You can use `transitionComponentProps` to pass props to transition
-  // component in order to customize it.
-  transitionComponentProps: {},
 };
 
 export const Transition = React.forwardRef((props, ref) => (

@@ -78,6 +78,6 @@ storiesOf('Transitions', module)
   .add('Custom parameters', withReadme(BaseReadme, withDocs(describeStory(`<ToggleableContent delay={100} duration={1000} timingFunc={"linear"} />`), () => (
     <ToggleableContent delay={100} duration={1000} timingFunc={"linear"} />
   ))))
-  .add('Display none on exit', withReadme(BaseReadme, withDocs(describeStory(`<ToggleableContent displayNoneOnExit />`), () => (
+  .add('Hide on exit', withReadme(BaseReadme, withDocs(describeStory(`<ToggleableContent hideOnExit />`), () => (
     <ToggleableContent hideOnExit />
   ))));
