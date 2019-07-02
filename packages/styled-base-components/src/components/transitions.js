@@ -96,10 +96,21 @@ export class TransitionWithoutForwardingRef extends React.Component {
         if (noEnter) {
           nextStatus = ENTERED;
         } else if (hideOnExit) {
-          // Render not visible transition without(!) hidden and skip delays.
+          // If we were hidden (display: none), then we should first render
+          // component with normal display.
+
+          // This special case renders components without hidden, then renders
+          // it with as visible, and after transition it will update status
+          // to ENTERED.
+
           // eslint-disable-next-line react/no-did-update-set-state
           this.setState({ status: UNMOUNTED }, () => {
-            this.setNextCallback(() => this.setState({ status: ENTERING }), 0);
+            this.setNextCallback(() => this.setState({ status: ENTERING }, () => {
+              this.setNextCallback(
+                () => this.setState({ status: ENTERED }),
+                getStatusChangeDelay(this.props),
+              );
+            }), 0);
           });
           return;
         } else {
@@ -123,6 +134,9 @@ export class TransitionWithoutForwardingRef extends React.Component {
   }
 
   setNextCallback(callback, delay) {
+    // This method helps to avoid multiple simultaneous callbacks. It clears
+    // alreadu set callbacks and schedules new one.
+
     if (this.nextCallback != null) {
       this.nextCallback.cancel();
     }
@@ -151,6 +165,7 @@ export class TransitionWithoutForwardingRef extends React.Component {
 
   forceUpdate() {
     // Force repaint for transitions to work
+
     // eslint-disable-next-line no-unused-expressions
     this.refTransition.current && this.refTransition.current.scrollTop;
   }
