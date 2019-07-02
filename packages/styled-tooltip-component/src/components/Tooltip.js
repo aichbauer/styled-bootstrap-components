@@ -32,7 +32,7 @@ const opacity = (props) => (
     `
 );
 
-const TooltipRaw = styled(Div)`
+export const TooltipWithoutTransition = styled(Div)`
   position: absolute;
   z-index: 1070;
   display: block;
@@ -56,7 +56,7 @@ const TooltipRaw = styled(Div)`
   ${(props) => opacity(props)};
 `;
 
-TooltipRaw.defaultProps = {
+TooltipWithoutTransition.defaultProps = {
   theme,
 };
 
@@ -73,9 +73,9 @@ export const Tooltip = React.forwardRef((props, ref) => {
       ref={ref}
       {...transitionProps}
     >
-      <TooltipRaw {...rest}>
+      <TooltipWithoutTransition {...rest}>
         {children}
-      </TooltipRaw>
+      </TooltipWithoutTransition>
     </Transition>
   );
 });

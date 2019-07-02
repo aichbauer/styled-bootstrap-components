@@ -44,7 +44,7 @@ const margin = (props) => {
   `;
 };
 
-const PopoverRaw = styled(Div)`
+export const PopoverWithoutTransition = styled(Div)`
   position: absolute;
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@ const PopoverRaw = styled(Div)`
   ${(props) => display(props)};
 `;
 
-PopoverRaw.defaultProps = {
+PopoverWithoutTransition.defaultProps = {
   theme,
 };
 
@@ -90,9 +90,9 @@ export const Popover = React.forwardRef((props, ref) => {
       ref={ref}
       {...transitionProps}
     >
-      <PopoverRaw {...rest}>
+      <PopoverWithoutTransition {...rest}>
         {children}
-      </PopoverRaw>
+      </PopoverWithoutTransition>
     </Transition>
   );
 });
