@@ -14,16 +14,16 @@ import { Button } from '../../../packages/styled-button-component';
 class ToggleableContent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { visible: true };
+    this.state = { hidden: false };
   }
 
   render() {
-    const { visible } = this.state;
+    const { hidden } = this.state;
     return (
       <Container>
-        <Button block primary onClick={() => this.setState({visible: !visible})}>Toggle</Button>
+        <Button block primary onClick={() => this.setState({hidden: !hidden})}>Toggle</Button>
         <Container p4>
-          <Transition visible={visible} {...this.props}>
+          <Transition hidden={hidden} {...this.props}>
             Simple content in transition with props: <code>{JSON.stringify(this.props)}</code>
           </Transition>
         </Container>
@@ -36,16 +36,16 @@ const toggleableContentSource = `
 class ToggleableContent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { visible: true };
+    this.state = { hidden: false };
   }
 
   render() {
-    const { visible } = this.state;
+    const { hidden } = this.state;
     return (
       <Container>
-        <Button block primary onClick={() => this.setState({visible: !visible})}>Toggle</Button>
+        <Button block primary onClick={() => this.setState({hidden: !hidden})}>Toggle</Button>
         <Container p4>
-          <Transition visible={visible} {...this.props}>
+          <Transition hidden={hidden} {...this.props}>
             Simple content in transition with props: <code>{JSON.stringify(this.props)}</code>
           </Transition>
         </Container>
@@ -77,4 +77,7 @@ storiesOf('Transitions', module)
   ))))
   .add('Custom parameters', withReadme(BaseReadme, withDocs(describeStory(`<ToggleableContent delay={100} duration={1000} timingFunc={"linear"} />`), () => (
     <ToggleableContent delay={100} duration={1000} timingFunc={"linear"} />
+  ))))
+  .add('Display none on exit', withReadme(BaseReadme, withDocs(describeStory(`<ToggleableContent displayNoneOnExit />`), () => (
+    <ToggleableContent hideOnExit />
   ))));

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
+import { Utilities } from './utilityStyle';
+
 const fadeInKeyframes = keyframes`
   from {
     opacity: 0;
@@ -17,6 +19,8 @@ const getTimingFunction = ({ timingFunc }) => timingFunc || 'ease-out';
 // TransitionFade is default transition component using
 // opacity and visibility.
 export const TransitionFade = styled.div`
+  ${Utilities}
+
   ${(props) =>
     (props.transition ?
       css`
@@ -27,7 +31,8 @@ export const TransitionFade = styled.div`
   ${(props) =>
     (props.animation ?
       css`
-        animation: ${fadeInKeyframes} ${getDuration}ms ${getTimingFunction} ${getDelay}ms;
+        animation: ${fadeInKeyframes} ${getDuration}ms ${getTimingFunction}
+          ${getDelay}ms 1 normal backwards;
       ` : '')}
 
   ${(props) =>
@@ -43,8 +48,10 @@ export const TransitionFade = styled.div`
 `;
 
 export const UNMOUNTED = 'unmounted';
-export const EXIT = 'exit';
-export const ENTER = 'enter';
+export const ENTERING = 'entering';
+export const ENTERED = 'entered';
+export const EXITING = 'exiting';
+export const EXITED = 'exited';
 
 export class TransitionWithoutForwardingRef extends React.Component {
   constructor(props) {
@@ -53,12 +60,17 @@ export class TransitionWithoutForwardingRef extends React.Component {
       status: UNMOUNTED,
       initiallyVisible: !props.hidden,
     };
+    this.refTransition = this.props.innerRef || React.createRef();
+    this.animationOrTransitionEnded = this.animationOrTransitionEnded.bind(this);
   }
 
   componentDidMount() {
+    this.refTransition.current.addEventListener('transitionend', this.animationOrTransitionEnded);
+    this.refTransition.current.addEventListener('animationend', this.animationOrTransitionEnded);
+
     const { initiallyVisible } = this.state;
     // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({ status: initiallyVisible ? ENTER : EXIT });
+    this.setState({ status: initiallyVisible ? ENTERING : EXITED });
   }
 
   componentDidUpdate(prevProps) {
@@ -67,16 +79,29 @@ export class TransitionWithoutForwardingRef extends React.Component {
       const { status } = this.state;
 
       if (this.props.hidden) {
-        if (status === ENTER) {
-          nextStatus = EXIT;
+        if (status === ENTERING || status === ENTERED) {
+          nextStatus = EXITING;
         }
-      } else if (status === EXIT) {
-        nextStatus = ENTER;
+      } else if (status === EXITING || status === EXITED) {
+        nextStatus = ENTERING;
       }
     }
     if (nextStatus != null) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({ status: nextStatus });
+    }
+  }
+
+  componentWillUnmount() {
+    this.refTransition.current.removeEventListener('transitionend', this.animationOrTransitionEnded);
+    this.refTransition.current.removeEventListener('animationend', this.animationOrTransitionEnded);
+  }
+
+  animationOrTransitionEnded() {
+    if (this.state.status === EXITING) {
+      this.setState({ status: EXITED });
+    } else if (this.state.status === ENTERING) {
+      this.setState({ status: ENTERED });
     }
   }
 
@@ -88,6 +113,7 @@ export class TransitionWithoutForwardingRef extends React.Component {
       noExit,
       noEnter,
       noInitialEnter,
+      hideOnExit,
       ...transitionProps
     } = this.props;
 
@@ -95,16 +121,17 @@ export class TransitionWithoutForwardingRef extends React.Component {
 
     delete transitionProps.hidden; /* We can't use `hidden` as it just hides element */
 
-    transitionProps.visible = status === ENTER ? 1 : 0;
+    transitionProps.hidden = status === EXITED && hideOnExit;
+    transitionProps.visible = (status === ENTERING || status === ENTERED) ? 1 : 0;
     transitionProps.animation = initiallyVisible && !noInitialEnter && !noEnter;
     transitionProps.transition =
-      ((status === ENTER) && !noEnter) ||
-      ((status === EXIT) && !noExit)
+      ((status === ENTERING || status === ENTERED) && !noEnter) ||
+      ((status === EXITING || status === EXITED) && !noExit)
         ? 1
         : 0;
 
     return (
-      <TransitionComponent ref={innerRef} {...transitionProps}>
+      <TransitionComponent ref={this.refTransition} {...transitionProps}>
         {children}
       </TransitionComponent>
     );
