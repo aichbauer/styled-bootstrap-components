@@ -371,8 +371,8 @@ const resize = (size) => css`
   resize: ${(props) => {
     if (props[`resize${size}None`] !== undefined) { return 'none'; }
     if (props[`resize${size}Both`] !== undefined) { return 'both'; }
-    if (props[`resize${size}Horizontal`] !== undefined) { return 'horizontal'; }
     if (props[`resize${size}Vertical`] !== undefined) { return 'vertical'; }
+    if (props[`resize${size}Horizontal`] !== undefined) { return 'horizontal'; }
     return null;
   }};
 `;
