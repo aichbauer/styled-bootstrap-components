@@ -183,6 +183,7 @@ const Table = styled(BaseTable)`
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
+  border-collapse: collapse;
   background-color: transparent;
   & th,
   & td {
