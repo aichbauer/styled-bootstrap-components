@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { Div } from 'styled-base-components';
+import { Transition, Div } from 'styled-base-components';
 
 import {
   theme,
@@ -21,17 +22,7 @@ const padding = (props) => (
     `
 );
 
-const opacity = (props) => (
-  props.hidden
-    ? css`
-      opacity: 0;
-    `
-    : css`
-      opacity: 0.9;
-    `
-);
-
-const Tooltip = styled(Div)`
+export const TooltipWithoutTransition = styled(Div)`
   position: absolute;
   z-index: 1070;
   display: block;
@@ -51,12 +42,30 @@ const Tooltip = styled(Div)`
   line-break: auto;
   font-size: ${(props) => fontSize(props, 'tooltip').default};
   word-wrap: break-word;
+  opacity: 0.9;
   ${(props) => padding(props)};
-  ${(props) => opacity(props)};
 `;
 
-Tooltip.defaultProps = {
+TooltipWithoutTransition.defaultProps = {
   theme,
 };
 
-export { Tooltip };
+export const Tooltip = React.forwardRef((props, ref) => {
+  const {
+    hidden, children, transitionProps, ...rest
+  } = props;
+
+  return (
+    <Transition
+      noInitialEnter
+      hidden={hidden}
+      duration={150}
+      ref={ref}
+      {...transitionProps}
+    >
+      <TooltipWithoutTransition {...rest}>
+        {children}
+      </TooltipWithoutTransition>
+    </Transition>
+  );
+});

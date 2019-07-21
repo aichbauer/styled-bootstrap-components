@@ -7,5 +7,5 @@ import { Popover } from '../../src';
 test('Styles matches Popover hidden', () => {
   const tree = renderer.create(<Popover hidden />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('display', 'none');
+  expect(tree).toHaveStyleRule('opacity', '0');
 });

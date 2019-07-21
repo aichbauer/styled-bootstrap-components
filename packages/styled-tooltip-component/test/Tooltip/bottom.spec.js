@@ -8,5 +8,7 @@ import { Tooltip } from '../../src';
 test('Styles matches Tooltip bottom', () => {
   const tree = renderer.create(<Tooltip bottom />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('padding', '0.4rem 0');
+
+  const tooltip = tree.children[0];
+  expect(tooltip).toHaveStyleRule('padding', '0.4rem 0');
 });

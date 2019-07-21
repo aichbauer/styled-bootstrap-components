@@ -1,26 +1,14 @@
 /* eslint-env browser */
 
 import React from 'react';
-import styled, { css } from 'styled-components';
 
-import { Div } from 'styled-base-components';
+import { Transition } from 'styled-base-components';
 
 import { theme } from 'styled-config';
 import { ModalContent } from './ModalContent';
 import { ModalDialog } from './ModalDialog';
 import { ModalBackdrop } from './ModalBackdrop';
 import { ModalWrapper } from './ModalWrapper';
-
-const Fade = styled(Div)`
-  display: block;
-  transition: visibility 0.5s, opacity 0.5s ease-out;
-
-  ${({ hidden }) =>
-    hidden && css`
-      visibility: hidden;
-      opacity: 0;
-    `}
-`;
 
 class Modal extends React.Component {
   constructor(props) {
@@ -32,7 +20,7 @@ class Modal extends React.Component {
     this.elementTriggeredOpen = null;
 
     this.refModal = React.createRef();
-    this.refFade = React.createRef();
+    this.refTransition = React.createRef();
 
     this.handleBackdropMouseDown = this.handleBackdropMouseDown.bind(this);
     this.handleBackdropClick = this.handleBackdropClick.bind(this);
@@ -98,7 +86,7 @@ class Modal extends React.Component {
       return false;
     }
 
-    const { opacity } = window.getComputedStyle(this.refFade.current);
+    const { opacity } = window.getComputedStyle(this.refTransition.current);
 
     return opacity <= 0.1 || opacity >= 0.9;
   }
@@ -121,12 +109,12 @@ class Modal extends React.Component {
 
   render() {
     const {
-      FadeComponent,
+      TransitionComponent,
       ModalWrapperComponent,
       ModalDialogComponent,
       ModalBackdropComponent,
       ModalContentComponent,
-      fadeProps,
+      transitionProps,
       wrapperProps,
       dialogProps,
       contentProps,
@@ -137,23 +125,22 @@ class Modal extends React.Component {
       backdrop,
       sm,
       lg,
+      hidden,
       ...rest
     } = this.props;
 
-    const { hidden } = this.state;
-
     return (
-      <FadeComponent
-        hidden={hidden}
-        ref={this.refFade}
+      <TransitionComponent
+        hidden={this.state.hidden}
+        ref={this.refTransition}
         {...rest}
-        {...fadeProps}
+        {...transitionProps}
       >
         <ModalWrapperComponent
           theme={this.props.theme}
-          ref={this.refModal}
           onMouseDown={this.handleBackdropMouseDown}
           onClick={this.handleBackdropClick}
+          ref={this.refModal}
           {...wrapperProps}
         >
           <ModalDialogComponent
@@ -175,14 +162,14 @@ class Modal extends React.Component {
           backdrop={backdrop}
           {...backdropProps}
         />}
-      </FadeComponent>
+      </TransitionComponent>
     );
   }
 }
 
 Modal.defaultProps = {
   theme,
-  FadeComponent: Fade,
+  TransitionComponent: Transition,
   ModalWrapperComponent: ModalWrapper,
   ModalDialogComponent: ModalDialog,
   ModalBackdropComponent: ModalBackdrop,

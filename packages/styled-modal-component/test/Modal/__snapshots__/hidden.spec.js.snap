@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styles matches hidden Modal 1`] = `
+.c0 {
+  -webkit-transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  transition: visibility 500ms ease-out 0ms, opacity 500ms ease-out 0ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .c3 {
   position: relative;
   display: -webkit-box;
@@ -54,17 +61,8 @@ exports[`Styles matches hidden Modal 1`] = `
   display: block;
 }
 
-.c0 {
-  display: block;
-  -webkit-transition: visibility 0.5s,opacity 0.5s ease-out;
-  transition: visibility 0.5s,opacity 0.5s ease-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
 <div
   className="c0"
-  hidden={true}
 >
   <div
     className="c1"

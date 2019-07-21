@@ -15,10 +15,8 @@ function createNodeMock() {
 test('Styles matches visible Modal', () => {
   const tree = renderer.create(<Modal />, { createNodeMock }).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('visibility', undefined);
-  expect(tree).toHaveStyleRule('opacity', undefined);
-  expect(tree).toHaveStyleRule('display', 'block');
-  expect(tree).toHaveStyleRule('transition', 'visibility 0.5s,opacity 0.5s ease-out');
+  expect(tree).toHaveStyleRule('visibility', 'visible');
+  expect(tree).toHaveStyleRule('opacity', '1');
 
   // eslint-disable-next-line no-undef
   expect(document.body.style.overflow).toBe('hidden');

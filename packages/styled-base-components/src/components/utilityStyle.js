@@ -157,6 +157,18 @@ const overflow = (size) => css`
   }};
 `;
 
+/* Hidden ----------------------------------------------------------------- */
+const hidden = () => css`
+  ${(props) => {
+    if (props.hidden) {
+      return css`
+        display: none;
+      `;
+    }
+    return null;
+  }};
+`;
+
 /* Text hide ------------------------------------------------------------- */
 const textHide = (size) => css`
   ${(props) => {
@@ -467,4 +479,6 @@ export const Utilities = css`
       ${makeUtilitiesForScreenSize(size)};
     }
   `)};
+
+  ${hidden()};
 `;
