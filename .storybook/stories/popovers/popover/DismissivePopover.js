@@ -9,7 +9,7 @@ import {
   PopoverHeader,
 } from '../../../../packages/styled-popover-component';
 
-export class SimplePopoverToggle extends React.Component {
+export class DismissivePopover extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,11 +19,17 @@ export class SimplePopoverToggle extends React.Component {
     };
   }
 
-  handlePopover(ev) {
+  showPopover(ev) {
     this.setState({
       top: ev.target.offsetTop - ev.target.offsetHeight,
       left: ev.target.offsetLeft + ev.target.offsetWidth,
-      hidden: !this.state.hidden,
+      hidden: false,
+    });
+  }
+
+  hidePopover(ev) {
+    this.setState({
+      hidden: true,
     });
   }
 
@@ -33,13 +39,15 @@ export class SimplePopoverToggle extends React.Component {
       left,
       hidden,
     } = this.state;
+
     return (
       <Container>
         <Button
           danger
-          onClick={(ev) => this.handlePopover(ev)}
+          onClick={(ev) => this.showPopover(ev)}
+          onBlur={(ev) => this.hidePopover(ev)}
         >
-          Click to toggle popover
+          Click to show popover
         </Button>
         <Popover
           hidden={hidden}

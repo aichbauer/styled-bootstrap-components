@@ -9,7 +9,7 @@ export class SimplePopoverToggle extends React.Component {
     };
   }
 
-  handleModal(ev) {
+  handlePopover(ev) {
     this.setState({
       top: ev.target.offsetTop - ev.target.offsetHeight,
       left: ev.target.offsetLeft + ev.target.offsetWidth,
@@ -27,7 +27,7 @@ export class SimplePopoverToggle extends React.Component {
       <Container>
         <Button
           danger
-          onClick={(ev) => this.handleModal(ev)}
+          onClick={(ev) => this.handlePopover(ev)}
         >
           Click to toggle popover
         </Button>
