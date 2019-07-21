@@ -189,6 +189,11 @@ Possible values for `{size}`:
   * `float{size}Right`
   * `float{size}Left`
   * `float{size}None`
+* resize:
+  * `resize{size}None`
+  * `resize{size}Both`
+  * `resize{size}Vertical`
+  * `resize{size}Horizontal`
 * border:
   * `borderLeft{size}`
   * `borderRight{size}`

@@ -378,6 +378,17 @@ const visibility = (size) => css`
   }};
 `;
 
+/* Resize ----------------------------------------------------------------- */
+const resize = (size) => css`
+  resize: ${(props) => {
+    if (props[`resize${size}None`] !== undefined) { return 'none'; }
+    if (props[`resize${size}Both`] !== undefined) { return 'both'; }
+    if (props[`resize${size}Vertical`] !== undefined) { return 'vertical'; }
+    if (props[`resize${size}Horizontal`] !== undefined) { return 'horizontal'; }
+    return null;
+  }};
+`;
+
 /* Display ---------------------------------------------------------------- */
 const display = (size) => css`
   display: ${(props) =>
@@ -450,6 +461,8 @@ const makeUtilitiesForScreenSize = (size) => css`
 
   ${textColors(size)};
   ${backgroundColors(size)};
+
+  ${resize(size)};
 
   ${clearfix(size)};
   ${textHide(size)};
