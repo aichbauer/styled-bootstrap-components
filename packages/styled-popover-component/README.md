@@ -123,6 +123,7 @@ Properties which can be added to the component to change the visual appearance.
 * `top` **Type**: boolean
 * `left` **Type**: boolean
 * `bottom` **Type**: boolean
+* `transitionProps` **Type**: object
 
 ## Related
 

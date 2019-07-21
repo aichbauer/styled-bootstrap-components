@@ -157,6 +157,18 @@ const overflow = (size) => css`
   }};
 `;
 
+/* Hidden ----------------------------------------------------------------- */
+const hidden = () => css`
+  ${(props) => {
+    if (props.hidden) {
+      return css`
+        display: none;
+      `;
+    }
+    return null;
+  }};
+`;
+
 /* Text hide ------------------------------------------------------------- */
 const textHide = (size) => css`
   ${(props) => {
@@ -366,6 +378,17 @@ const visibility = (size) => css`
   }};
 `;
 
+/* Resize ----------------------------------------------------------------- */
+const resize = (size) => css`
+  resize: ${(props) => {
+    if (props[`resize${size}None`] !== undefined) { return 'none'; }
+    if (props[`resize${size}Both`] !== undefined) { return 'both'; }
+    if (props[`resize${size}Vertical`] !== undefined) { return 'vertical'; }
+    if (props[`resize${size}Horizontal`] !== undefined) { return 'horizontal'; }
+    return null;
+  }};
+`;
+
 /* Display ---------------------------------------------------------------- */
 const display = (size) => css`
   display: ${(props) =>
@@ -439,6 +462,8 @@ const makeUtilitiesForScreenSize = (size) => css`
   ${textColors(size)};
   ${backgroundColors(size)};
 
+  ${resize(size)};
+
   ${clearfix(size)};
   ${textHide(size)};
   ${overflow(size)};
@@ -454,4 +479,6 @@ export const Utilities = css`
       ${makeUtilitiesForScreenSize(size)};
     }
   `)};
+
+  ${hidden()};
 `;

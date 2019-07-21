@@ -4185,6 +4185,18 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
+styled-base-components@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/styled-base-components/-/styled-base-components-3.0.1.tgz#e11540294f8718ed16eb3d99fea0aad71c254ca4"
+  integrity sha512-wM4rxjpO+JlWhd7GGZFEF+U+BpvcGZ/0UaDSBNp+W8SpKhObYp50b2+sXZfOV3FvqjH2SyNcGt8bdfjibJMy8w==
+  dependencies:
+    styled-config "^3.0.1"
+
+styled-config@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/styled-config/-/styled-config-3.0.1.tgz#3afbc3647e2f423a838c297f8c84e379b2b2a7db"
+  integrity sha512-dzXbqRgJPTEbm30T2FYx3JyWCLAXI2B7zoyJcukFLB2WqGZlx640/4TqIq8sgpUlkkLZW5ufeX09i79sREwYFw==
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"

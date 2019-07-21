@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { Transition } from './components/transitions';
 import { BootstrapBaseCss } from './components/globalStyle';
 import { Utilities } from './components/utilityStyle';
 
@@ -29,6 +29,7 @@ const Select = styled.select`${Utilities};`;
 const Textarea = styled.textarea`${Utilities};`;
 
 export {
+  Transition,
   BootstrapBaseCss,
   Utilities,
   P,

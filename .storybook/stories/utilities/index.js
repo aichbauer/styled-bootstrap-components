@@ -25,6 +25,8 @@ import ShadowsDocs from './docs/shadows.md';
 import Shadows from './showcase/shadows';
 import FloatDocs from './docs/float.md';
 import Float from './showcase/float';
+import ResizeDocs from './docs/resize.md';
+import Resize from './showcase/resize';
 
 storiesOf('Utilities', module)
   .add('ShowcaseContainer', withReadme(BaseReadme, withDocs(ShowcaseContainerDocs, () => (
@@ -39,5 +41,6 @@ storiesOf('Utilities', module)
   .add('Display', withReadme(BaseReadme, withDocs(DisplayDocs, Display)))
   .add('Borders', withReadme(BaseReadme, withDocs(BordersDocs, Borders)))
   .add('Shadows', withReadme(BaseReadme, withDocs(ShadowsDocs, Shadows)))
-  .add('Float', withReadme(BaseReadme, withDocs(FloatDocs, Float)));
+  .add('Float', withReadme(BaseReadme, withDocs(FloatDocs, Float)))
+  .add('Resize', withReadme(BaseReadme, withDocs(ResizeDocs, Resize)));
 

@@ -336,6 +336,46 @@ exports[`Styles match Div with padding and margin 1`] = `
 />
 `;
 
+exports[`Styles match Div with resize 1`] = `
+.c0 {
+  resize: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with resize 2`] = `
+.c0 {
+  resize: both;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with resize 3`] = `
+.c0 {
+  resize: horizontal;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Div with resize 4`] = `
+.c0 {
+  resize: vertical;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`Styles match Div with roundedCircle 1`] = `
 .c0 {
   border-radius: 50%;
@@ -1089,5 +1129,16 @@ exports[`Styles match Divs with width/height 5`] = `
 
 <div
   className="c0"
+/>
+`;
+
+exports[`Styles match hidden Div 1`] = `
+.c0 {
+  display: none;
+}
+
+<div
+  className="c0"
+  hidden={true}
 />
 `;

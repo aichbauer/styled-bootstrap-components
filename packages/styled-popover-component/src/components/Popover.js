@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { Div } from 'styled-base-components';
+import { Transition, Div } from 'styled-base-components';
 
 import {
   theme,
@@ -12,16 +13,6 @@ import {
   border,
   fontSize,
 } from 'styled-config';
-
-const display = (props) => (
-  props.hidden
-    ? css`
-        display: none;
-      `
-    : css`
-        display: block;
-      `
-);
 
 const margin = (props) => {
   if (props.top) {
@@ -43,7 +34,7 @@ const margin = (props) => {
   `;
 };
 
-const Popover = styled(Div)`
+export const PopoverWithoutTransition = styled(Div)`
   position: absolute;
   top: 0;
   left: 0;
@@ -69,11 +60,28 @@ const Popover = styled(Div)`
   border: ${(props) => border(props, 'popover').default} ${(props) => colors(props, 'popover').borderColor};
   border-radius: ${(props) => borderRadius(props, 'popover').lg};
   ${(props) => margin(props)};
-  ${(props) => display(props)};
 `;
 
-Popover.defaultProps = {
+PopoverWithoutTransition.defaultProps = {
   theme,
 };
 
-export { Popover };
+export const Popover = React.forwardRef((props, ref) => {
+  const {
+    hidden, children, transitionProps, ...rest
+  } = props;
+
+  return (
+    <Transition
+      noInitialEnter
+      hidden={hidden}
+      duration={250}
+      ref={ref}
+      {...transitionProps}
+    >
+      <PopoverWithoutTransition {...rest}>
+        {children}
+      </PopoverWithoutTransition>
+    </Transition>
+  );
+});

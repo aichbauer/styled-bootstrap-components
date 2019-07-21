@@ -365,6 +365,22 @@ test('Styles match Div with visibilities', () => {
   expect(div).toMatchSnapshot();
 });
 
+test('Styles match Div with resize', () => {
+  let div;
+
+  div = renderer.create(<Div resizeNone />).toJSON();
+  expect(div).toMatchSnapshot();
+
+  div = renderer.create(<Div resizeBoth />).toJSON();
+  expect(div).toMatchSnapshot();
+
+  div = renderer.create(<Div resizeHorizontal />).toJSON();
+  expect(div).toMatchSnapshot();
+
+  div = renderer.create(<Div resizeVertical />).toJSON();
+  expect(div).toMatchSnapshot();
+});
+
 test('Styles match Divs with displays', () => {
   let div;
 
@@ -393,5 +409,10 @@ test('Styles match Divs with displays', () => {
   expect(div).toMatchSnapshot();
 
   div = renderer.create(<Div dInlineFlex />).toJSON();
+  expect(div).toMatchSnapshot();
+});
+
+test('Styles match hidden Div', () => {
+  const div = renderer.create(<Div hidden />).toJSON();
   expect(div).toMatchSnapshot();
 });
