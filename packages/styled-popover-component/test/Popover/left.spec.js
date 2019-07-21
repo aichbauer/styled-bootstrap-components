@@ -7,5 +7,7 @@ import { Popover } from '../../src';
 test('Styles matches Popover left', () => {
   const tree = renderer.create(<Popover left />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('margin-right', '0.5rem');
+
+  const popover = tree.children[0];
+  expect(popover).toHaveStyleRule('margin-right', '0.5rem');
 });

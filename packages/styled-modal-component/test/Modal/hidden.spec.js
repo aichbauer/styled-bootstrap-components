@@ -10,8 +10,6 @@ test('Styles matches hidden Modal', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('visibility', 'hidden');
   expect(tree).toHaveStyleRule('opacity', '0');
-  expect(tree).toHaveStyleRule('display', 'block');
-  expect(tree).toHaveStyleRule('transition', 'visibility 0.5s,opacity 0.5s ease-out');
 
   // eslint-disable-next-line no-undef
   expect(document.body.style.overflow).toBe('');

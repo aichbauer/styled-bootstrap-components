@@ -40,6 +40,8 @@ $ yarn add styled-base-components
 
 > This package contains basic global style for bootstrap layouts and
 > styled components for using `utility` classes from bootstrap.
+> This package also contains `Transition` components that can be used for
+> creating transitions.
 
 ```jsx
 /*
@@ -57,7 +59,6 @@ import { BootstrapBaseCss, Div, Utilities } from 'styled-base-components';
 const MyComponent = styled.div`
   ${Utilities};
 `;
-
 
 const App = (props) => (
   <div>
@@ -77,6 +78,19 @@ const App = (props) => (
 
 ## Properties
 
+### Transition
+
+* transitionComponentProps **Type**: object
+* delay **Type**: millisecods
+* duration **Type**: milliseconds
+* timingFunc **Type**: string
+* noExit **Type**: boolean
+* noEnter **Type**: boolean
+* noInitialEnter **Type**: boolean
+* hideOnExit **Type**: boolean
+
+### Utilities
+
 Possible values for `{size}`:
 
 * nothing (for `xs`)
@@ -84,8 +98,6 @@ Possible values for `{size}`:
 * `Md` (for `md`)
 * `Lg` (for `lg`)
 * `Xl` (for `xl`)
-
-### Utilities
 
 * vertical-align:
   * `text{size}Baseline`
@@ -279,7 +291,7 @@ Possible values for `{size}`:
 * Hide text
   * `text{size}Hide`
 
-### Spacing
+#### Spacing
 
 Possible properties:
 

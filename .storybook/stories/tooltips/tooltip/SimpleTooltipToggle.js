@@ -14,7 +14,7 @@ export class SimpleTooltipToggle extends React.Component {
     this.state = {
       top: 0,
       left: 0,
-      hidden: false,
+      hidden: true,
     };
   }
 

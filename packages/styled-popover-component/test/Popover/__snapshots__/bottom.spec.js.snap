@@ -2,6 +2,13 @@
 
 exports[`Styles matches Popover bottom 1`] = `
 .c0 {
+  -webkit-transition: visibility 250ms ease-out 0ms, opacity 250ms ease-out 0ms;
+  transition: visibility 250ms ease-out 0ms, opacity 250ms ease-out 0ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.c1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -31,10 +38,14 @@ exports[`Styles matches Popover bottom 1`] = `
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 0.3rem;
   margin-top: 0.5rem;
-  display: block;
 }
 
 <div
   className="c0"
-/>
+  hidden={false}
+>
+  <div
+    className="c1"
+  />
+</div>
 `;
