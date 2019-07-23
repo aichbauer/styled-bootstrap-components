@@ -1,84 +1,34 @@
 import React from 'react';
-import { configure, addDecorator } from '@storybook/react';
-import { setOptions } from '@storybook/addon-options';
-import { Button as ButtonBoot } from '../packages/styled-button-component';
-import { BootstrapBaseCss } from '../packages/styled-base-components';
+import { addParameters, addDecorator, configure } from '@storybook/react';
+import { createGlobalStyle } from 'styled-components';
 
-setOptions({
-  addonPanelInRight: true,
-  showAddonPanel: false,
-});
-
-class Button extends React.Component {
-  constructor(props) {
-    super();
-
-    this.state = {
-      open: false,
-    };
+addParameters({
+  options: {
+    showPanel: true,
+    panelPosition: 'bottom',
   }
+})
 
-  handleOnClickReadme() {
-    this.setState({
-      open: !this.state.open,
-    }, () => {
-      setOptions({
-        showAddonPanel: this.state.open,
-      });
-    });
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+    color: #111111;
   }
+`;
 
-  render() {
-    const { open } = this.state;
-    return (
-      <ButtonBoot style={{
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-        fontWeight: 400,
-        lineHeight: 1.5,
-        fontSize: '1rem',
-        marginLeft: '10px',
-        marginTop: '8px',
-        marginBottom: '-10px',
-      }}
-      light onClick={() => this.handleOnClickReadme()}>
-        {open ? 'Close Readme' : 'Open Readme'}
-      </ButtonBoot>
-    );
-  }
-};
-
-const readmeDecorator = (story) => (
-  <div>
-    <BootstrapBaseCss />
-    <Button />
+const globalStyling = (story) => (
+  <React.Fragment>
+    <GlobalStyle />
     {story()}
-  </div>
+  </React.Fragment>
 );
 
-const loadStories = () => {
-  addDecorator(readmeDecorator);
-  require('./stories/alerts');
-  require('./stories/badges');
-  require('./stories/utilities');
-  require('./stories/transitions');
-  require('./stories/breadcrumbs');
-  require('./stories/buttons');
-  require('./stories/buttongroups');
-  require('./stories/cards');
-  require('./stories/dropdowns');
-  require('./stories/forms');
-  require('./stories/inputgroups');
-  require('./stories/jumbotrons');
-  require('./stories/container');
-  require('./stories/grid');
-  require('./stories/listgroups');
-  require('./stories/modals');
-  require('./stories/navs');
-  require('./stories/navbars');
-  require('./stories/popovers');
-  require('./stories/tooltips');
-  require('./stories/tables');
-  require('./stories/customize');
-};
+// automatically import all files ending in *.stories.js
+const req = require.context('./stories', true, /\.stories\.js$/);
 
-configure(loadStories(), module);
+function loadStories() {
+  addDecorator(globalStyling);
+  req.keys().forEach(filename => req(filename));
+}
+
+configure(loadStories, module);

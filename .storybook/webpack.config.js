@@ -1,10 +1,13 @@
-const path = require('path');
-const cwd = process.cwd();
+const path = require("path");
 
-module.exports = {
-  resolve: {
-    alias: {
-      'styled-components': path.resolve(cwd, 'node_modules', 'styled-components'),
-    }
-  }
+module.exports = function({ config }) {
+  config.module.rules.push({
+    // test: /\.stories\.jsx?$/,
+    test: /\.jsx?$/,
+    include: path.resolve('./stories'),
+    loaders: [require.resolve('@storybook/addon-storysource/loader')],
+    enforce: 'pre',
+  });
+
+  return config;
 };
