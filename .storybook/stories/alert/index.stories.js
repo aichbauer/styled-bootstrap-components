@@ -27,10 +27,7 @@ storiesOf('Alert', module)
       <Transition noInitialEnter hideOnExit hidden={hidden}>
         <Alert>
           Hello World
-          <span
-            style={{float: 'right', cursor: 'pointer'}}
-            onClick={() => setHidden(true)}
-          >
+          <span style={{float: 'right', cursor: 'pointer'}} onClick={() => setHidden(true)}>
             &#10006;
           </span>
         </Alert>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { addParameters, addDecorator, configure } from '@storybook/react';
 import { createGlobalStyle } from 'styled-components';
+import { Container } from '../packages/styled-container-component';
 
 addParameters({
   options: {
@@ -16,10 +17,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const globalStyling = (story) => (
+const storyWrapper = (story) => (
   <React.Fragment>
     <GlobalStyle />
-    {story()}
+    <Container>
+      {story()}
+    </Container>
   </React.Fragment>
 );
 
@@ -27,7 +30,10 @@ const globalStyling = (story) => (
 const req = require.context('./stories', true, /\.stories\.js$/);
 
 function loadStories() {
-  addDecorator(globalStyling);
+  addDecorator(storyWrapper);
+
+  require('./stories/index.stories');
+
   req.keys().forEach(filename => req(filename));
 }
 
