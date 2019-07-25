@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Story } from '../../utils';
 import { Badge } from '../../../packages/styled-badge-component';
 import { Button } from '../../../packages/styled-button-component';
-import { Div } from '../../../packages/styled-base-components';
 
 storiesOf('Badge', module)
   .add('in headings', () => (
