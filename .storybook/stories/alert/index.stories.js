@@ -5,7 +5,7 @@ import { Alert } from '../../../packages/styled-alert-component';
 import { Transition } from '../../../packages/styled-base-components';
 
 storiesOf('Alert', module)
-  .add('with text', () => (
+  .add('simple', () => (
     <Alert primary>Hello World</Alert>
   ))
   .add('colored', () => (
