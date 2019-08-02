@@ -13,9 +13,10 @@ export const getConfigProperty = (theme, ...propertyPath) => (
   || getProperty(defaultTheme, ...propertyPath)
 );
 
-// Helper for creating basic getter function for config's properies
+// Helper for creating basic getter function for acessor's config properies
 export const makeGetter = (property) => (
-  (props, accessor) => getConfigProperty(props.theme, accessor, property)
+  (props, accessor, ...path) =>
+    getConfigProperty(props.theme, accessor, property, ...path)
 );
 
 // ---------------------------------------------------------------------------
@@ -45,18 +46,17 @@ export const screenSize = (props) => {
   return '';
 };
 
-export const colors = (props, accessor) => {
-  const theme = props.theme || defaultTheme;
-  const availableColors = Object.keys(theme.colorScheme);
+export const colors = (props, accessor, ...path) => {
+  const availableColors = Object.keys(defaultTheme.colorScheme);
 
   for (let i = 0; i < availableColors.length; i += 1) {
     const color = availableColors[i];
 
     if (props[color]) {
-      return getConfigProperty(props.theme, accessor, 'colors', color);
+      return getConfigProperty(props.theme, accessor, 'colors', color, ...path);
     }
   }
 
   // Default
-  return getConfigProperty(props.theme, accessor, 'colors', 'secondary');
+  return getConfigProperty(props.theme, accessor, 'colors', 'secondary', ...path);
 };
