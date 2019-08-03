@@ -10,7 +10,7 @@ import {
 
 const PopoverBody = styled(Div)`
   padding: ${(props) => padding(props, 'popoverBody').default};
-  color: ${(props) => colors(props, 'popoverBody').color};
+  color: ${(props) => colors(props, 'popoverBody', 'color')};
 `;
 
 PopoverBody.defaultProps = {

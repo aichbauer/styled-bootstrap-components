@@ -11,9 +11,9 @@ import {
 const color = (props) => (
   props.disabled &&
   css`
-    color: ${colors(props, 'formCheckInput').colorDisabled};
+    color: ${colors(props, 'formCheckInput', 'colorDisabled')};
     & + label {
-      color: ${colors(props, 'formCheckInput').colorDisabledLabel};
+      color: ${colors(props, 'formCheckInput', 'colorDisabledLabel')};
     };
   `
 );

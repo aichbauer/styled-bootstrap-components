@@ -26,7 +26,7 @@ const Breadcrumb = styled(Ol)`
   padding: ${(props) => padding(props, 'breadcrumb').default};
   margin-bottom: ${(props) => margin(props, 'breadcrumb').bottom};
   list-style: none;
-  background-color: ${(props) => colors(props, 'breadcrumb').backgroundColor};
+  background-color: ${(props) => colors(props, 'breadcrumb', 'backgroundColor')};
   ${(props) => borderRadius(props)}
 `;
 

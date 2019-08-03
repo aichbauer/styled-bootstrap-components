@@ -35,9 +35,9 @@ const pill = (props) => (
 const TooltipInner = styled(Div)`
   max-width: 200px;
   padding: ${(props) => padding(props, 'tooltipInner').default};
-  color: ${(props) => colors(props, 'tooltipInner').color};
+  color: ${(props) => colors(props, 'tooltipInner', 'color')};
   text-align: center;
-  background-color: ${(props) => colors(props, 'tooltipInner').backgroundColor};
+  background-color: ${(props) => colors(props, 'tooltipInner', 'backgroundColor')};
   ${(props) => borderRadius(props)};
   ${(props) => pill(props)};
 `;

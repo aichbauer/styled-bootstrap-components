@@ -15,7 +15,7 @@ const color = (props) => {
       & tbody tr:hover,
       & tbody tr:hover > th,
       & tbody tr:hover > td {
-        background-color: ${colors(props, 'tr').activeBackgroundColor};
+        background-color: ${colors(props, 'tr', 'activeBackgroundColor')};
       };
     `;
   }
@@ -23,7 +23,7 @@ const color = (props) => {
   return css`
     & > th,
     & > td {
-      background-color: ${colors(props, 'tr').backgroundColor};
+      background-color: ${colors(props, 'tr', 'backgroundColor')};
     };
     ${props.hover &&
     css`
@@ -32,7 +32,7 @@ const color = (props) => {
         & tbody tr:hover,
         & tbody tr:hover > th,
         & tbody tr:hover > td {
-          background-color: ${colors(props, 'tr').backgroundColorHoverFocus};
+          background-color: ${colors(props, 'tr', 'backgroundColorHoverFocus')};
         };
       `};
     `;

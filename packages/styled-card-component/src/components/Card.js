@@ -28,9 +28,9 @@ const Card = styled(Div)`
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: ${(props) => colors(props, 'card').backgroundColor};
+  background-color: ${(props) => colors(props, 'card', 'backgroundColor')};
   background-clip: border-box;
-  border: ${(props) => border(props, 'card').default} ${(props) => colors(props, 'card').borderColor};
+  border: ${(props) => border(props, 'card').default} ${(props) => colors(props, 'card', 'borderColor')};
   ${(props) => borderRadius(props)}
 `;
 

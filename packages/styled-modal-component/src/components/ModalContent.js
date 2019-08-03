@@ -23,9 +23,9 @@ const ModalContent = styled(Div)`
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: ${(props) => colors(props, 'modalContent').backgroundColor};
+  background-color: ${(props) => colors(props, 'modalContent', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'modalContent').default} ${(props) => colors(props, 'modalContent').borderColor};
+  border: ${(props) => border(props, 'modalContent').default} ${(props) => colors(props, 'modalContent', 'borderColor')};
   outline: 0;
   ${(props) => borderRadius(props)}
 `;

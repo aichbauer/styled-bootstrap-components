@@ -64,12 +64,12 @@ const StyledDiv = styled(Div)`
   padding: ${(props) => padding(props, 'dropdownMenu').default};
   margin: ${(props) => margin(props, 'dropdownMenu').default};
   font-size: ${(props) => fontSize(props, 'dropdownMenu').default};
-  color: ${(props) => colors(props, 'dropdownMenu').color};
+  color: ${(props) => colors(props, 'dropdownMenu', 'color')};
   text-align: left;
   list-style: none;
-  background-color: ${(props) => colors(props, 'dropdownMenu').backgroundColor};
+  background-color: ${(props) => colors(props, 'dropdownMenu', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'dropdownMenu').default} ${(props) => colors(props, 'dropdownMenu').borderColor};
+  border: ${(props) => border(props, 'dropdownMenu').default} ${(props) => colors(props, 'dropdownMenu', 'borderColor')};
   ${(props) => borderRadius(props)};
   ${(props) => dropdownMenuHidden(props)};
   ${(props) => isLeftOrRight(props)};

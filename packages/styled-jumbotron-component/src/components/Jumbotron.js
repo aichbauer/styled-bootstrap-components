@@ -44,7 +44,7 @@ const borderRadius = (props) => {
 
 const Jumbotron = styled(Div)`
   margin-bottom: 2rem;
-  background-color: ${(props) => colors(props, 'jumbotron').backgroundColor};
+  background-color: ${(props) => colors(props, 'jumbotron', 'backgroundColor')};
   @media(min-width: ${(props) => props.theme.screenSize.sm}) {
     padding: ${(props) => {
     if (props.pill) {

@@ -55,9 +55,9 @@ export const PopoverWithoutTransition = styled(Div)`
   line-break: auto;
   font-size: ${(props) => fontSize(props, 'popover').sm};
   word-wrap: break-word;
-  background-color: ${(props) => colors(props, 'popover').backgroundColor};
+  background-color: ${(props) => colors(props, 'popover', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'popover').default} ${(props) => colors(props, 'popover').borderColor};
+  border: ${(props) => border(props, 'popover').default} ${(props) => colors(props, 'popover', 'borderColor')};
   border-radius: ${(props) => borderRadius(props, 'popover').lg};
   ${(props) => margin(props)};
 `;

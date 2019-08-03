@@ -8,10 +8,18 @@ export const getProperty = (obj, level, ...rest) => {
   return getProperty(obj[level], ...rest);
 };
 
-export const getConfigProperty = (theme, ...propertyPath) => (
-  getProperty(theme, ...propertyPath)
-  || getProperty(defaultTheme, ...propertyPath)
-);
+export const getConfigProperty = (theme, ...propertyPath) => {
+  const value = (
+    getProperty(theme, ...propertyPath)
+    || getProperty(defaultTheme, ...propertyPath)
+  );
+
+  if (typeof value === 'function') {
+    return value((...path) => getConfigProperty(theme, ...path));
+  }
+
+  return value;
+};
 
 // Helper for creating basic getter function for acessor's config properies
 export const makeGetter = (property) => (
@@ -58,5 +66,5 @@ export const colors = (props, accessor, ...path) => {
   }
 
   // Default
-  return getConfigProperty(props.theme, accessor, 'colors', 'secondary', ...path);
+  return getConfigProperty(props.theme, accessor, 'colors', 'default', ...path);
 };

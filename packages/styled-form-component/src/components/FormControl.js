@@ -17,17 +17,17 @@ import {
 const backgroundColor = (props) => {
   if (props.disabled || props.readonly) {
     return css`
-      background-color: ${colors(props, 'formControl').backgroundColorDisabledReadonly};
+      background-color: ${colors(props, 'formControl', 'backgroundColorDisabledReadonly')};
       &:focus {
-        background-color: ${colors(props, 'formControl').backgroundColorDisabledReadonly};
+        background-color: ${colors(props, 'formControl', 'backgroundColorDisabledReadonly')};
       }
     `;
   }
 
   return css`
-    background-color: ${colors(props, 'formControl').background};
+    background-color: ${colors(props, 'formControl', 'background')};
     &:focus {
-      background-color: ${colors(props, 'formControl').background};
+      background-color: ${colors(props, 'formControl', 'background')};
     }
   `;
 };
@@ -35,24 +35,24 @@ const backgroundColor = (props) => {
 const border = (props) => {
   if (props.valid) {
     return css`
-      border-color: ${colors(props, 'formControl').borderValid};
+      border-color: ${colors(props, 'formControl', 'borderValid')};
       &:focus {
-        border-color: ${colors(props, 'formControl').borderValid};
+        border-color: ${colors(props, 'formControl', 'borderValid')};
       };
     `;
   } else if (props.invalid) {
     return css`
-      border-color: ${colors(props, 'formControl').borderInvalid};
+      border-color: ${colors(props, 'formControl', 'borderInvalid')};
       &:focus {
-        border-color: ${colors(props, 'formControl').borderInvalid};
+        border-color: ${colors(props, 'formControl', 'borderInvalid')};
       };
     `;
   }
 
   return css`
-    border: ${b(props, 'formControl').default} ${colors(props, 'formControl').border};
+    border: ${b(props, 'formControl').default} ${colors(props, 'formControl', 'border')};
     &:focus {
-      border-color: ${colors(props, 'formControl').border};
+      border-color: ${colors(props, 'formControl', 'border')};
     };
   `;
 };
@@ -61,13 +61,13 @@ const boxShadow = (props) => {
   if (props.valid) {
     return css`
       &:focus {
-        box-shadow: ${bs(props, 'formControl').default} ${colors(props, 'formControl').formControlBoxShadowValid};
+        box-shadow: ${bs(props, 'formControl').default} ${colors(props, 'formControl', 'formControlBoxShadowValid')};
       };
     `;
   } else if (props.invalid) {
     return css`
       &:focus {
-        box-shadow: ${bs(props, 'formControl').default} ${colors(props, 'formControl').formControlBoxShadowInvalid};
+        box-shadow: ${bs(props, 'formControl').default} ${colors(props, 'formControl', 'formControlBoxShadowInvalid')};
       };
     `;
   }
@@ -185,7 +185,7 @@ const formControlStyle = () => css`
     display: block;
     width: 100%;
     line-height: 1.5;
-    color: ${(props) => colors(props, 'formControl').color};
+    color: ${(props) => colors(props, 'formControl', 'color')};
     background-clip: padding-box;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     box-sizing: border-box;
@@ -194,12 +194,12 @@ const formControlStyle = () => css`
       border: 0;
     };
     &:focus {
-      color: ${(props) => colors(props, 'formControl').color};
+      color: ${(props) => colors(props, 'formControl', 'color')};
       outline: 0;
-      box-shadow: 0 0 0 0.2rem ${(props) => colors(props, 'formControl').boxShadowFocus};
+      box-shadow: 0 0 0 0.2rem ${(props) => colors(props, 'formControl', 'boxShadowFocus')};
     };
     &::placeholder {
-      color: ${(props) => colors(props, 'formControl').placeholder};
+      color: ${(props) => colors(props, 'formControl', 'placeholder')};
       opacity: 1;
     };
     ${(props) => backgroundColor(props)}
@@ -224,8 +224,8 @@ const FormControlTextarea = styled(Textarea)`
 const FormControlSelect = styled(Select)`
   ${formControlStyle};
   &:focus::-ms-value {
-    color: ${(props) => colors(props, 'formControl').color};
-    background-color: ${(props) => colors(props, 'formControl').background};
+    color: ${(props) => colors(props, 'formControl', 'color')};
+    background-color: ${(props) => colors(props, 'formControl', 'background')};
   };
 `;
 

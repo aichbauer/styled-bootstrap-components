@@ -13,35 +13,35 @@ import {
 const color = (props) => {
   if (props.disabled) {
     return css`
-      color: ${colors(props, 'listGroupItem').colorDisabled};
+      color: ${colors(props, 'listGroupItem', 'colorDisabled')};
       ${props.action && css`
         & > a,
         & > a:hover,
         & > a:focus {
-          color: ${colors(props, 'listGroupItem').colorDisabled};
+          color: ${colors(props, 'listGroupItem', 'colorDisabled')};
         };
       `}
     `;
   } else if (props.active) {
     return css`
-      color: ${colors(props, 'listGroupItem').colorActive};
+      color: ${colors(props, 'listGroupItem', 'colorActive')};
       ${props.action && css`
         & > a,
         & > a:hover,
         & > a:focus {
-          color: ${colors(props, 'listGroupItem').colorActive};
+          color: ${colors(props, 'listGroupItem', 'colorActive')};
         };
       `}
     `;
   }
 
   return css`
-    color: ${colors(props, 'listGroupItem').color};
+    color: ${colors(props, 'listGroupItem', 'color')};
     ${props.action && css`
       & > a,
       & > a:hover,
       & > a:focus {
-        color: ${colors(props, 'listGroupItem').color};
+        color: ${colors(props, 'listGroupItem', 'color')};
       };
     `}
   `;
@@ -50,29 +50,29 @@ const color = (props) => {
 const backgroundBorderColor = (props) => {
   if (props.disabled) {
     return css`
-      background-color: ${colors(props, 'listGroupItem').backgroundColorDisabled};
+      background-color: ${colors(props, 'listGroupItem', 'backgroundColorDisabled')};
     `;
   }
 
   return css`
-    background-color: ${colors(props, 'listGroupItem').backgroundColor};
-    border-color: ${colors(props, 'listGroupItem').borderColor};
+    background-color: ${colors(props, 'listGroupItem', 'backgroundColor')};
+    border-color: ${colors(props, 'listGroupItem', 'borderColor')};
     ${props.action && css`
       &:hover,
       &:focus,
       & > a:hover,
       & > a:focus {
-        background-color: ${colors(props, 'listGroupItem').backgroundColorHoverFocusAction};
+        background-color: ${colors(props, 'listGroupItem', 'backgroundColorHoverFocusAction')};
       };
     `}
     ${props.active && css`
-      background-color: ${colors(props, 'listGroupItem').backgroundColorActive};
-      border-color: ${colors(props, 'listGroupItem').borderColorActive};
+      background-color: ${colors(props, 'listGroupItem', 'backgroundColorActive')};
+      border-color: ${colors(props, 'listGroupItem', 'borderColorActive')};
       &:hover,
       &:focus,
       & > a:hover,
       & > a:focus {
-        background-color: ${colors(props, 'listGroupItem').borderColorActive};
+        background-color: ${colors(props, 'listGroupItem', 'borderColorActive')};
       };
     `}
   `;
@@ -110,25 +110,25 @@ const ListGroupItem = styled(Li)`
   position: relative;
   display: block;
   padding: ${(props) => padding(props, 'listGroupItem').default};
-  border: ${(props) => border(props, 'listGroupItem').default} ${(props) => colors(props, 'listGroupItem').borderColor};
+  border: ${(props) => border(props, 'listGroupItem').default} ${(props) => colors(props, 'listGroupItem', 'borderColor')};
   border-bottom: none;
   margin-bottom: -1px;
   &:first-child {
-    border-top-left-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
-    border-top-right-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
+    border-top-left-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
+    border-top-right-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
   };
   &:last-child {
     border-bottom: ${(props) => border(props, 'listGroupItem').default}
     ${(props) => {
     if (props.active) {
-      return colors(props, 'listGroupItem').borderColorActive;
+      return colors(props, 'listGroupItem', 'borderColorActive');
     }
 
-    return colors(props, 'listGroupItem').borderColor;
+    return colors(props, 'listGroupItem', 'borderColor');
   }};
     margin-bottom: 0;
-    border-bottom-right-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
-    border-bottom-left-radius: ${(props) => borderRadius(props, 'listGroupItem').default};
+    border-bottom-right-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
+    border-bottom-left-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
   };
   & > a:hover,
   & > a:focus {

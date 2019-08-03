@@ -31,31 +31,31 @@ const padding = (props) => {
 };
 
 const backgroundColor = (props) => (
-  css`background-color: ${colors(props, 'badge').backgroundColor};`
+  css`background-color: ${colors(props, 'badge', 'backgroundColor')};`
 );
 
 const color = (props) => (
-  css`color: ${colors(props, 'badge').color};`
+  css`color: ${colors(props, 'badge', 'color')};`
 );
 
 const badgeLink = (props) => {
   if (props.action) {
     return css`
     & > a {
-      color: ${colors(props, 'badge').linkColor};
+      color: ${colors(props, 'badge', 'linkColor')};
       text-decoration: none;
-      background-color: ${colors(props, 'badge').backgroundColor};
+      background-color: ${colors(props, 'badge', 'backgroundColor')};
       &:hover, &:focus {
         text-decoration: none;
-        background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
+        background-color: ${colors(props, 'badge', 'backgroundColorHoverFocus')};
       };
     };
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
+      background-color: ${colors(props, 'badge', 'backgroundColorHoverFocus')};
       & > a {
-        background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
+        background-color: ${colors(props, 'badge', 'backgroundColorHoverFocus')};
       };
     };
   `;
@@ -63,9 +63,9 @@ const badgeLink = (props) => {
 
   return css`
     & > a {
-      color: ${colors(props, 'badge').linkColor};
+      color: ${colors(props, 'badge', 'linkColor')};
       text-decoration: none;
-      background-color: ${colors(props, 'badge').backgroundColor};
+      background-color: ${colors(props, 'badge', 'backgroundColor')};
     }
   `;
 };
@@ -73,7 +73,7 @@ const badgeLink = (props) => {
 const Badge = styled(Span)`
   display: inline-block;
   font-size: 75%;
-  font-weight: ${(props) => fontWeight(props, 'badge').default};
+  font-weight: ${(props) => fontWeight(props, 'badge', 'default')};
   line-height: 1;
   text-align: center;
   white-space: nowrap;

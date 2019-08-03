@@ -74,7 +74,7 @@ const flex = (props) => (
 const border = (props) => (
   props.tabs &&
   css`
-    border-bottom: ${b(props, 'nav').default} ${colors(props, 'nav').borderColorTabs};
+    border-bottom: ${b(props, 'nav').default} ${colors(props, 'nav', 'borderColorTabs')};
   `
 );
 

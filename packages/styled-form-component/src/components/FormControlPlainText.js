@@ -35,8 +35,8 @@ const FormControlPlainText = styled(Input)`
   padding-bottom: ${(props) => p(props, 'formControlPlainText').bottom};
   margin-bottom: ${(props) => margin(props, 'formControlPlainText').bottom};
   line-height: 1.5;
-  background-color: ${(props) => colors(props, 'formControlPlainText').backgroundColor};
-  border: solid ${(props) => colors(props, 'formControlPlainText').borderColor};
+  background-color: ${(props) => colors(props, 'formControlPlainText', 'backgroundColor')};
+  border: solid ${(props) => colors(props, 'formControlPlainText', 'borderColor')};
   border-width: 1px 0;
   box-sizing: border-box;
   ${(props) => display(props)};

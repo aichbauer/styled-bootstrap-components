@@ -11,16 +11,16 @@ import {
 const active = (props) => (
   props.active &&
   css`
-    color: ${colors(props, 'breadcrumbItem').color};
+    color: ${colors(props, 'breadcrumbItem', 'color')};
   `
 );
 
 const BreadcrumbItem = styled(Li)`
   &:not(:first-child)::before {
     display: inline-block;
-    padding-right: ${(props) => padding(props, 'breadcrumbItem').right};
-    padding-left: ${(props) => padding(props, 'breadcrumbItem').left};
-    color: ${(props) => colors(props, 'breadcrumbItem').color};
+    padding-right: ${(props) => padding(props, 'breadcrumbItem', 'right')};
+    padding-left: ${(props) => padding(props, 'breadcrumbItem', 'left')};
+    color: ${(props) => colors(props, 'breadcrumbItem', 'color')};
     content: "/";
   };
   & + &:hover::before {

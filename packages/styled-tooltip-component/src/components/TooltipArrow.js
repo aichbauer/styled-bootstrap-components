@@ -16,7 +16,7 @@ const tooltipArrowTop = (props) => (
       top: 0.4rem;
       left: calc(50% - 0.35rem);
       border-width: 0.4rem 0.4rem 0;
-      border-top-color: ${colors(props, 'tooltipArrow').borderColor};
+      border-top-color: ${colors(props, 'tooltipArrow', 'borderColor')};
     }
   `
 );
@@ -30,7 +30,7 @@ const tooltipArrowBottom = (props) => (
         bottom: 0.4rem;
         left: calc(50% - 0.35rem);
         border-width: 0 0.4rem 0.4rem;
-        border-bottom-color: ${colors(props, 'tooltipArrow').borderColor};
+        border-bottom-color: ${colors(props, 'tooltipArrow', 'borderColor')};
       }
     `
 );
@@ -45,7 +45,7 @@ const tooltipArrowRight = (props) => (
       right: 0;
       top: calc(50% - 0.35rem);
       border-width: 0.4rem 0.4rem 0.4rem 0;
-      border-right-color: ${colors(props, 'tooltipArrow').borderColor};
+      border-right-color: ${colors(props, 'tooltipArrow', 'borderColor')};
     }
   `
 );
@@ -60,7 +60,7 @@ const tooltipArrowLeft = (props) => (
       left: 0;
       top: calc(50% - 0.35rem);
       border-width: 0.4rem 0 0.4rem 0.4rem;
-      border-left-color: ${colors(props, 'tooltipArrow').borderColor};
+      border-left-color: ${colors(props, 'tooltipArrow', 'borderColor')};
     }
   `
 );

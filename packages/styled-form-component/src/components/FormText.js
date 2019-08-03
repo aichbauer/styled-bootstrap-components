@@ -11,7 +11,7 @@ import {
 const color = (props) => (
   props.muted &&
   css`
-    color: ${colors(props, 'formText').colorMuted};
+    color: ${colors(props, 'formText', 'colorMuted')};
   `
 );
 

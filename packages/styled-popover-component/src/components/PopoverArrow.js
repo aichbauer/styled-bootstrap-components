@@ -19,11 +19,11 @@ const popoverArrowTop = (props) => (
     };
     &::before {
       bottom: 0;
-      border-top-color: ${colors(props, 'popoverArrow').borderColor};
+      border-top-color: ${colors(props, 'popoverArrow', 'borderColor')};
     };
     &::after {
       bottom: 1px;
-      border-top-color: ${colors(props, 'popoverArrow').borderColorWhite};
+      border-top-color: ${colors(props, 'popoverArrow', 'borderColorWhite')};
     };
   `
 );
@@ -42,11 +42,11 @@ const popoverArrowRight = (props) => (
     };
     &::before {
       left: 0;
-      border-right-color: ${colors(props, 'popoverArrow').borderColor};
+      border-right-color: ${colors(props, 'popoverArrow', 'borderColor')};
     };
     &::after {
       left: 1px;
-      border-right-color: ${colors(props, 'popoverArrow').borderColorWhite};
+      border-right-color: ${colors(props, 'popoverArrow', 'borderColorWhite')};
     };
   `
 );
@@ -63,11 +63,11 @@ const popoverArrowBottom = (props) => (
     };
     &::before {
       top: 0;
-      border-bottom-color: ${colors(props, 'popoverArrow').borderColor};
+      border-bottom-color: ${colors(props, 'popoverArrow', 'borderColor')};
     };
     &::after {
       top: 1px;
-      border-bottom-color: ${colors(props, 'popoverArrow').borderColorWhite};
+      border-bottom-color: ${colors(props, 'popoverArrow', 'borderColorWhite')};
     };
   `
 );
@@ -86,11 +86,11 @@ const popoverArrowLeft = (props) => (
     };
     &::before {
       right: 0;
-      border-left-color: ${colors(props, 'popoverArrow').borderColor};
+      border-left-color: ${colors(props, 'popoverArrow', 'borderColor')};
     };
     &::after {
       right: 1px;
-      border-left-color: ${colors(props, 'popoverArrow').borderColorWhite};
+      border-left-color: ${colors(props, 'popoverArrow', 'borderColorWhite')};
     };
   `
 );

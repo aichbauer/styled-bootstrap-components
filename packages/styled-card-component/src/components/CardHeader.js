@@ -24,8 +24,8 @@ const borderRadius = (props) => {
 
 const CardHeader = styled(Div)`
   padding: ${(props) => padding(props, 'cardHeader').default};
-  background-color: ${(props) => colors(props, 'cardHeader').background};
-  border-bottom: 1px solid ${(props) => colors(props, 'cardHeader').borderBottom};
+  background-color: ${(props) => colors(props, 'cardHeader', 'background')};
+  border-bottom: 1px solid ${(props) => colors(props, 'cardHeader', 'borderBottom')};
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

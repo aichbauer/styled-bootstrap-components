@@ -20,7 +20,7 @@ const margin = (props) => (
 const color = (props) => (
   props.muted &&
   css`
-    color: ${colors(props, 'cardTitle').colorMuted};
+    color: ${colors(props, 'cardTitle', 'colorMuted')};
   `
 );
 

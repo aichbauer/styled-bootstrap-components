@@ -11,19 +11,19 @@ import {
 
 const color = (props) => (
   css`
-    color: ${colors(props, 'navbar').color};
+    color: ${colors(props, 'navbar', 'color')};
   `
 );
 
 const borderColor = (props) => (
   css`
-    border-color: ${colors(props, 'navbar').borderColor};
+    border-color: ${colors(props, 'navbar', 'borderColor')};
   `
 );
 
 const backgroundColor = (props) => (
   css`
-    background-color: ${colors(props, 'navbar').backgroundColor} !important;
+    background-color: ${colors(props, 'navbar', 'backgroundColor')} !important;
   `
 );
 

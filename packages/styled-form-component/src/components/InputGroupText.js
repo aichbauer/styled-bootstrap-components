@@ -21,11 +21,11 @@ const InputGroupText = styled(Span)`
   font-size: ${(props) => fontSize(props, 'inputGroupText').default};
   font-weight: ${(props) => fontWeight(props, 'inputGroupText').default};
   line-height: 1.5;
-  color: ${(props) => colors(props, 'inputGroupText').color};
+  color: ${(props) => colors(props, 'inputGroupText', 'color')};
   text-align: center;
   white-space: nowrap;
-  background-color: ${(props) => colors(props, 'inputGroupText').backgroundColor};
-  border: ${(props) => border(props, 'inputGroupText').default} ${(props) => colors(props, 'inputGroupText').borderColor};
+  background-color: ${(props) => colors(props, 'inputGroupText', 'backgroundColor')};
+  border: ${(props) => border(props, 'inputGroupText').default} ${(props) => colors(props, 'inputGroupText', 'borderColor')};
   border-radius: ${(props) => borderRadius(props, 'inputGroupText').default};
   & input[type="radio"],
   & input[type="checkbox"] {
