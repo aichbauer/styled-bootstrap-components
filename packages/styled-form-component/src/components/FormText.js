@@ -4,14 +4,14 @@ import { Small } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   margin,
 } from 'styled-config';
 
 const color = (props) => (
   props.muted &&
   css`
-    color: ${colors(props, 'formText', 'colorMuted')};
+    color: ${getColor(props, 'formText', 'colorMuted')};
   `
 );
 

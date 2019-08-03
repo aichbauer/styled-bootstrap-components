@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { NavLink } from 'styled-nav-component';
 import {
   theme,
-  colors,
+  getColor,
   padding as p,
   fontSize as fs,
 } from 'styled-config';
@@ -11,51 +11,51 @@ import {
 const color = (props) => {
   if (props.dark && props.disabled) {
     return css`
-      color: ${colors(props, 'navbarLink', 'colorDisabled')};
+      color: ${getColor(props, 'navbarLink', 'colorDisabled')};
       &:hover,
       &:focus {
-        color: ${colors(props, 'navbarLink', 'colorDisabledHoverFocus')};
+        color: ${getColor(props, 'navbarLink', 'colorDisabledHoverFocus')};
       };
     `;
   } else if (props.dark && props.active) {
     return css`
-      color: ${colors(props, 'navbarLink', 'colorActive')};
+      color: ${getColor(props, 'navbarLink', 'colorActive')};
       &:hover,
       &:focus {
-        color: ${colors(props, 'navbarLink', 'colorActiveHoverFocus')};
+        color: ${getColor(props, 'navbarLink', 'colorActiveHoverFocus')};
       };
     `;
   } else if (props.dark) {
     return css`
-      color: ${colors(props, 'navbarLink', 'color')};
+      color: ${getColor(props, 'navbarLink', 'color')};
       &:hover,
       &:focus {
-        color: ${colors(props, 'navbarLink', 'colorHoverFocus')};
+        color: ${getColor(props, 'navbarLink', 'colorHoverFocus')};
       };
     `;
   } else if (props.disabled) {
     return css`
-      color: ${colors(props, 'navbarLink', 'colorDisabled')};
+      color: ${getColor(props, 'navbarLink', 'colorDisabled')};
       &:hover,
       &:focus {
-        color: ${colors(props, 'navbarLink', 'colorDisabledHoverFocus')};
+        color: ${getColor(props, 'navbarLink', 'colorDisabledHoverFocus')};
       };
     `;
   } else if (props.active) {
     return css`
-      color: ${colors(props, 'navbarLink', 'colorActive')};
+      color: ${getColor(props, 'navbarLink', 'colorActive')};
       &:hover,
       &:focus {
-        color: ${colors(props, 'navbarLink', 'colorActiveHoverFocus')};
+        color: ${getColor(props, 'navbarLink', 'colorActiveHoverFocus')};
       };
     `;
   }
 
   return css`
-    color: ${colors(props, 'navbarLink', 'color')};
+    color: ${getColor(props, 'navbarLink', 'color')};
     &:hover,
     &:focus {
-      color: ${colors(props, 'navbarLink', 'colorHoverFocus')};
+      color: ${getColor(props, 'navbarLink', 'colorHoverFocus')};
     };
   `;
 };

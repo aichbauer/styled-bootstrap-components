@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   borderRadius as br,
   border,
 } from 'styled-config';
@@ -28,9 +28,9 @@ const Card = styled(Div)`
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: ${(props) => colors(props, 'card', 'backgroundColor')};
+  background-color: ${(props) => getColor(props, 'card', 'backgroundColor')};
   background-clip: border-box;
-  border: ${(props) => border(props, 'card').default} ${(props) => colors(props, 'card', 'borderColor')};
+  border: ${(props) => border(props, 'card').default} ${(props) => getColor(props, 'card', 'borderColor')};
   ${(props) => borderRadius(props)}
 `;
 

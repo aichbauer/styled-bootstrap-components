@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   padding,
   border,
   borderRadius,
@@ -15,7 +15,7 @@ const ModalHeader = styled(Div)`
   align-items: flex-start;
   justify-content: space-between;
   padding: ${(props) => padding(props, 'modalHeader').default};
-  border-bottom: ${(props) => border(props, 'modalHeader').default} ${(props) => colors(props, 'modalHeader', 'borderColor')};
+  border-bottom: ${(props) => border(props, 'modalHeader').default} ${(props) => getColor(props, 'modalHeader', 'borderColor')};
   border-top-left-radius: ${(props) => borderRadius(props, 'modalHeader').lg};
   border-top-right-radius: ${(props) => borderRadius(props, 'modalHeader').lg};
 `;

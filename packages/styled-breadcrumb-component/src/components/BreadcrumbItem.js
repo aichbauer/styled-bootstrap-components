@@ -4,14 +4,14 @@ import { Li } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   padding,
 } from 'styled-config';
 
 const active = (props) => (
   props.active &&
   css`
-    color: ${colors(props, 'breadcrumbItem', 'color')};
+    color: ${getColor(props, 'breadcrumbItem', 'color')};
   `
 );
 
@@ -20,7 +20,7 @@ const BreadcrumbItem = styled(Li)`
     display: inline-block;
     padding-right: ${(props) => padding(props, 'breadcrumbItem', 'right')};
     padding-left: ${(props) => padding(props, 'breadcrumbItem', 'left')};
-    color: ${(props) => colors(props, 'breadcrumbItem', 'color')};
+    color: ${(props) => getColor(props, 'breadcrumbItem', 'color')};
     content: "/";
   };
   & + &:hover::before {

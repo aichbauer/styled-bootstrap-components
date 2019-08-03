@@ -4,26 +4,26 @@ import { Nav } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   padding,
   screenSize,
 } from 'styled-config';
 
 const color = (props) => (
   css`
-    color: ${colors(props, 'navbar', 'color')};
+    color: ${getColor(props, 'navbar', 'color')};
   `
 );
 
 const borderColor = (props) => (
   css`
-    border-color: ${colors(props, 'navbar', 'borderColor')};
+    border-color: ${getColor(props, 'navbar', 'borderColor')};
   `
 );
 
 const backgroundColor = (props) => (
   css`
-    background-color: ${colors(props, 'navbar', 'backgroundColor')} !important;
+    background-color: ${getColor(props, 'navbar', 'backgroundColor')} !important;
   `
 );
 

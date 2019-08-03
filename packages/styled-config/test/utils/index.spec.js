@@ -3,7 +3,7 @@ import {
   border,
   borderRadius,
   boxShadow,
-  colors,
+  getColor,
   fontFamily,
   fontSize,
   fontWeight,
@@ -33,15 +33,15 @@ test('test if boxShadow extracts boxShadow of theme', () => {
 });
 
 test('test if colors extracts colors of theme', () => {
-  const cDefault = colors({ theme }, 'button');
-  const cPrimary = colors({ theme, primary: true }, 'button');
-  const cSecondary = colors({ theme, secondary: true }, 'button');
-  const cSuccess = colors({ theme, success: true }, 'button');
-  const cDanger = colors({ theme, danger: true }, 'button');
-  const cWarning = colors({ theme, warning: true }, 'button');
-  const cInfo = colors({ theme, info: true }, 'button');
-  const cLight = colors({ theme, light: true }, 'button');
-  const cDark = colors({ theme, dark: true }, 'button');
+  const cDefault = getColor({ theme }, 'button');
+  const cPrimary = getColor({ theme, primary: true }, 'button');
+  const cSecondary = getColor({ theme, secondary: true }, 'button');
+  const cSuccess = getColor({ theme, success: true }, 'button');
+  const cDanger = getColor({ theme, danger: true }, 'button');
+  const cWarning = getColor({ theme, warning: true }, 'button');
+  const cInfo = getColor({ theme, info: true }, 'button');
+  const cLight = getColor({ theme, light: true }, 'button');
+  const cDark = getColor({ theme, dark: true }, 'button');
 
   expect(cDefault).toEqual(theme.button.colors.default);
   expect(cPrimary).toEqual(theme.button.colors.primary);

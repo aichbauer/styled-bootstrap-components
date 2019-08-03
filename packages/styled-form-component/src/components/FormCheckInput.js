@@ -4,16 +4,16 @@ import { Input } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   margin,
 } from 'styled-config';
 
 const color = (props) => (
   props.disabled &&
   css`
-    color: ${colors(props, 'formCheckInput', 'colorDisabled')};
+    color: ${getColor(props, 'formCheckInput', 'colorDisabled')};
     & + label {
-      color: ${colors(props, 'formCheckInput', 'colorDisabledLabel')};
+      color: ${getColor(props, 'formCheckInput', 'colorDisabledLabel')};
     };
   `
 );

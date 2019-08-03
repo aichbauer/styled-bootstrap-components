@@ -54,7 +54,7 @@ export const screenSize = (props) => {
   return '';
 };
 
-export const colors = (props, accessor, ...path) => {
+export const getColor = (props, accessor, ...path) => {
   const availableColors = Object.keys(defaultTheme.colorScheme);
 
   for (let i = 0; i < availableColors.length; i += 1) {

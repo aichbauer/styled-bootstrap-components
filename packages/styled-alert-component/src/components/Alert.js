@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   margin,
   padding,
   border,
@@ -20,21 +20,21 @@ const alertDismissible = (props) => (
 );
 
 const color = (props) => (
-  css`color: ${colors(props, 'alert', 'text')};`
+  css`color: ${getColor(props, 'alert', 'text')};`
 );
 
 const backgroundColor = (props) => (
-  css`background-color: ${colors(props, 'alert', 'background')};`
+  css`background-color: ${getColor(props, 'alert', 'background')};`
 );
 
 const borderColor = (props) => (
-  css`border-color: ${colors(props, 'alert', 'border')};`
+  css`border-color: ${getColor(props, 'alert', 'border')};`
 );
 
 const borderTopColor = (props) => (
   css`
     & > hr {
-      border-top-color: ${colors(props, 'alert', 'borderTop')};
+      border-top-color: ${getColor(props, 'alert', 'borderTop')};
     };
   `
 );
@@ -43,7 +43,7 @@ const linkHoverColor = (props) => (
   css`
     & > a,
     & > a:hover {
-      color: ${colors(props, 'alert', 'hover')};
+      color: ${getColor(props, 'alert', 'hover')};
     };
   `
 );

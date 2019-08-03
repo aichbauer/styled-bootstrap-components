@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   padding as p,
   borderRadius as br,
 } from 'styled-config';
@@ -44,7 +44,7 @@ const borderRadius = (props) => {
 
 const Jumbotron = styled(Div)`
   margin-bottom: 2rem;
-  background-color: ${(props) => colors(props, 'jumbotron', 'backgroundColor')};
+  background-color: ${(props) => getColor(props, 'jumbotron', 'backgroundColor')};
   @media(min-width: ${(props) => props.theme.screenSize.sm}) {
     padding: ${(props) => {
     if (props.pill) {

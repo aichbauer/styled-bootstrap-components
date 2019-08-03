@@ -4,7 +4,7 @@ import { Span } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   padding as p,
   borderRadius as br,
   fontWeight,
@@ -31,31 +31,31 @@ const padding = (props) => {
 };
 
 const backgroundColor = (props) => (
-  css`background-color: ${colors(props, 'badge', 'backgroundColor')};`
+  css`background-color: ${getColor(props, 'badge', 'backgroundColor')};`
 );
 
 const color = (props) => (
-  css`color: ${colors(props, 'badge', 'color')};`
+  css`color: ${getColor(props, 'badge', 'color')};`
 );
 
 const badgeLink = (props) => {
   if (props.action) {
     return css`
     & > a {
-      color: ${colors(props, 'badge', 'linkColor')};
+      color: ${getColor(props, 'badge', 'linkColor')};
       text-decoration: none;
-      background-color: ${colors(props, 'badge', 'backgroundColor')};
+      background-color: ${getColor(props, 'badge', 'backgroundColor')};
       &:hover, &:focus {
         text-decoration: none;
-        background-color: ${colors(props, 'badge', 'backgroundColorHoverFocus')};
+        background-color: ${getColor(props, 'badge', 'backgroundColorHoverFocus')};
       };
     };
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: ${colors(props, 'badge', 'backgroundColorHoverFocus')};
+      background-color: ${getColor(props, 'badge', 'backgroundColorHoverFocus')};
       & > a {
-        background-color: ${colors(props, 'badge', 'backgroundColorHoverFocus')};
+        background-color: ${getColor(props, 'badge', 'backgroundColorHoverFocus')};
       };
     };
   `;
@@ -63,9 +63,9 @@ const badgeLink = (props) => {
 
   return css`
     & > a {
-      color: ${colors(props, 'badge', 'linkColor')};
+      color: ${getColor(props, 'badge', 'linkColor')};
       text-decoration: none;
-      background-color: ${colors(props, 'badge', 'backgroundColor')};
+      background-color: ${getColor(props, 'badge', 'backgroundColor')};
     }
   `;
 };

@@ -4,7 +4,7 @@ import { Utilities, Button as BaseButton, A } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   screenSize,
   borderRadius as br,
   border as b,
@@ -15,7 +15,7 @@ import {
 
 const boxShadow = (props) => (
   css`
-    box-shadow: 0 0 0 0.2rem ${colors(props, 'button', 'boxShadow')};
+    box-shadow: 0 0 0 0.2rem ${getColor(props, 'button', 'boxShadow')};
   `
 );
 
@@ -129,18 +129,18 @@ const disabled = (props) => (
 
 const border = (props) => {
   if (props.active) {
-    return css`border: ${b(props, 'button').default} ${colors(props, 'button', 'borderColorActive')};`;
+    return css`border: ${b(props, 'button').default} ${getColor(props, 'button', 'borderColorActive')};`;
   } else if (props.disabled) {
-    return css`border: ${b(props, 'button').default} ${colors(props, 'button', 'borderColorDisabled')};`;
+    return css`border: ${b(props, 'button').default} ${getColor(props, 'button', 'borderColorDisabled')};`;
   }
 
   return css`
-    border: 1px solid ${colors(props, 'button', 'borderColor')};
+    border: 1px solid ${getColor(props, 'button', 'borderColor')};
     ${!props.outline &&
     css`
       &:focus,
       &:hover {
-        border: 1px solid ${colors(props, 'button', 'borderColorHoverFocus')};
+        border: 1px solid ${getColor(props, 'button', 'borderColorHoverFocus')};
       }
     `}
   `;
@@ -150,28 +150,28 @@ const backgroundColor = (props) => {
   if (props.active) {
     return css`
       background-image: none;
-      background-color: ${colors(props, 'button', 'backgroundColorActive')};
+      background-color: ${getColor(props, 'button', 'backgroundColorActive')};
     `;
   } else if (props.outline) {
     return css`
       background-image: none;
       background-color: transparent;
       &:hover {
-        background-color: ${props.disabled ? 'transparent' : colors(props, 'button', 'backgroundColor')};
+        background-color: ${props.disabled ? 'transparent' : getColor(props, 'button', 'backgroundColor')};
       }
     `;
   } else if (props.disabled) {
     return css`
       background-image: none;
-      background-color: ${colors(props, 'button', 'backgroundColorDisabled')};
+      background-color: ${getColor(props, 'button', 'backgroundColorDisabled')};
     `;
   }
 
   return css`
-    background-color: ${colors(props, 'button', 'backgroundColor')};
+    background-color: ${getColor(props, 'button', 'backgroundColor')};
     &:focus,
     &:hover {
-      background-color: ${colors(props, 'button', 'backgroundColorHoverFocus')};
+      background-color: ${getColor(props, 'button', 'backgroundColorHoverFocus')};
     }
   `;
 };
@@ -192,11 +192,11 @@ const borderRadius = (props) => {
 
 const buttonToggler = (props) => (
   css`
-    color: ${colors(props, 'button', 'toggle', 'color')};
-    border-color: ${colors(props, 'button', 'toggle', 'borderColor')};
+    color: ${getColor(props, 'button', 'toggle', 'color')};
+    border-color: ${getColor(props, 'button', 'toggle', 'borderColor')};
     &:hover, &:focus {
-      color: ${colors(props, 'button', 'toggle', 'color')};
-      border-color: ${colors(props, 'button', 'toggle', 'borderColor')};
+      color: ${getColor(props, 'button', 'toggle', 'color')};
+      border-color: ${getColor(props, 'button', 'toggle', 'borderColor')};
     }
   `
 );
@@ -228,19 +228,19 @@ const color = (props) => {
   if (props.outline) {
     if (props.disabled) {
       return css`
-        color: ${colors(props, 'button', 'colorOutline')};
+        color: ${getColor(props, 'button', 'colorOutline')};
       `;
     }
 
     return css`
-      color: ${colors(props, 'button', 'colorOutline')};
+      color: ${getColor(props, 'button', 'colorOutline')};
       &:hover {
-        color: ${colors(props, 'button', 'colorOutlineHover')};
+        color: ${getColor(props, 'button', 'colorOutlineHover')};
       }
     `;
   }
 
-  return css`color: ${colors(props, 'button', 'color')};`;
+  return css`color: ${getColor(props, 'button', 'color')};`;
 };
 
 const cursor = (props) => (

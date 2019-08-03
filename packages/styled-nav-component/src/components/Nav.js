@@ -4,7 +4,7 @@ import { Nav as BaseNav } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   padding,
   margin as m,
   border as b,
@@ -74,7 +74,7 @@ const flex = (props) => (
 const border = (props) => (
   props.tabs &&
   css`
-    border-bottom: ${b(props, 'nav').default} ${colors(props, 'nav', 'borderColorTabs')};
+    border-bottom: ${b(props, 'nav').default} ${getColor(props, 'nav', 'borderColorTabs')};
   `
 );
 

@@ -4,7 +4,7 @@ import { Li } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   padding,
   border,
   borderRadius,
@@ -13,35 +13,35 @@ import {
 const color = (props) => {
   if (props.disabled) {
     return css`
-      color: ${colors(props, 'listGroupItem', 'colorDisabled')};
+      color: ${getColor(props, 'listGroupItem', 'colorDisabled')};
       ${props.action && css`
         & > a,
         & > a:hover,
         & > a:focus {
-          color: ${colors(props, 'listGroupItem', 'colorDisabled')};
+          color: ${getColor(props, 'listGroupItem', 'colorDisabled')};
         };
       `}
     `;
   } else if (props.active) {
     return css`
-      color: ${colors(props, 'listGroupItem', 'colorActive')};
+      color: ${getColor(props, 'listGroupItem', 'colorActive')};
       ${props.action && css`
         & > a,
         & > a:hover,
         & > a:focus {
-          color: ${colors(props, 'listGroupItem', 'colorActive')};
+          color: ${getColor(props, 'listGroupItem', 'colorActive')};
         };
       `}
     `;
   }
 
   return css`
-    color: ${colors(props, 'listGroupItem', 'color')};
+    color: ${getColor(props, 'listGroupItem', 'color')};
     ${props.action && css`
       & > a,
       & > a:hover,
       & > a:focus {
-        color: ${colors(props, 'listGroupItem', 'color')};
+        color: ${getColor(props, 'listGroupItem', 'color')};
       };
     `}
   `;
@@ -50,29 +50,29 @@ const color = (props) => {
 const backgroundBorderColor = (props) => {
   if (props.disabled) {
     return css`
-      background-color: ${colors(props, 'listGroupItem', 'backgroundColorDisabled')};
+      background-color: ${getColor(props, 'listGroupItem', 'backgroundColorDisabled')};
     `;
   }
 
   return css`
-    background-color: ${colors(props, 'listGroupItem', 'backgroundColor')};
-    border-color: ${colors(props, 'listGroupItem', 'borderColor')};
+    background-color: ${getColor(props, 'listGroupItem', 'backgroundColor')};
+    border-color: ${getColor(props, 'listGroupItem', 'borderColor')};
     ${props.action && css`
       &:hover,
       &:focus,
       & > a:hover,
       & > a:focus {
-        background-color: ${colors(props, 'listGroupItem', 'backgroundColorHoverFocusAction')};
+        background-color: ${getColor(props, 'listGroupItem', 'backgroundColorHoverFocusAction')};
       };
     `}
     ${props.active && css`
-      background-color: ${colors(props, 'listGroupItem', 'backgroundColorActive')};
-      border-color: ${colors(props, 'listGroupItem', 'borderColorActive')};
+      background-color: ${getColor(props, 'listGroupItem', 'backgroundColorActive')};
+      border-color: ${getColor(props, 'listGroupItem', 'borderColorActive')};
       &:hover,
       &:focus,
       & > a:hover,
       & > a:focus {
-        background-color: ${colors(props, 'listGroupItem', 'borderColorActive')};
+        background-color: ${getColor(props, 'listGroupItem', 'borderColorActive')};
       };
     `}
   `;
@@ -110,7 +110,7 @@ const ListGroupItem = styled(Li)`
   position: relative;
   display: block;
   padding: ${(props) => padding(props, 'listGroupItem').default};
-  border: ${(props) => border(props, 'listGroupItem').default} ${(props) => colors(props, 'listGroupItem', 'borderColor')};
+  border: ${(props) => border(props, 'listGroupItem').default} ${(props) => getColor(props, 'listGroupItem', 'borderColor')};
   border-bottom: none;
   margin-bottom: -1px;
   &:first-child {
@@ -121,10 +121,10 @@ const ListGroupItem = styled(Li)`
     border-bottom: ${(props) => border(props, 'listGroupItem').default}
     ${(props) => {
     if (props.active) {
-      return colors(props, 'listGroupItem', 'borderColorActive');
+      return getColor(props, 'listGroupItem', 'borderColorActive');
     }
 
-    return colors(props, 'listGroupItem', 'borderColor');
+    return getColor(props, 'listGroupItem', 'borderColor');
   }};
     margin-bottom: 0;
     border-bottom-right-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};

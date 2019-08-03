@@ -5,7 +5,7 @@ import { H1, H2, H3, H4, H5, H6 } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
   margin as m,
 } from 'styled-config';
 
@@ -20,7 +20,7 @@ const margin = (props) => (
 const color = (props) => (
   props.muted &&
   css`
-    color: ${colors(props, 'cardTitle', 'colorMuted')};
+    color: ${getColor(props, 'cardTitle', 'colorMuted')};
   `
 );
 
