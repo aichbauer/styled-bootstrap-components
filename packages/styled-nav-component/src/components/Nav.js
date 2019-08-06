@@ -7,7 +7,7 @@ import {
   getColor,
   getPadding,
   getMargin,
-  border as b,
+  getBorder,
   getBreakpointSize,
 } from 'styled-config';
 
@@ -74,7 +74,7 @@ const flex = (props) => (
 const border = (props) => (
   props.tabs &&
   css`
-    border-bottom: ${b(props, 'nav').default} ${getColor(props, 'nav', 'borderColorTabs')};
+    border-bottom: ${getBorder(props, 'nav', 'default')} ${getColor(props, 'nav', 'borderColorTabs')};
   `
 );
 

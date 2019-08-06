@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   borderRadius as br,
-  border,
+  getBorder,
 } from 'styled-config';
 
 const borderRadius = (props) => {
@@ -30,7 +30,7 @@ const Card = styled(Div)`
   word-wrap: break-word;
   background-color: ${(props) => getColor(props, 'card', 'backgroundColor')};
   background-clip: border-box;
-  border: ${(props) => border(props, 'card').default} ${(props) => getColor(props, 'card', 'borderColor')};
+  border: ${(props) => getBorder(props, 'card', 'default')} ${(props) => getColor(props, 'card', 'borderColor')};
   ${(props) => borderRadius(props)}
 `;
 

@@ -10,7 +10,7 @@ import {
   fontWeight,
   getMargin,
   borderRadius,
-  border,
+  getBorder,
 } from 'styled-config';
 
 const InputGroupText = styled(Span)`
@@ -25,7 +25,7 @@ const InputGroupText = styled(Span)`
   text-align: center;
   white-space: nowrap;
   background-color: ${(props) => getColor(props, 'inputGroupText', 'backgroundColor')};
-  border: ${(props) => border(props, 'inputGroupText').default} ${(props) => getColor(props, 'inputGroupText', 'borderColor')};
+  border: ${(props) => getBorder(props, 'inputGroupText', 'default')} ${(props) => getColor(props, 'inputGroupText', 'borderColor')};
   border-radius: ${(props) => borderRadius(props, 'inputGroupText').default};
   & input[type="radio"],
   & input[type="checkbox"] {

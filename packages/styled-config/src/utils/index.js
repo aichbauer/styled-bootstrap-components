@@ -32,7 +32,7 @@ export const makeGetter = (property) => (
 export const getBoxShadow = makeGetter('boxShadow');
 export const getMargin = makeGetter('margin');
 export const getPadding = makeGetter('padding');
-export const border = makeGetter('border');
+export const getBorder = makeGetter('border');
 export const borderRadius = makeGetter('borderRadius');
 export const fontWeight = makeGetter('fontWeight');
 export const fontSize = makeGetter('fontSize');

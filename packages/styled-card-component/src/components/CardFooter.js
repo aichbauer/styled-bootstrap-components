@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getPadding,
-  border,
+  getBorder,
   borderRadius as br,
 } from 'styled-config';
 
@@ -25,7 +25,7 @@ const borderRadius = (props) => {
 const CardFooter = styled(Div)`
   padding: ${(props) => getPadding(props, 'cardFooter', 'default')};
   background-color: ${(props) => getColor(props, 'cardFooter', 'background')};
-  border-top: ${(props) => border(props, 'cardFooter').default} ${(props) => getColor(props, 'cardFooter', 'borderTop')};
+  border-top: ${(props) => getBorder(props, 'cardFooter', 'default')} ${(props) => getColor(props, 'cardFooter', 'borderTop')};
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

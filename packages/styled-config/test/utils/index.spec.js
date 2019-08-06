@@ -1,6 +1,6 @@
 import {
   theme,
-  border,
+  getBorder,
   borderRadius,
   getBoxShadow,
   getColor,
@@ -15,8 +15,8 @@ import {
   getConcreteBreakpointSize,
 } from '../../src';
 
-test('test if border extracts border of theme', () => {
-  const b = border({ theme }, 'button');
+test('test if getBorder extracts border of theme', () => {
+  const b = getBorder({ theme }, 'button');
 
   expect(b).toEqual(theme.button.border);
 });

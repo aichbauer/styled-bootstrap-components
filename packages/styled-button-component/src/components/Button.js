@@ -7,7 +7,7 @@ import {
   getColor,
   getBreakpointSize,
   borderRadius as br,
-  border as b,
+  getBorder,
   getPadding,
   getMargin,
   fontSize as fs,
@@ -129,9 +129,9 @@ const disabled = (props) => (
 
 const border = (props) => {
   if (props.active) {
-    return css`border: ${b(props, 'button').default} ${getColor(props, 'button', 'borderColorActive')};`;
+    return css`border: ${getBorder(props, 'button', 'default')} ${getColor(props, 'button', 'borderColorActive')};`;
   } else if (props.disabled) {
-    return css`border: ${b(props, 'button').default} ${getColor(props, 'button', 'borderColorDisabled')};`;
+    return css`border: ${getBorder(props, 'button', 'default')} ${getColor(props, 'button', 'borderColorDisabled')};`;
   }
 
   return css`

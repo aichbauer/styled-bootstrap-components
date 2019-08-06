@@ -1,6 +1,6 @@
 import { theme } from './theme';
 import {
-  border,
+  getBorder,
   borderRadius,
   getBoxShadow,
   getColor,
@@ -18,7 +18,7 @@ import {
 export {
   theme,
   // utils
-  border,
+  getBorder,
   borderRadius,
   getBoxShadow,
   getColor,

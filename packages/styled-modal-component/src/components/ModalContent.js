@@ -5,7 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getColor,
-  border,
+  getBorder,
   borderRadius as br,
 } from 'styled-config';
 
@@ -25,7 +25,7 @@ const ModalContent = styled(Div)`
   pointer-events: auto;
   background-color: ${(props) => getColor(props, 'modalContent', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'modalContent').default} ${(props) => getColor(props, 'modalContent', 'borderColor')};
+  border: ${(props) => getBorder(props, 'modalContent', 'default')} ${(props) => getColor(props, 'modalContent', 'borderColor')};
   outline: 0;
   ${(props) => borderRadius(props)}
 `;

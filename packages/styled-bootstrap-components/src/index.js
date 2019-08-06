@@ -21,7 +21,7 @@ import {
 } from 'styled-card-component';
 import {
   theme,
-  border,
+  getBorder,
   borderRadius,
   getBoxShadow,
   getColor,
@@ -117,7 +117,7 @@ export {
   CardText,
   CardTitle,
   theme,
-  border,
+  getBorder,
   borderRadius,
   getBoxShadow,
   getColor,

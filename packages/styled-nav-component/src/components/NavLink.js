@@ -7,7 +7,7 @@ import {
   getColor,
   getPadding,
   borderRadius as br,
-  border as b,
+  getBorder,
 } from 'styled-config';
 
 const color = (props) => {
@@ -98,7 +98,7 @@ const borderRadius = (props) => {
 const NavLink = styled(A)`
   display: block;
   padding: ${(props) => getPadding(props, 'navLink', 'default')};
-  border: ${(props) => b(props, 'navLink').default} ${(props) => getColor(props, 'navLink', 'borderColor')};
+  border: ${(props) => getBorder(props, 'navLink', 'default')} ${(props) => getColor(props, 'navLink', 'borderColor')};
   &:hover,
   &:focus {
     text-decoration: none;

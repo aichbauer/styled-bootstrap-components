@@ -12,7 +12,7 @@ import {
   getPadding,
   getMargin,
   fontSize,
-  border,
+  getBorder,
 } from 'styled-config';
 
 const isLeftOrRight = (props) => (
@@ -69,7 +69,7 @@ const StyledDiv = styled(Div)`
   list-style: none;
   background-color: ${(props) => getColor(props, 'dropdownMenu', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'dropdownMenu').default} ${(props) => getColor(props, 'dropdownMenu', 'borderColor')};
+  border: ${(props) => getBorder(props, 'dropdownMenu', 'default')} ${(props) => getColor(props, 'dropdownMenu', 'borderColor')};
   ${(props) => borderRadius(props)};
   ${(props) => dropdownMenuHidden(props)};
   ${(props) => isLeftOrRight(props)};

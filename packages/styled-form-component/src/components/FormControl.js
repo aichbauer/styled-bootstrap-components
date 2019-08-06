@@ -6,7 +6,7 @@ import { Input, Textarea, Select } from 'styled-base-components';
 import {
   theme,
   getColor,
-  border as b,
+  getBorder,
   getPadding,
   fontSize as fs,
   borderRadius as br,
@@ -51,7 +51,7 @@ const border = (props) => {
   }
 
   return css`
-    border: ${b(props, 'formControl').default} ${getColor(props, 'formControl', 'border')};
+    border: ${getBorder(props, 'formControl', 'default')} ${getColor(props, 'formControl', 'border')};
     &:focus {
       border-color: ${getColor(props, 'formControl', 'border')};
     };

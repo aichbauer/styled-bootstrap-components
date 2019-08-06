@@ -5,7 +5,7 @@ import { Table as BaseTable } from 'styled-base-components';
 import {
   theme,
   getColor,
-  border,
+  getBorder,
 } from 'styled-config';
 
 const tableSmall = (props) => (
@@ -21,10 +21,10 @@ const tableSmall = (props) => (
 const tableBordered = (props) => (
   props.bordered &&
   css`
-    border: ${border(props, 'table').default} ${getColor(props, 'table', 'borderedBorderColor')};
+    border: ${getBorder(props, 'table', 'default')} ${getColor(props, 'table', 'borderedBorderColor')};
     & th,
     & td {
-      border: ${border(props, 'table').default} ${getColor(props, 'table', 'borderedBorderColor')};
+      border: ${getBorder(props, 'table', 'default')} ${getColor(props, 'table', 'borderedBorderColor')};
     };
     & thead th,
     & thead td {
@@ -189,14 +189,14 @@ const Table = styled(BaseTable)`
   & td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: ${(props) => border(props, 'table').default} ${(props) => getColor(props, 'table', 'borderColor')};
+    border-top: ${(props) => getBorder(props, 'table', 'default')} ${(props) => getColor(props, 'table', 'borderColor')};
   };
   & thead th {
     vertical-align: bottom;
-    border-bottom: ${(props) => border(props, 'table').bottomTop} ${(props) => getColor(props, 'table', 'borderColor')};
+    border-bottom: ${(props) => getBorder(props, 'table', 'bottomTop')} ${(props) => getColor(props, 'table', 'borderColor')};
   };
   & tbody + tbody {
-    border-top: ${(props) => border(props, 'table').bottomTop} ${(props) => getColor(props, 'table', 'borderColor')};
+    border-top: ${(props) => getBorder(props, 'table', 'bottomTop')} ${(props) => getColor(props, 'table', 'borderColor')};
   };
   & + & {
     background-color: ${(props) => getColor(props, 'table', 'backgroundColor')};

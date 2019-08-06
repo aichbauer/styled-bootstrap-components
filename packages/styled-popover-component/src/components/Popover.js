@@ -10,7 +10,7 @@ import {
   getMargin,
   fontFamily,
   borderRadius,
-  border,
+  getBorder,
   fontSize,
 } from 'styled-config';
 
@@ -57,7 +57,7 @@ export const PopoverWithoutTransition = styled(Div)`
   word-wrap: break-word;
   background-color: ${(props) => getColor(props, 'popover', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'popover').default} ${(props) => getColor(props, 'popover', 'borderColor')};
+  border: ${(props) => getBorder(props, 'popover', 'default')} ${(props) => getColor(props, 'popover', 'borderColor')};
   border-radius: ${(props) => borderRadius(props, 'popover').lg};
   ${(props) => margin(props)};
 `;

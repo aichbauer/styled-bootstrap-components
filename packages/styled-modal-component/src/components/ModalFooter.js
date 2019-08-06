@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getPadding,
-  border,
+  getBorder,
 } from 'styled-config';
 
 const ModalFooter = styled(Div)`
@@ -14,7 +14,7 @@ const ModalFooter = styled(Div)`
   align-items: center;
   justify-content: flex-end;
   padding: ${(props) => getPadding(props, 'modalFooter', 'default')};
-  border-top: ${(props) => border(props, 'modalFooter').default} ${(props) => getColor(props, 'modalFooter', 'borderColor')};
+  border-top: ${(props) => getBorder(props, 'modalFooter', 'default')} ${(props) => getColor(props, 'modalFooter', 'borderColor')};
 `;
 
 ModalFooter.defaultProps = {

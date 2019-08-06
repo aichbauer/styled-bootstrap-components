@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getPadding,
-  border,
+  getBorder,
   borderRadius,
 } from 'styled-config';
 
@@ -110,7 +110,7 @@ const ListGroupItem = styled(Li)`
   position: relative;
   display: block;
   padding: ${(props) => getPadding(props, 'listGroupItem', 'default')};
-  border: ${(props) => border(props, 'listGroupItem').default} ${(props) => getColor(props, 'listGroupItem', 'borderColor')};
+  border: ${(props) => getBorder(props, 'listGroupItem', 'default')} ${(props) => getColor(props, 'listGroupItem', 'borderColor')};
   border-bottom: none;
   margin-bottom: -1px;
   &:first-child {
@@ -118,7 +118,7 @@ const ListGroupItem = styled(Li)`
     border-top-right-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
   };
   &:last-child {
-    border-bottom: ${(props) => border(props, 'listGroupItem').default}
+    border-bottom: ${(props) => getBorder(props, 'listGroupItem', 'default')}
     ${(props) => {
     if (props.active) {
       return getColor(props, 'listGroupItem', 'borderColorActive');

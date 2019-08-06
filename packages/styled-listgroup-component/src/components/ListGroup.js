@@ -6,7 +6,7 @@ import {
   theme,
   getPadding,
   getMargin,
-  border as b,
+  getBorder,
   borderRadius,
 } from 'styled-config';
 
@@ -15,14 +15,14 @@ const border = (props) => (
   css`
     & > a,
     & > li {
-      border-right: ${b(props, 'listGroup').aLiFlushRight};
-      border-left: ${b(props, 'listGroup').aLiFlushLeft};
+      border-right: ${getBorder(props, 'listGroup', 'aLiFlushRight')};
+      border-left: ${getBorder(props, 'listGroup', 'aLiFlushLeft')};
       border-radius: ${borderRadius(props, 'listGroup').noRadius};
       &:first-child {
-        border-top: ${b(props, 'listGroup').aLiFlushFirstChildTop};
+        border-top: ${getBorder(props, 'listGroup', 'aLiFlushFirstChildTop')};
       };
       &:last-child {
-        border-bottom: ${b(props, 'listGroup').aLiFlushLastChildBottom};
+        border-bottom: ${getBorder(props, 'listGroup', 'aLiFlushLastChildBottom')};
       };
     };
   `
