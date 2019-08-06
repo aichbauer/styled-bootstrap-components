@@ -2,7 +2,7 @@ import { theme } from './theme';
 import {
   border,
   borderRadius,
-  boxShadow,
+  getBoxShadow,
   getColor,
   fontFamily,
   fontSize,
@@ -20,7 +20,7 @@ export {
   // utils
   border,
   borderRadius,
-  boxShadow,
+  getBoxShadow,
   getColor,
   fontFamily,
   fontSize,

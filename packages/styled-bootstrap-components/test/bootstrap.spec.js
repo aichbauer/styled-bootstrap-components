@@ -21,7 +21,7 @@ import {
   theme,
   border,
   borderRadius,
-  boxShadow,
+  getBoxShadow,
   getColor,
   fontFamily,
   fontSize,
@@ -129,7 +129,7 @@ test('Simply check if all components are imported and exported correctly', () =>
 
   expect(typeof border).toBe('function');
   expect(typeof borderRadius).toBe('function');
-  expect(typeof boxShadow).toBe('function');
+  expect(typeof getBoxShadow).toBe('function');
   expect(typeof fontFamily).toBe('function');
   expect(typeof getColor).toBe('function');
   expect(typeof margin).toBe('function');

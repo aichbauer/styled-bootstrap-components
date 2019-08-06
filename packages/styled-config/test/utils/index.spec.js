@@ -2,7 +2,7 @@ import {
   theme,
   border,
   borderRadius,
-  boxShadow,
+  getBoxShadow,
   getColor,
   fontFamily,
   fontSize,
@@ -27,9 +27,8 @@ test('test if borderRadius extracts borderRadius of theme', () => {
   expect(br).toEqual(theme.button.borderRadius);
 });
 
-test('test if boxShadow extracts boxShadow of theme', () => {
-  const bs = boxShadow({ theme }, 'button');
-
+test('test if getBoxShadow extracts boxShadow of theme', () => {
+  const bs = getBoxShadow({ theme }, 'button');
   expect(bs).toEqual(theme.button.boxShadow);
 });
 

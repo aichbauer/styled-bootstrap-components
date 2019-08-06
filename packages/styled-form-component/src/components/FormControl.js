@@ -7,11 +7,11 @@ import {
   theme,
   getColor,
   border as b,
-  boxShadow as bs,
   padding as p,
   fontSize as fs,
   borderRadius as br,
   height as h,
+  getBoxShadow,
   getConcreteBreakpointSize,
 } from 'styled-config';
 
@@ -62,13 +62,13 @@ const boxShadow = (props) => {
   if (props.valid) {
     return css`
       &:focus {
-        box-shadow: ${bs(props, 'formControl').default} ${getColor(props, 'formControl', 'formControlBoxShadowValid')};
+        box-shadow: ${getBoxShadow(props, 'formControl', 'default')} ${getColor(props, 'formControl', 'formControlBoxShadowValid')};
       };
     `;
   } else if (props.invalid) {
     return css`
       &:focus {
-        box-shadow: ${bs(props, 'formControl').default} ${getColor(props, 'formControl', 'formControlBoxShadowInvalid')};
+        box-shadow: ${getBoxShadow(props, 'formControl', 'default')} ${getColor(props, 'formControl', 'formControlBoxShadowInvalid')};
       };
     `;
   }

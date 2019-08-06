@@ -29,7 +29,7 @@ export const makeGetter = (property) => (
 
 // ---------------------------------------------------------------------------
 
-export const boxShadow = makeGetter('boxShadow');
+export const getBoxShadow = makeGetter('boxShadow');
 export const margin = makeGetter('margin');
 export const padding = makeGetter('padding');
 export const border = makeGetter('border');
