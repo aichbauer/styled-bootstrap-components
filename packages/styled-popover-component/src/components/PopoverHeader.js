@@ -7,7 +7,7 @@ import {
   theme,
   getColor,
   padding,
-  margin,
+  getMargin,
   border,
   fontSize,
 } from 'styled-config';
@@ -16,7 +16,7 @@ const popoverHeaderBottom = (props) => (
   props.bottom &&
   css`
     padding: ${padding(props, 'popoverHeader').default};
-    margin-bottom: ${margin(props, 'popoverHeader').bottom};
+    margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
     font-size:  ${fontSize(props, 'popoverHeader').default};
     color: inherit;
     background-color: ${getColor(props, 'popoverHeader', 'backgrondColor')};
@@ -36,8 +36,8 @@ const popoverHeaderStyle = (props) => (
     display: block;
     content: "";
     padding: ${padding(props, 'popoverHeader').default};
-    margin-bottom: ${margin(props, 'popoverHeader').bottom};
-    margin-top: ${margin(props, 'popoverHeader').top};
+    margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
+    margin-top: ${getMargin(props, 'popoverHeader', 'top')};
     font-size: ${fontSize(props, 'popoverHeader').default};
     color: inherit;
     background-color: ${getColor(props, 'popoverHeader', 'backgrondColor')};
@@ -50,7 +50,7 @@ const popoverHeaderStyle = (props) => (
       left: 50%;
       display: block;
       width: 1rem;
-      margin-left: ${margin(props, 'popoverHeader').beforeLeft};
+      margin-left: ${getMargin(props, 'popoverHeader', 'beforeLeft')};
       content: "";
       border-bottom: ${border(props, 'popoverHeader').default} ${getColor(props, 'popoverHeader', 'backgrondColor')};
     }

@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  margin as m,
+  getMargin,
   padding as p,
   borderRadius as br,
   fontSize as fs,
@@ -19,7 +19,7 @@ const formGroupFormInline = (props) => (
       flex: 0 0 auto;
       flex-flow: row wrap;
       align-items: center;
-      margin-bottom: ${m(props, 'formGroup').inlineBottom}
+      margin-bottom: ${getMargin(props, 'formGroup', 'inlineBottom')}
     };
   `
 );
@@ -41,30 +41,30 @@ const flexWrap = (props) => (
 const margin = (props) => {
   if (props.nomb && !props.row) {
     return css`
-      margin-bottom: ${m(props, 'formGroup').nombNoRow};
+      margin-bottom: ${getMargin(props, 'formGroup', 'nombNoRow')};
     `;
   } if (props.nomb && props.row) {
     return css`
-      margin-right: ${m(props, 'formGroup').nombRowRight};
-      margin-left: ${m(props, 'formGroup').nombRowLeft};
+      margin-right: ${getMargin(props, 'formGroup', 'nombRowRight')};
+      margin-left: ${getMargin(props, 'formGroup', 'nombRowLeft')};
       & > div > label {
-        margin-bottom: ${m(props, 'formGroup').nombRowDivLabelBottom};
+        margin-bottom: ${getMargin(props, 'formGroup', 'nombRowDivLabelBottom')};
       };
-      margin-bottom: ${m(props, 'formGroup').nombRowBottom};
+      margin-bottom: ${getMargin(props, 'formGroup', 'nombRowBottom')};
     `;
   } else if (props.row) {
     return css`
-      margin-right: ${m(props, 'formGroup').rowRight};
-      margin-left: ${m(props, 'formGroup').rowLeft};
+      margin-right: ${getMargin(props, 'formGroup', 'rowRight')};
+      margin-left: ${getMargin(props, 'formGroup', 'rowLeft')};
       & > div > label {
-        margin-bottom: ${m(props, 'formGroup').rowDivLabel};
+        margin-bottom: ${getMargin(props, 'formGroup', 'rowDivLabel')};
       };
-      margin-bottom: ${m(props, 'formGroup').bottom};
+      margin-bottom: ${getMargin(props, 'formGroup', 'bottom')};
     `;
   }
 
   return css`
-    margin-bottom: ${m(props, 'formGroup').bottom};
+    margin-bottom: ${getMargin(props, 'formGroup', 'bottom')};
   `;
 };
 

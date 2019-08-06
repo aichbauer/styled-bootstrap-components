@@ -5,7 +5,7 @@ import { Input } from 'styled-base-components';
 import {
   theme,
   getColor,
-  margin,
+  getMargin,
 } from 'styled-config';
 
 const color = (props) => (
@@ -20,8 +20,8 @@ const color = (props) => (
 
 const FormCheckInput = styled(Input)`
   position: absolute;
-  margin-top: ${(props) => margin(props, 'formCheckInput').top};
-  margin-left: ${(props) => margin(props, 'formCheckInput').left};
+  margin-top: ${(props) => getMargin(props, 'formCheckInput', 'top')};
+  margin-left: ${(props) => getMargin(props, 'formCheckInput', 'left')};
   box-sizing: border-box;
   ${(props) => color(props)};
 `;

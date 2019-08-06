@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   padding as p,
-  margin,
+  getMargin,
 } from 'styled-config';
 
 const display = (props) => {
@@ -33,7 +33,7 @@ const FormControlPlainText = styled(Input)`
   width: 100%;
   padding-top: ${(props) => p(props, 'formControlPlainText').top};
   padding-bottom: ${(props) => p(props, 'formControlPlainText').bottom};
-  margin-bottom: ${(props) => margin(props, 'formControlPlainText').bottom};
+  margin-bottom: ${(props) => getMargin(props, 'formControlPlainText', 'bottom')};
   line-height: 1.5;
   background-color: ${(props) => getColor(props, 'formControlPlainText', 'backgroundColor')};
   border: solid ${(props) => getColor(props, 'formControlPlainText', 'borderColor')};

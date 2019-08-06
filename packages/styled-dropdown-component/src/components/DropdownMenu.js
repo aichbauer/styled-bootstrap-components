@@ -10,7 +10,7 @@ import {
   getColor,
   borderRadius as br,
   padding,
-  margin,
+  getMargin,
   fontSize,
   border,
 } from 'styled-config';
@@ -62,7 +62,7 @@ const StyledDiv = styled(Div)`
   float: left;
   min-width: 10rem;
   padding: ${(props) => padding(props, 'dropdownMenu').default};
-  margin: ${(props) => margin(props, 'dropdownMenu').default};
+  margin: ${(props) => getMargin(props, 'dropdownMenu', 'default')};
   font-size: ${(props) => fontSize(props, 'dropdownMenu').default};
   color: ${(props) => getColor(props, 'dropdownMenu', 'color')};
   text-align: left;

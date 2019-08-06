@@ -7,7 +7,7 @@ import {
   borderRadius as br,
   padding as p,
   fontSize as fs,
-  margin as m,
+  getMargin,
 } from 'styled-config';
 
 const borderRadius = (props) => {
@@ -97,7 +97,7 @@ const InputGroup = styled(Div)`
     position: relative;
     flex: 1 1 auto;
     width: 1%;
-    margin-bottom: ${(props) => m(props, 'inputGroup').bottom};
+    margin-bottom: ${(props) => getMargin(props, 'inputGroup', 'bottom')};
     &:not(:last-child) {
       border-top-right-radius: ${(props) => br(props, 'inputGroup').noRadius};
       border-bottom-right-radius: ${(props) => br(props, 'inputGroup').noRadius};

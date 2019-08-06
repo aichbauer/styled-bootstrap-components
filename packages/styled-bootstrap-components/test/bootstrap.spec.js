@@ -27,7 +27,7 @@ import {
   fontSize,
   fontWeight,
   height,
-  margin,
+  getMargin,
   padding,
   getBreakpointSize,
   getConcreteBreakpointSize,
@@ -132,7 +132,7 @@ test('Simply check if all components are imported and exported correctly', () =>
   expect(typeof getBoxShadow).toBe('function');
   expect(typeof fontFamily).toBe('function');
   expect(typeof getColor).toBe('function');
-  expect(typeof margin).toBe('function');
+  expect(typeof getMargin).toBe('function');
   expect(typeof fontSize).toBe('function');
   expect(typeof fontWeight).toBe('function');
   expect(typeof height).toBe('function');

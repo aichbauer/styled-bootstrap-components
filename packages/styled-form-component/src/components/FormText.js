@@ -5,7 +5,7 @@ import { Small } from 'styled-base-components';
 import {
   theme,
   getColor,
-  margin,
+  getMargin,
 } from 'styled-config';
 
 const color = (props) => (
@@ -17,7 +17,7 @@ const color = (props) => (
 
 const FormText = styled(Small)`
   display: block;
-  margin-top: ${(props) => margin(props, 'formText').top};
+  margin-top: ${(props) => getMargin(props, 'formText', 'top')};
   box-sizing: border-box;
   ${(props) => color(props)};
 `;

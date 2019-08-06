@@ -9,7 +9,7 @@ import {
   borderRadius as br,
   border as b,
   padding as p,
-  margin,
+  getMargin,
   fontSize as fs,
 } from 'styled-config';
 
@@ -70,7 +70,7 @@ const block = (props) => {
       display: block;
       width: 100%;
       & + & {
-        margin-top: ${margin(props, 'button').blockTop};
+        margin-top: ${getMargin(props, 'button', 'blockTop')};
       };
     `;
   }
@@ -103,7 +103,7 @@ const dropdownToggle = (props) => (
       display: inline-block;
       width: 0;
       height: 0;
-      margin-left: ${margin(props, 'button').dropdownToggleLeft};
+      margin-left: ${getMargin(props, 'button', 'dropdownToggleLeft')};
       vertical-align: 0.255em;
       content: "";
       border-top: 0.3em solid;

@@ -8,7 +8,7 @@ import {
   padding,
   fontSize,
   fontWeight,
-  margin,
+  getMargin,
   borderRadius,
   border,
 } from 'styled-config';
@@ -17,7 +17,7 @@ const InputGroupText = styled(Span)`
   display: flex;
   align-items: center;
   padding: ${(props) => padding(props, 'inputGroupText').default};
-  margin-bottom: ${(props) => margin(props, 'inputGroupText').bottom};
+  margin-bottom: ${(props) => getMargin(props, 'inputGroupText', 'bottom')};
   font-size: ${(props) => fontSize(props, 'inputGroupText').default};
   font-weight: ${(props) => fontWeight(props, 'inputGroupText').default};
   line-height: 1.5;
@@ -29,9 +29,9 @@ const InputGroupText = styled(Span)`
   border-radius: ${(props) => borderRadius(props, 'inputGroupText').default};
   & input[type="radio"],
   & input[type="checkbox"] {
-    margin-top: ${(props) => margin(props, 'inputGroupText').radioCheckboxTop};
-    margin-right: ${(props) => margin(props, 'inputGroupText').radioCheckboxRight};
-    margin-bottom: ${(props) => margin(props, 'inputGroupText').radioCheckboxBottom};
+    margin-top: ${(props) => getMargin(props, 'inputGroupText', 'radioCheckboxTop')};
+    margin-right: ${(props) => getMargin(props, 'inputGroupText', 'radioCheckboxRight')};
+    margin-bottom: ${(props) => getMargin(props, 'inputGroupText', 'radioCheckboxBottom')};
   };
 `;
 

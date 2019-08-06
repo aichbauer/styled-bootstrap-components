@@ -7,7 +7,7 @@ import {
   theme,
   getColor,
   fontWeight,
-  margin as m,
+  getMargin,
   fontFamily,
   borderRadius,
   border,
@@ -17,20 +17,20 @@ import {
 const margin = (props) => {
   if (props.top) {
     return css`
-      margin-bottom: ${m(props, 'popover').topBottom};
+      margin-bottom: ${getMargin(props, 'popover', 'topBottom')};
     `;
   } else if (props.left) {
     return css`
-      margin-right: ${m(props, 'popover').leftRight};
+      margin-right: ${getMargin(props, 'popover', 'leftRight')};
     `;
   } else if (props.bottom) {
     return css`
-      margin-top: ${m(props, 'popover').bottomTop};
+      margin-top: ${getMargin(props, 'popover', 'bottomTop')};
     `;
   }
 
   return css`
-    margin-left: ${m(props, 'popover').rightLeft};
+    margin-left: ${getMargin(props, 'popover', 'rightLeft')};
   `;
 };
 

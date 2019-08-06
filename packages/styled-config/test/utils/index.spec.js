@@ -8,7 +8,7 @@ import {
   fontSize,
   fontWeight,
   height,
-  margin,
+  getMargin,
   padding,
   width,
   getBreakpointSize,
@@ -75,8 +75,8 @@ test('test if height extract height of theme', () => {
   expect(h).toEqual(theme.button.height);
 });
 
-test('test if margin extract margin of theme', () => {
-  const m = margin({ theme }, 'button');
+test('test if getMargin extract margin of theme', () => {
+  const m = getMargin({ theme }, 'button');
   expect(m).toEqual(theme.button.margin);
 });
 

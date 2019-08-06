@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   padding,
-  margin as m,
+  getMargin,
   border as b,
   getBreakpointSize,
 } from 'styled-config';
@@ -138,7 +138,7 @@ const Nav = styled(BaseNav)`
   display: flex;
   flex-wrap: wrap;
   padding-left: ${(props) => padding(props, 'nav').left};
-  margin-bottom: ${(props) => m(props, 'nav').bottom};
+  margin-bottom: ${(props) => getMargin(props, 'nav', 'bottom')};
   list-style: none;
   & > a {
     text-decoration: none;

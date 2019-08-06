@@ -5,7 +5,7 @@ import { Ul } from 'styled-base-components';
 import {
   theme,
   padding,
-  margin,
+  getMargin,
   border as b,
   borderRadius,
 } from 'styled-config';
@@ -32,7 +32,7 @@ const ListGroup = styled(Ul)`
   display: flex;
   flex-direction: column;
   padding-left: ${(props) => padding(props, 'listGroup').left};
-  margin-bottom: ${(props) => margin(props, 'listGroup').bottom};
+  margin-bottom: ${(props) => getMargin(props, 'listGroup', 'bottom')};
   ${(props) => border(props)};
 `;
 

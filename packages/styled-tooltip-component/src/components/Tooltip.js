@@ -6,7 +6,7 @@ import { Transition, Div } from 'styled-base-components';
 import {
   theme,
   padding as p,
-  margin,
+  getMargin,
   fontWeight,
   fontSize,
   fontFamily,
@@ -26,7 +26,7 @@ export const TooltipWithoutTransition = styled(Div)`
   position: absolute;
   z-index: 1070;
   display: block;
-  margin: ${(props) => margin(props, 'tooltip').default};
+  margin: ${(props) => getMargin(props, 'tooltip', 'default')};
   font-family: ${(props) => fontFamily(props, 'tooltip').default};
   font-style: normal;
   font-weight: ${(props) => fontWeight(props, 'tooltip').default};

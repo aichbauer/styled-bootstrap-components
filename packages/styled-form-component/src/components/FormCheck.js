@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  margin,
+  getMargin,
   padding,
 } from 'styled-config';
 
@@ -37,7 +37,7 @@ const paddingLeft = (props) => (
 const marginRight = (props) => (
   props.inline &&
   css`
-    margin-right: ${margin(props, 'formCheck').inlineRight};
+    margin-right: ${getMargin(props, 'formCheck', 'inlineRight')};
   `
 );
 
@@ -45,13 +45,13 @@ const FormCheck = styled(Div)`
   position: relative;
   box-sizing: border-box;
   & > label {
-    margin-bottom: ${(props) => margin(props, 'formCheck').labelBottom};
+    margin-bottom: ${(props) => getMargin(props, 'formCheck', 'labelBottom')};
   };
   & > input {
     position: static;
-    margin-top: ${(props) => margin(props, 'formCheck').inputTop};
-    margin-right:${(props) => margin(props, 'formCheck').inputRight};
-    margin-left: ${(props) => margin(props, 'formCheck').inputLeft};
+    margin-top: ${(props) => getMargin(props, 'formCheck', 'inputTop')};
+    margin-right:${(props) => getMargin(props, 'formCheck', 'inputRight')};
+    margin-left: ${(props) => getMargin(props, 'formCheck', 'inputLeft')};
   };
   ${(props) => display(props)}
   ${(props) => alignItems(props)}

@@ -5,7 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   padding,
-  margin,
+  getMargin,
 } from 'styled-config';
 
 const CardBody = styled(Div)`
@@ -16,7 +16,7 @@ const CardBody = styled(Div)`
       text-decoration: none;
     };
     & + a {
-      margin-left: ${(props) => margin(props, 'cardBody').leftA};
+      margin-left: ${(props) => getMargin(props, 'cardBody', 'leftA')};
     };
   };
 `;
