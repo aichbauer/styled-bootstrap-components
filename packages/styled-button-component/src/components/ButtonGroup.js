@@ -4,28 +4,28 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  padding as p,
+  getPadding,
   fontSize,
 } from 'styled-config';
 
 const size = (props) => {
   if (props.lg) {
     return css`
-      padding: ${p(props, 'buttonGroup').lg};
-      font-size: ${fontSize(props, 'buttonGroup').lg};
+      padding: ${getPadding(props, 'buttonGroup', 'lg')};
+      font-size: ${fontSize(props, 'buttonGroup', 'lg')};
       line-height: 1.5;
     `;
   } else if (props.sm) {
     return css`
-      padding:  ${p(props, 'buttonGroup').sm};
-      font-size: ${fontSize(props, 'buttonGroup').sm};
+      padding:  ${getPadding(props, 'buttonGroup', 'sm')};
+      font-size: ${fontSize(props, 'buttonGroup', 'sm')};
       line-height: 1.5;
     `;
   }
 
   return css`
-    padding: ${p(props, 'buttonGroup').default};
-    font-size: ${fontSize(props, 'buttonGroup').default};
+    padding: ${getPadding(props, 'buttonGroup', 'default')};
+    font-size: ${fontSize(props, 'buttonGroup', 'default')};
     line-height: 1.5;
   `;
 };

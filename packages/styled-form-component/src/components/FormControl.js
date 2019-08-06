@@ -7,7 +7,7 @@ import {
   theme,
   getColor,
   border as b,
-  padding as p,
+  getPadding,
   fontSize as fs,
   borderRadius as br,
   height as h,
@@ -107,20 +107,20 @@ const formControlFormInline = (props) => (
 const padding = (props) => {
   if (props.lg) {
     return css`
-      padding-right: ${p(props, 'formControl').lgRight};
-      padding-left: ${p(props, 'formControl').lgLeft};
-      padding: ${p(props, 'formControl').lgPadding};
+      padding-right: ${getPadding(props, 'formControl', 'lgRight')};
+      padding-left: ${getPadding(props, 'formControl', 'lgLeft')};
+      padding: ${getPadding(props, 'formControl', 'lgPadding')};
     `;
   } else if (props.sm) {
     return css`
-    padding-right: ${p(props, 'formControl').smRight};
-    padding-left: ${p(props, 'formControl').smLeft};
-    padding: ${p(props, 'formControl').smPadding};
+    padding-right: ${getPadding(props, 'formControl', 'smRight')};
+    padding-left: ${getPadding(props, 'formControl', 'smLeft')};
+    padding: ${getPadding(props, 'formControl', 'smPadding')};
     `;
   }
 
   return css`
-    padding: ${p(props, 'formControl').defaultPadding};
+    padding: ${getPadding(props, 'formControl', 'defaultPadding')};
   `;
 };
 

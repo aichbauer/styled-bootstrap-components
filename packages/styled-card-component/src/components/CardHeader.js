@@ -5,7 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
   borderRadius as br,
 } from 'styled-config';
 
@@ -23,7 +23,7 @@ const borderRadius = (props) => {
 };
 
 const CardHeader = styled(Div)`
-  padding: ${(props) => padding(props, 'cardHeader').default};
+  padding: ${(props) => getPadding(props, 'cardHeader', 'default')};
   background-color: ${(props) => getColor(props, 'cardHeader', 'background')};
   border-bottom: 1px solid ${(props) => getColor(props, 'cardHeader', 'borderBottom')};
   display: flex;

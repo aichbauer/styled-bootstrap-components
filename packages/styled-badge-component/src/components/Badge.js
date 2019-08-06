@@ -5,7 +5,7 @@ import { Span } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding as p,
+  getPadding,
   borderRadius as br,
   fontWeight,
 } from 'styled-config';
@@ -23,11 +23,11 @@ const borderRadius = (props) => {
 const padding = (props) => {
   if (props.pill) {
     return css`
-      padding: ${p(props, 'badge').pill};
+      padding: ${getPadding(props, 'badge', 'pill')};
     `;
   }
 
-  return css`padding: ${p(props, 'badge').default};`;
+  return css`padding: ${getPadding(props, 'badge', 'default')};`;
 };
 
 const backgroundColor = (props) => (

@@ -9,7 +9,7 @@ import {
   theme as DefaultTheme,
   getColor,
   borderRadius as br,
-  padding,
+  getPadding,
   getMargin,
   fontSize,
   border,
@@ -61,7 +61,7 @@ const StyledDiv = styled(Div)`
   z-index: 1000;
   float: left;
   min-width: 10rem;
-  padding: ${(props) => padding(props, 'dropdownMenu').default};
+  padding: ${(props) => getPadding(props, 'dropdownMenu', 'default')};
   margin: ${(props) => getMargin(props, 'dropdownMenu', 'default')};
   font-size: ${(props) => fontSize(props, 'dropdownMenu').default};
   color: ${(props) => getColor(props, 'dropdownMenu', 'color')};

@@ -4,13 +4,13 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  padding,
+  getPadding,
   getMargin,
 } from 'styled-config';
 
 const CardBody = styled(Div)`
   flex: 1 1 auto;
-  padding: ${(props) => padding(props, 'cardBody').default};
+  padding: ${(props) => getPadding(props, 'cardBody', 'default')};
   & > a {
     &:hover {
       text-decoration: none;

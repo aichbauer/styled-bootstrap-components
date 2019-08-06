@@ -5,7 +5,7 @@ import { Li } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
 } from 'styled-config';
 
 const active = (props) => (
@@ -18,8 +18,8 @@ const active = (props) => (
 const BreadcrumbItem = styled(Li)`
   &:not(:first-child)::before {
     display: inline-block;
-    padding-right: ${(props) => padding(props, 'breadcrumbItem', 'right')};
-    padding-left: ${(props) => padding(props, 'breadcrumbItem', 'left')};
+    padding-right: ${(props) => getPadding(props, 'breadcrumbItem', 'right')};
+    padding-left: ${(props) => getPadding(props, 'breadcrumbItem', 'left')};
     color: ${(props) => getColor(props, 'breadcrumbItem', 'color')};
     content: "/";
   };

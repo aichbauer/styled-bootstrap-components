@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getMargin,
-  padding,
+  getPadding,
   border,
   borderRadius as br,
   fontWeight,
@@ -15,7 +15,7 @@ import {
 const alertDismissible = (props) => (
   props.dismissible &&
   css`
-    padding-right: ${padding(props, 'alert', 'dismissibleRight')};
+    padding-right: ${getPadding(props, 'alert', 'dismissibleRight')};
   `
 );
 
@@ -60,7 +60,7 @@ const borderRadius = (props) => {
 
 const Alert = styled(Div)`
   position: relative;
-  padding: ${(props) => padding(props, 'alert', 'default')};
+  padding: ${(props) => getPadding(props, 'alert', 'default')};
   margin-bottom: ${(props) => getMargin(props, 'alert', 'bottom')};
   border: ${(props) => border(props, 'alert', 'default')};
   & > a {

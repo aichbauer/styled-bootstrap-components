@@ -6,40 +6,40 @@ import {
   theme,
   getColor,
   getConcreteBreakpointSize,
-  padding as p,
+  getPadding,
   borderRadius as br,
 } from 'styled-config';
 
 const padding = (props) => {
   if (props.fluid) {
     return css`
-      padding-right: ${p(props, 'jumbotron').fluidRight};
-      padding-left: ${p(props, 'jumbotron').fluidLeft};
+      padding-right: ${getPadding(props, 'jumbotron', 'fluidRight')};
+      padding-left: ${getPadding(props, 'jumbotron', 'fluidLeft')};
     `;
   } else if (props.pill) {
     return css`
-      padding: ${p(props, 'jumbotron').pill};
+      padding: ${getPadding(props, 'jumbotron', 'pill')};
     `;
   }
 
   return css`
-    padding: ${p(props, 'jumbotron').default};
+    padding: ${getPadding(props, 'jumbotron', 'default')};
   `;
 };
 
 const borderRadius = (props) => {
   if (props.fluid || props.noRadius) {
     return css`
-      border-radius: ${br(props, 'jumbotron').noRadius}
+      border-radius: ${br(props, 'jumbotron', 'noRadius')}
     `;
   } else if (props.pill) {
     return css`
-      border-radius: ${br(props, 'jumbotron').pill}
+      border-radius: ${br(props, 'jumbotron', 'pill')}
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'jumbotron').lg}
+    border-radius: ${br(props, 'jumbotron', 'lg')}
   `;
 };
 
@@ -49,19 +49,19 @@ const Jumbotron = styled(Div)`
   @media(min-width: ${(props) => getConcreteBreakpointSize(props.theme, 'sm')}) {
     padding: ${(props) => {
     if (props.pill) {
-      return p(props, 'jumbotron').lgPill;
+      return getPadding(props, 'jumbotron', 'lgPill');
     }
 
-    return p(props, 'jumbotron').sm;
+    return getPadding(props, 'jumbotron', 'sm');
   }};
   };
   @media(max-width: ${(props) => getConcreteBreakpointSize(props, 'md')}) {
     padding: ${(props) => {
     if (props.pill) {
-      return p(props, 'jumbotron').smPill;
+      return getPadding(props, 'jumbotron', 'smPill');
     }
 
-    return p(props, 'jumbotron').sm;
+    return getPadding(props, 'jumbotron', 'sm');
   }};
   };
   ${(props) => padding(props)};

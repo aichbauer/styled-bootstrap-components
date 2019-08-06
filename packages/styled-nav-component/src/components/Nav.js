@@ -5,7 +5,7 @@ import { Nav as BaseNav } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
   getMargin,
   border as b,
   getBreakpointSize,
@@ -105,8 +105,8 @@ const navCollapse = (props) => {
         flex-basis: auto;
         flex-direction: column;
         & > a {
-          padding-right: ${padding(props, 'nav').collapseNotHiddenARight};
-          padding-left: ${padding(props, 'nav').collapseNotHiddenALeft};
+          padding-right: ${getPadding(props, 'nav', 'collapseNotHiddenARight')};
+          padding-left: ${getPadding(props, 'nav', 'collapseNotHiddenALeft')};
           flex: 1;
           text-align: left;
         };
@@ -137,7 +137,7 @@ const navCollapse = (props) => {
 const Nav = styled(BaseNav)`
   display: flex;
   flex-wrap: wrap;
-  padding-left: ${(props) => padding(props, 'nav').left};
+  padding-left: ${(props) => getPadding(props, 'nav', 'left')};
   margin-bottom: ${(props) => getMargin(props, 'nav', 'bottom')};
   list-style: none;
   & > a {

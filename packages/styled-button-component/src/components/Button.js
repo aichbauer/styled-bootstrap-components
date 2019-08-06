@@ -8,7 +8,7 @@ import {
   getBreakpointSize,
   borderRadius as br,
   border as b,
-  padding as p,
+  getPadding,
   getMargin,
   fontSize as fs,
 } from 'styled-config';
@@ -24,8 +24,8 @@ const padding = (props) => {
     if (props.sm) {
       return css`
       padding: 0;
-      padding-right: ${p(props, 'button').splitSmRight};
-      padding-left: ${p(props, 'button').splitSmLeft};
+      padding-right: ${getPadding(props, 'button', 'splitSmRight')};
+      padding-left: ${getPadding(props, 'button', 'splitSmLeft')};
       &::after {
         margin-left: 0;
       };
@@ -33,8 +33,8 @@ const padding = (props) => {
     } else if (props.lg) {
       return css`
       padding: 0;
-      padding-right: ${p(props, 'button').splitLgRight};
-      padding-left: ${p(props, 'button').splitLgLeft};
+      padding-right: ${getPadding(props, 'button', 'splitLgRight')};
+      padding-left: ${getPadding(props, 'button', 'splitLgLeft')};
       &::after {
         margin-left: 0;
       };
@@ -43,24 +43,24 @@ const padding = (props) => {
 
     return css`
       padding: 0;
-      padding-right: ${p(props, 'button').splitDefaultRight};
-      padding-left: ${p(props, 'button').splitDefaultLeft};
+      padding-right: ${getPadding(props, 'button', 'splitDefaultRight')};
+      padding-left: ${getPadding(props, 'button', 'splitDefaultLeft')};
       &::after {
         margin-left: 0;
       };
   `;
   } else if (props.lg) {
     return css`
-      padding: ${p(props, 'button').lg};
+      padding: ${getPadding(props, 'button', 'lg')};
     `;
   } else if (props.sm) {
     return css`
-      padding: ${p(props, 'button').sm};
+      padding: ${getPadding(props, 'button', 'sm')};
     `;
   }
 
   return css`
-    padding: ${p(props, 'button').default};
+    padding: ${getPadding(props, 'button', 'default')};
   `;
 };
 

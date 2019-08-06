@@ -5,7 +5,7 @@ import { Li } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
   border,
   borderRadius,
 } from 'styled-config';
@@ -109,7 +109,7 @@ const cursor = (props) => (
 const ListGroupItem = styled(Li)`
   position: relative;
   display: block;
-  padding: ${(props) => padding(props, 'listGroupItem').default};
+  padding: ${(props) => getPadding(props, 'listGroupItem', 'default')};
   border: ${(props) => border(props, 'listGroupItem').default} ${(props) => getColor(props, 'listGroupItem', 'borderColor')};
   border-bottom: none;
   margin-bottom: -1px;

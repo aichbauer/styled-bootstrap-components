@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getMargin,
-  padding,
+  getPadding,
   borderRadius as br,
 } from 'styled-config';
 
@@ -23,7 +23,7 @@ const borderRadius = (props) => {
 const Breadcrumb = styled(Ol)`
   display: flex;
   flex-wrap: wrap;
-  padding: ${(props) => padding(props, 'breadcrumb').default};
+  padding: ${(props) => getPadding(props, 'breadcrumb', 'default')};
   margin-bottom: ${(props) => getMargin(props, 'breadcrumb', 'bottom')};
   list-style: none;
   background-color: ${(props) => getColor(props, 'breadcrumb', 'backgroundColor')};

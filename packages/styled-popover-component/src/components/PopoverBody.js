@@ -5,11 +5,11 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
 } from 'styled-config';
 
 const PopoverBody = styled(Div)`
-  padding: ${(props) => padding(props, 'popoverBody').default};
+  padding: ${(props) => getPadding(props, 'popoverBody', 'default')};
   color: ${(props) => getColor(props, 'popoverBody', 'color')};
 `;
 

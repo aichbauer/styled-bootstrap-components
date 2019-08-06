@@ -5,7 +5,7 @@ import { Transition, Div } from 'styled-base-components';
 
 import {
   theme,
-  padding as p,
+  getPadding,
   getMargin,
   fontWeight,
   fontSize,
@@ -15,10 +15,10 @@ import {
 const padding = (props) => (
   (props.left || props.right)
     ? css`
-        padding: ${p(props, 'tooltip').leftRight};
+        padding: ${getPadding(props, 'tooltip', 'leftRight')};
       `
     : css`
-      padding: ${p(props, 'tooltip').topBottom};
+      padding: ${getPadding(props, 'tooltip', 'topBottom')};
     `
 );
 

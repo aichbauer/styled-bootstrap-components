@@ -31,7 +31,7 @@ export const makeGetter = (property) => (
 
 export const getBoxShadow = makeGetter('boxShadow');
 export const getMargin = makeGetter('margin');
-export const padding = makeGetter('padding');
+export const getPadding = makeGetter('padding');
 export const border = makeGetter('border');
 export const borderRadius = makeGetter('borderRadius');
 export const fontWeight = makeGetter('fontWeight');

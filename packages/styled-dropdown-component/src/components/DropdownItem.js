@@ -5,7 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
   fontWeight,
 } from 'styled-config';
 
@@ -27,7 +27,7 @@ const dropdownItemDisabled = (props) => (
 );
 
 const DropdownItem = styled(Div)`
-  padding: ${(props) => padding(props, 'dropdownItem').default};
+  padding: ${(props) => getPadding(props, 'dropdownItem', 'default')};
   clear: both;
   font-weight: ${(props) => fontWeight(props, 'dropdownItem').default};
   color: ${(props) => getColor(props, 'dropdownItem', 'color')};

@@ -5,7 +5,7 @@ import { Nav } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
   getBreakpointSize,
 } from 'styled-config';
 
@@ -52,7 +52,7 @@ const Navbar = styled(Nav)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: ${(props) => padding(props, 'navbar').default};
+  padding: ${(props) => getPadding(props, 'navbar', 'default')};
   ${(props) => color(props)}
   ${(props) => borderColor(props)}
   ${(props) => backgroundColor(props)}

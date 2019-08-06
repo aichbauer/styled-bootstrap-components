@@ -5,7 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
   border,
 } from 'styled-config';
 
@@ -13,7 +13,7 @@ const ModalFooter = styled(Div)`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: ${(props) => padding(props, 'modalFooter').default};
+  padding: ${(props) => getPadding(props, 'modalFooter', 'default')};
   border-top: ${(props) => border(props, 'modalFooter').default} ${(props) => getColor(props, 'modalFooter', 'borderColor')};
 `;
 

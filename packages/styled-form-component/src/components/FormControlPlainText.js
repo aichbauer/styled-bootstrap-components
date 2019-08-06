@@ -5,7 +5,7 @@ import { Input } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding as p,
+  getPadding,
   getMargin,
 } from 'styled-config';
 
@@ -24,15 +24,15 @@ const display = (props) => {
 const padding = (props) => (
   (props.sm || props.lg) &&
   css`
-    padding-right: ${p(props, 'formControlPlainText').smRight};
-    padding-left: ${p(props, 'formControlPlainText').smLeft};
+    padding-right: ${getPadding(props, 'formControlPlainText', 'smRight')};
+    padding-left: ${getPadding(props, 'formControlPlainText', 'smLeft')};
   `
 );
 
 const FormControlPlainText = styled(Input)`
   width: 100%;
-  padding-top: ${(props) => p(props, 'formControlPlainText').top};
-  padding-bottom: ${(props) => p(props, 'formControlPlainText').bottom};
+  padding-top: ${(props) => getPadding(props, 'formControlPlainText', 'top')};
+  padding-bottom: ${(props) => getPadding(props, 'formControlPlainText', 'bottom')};
   margin-bottom: ${(props) => getMargin(props, 'formControlPlainText', 'bottom')};
   line-height: 1.5;
   background-color: ${(props) => getColor(props, 'formControlPlainText', 'backgroundColor')};

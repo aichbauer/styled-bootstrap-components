@@ -5,7 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getMargin,
-  padding,
+  getPadding,
 } from 'styled-config';
 
 const display = (props) => {
@@ -30,7 +30,7 @@ const alignItems = (props) => (
 const paddingLeft = (props) => (
   props.inline &&
   css`
-    padding-left: ${padding(props, 'formCheck').inlineLeft};
+    padding-left: ${getPadding(props, 'formCheck', 'inlineLeft')};
   `
 );
 

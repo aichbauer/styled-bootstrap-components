@@ -6,7 +6,7 @@ import { H1, H2, H3, H4, H5, H6 } from 'styled-base-components';
 import {
   theme,
   getColor,
-  padding,
+  getPadding,
   getMargin,
   border,
   fontSize,
@@ -15,7 +15,7 @@ import {
 const popoverHeaderBottom = (props) => (
   props.bottom &&
   css`
-    padding: ${padding(props, 'popoverHeader').default};
+    padding: ${getPadding(props, 'popoverHeader', 'default')};
     margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
     font-size:  ${fontSize(props, 'popoverHeader').default};
     color: inherit;
@@ -35,7 +35,7 @@ const popoverHeaderStyle = (props) => (
     left: 50%;
     display: block;
     content: "";
-    padding: ${padding(props, 'popoverHeader').default};
+    padding: ${getPadding(props, 'popoverHeader', 'default')};
     margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
     margin-top: ${getMargin(props, 'popoverHeader', 'top')};
     font-size: ${fontSize(props, 'popoverHeader').default};

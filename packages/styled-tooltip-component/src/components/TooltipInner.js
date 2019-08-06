@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  padding,
+  getPadding,
   getColor,
   borderRadius as br,
 } from 'styled-config';
@@ -34,7 +34,7 @@ const pill = (props) => (
 
 const TooltipInner = styled(Div)`
   max-width: 200px;
-  padding: ${(props) => padding(props, 'tooltipInner').default};
+  padding: ${(props) => getPadding(props, 'tooltipInner', 'default')};
   color: ${(props) => getColor(props, 'tooltipInner', 'color')};
   text-align: center;
   background-color: ${(props) => getColor(props, 'tooltipInner', 'backgroundColor')};

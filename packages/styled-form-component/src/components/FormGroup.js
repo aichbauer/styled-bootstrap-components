@@ -5,7 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getMargin,
-  padding as p,
+  getPadding,
   borderRadius as br,
   fontSize as fs,
   getConcreteBreakpointSize,
@@ -167,25 +167,25 @@ const padding = (props) => {
   if (props.lg) {
     return css`
       & > label, & > div > label {
-        padding-top: ${p(props, 'formGroup').labelTopLg};
-        padding-bottom: ${p(props, 'formGroup').labelBottomLg};
+        padding-top: ${getPadding(props, 'formGroup', 'labelTopLg')};
+        padding-bottom: ${getPadding(props, 'formGroup', 'labelBottomLg')};
       };
       & > input, & > div > input {
-        padding-right: ${p(props, 'formGroup').inputRightLg};
-        padding-left: ${p(props, 'formGroup').inputLeftLg};
-        padding: ${p(props, 'formGroup').inputLg};
+        padding-right: ${getPadding(props, 'formGroup', 'inputRightLg')};
+        padding-left: ${getPadding(props, 'formGroup', 'inputLeftLg')};
+        padding: ${getPadding(props, 'formGroup', 'inputLg')};
       };
     `;
   } else if (props.sm) {
     return css`
       & > label, & > div > label {
-        padding-top: ${p(props, 'formGroup').labelTopSm};
-        padding-bottom: ${p(props, 'formGroup').labelBottomSm};
+        padding-top: ${getPadding(props, 'formGroup', 'labelTopSm')};
+        padding-bottom: ${getPadding(props, 'formGroup', 'labelBottomSm')};
       };
       & > input, & > div > input {
-        padding-right: ${p(props, 'formGroup').inputRightSm};
-        padding-left: ${p(props, 'formGroup').inputLeftSm};
-        padding: ${p(props, 'formGroup').inputSm};
+        padding-right: ${getPadding(props, 'formGroup', 'inputRightSm')};
+        padding-left: ${getPadding(props, 'formGroup', 'inputLeftSm')};
+        padding: ${getPadding(props, 'formGroup', 'inputSm')};
       };
     `;
   }

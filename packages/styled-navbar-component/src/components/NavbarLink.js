@@ -4,7 +4,7 @@ import { NavLink } from 'styled-nav-component';
 import {
   theme,
   getColor,
-  padding as p,
+  getPadding,
   fontSize as fs,
 } from 'styled-config';
 
@@ -70,8 +70,8 @@ const display = (props) => (
 const padding = (props) => (
   props.brand &&
   css`
-    padding-top: ${p(props, 'navbarLink').brandTop};
-    padding-bottom: ${p(props, 'navbarLink').brandBottom};
+    padding-top: ${getPadding(props, 'navbarLink', 'brandTop')};
+    padding-bottom: ${getPadding(props, 'navbarLink', 'brandBottom')};
   `
 );
 
