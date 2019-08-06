@@ -8,7 +8,7 @@ import {
   fontFamily,
   fontSize,
   fontWeight,
-  screenSize,
+  getBreakpointSize,
 } from 'styled-config';
 
 const Container = styled(Div)`
@@ -21,7 +21,7 @@ const Container = styled(Div)`
   line-height: 1.5;
   box-sizing: border-box;
   @media (min-width: ${(props) => {
-    const screenWidth = screenSize({
+    const screenWidth = getBreakpointSize({
       ...props,
       sm: true,
     });
@@ -36,7 +36,7 @@ const Container = styled(Div)`
     box-sizing: border-box;
   };
   @media (min-width: ${(props) => {
-    const screenWidth = screenSize({
+    const screenWidth = getBreakpointSize({
       ...props,
       md: true,
     });
@@ -50,7 +50,7 @@ const Container = styled(Div)`
   )};
   };
   @media (min-width: ${(props) => {
-    const screenWidth = screenSize({
+    const screenWidth = getBreakpointSize({
       ...props,
       lg: true,
     });
@@ -64,7 +64,7 @@ const Container = styled(Div)`
   )};
   };
   @media (min-width: ${(props) => {
-    const screenWidth = screenSize({
+    const screenWidth = getBreakpointSize({
       ...props,
       xl: true,
     });

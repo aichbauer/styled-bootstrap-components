@@ -10,7 +10,8 @@ import {
   height,
   margin,
   padding,
-  screenSize,
+  getBreakpointSize,
+  getConcreteBreakpointSize,
   width,
 } from './utils';
 
@@ -27,6 +28,7 @@ export {
   height,
   margin,
   padding,
-  screenSize,
+  getBreakpointSize,
+  getConcreteBreakpointSize,
   width,
 };

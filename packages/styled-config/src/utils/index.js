@@ -40,15 +40,17 @@ export const fontFamily = makeGetter('fontFamily');
 export const width = makeGetter('width');
 export const height = makeGetter('height');
 
-export const screenSize = (props) => {
+export const getConcreteBreakpointSize = (props, size) => getConfigProperty(props.theme, 'screenSize', size);
+
+export const getBreakpointSize = (props) => {
   if (props.sm || props.expandSm) {
-    return getConfigProperty(props.theme, 'screenSize', 'sm');
+    return getConcreteBreakpointSize(props.theme, 'sm');
   } else if (props.md || props.expandMd) {
-    return getConfigProperty(props.theme, 'screenSize', 'md');
+    return getConcreteBreakpointSize(props.theme, 'md');
   } else if (props.lg || props.expandLg) {
-    return getConfigProperty(props.theme, 'screenSize', 'lg');
+    return getConcreteBreakpointSize(props.theme, 'lg');
   } else if (props.xl || props.expandXl) {
-    return getConfigProperty(props.theme, 'screenSize', 'xl');
+    return getConcreteBreakpointSize(props.theme, 'xl');
   }
 
   return '';

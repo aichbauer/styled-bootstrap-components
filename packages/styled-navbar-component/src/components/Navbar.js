@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   padding,
-  screenSize,
+  getBreakpointSize,
 } from 'styled-config';
 
 const color = (props) => (
@@ -36,7 +36,7 @@ const navbarExpand = (props) => (
     || props.expandXl
   )
   && css`
-    @media (max-width: ${screenSize(props)}) {
+    @media (max-width: ${getBreakpointSize(props)}) {
       & > nav:not(:last-child) {
         display: flex !important;
         width: 100%;

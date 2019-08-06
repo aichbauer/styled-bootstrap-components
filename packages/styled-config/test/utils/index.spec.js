@@ -10,8 +10,9 @@ import {
   height,
   margin,
   padding,
-  screenSize,
   width,
+  getBreakpointSize,
+  getConcreteBreakpointSize,
 } from '../../src';
 
 test('test if border extracts border of theme', () => {
@@ -85,21 +86,28 @@ test('test if padding extract padding of theme', () => {
   expect(p).toEqual(theme.button.padding);
 });
 
-test('test if screenSize extract screenSize of theme', () => {
-  const myScreenSizeSm = screenSize({ theme, sm: true });
+test('test if getBreakpointSize extract screenSize of theme', () => {
+  const myScreenSizeSm = getBreakpointSize({ theme, sm: true });
   expect(myScreenSizeSm).toEqual(theme.screenSize.sm);
 
-  const myScreenSizeMd = screenSize({ theme, md: true });
+  const myScreenSizeMd = getBreakpointSize({ theme, md: true });
   expect(myScreenSizeMd).toEqual(theme.screenSize.md);
 
-  const myScreenSizeLg = screenSize({ theme, lg: true });
+  const myScreenSizeLg = getBreakpointSize({ theme, lg: true });
   expect(myScreenSizeLg).toEqual(theme.screenSize.lg);
 
-  const myScreenSizeXl = screenSize({ theme, xl: true });
+  const myScreenSizeXl = getBreakpointSize({ theme, xl: true });
   expect(myScreenSizeXl).toEqual(theme.screenSize.xl);
 
-  const myScreenSizeDefault = screenSize({ theme });
+  const myScreenSizeDefault = getBreakpointSize({ theme });
   expect(myScreenSizeDefault).toEqual('');
+});
+
+test('test if getConcreteBreakpointSize extract same values as getBreakpointSize', () => {
+  expect(getBreakpointSize({ theme, sm: true })).toEqual(getConcreteBreakpointSize({ theme }, 'sm'));
+  expect(getBreakpointSize({ theme, md: true })).toEqual(getConcreteBreakpointSize({ theme }, 'md'));
+  expect(getBreakpointSize({ theme, lg: true })).toEqual(getConcreteBreakpointSize({ theme }, 'lg'));
+  expect(getBreakpointSize({ theme, xl: true })).toEqual(getConcreteBreakpointSize({ theme }, 'xl'));
 });
 
 test('test if width extract width of theme', () => {

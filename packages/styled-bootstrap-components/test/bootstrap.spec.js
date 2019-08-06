@@ -29,7 +29,8 @@ import {
   height,
   margin,
   padding,
-  screenSize,
+  getBreakpointSize,
+  getConcreteBreakpointSize,
   width,
   Container,
   Dropdown,
@@ -136,7 +137,8 @@ test('Simply check if all components are imported and exported correctly', () =>
   expect(typeof fontWeight).toBe('function');
   expect(typeof height).toBe('function');
   expect(typeof padding).toBe('function');
-  expect(typeof screenSize).toBe('function');
+  expect(typeof getBreakpointSize).toBe('function');
+  expect(typeof getConcreteBreakpointSize).toBe('function');
   expect(typeof width).toBe('function');
 
   const container = renderer.create(<Container />).toJSON();

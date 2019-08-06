@@ -31,7 +31,8 @@ import {
   height,
   margin,
   padding,
-  screenSize,
+  getBreakpointSize,
+  getConcreteBreakpointSize,
   width,
 } from 'styled-config';
 import { Container } from 'styled-container-component';
@@ -126,7 +127,8 @@ export {
   height,
   margin,
   padding,
-  screenSize,
+  getBreakpointSize,
+  getConcreteBreakpointSize,
   width,
   Container,
   Dropdown,

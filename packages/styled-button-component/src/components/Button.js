@@ -5,7 +5,7 @@ import { Utilities, Button as BaseButton, A } from 'styled-base-components';
 import {
   theme,
   getColor,
-  screenSize,
+  getBreakpointSize,
   borderRadius as br,
   border as b,
   padding as p,
@@ -213,7 +213,7 @@ const buttonToggleCollapse = (props) => {
   ) {
     return css`
       display: none;
-      @media (max-width: ${screenSize(props)}) {
+      @media (max-width: ${getBreakpointSize(props)}) {
         display: block;
         font-size: ${fontSize(props).toggle};
         ${buttonToggler};

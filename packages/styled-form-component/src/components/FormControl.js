@@ -12,6 +12,7 @@ import {
   fontSize as fs,
   borderRadius as br,
   height as h,
+  getConcreteBreakpointSize,
 } from 'styled-config';
 
 const backgroundColor = (props) => {
@@ -95,7 +96,7 @@ const opacity = (props) => {
 const formControlFormInline = (props) => (
   props.formInline &&
   css`
-    @media (min-width: ${props.theme.screenSize.sm}) {
+    @media (min-width: ${getConcreteBreakpointSize(props, 'sm')}) {
       display: inline-block;
       width: auto;
       vertical-align: middle;

@@ -8,12 +8,13 @@ import {
   padding as p,
   borderRadius as br,
   fontSize as fs,
+  getConcreteBreakpointSize,
 } from 'styled-config';
 
 const formGroupFormInline = (props) => (
   props.formInline &&
   css`
-    @media (min-width: ${props.theme.screenSize.sm}) {
+    @media (min-width: ${getConcreteBreakpointSize(props, 'sm')}) {
       display: flex;
       flex: 0 0 auto;
       flex-flow: row wrap;

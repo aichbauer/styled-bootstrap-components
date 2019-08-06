@@ -5,6 +5,7 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getColor,
+  getConcreteBreakpointSize,
   padding as p,
   borderRadius as br,
 } from 'styled-config';
@@ -45,7 +46,7 @@ const borderRadius = (props) => {
 const Jumbotron = styled(Div)`
   margin-bottom: 2rem;
   background-color: ${(props) => getColor(props, 'jumbotron', 'backgroundColor')};
-  @media(min-width: ${(props) => props.theme.screenSize.sm}) {
+  @media(min-width: ${(props) => getConcreteBreakpointSize(props.theme, 'sm')}) {
     padding: ${(props) => {
     if (props.pill) {
       return p(props, 'jumbotron').lgPill;
@@ -54,7 +55,7 @@ const Jumbotron = styled(Div)`
     return p(props, 'jumbotron').sm;
   }};
   };
-  @media(max-width: ${(props) => props.theme.screenSize.md}) {
+  @media(max-width: ${(props) => getConcreteBreakpointSize(props, 'md')}) {
     padding: ${(props) => {
     if (props.pill) {
       return p(props, 'jumbotron').smPill;

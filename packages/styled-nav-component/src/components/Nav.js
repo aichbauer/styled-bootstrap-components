@@ -8,7 +8,7 @@ import {
   padding,
   margin as m,
   border as b,
-  screenSize,
+  getBreakpointSize,
 } from 'styled-config';
 
 const justifyContent = (props) => {
@@ -100,7 +100,7 @@ const navCollapse = (props) => {
     && !props.hidden
   ) {
     return css`
-      @media (max-width: ${screenSize(props)}) {
+      @media (max-width: ${getBreakpointSize(props)}) {
         display: flex;
         flex-basis: auto;
         flex-direction: column;
@@ -123,7 +123,7 @@ const navCollapse = (props) => {
     && props.hidden
   ) {
     return css`
-      @media (max-width: ${screenSize(props)}) {
+      @media (max-width: ${getBreakpointSize(props)}) {
         display: none;
         flex-basis: auto;
         flex-direction: column;
