@@ -4,48 +4,64 @@ const colorScheme = {
   primary: '#007bff',
   primaryDarker: '#0069d9',
   primaryDark: '#005cbf',
+  primaryDarkest: '#004085',
+  primaryBoxShadow: 'rgba(0, 123, 255, 0.5)',
 
   secondaryLight: '#e2e3e5',
   secondaryLighter: '#b4b5b7',
   secondary: '#6c757d',
   secondaryDarker: '#5a6268',
   secondaryDark: '#4e555b',
+  secondaryDarkest: '#383d41',
+  secondaryBoxShadow: 'rgba(108, 117, 125, 0.5)',
 
   successLight: '#d4edda',
   successLighter: '#72d889',
   success: '#28a745',
   successDarker: '#218838',
   successDark: '#1c7430',
+  successDarkest: '#155724',
+  successBoxShadow: 'rgba(40, 167, 69, 0.5)',
 
   dangerLight: '#f8d7da',
   dangerLighter: '#f5b4bb',
   danger: '#dc3545',
   dangerDarker: '#c82333',
   dangerDark: '#b21f2d',
+  dangerDarkest: '#721c24',
+  dangerBoxShadow: 'rgba(220, 53, 69, 0.5)',
 
   warningLight: '#fff3cd',
   warningLighter: '#f3da8d',
   warning: '#ffc107',
   warningDarker: '#e0a800',
   warningDark: '#c69500',
+  warningDarkest: '#856404',
+  warningBoxShadow: 'rgba(255, 193, 7, 0.5)',
 
   infoLight: '#d1ecf1',
   infoLighter: '#a3d6de',
   info: '#17a2b8',
   infoDarker: '#138496',
-  infoDark: '#10707f',
+  infoDark: '#12707f',
+  infoDarkest: '#10707f',
+  infoBoxShadow: 'rgba(23, 162, 184, 0.5)',
 
   lightLight: '#fefefe',
   lightLighter: '#fdfdfe',
   light: '#f0f0f0',
   lightDarker: '#e2e6ea',
   lightDark: '#d3d9df',
+  lightDarkest: '#343a40',
+  lightBoxShadow: 'rgba(248, 249, 250, 0.5)',
 
   darkLight: '#d6d8d9',
   darkLighter: '#c6c8ca',
   dark: '#343a40',
   darkDarker: '#23272b',
-  darkDark: '#171a1d',
+  darkDark: '#201a1d',
+  darkDarkest: '#171a1d',
+  darkBoxShadow: 'rgba(52, 58, 64, 0.5)',
 
   darkerLight: '#4d4f50',
   darkerLighter: '#3c3e40',
@@ -58,6 +74,11 @@ const colorScheme = {
   whiteDark: '#ececec',
 
   transparent: 'transparent',
+
+  whiteHalfTransparent: 'rgba(0, 0, 0, 0.5)',
+  whiteTenthTransparent: 'rgba(0, 0, 0, 0.1)',
+  darkHalfTransparent: 'rgba(255, 255, 255, 0.5)',
+  darkTenthTransparent: 'rgba(255, 255, 255, 0.1)',
 };
 
 export { colorScheme };
