@@ -6,7 +6,7 @@ import {
   theme,
   width,
   fontFamily,
-  fontSize,
+  getFontSize,
   getFontWeight,
   getBreakpointSize,
 } from 'styled-config';
@@ -16,7 +16,7 @@ const Container = styled(Div)`
   width: ${(props) => width(props, 'container').default};
   margin-right: auto;
   margin-left: auto;
-  font-size:  ${(props) => fontSize(props, 'container').default};
+  font-size:  ${(props) => getFontSize(props, 'container', 'default')};
   font-weight: ${(props) => getFontWeight(props, 'container', 'default')};
   line-height: 1.5;
   box-sizing: border-box;

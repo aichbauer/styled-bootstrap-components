@@ -9,7 +9,7 @@ import {
   getPadding,
   getMargin,
   getBorder,
-  fontSize,
+  getFontSize,
 } from 'styled-config';
 
 const popoverHeaderBottom = (props) => (
@@ -17,7 +17,7 @@ const popoverHeaderBottom = (props) => (
   css`
     padding: ${getPadding(props, 'popoverHeader', 'default')};
     margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
-    font-size:  ${fontSize(props, 'popoverHeader').default};
+    font-size:  ${getFontSize(props, 'popoverHeader', 'default')};
     color: inherit;
     background-color: ${getColor(props, 'popoverHeader', 'backgrondColor')};
     border-bottom: 0;
@@ -38,7 +38,7 @@ const popoverHeaderStyle = (props) => (
     padding: ${getPadding(props, 'popoverHeader', 'default')};
     margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
     margin-top: ${getMargin(props, 'popoverHeader', 'top')};
-    font-size: ${fontSize(props, 'popoverHeader').default};
+    font-size: ${getFontSize(props, 'popoverHeader', 'default')};
     color: inherit;
     background-color: ${getColor(props, 'popoverHeader', 'backgrondColor')};
     border-bottom: ${getBorder(props, 'popoverHeader', 'default')} ${getColor(props, 'popoverHeader', 'borderBottomColor')};

@@ -11,7 +11,7 @@ import {
   fontFamily,
   getBorderRadius,
   getBorder,
-  fontSize,
+  getFontSize,
 } from 'styled-config';
 
 const margin = (props) => {
@@ -53,7 +53,7 @@ export const PopoverWithoutTransition = styled(Div)`
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: ${(props) => fontSize(props, 'popover').sm};
+  font-size: ${(props) => getFontSize(props, 'popover', 'sm')};
   word-wrap: break-word;
   background-color: ${(props) => getColor(props, 'popover', 'backgroundColor')};
   background-clip: padding-box;

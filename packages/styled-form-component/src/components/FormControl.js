@@ -8,7 +8,7 @@ import {
   getColor,
   getBorder,
   getPadding,
-  fontSize as fs,
+  getFontSize,
   getBorderRadius,
   height as h,
   getBoxShadow,
@@ -127,16 +127,16 @@ const padding = (props) => {
 const fontSize = (props) => {
   if (props.lg) {
     return css`
-      font-size: ${fs(props, 'formControl').lg};
+      font-size: ${getFontSize(props, 'formControl', 'lg')};
     `;
   } else if (props.sm) {
     return css`
-      font-size: ${fs(props, 'formControl').sm};
+      font-size: ${getFontSize(props, 'formControl', 'sm')};
     `;
   }
 
   return css`
-    font-size: ${fs(props, 'formControl').default};
+    font-size: ${getFontSize(props, 'formControl', 'default')};
   `;
 };
 

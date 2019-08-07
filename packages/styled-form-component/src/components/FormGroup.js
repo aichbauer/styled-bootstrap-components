@@ -7,7 +7,7 @@ import {
   getMargin,
   getPadding,
   getBorderRadius,
-  fontSize as fs,
+  getFontSize,
   getConcreteBreakpointSize,
 } from 'styled-config';
 
@@ -139,7 +139,7 @@ const fontSize = (props) => {
       & > div > input,
       & > label,
       & > div > label {
-        font-size: ${fs(props, 'formGroup').lg};
+        font-size: ${getFontSize(props, 'formGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
@@ -148,7 +148,7 @@ const fontSize = (props) => {
       & > div > input,
       & > label,
       & > div > label {
-        font-size: ${fs(props, 'formGroup').sm};
+        font-size: ${getFontSize(props, 'formGroup', 'sm')};
       };
     `;
   }
@@ -158,7 +158,7 @@ const fontSize = (props) => {
     & > div > input,
     & > label,
     & > div > label {
-      font-size: ${fs(props, 'formGroup').default};
+      font-size: ${getFontSize(props, 'formGroup', 'default')};
     };
   `;
 };

@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getPadding,
-  fontSize,
+  getFontSize,
   getFontWeight,
   getMargin,
   getBorderRadius,
@@ -18,7 +18,7 @@ const InputGroupText = styled(Span)`
   align-items: center;
   padding: ${(props) => getPadding(props, 'inputGroupText', 'default')};
   margin-bottom: ${(props) => getMargin(props, 'inputGroupText', 'bottom')};
-  font-size: ${(props) => fontSize(props, 'inputGroupText').default};
+  font-size: ${(props) => getFontSize(props, 'inputGroupText', 'default')};
   font-weight: ${(props) => getFontWeight(props, 'inputGroupText', 'default')};
   line-height: 1.5;
   color: ${(props) => getColor(props, 'inputGroupText', 'color')};

@@ -5,7 +5,7 @@ import {
   getBoxShadow,
   getColor,
   fontFamily,
-  fontSize,
+  getFontSize,
   getFontWeight,
   height,
   getMargin,
@@ -60,8 +60,8 @@ test('test if fontFamily extracts fontFamily of theme', () => {
   expect(ff).toEqual(theme.tooltip.fontFamily);
 });
 
-test('test if fontSize extract fontSize of theme', () => {
-  const fs = fontSize({ theme }, 'button');
+test('test if getFontSize extract fontSize of theme', () => {
+  const fs = getFontSize({ theme }, 'button');
   expect(fs).toEqual(theme.button.fontSize);
 });
 

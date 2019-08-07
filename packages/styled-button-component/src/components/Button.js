@@ -10,7 +10,7 @@ import {
   getBorder,
   getPadding,
   getMargin,
-  fontSize as fs,
+  getFontSize,
 } from 'styled-config';
 
 const boxShadow = (props) => (
@@ -83,16 +83,16 @@ const block = (props) => {
 const fontSize = (props) => {
   if (props.lg) {
     return css`
-      font-size: ${fs(props, 'button').lg};
+      font-size: ${getFontSize(props, 'button', 'lg')};
     `;
   } else if (props.sm) {
     return css`
-      font-size: ${fs(props, 'button').sm};
+      font-size: ${getFontSize(props, 'button', 'sm')};
     `;
   }
 
   return css`
-    font-size: ${fs(props, 'button').default};
+    font-size: ${getFontSize(props, 'button', 'default')};
   `;
 };
 

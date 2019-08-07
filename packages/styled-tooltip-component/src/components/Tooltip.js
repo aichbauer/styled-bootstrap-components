@@ -8,7 +8,7 @@ import {
   getPadding,
   getMargin,
   getFontWeight,
-  fontSize,
+  getFontSize,
   fontFamily,
 } from 'styled-config';
 
@@ -40,7 +40,7 @@ export const TooltipWithoutTransition = styled(Div)`
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: ${(props) => fontSize(props, 'tooltip').default};
+  font-size: ${(props) => getFontSize(props, 'tooltip', 'default')};
   word-wrap: break-word;
   opacity: 0.9;
   ${(props) => padding(props)};

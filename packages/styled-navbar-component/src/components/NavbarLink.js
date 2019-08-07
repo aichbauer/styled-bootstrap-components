@@ -5,7 +5,7 @@ import {
   theme,
   getColor,
   getPadding,
-  fontSize as fs,
+  getFontSize,
 } from 'styled-config';
 
 const color = (props) => {
@@ -78,7 +78,7 @@ const padding = (props) => (
 const fontSize = (props) => (
   props.brand &&
   css`
-    font-size: ${fs(props, 'navbarLink').lg};
+    font-size: ${getFontSize(props, 'navbarLink', 'lg')};
   `
 );
 

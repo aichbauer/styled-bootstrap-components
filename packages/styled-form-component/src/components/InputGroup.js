@@ -6,7 +6,7 @@ import {
   theme,
   getBorderRadius,
   getPadding,
-  fontSize as fs,
+  getFontSize,
   getMargin,
 } from 'styled-config';
 
@@ -38,7 +38,7 @@ const fontSize = (props) => {
       & > div > span,
       & > input {
         line-height: 1.5;
-        font-size: ${fs(props, 'inputGroup').lg};
+        font-size: ${getFontSize(props, 'inputGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
@@ -46,7 +46,7 @@ const fontSize = (props) => {
       & > div > span,
       & > input {
         line-height: 1.5;
-        font-size: ${fs(props, 'inputGroup').sm};
+        font-size: ${getFontSize(props, 'inputGroup', 'sm')};
       };
     `;
   }
@@ -55,7 +55,7 @@ const fontSize = (props) => {
     & > div > span,
     & > input {
       line-height: 1.5;
-      font-size: ${fs(props, 'inputGroup').default};
+      font-size: ${getFontSize(props, 'inputGroup', 'default')};
     };
   `;
 };

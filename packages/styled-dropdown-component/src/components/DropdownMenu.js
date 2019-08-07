@@ -11,7 +11,7 @@ import {
   getBorderRadius,
   getPadding,
   getMargin,
-  fontSize,
+  getFontSize,
   getBorder,
 } from 'styled-config';
 
@@ -63,7 +63,7 @@ const StyledDiv = styled(Div)`
   min-width: 10rem;
   padding: ${(props) => getPadding(props, 'dropdownMenu', 'default')};
   margin: ${(props) => getMargin(props, 'dropdownMenu', 'default')};
-  font-size: ${(props) => fontSize(props, 'dropdownMenu').default};
+  font-size: ${(props) => getFontSize(props, 'dropdownMenu', 'default')};
   color: ${(props) => getColor(props, 'dropdownMenu', 'color')};
   text-align: left;
   list-style: none;
