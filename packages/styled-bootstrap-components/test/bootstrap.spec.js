@@ -31,7 +31,7 @@ import {
   getPadding,
   getBreakpointSize,
   getConcreteBreakpointSize,
-  width,
+  getWidth,
   Container,
   Dropdown,
   DropdownItem,
@@ -139,7 +139,7 @@ test('Simply check if all components are imported and exported correctly', () =>
   expect(typeof getPadding).toBe('function');
   expect(typeof getBreakpointSize).toBe('function');
   expect(typeof getConcreteBreakpointSize).toBe('function');
-  expect(typeof width).toBe('function');
+  expect(typeof getWidth).toBe('function');
 
   const container = renderer.create(<Container />).toJSON();
   expect(container).toMatchSnapshot();

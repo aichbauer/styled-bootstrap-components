@@ -37,7 +37,7 @@ export const getBorderRadius = makeGetter('borderRadius');
 export const getFontWeight = makeGetter('fontWeight');
 export const getFontSize = makeGetter('fontSize');
 export const getFontFamily = makeGetter('fontFamily');
-export const width = makeGetter('width');
+export const getWidth = makeGetter('width');
 export const height = makeGetter('height');
 
 export const getConcreteBreakpointSize = (props, size) => getConfigProperty(props.theme, 'screenSize', size);

@@ -12,7 +12,7 @@ import {
   getPadding,
   getBreakpointSize,
   getConcreteBreakpointSize,
-  width,
+  getWidth,
 } from './utils';
 
 export {
@@ -30,5 +30,5 @@ export {
   getPadding,
   getBreakpointSize,
   getConcreteBreakpointSize,
-  width,
+  getWidth,
 };

@@ -33,7 +33,7 @@ import {
   getPadding,
   getBreakpointSize,
   getConcreteBreakpointSize,
-  width,
+  getWidth,
 } from 'styled-config';
 import { Container } from 'styled-container-component';
 import {
@@ -129,7 +129,7 @@ export {
   getPadding,
   getBreakpointSize,
   getConcreteBreakpointSize,
-  width,
+  getWidth,
   Container,
   Dropdown,
   DropdownItem,

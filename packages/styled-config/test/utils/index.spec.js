@@ -10,7 +10,7 @@ import {
   height,
   getMargin,
   getPadding,
-  width,
+  getWidth,
   getBreakpointSize,
   getConcreteBreakpointSize,
 } from '../../src';
@@ -109,8 +109,8 @@ test('test if getConcreteBreakpointSize extract same values as getBreakpointSize
   expect(getBreakpointSize({ theme, xl: true })).toEqual(getConcreteBreakpointSize({ theme }, 'xl'));
 });
 
-test('test if width extract width of theme', () => {
-  const w = width({ theme }, 'button');
+test('test if getWidth extract width of theme', () => {
+  const w = getWidth({ theme }, 'button');
   expect(w).toEqual(theme.button.width);
 });
 

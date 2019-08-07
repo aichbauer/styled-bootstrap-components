@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  width,
+  getWidth,
   getFontFamily,
   getFontSize,
   getFontWeight,
@@ -13,7 +13,7 @@ import {
 
 const Container = styled(Div)`
   font-family: ${(props) => getFontFamily(props, 'container', 'default')};
-  width: ${(props) => width(props, 'container').default};
+  width: ${(props) => getWidth(props, 'container', 'default')};
   margin-right: auto;
   margin-left: auto;
   font-size:  ${(props) => getFontSize(props, 'container', 'default')};
@@ -30,8 +30,8 @@ const Container = styled(Div)`
   }}) {
     max-width: ${(props) => (
     props.fluid
-      ? width(props, 'container').default
-      : width(props, 'container').fluid.sm
+      ? getWidth(props, 'container', 'default')
+      : getWidth(props, 'container', 'fluid', 'sm')
   )};
     box-sizing: border-box;
   };
@@ -45,8 +45,8 @@ const Container = styled(Div)`
   }}) {
     max-width: ${(props) => (
     props.fluid
-      ? width(props, 'container').default
-      : width(props, 'container').fluid.md
+      ? getWidth(props, 'container', 'default')
+      : getWidth(props, 'container', 'fluid', 'md')
   )};
   };
   @media (min-width: ${(props) => {
@@ -59,8 +59,8 @@ const Container = styled(Div)`
   }}) {
     max-width: ${(props) => (
     props.fluid
-      ? width(props, 'container').default
-      : width(props, 'container').fluid.lg
+      ? getWidth(props, 'container', 'default')
+      : getWidth(props, 'container', 'fluid', 'lg')
   )};
   };
   @media (min-width: ${(props) => {
@@ -73,8 +73,8 @@ const Container = styled(Div)`
   }}) {
     max-width: ${(props) => (
     props.fluid
-      ? width(props, 'container').default
-      : width(props, 'container').fluid.xl
+      ? getWidth(props, 'container', 'default')
+      : getWidth(props, 'container', 'fluid', 'xl')
   )};
   };
 `;
