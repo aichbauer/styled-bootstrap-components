@@ -10,7 +10,7 @@ import {
   getPadding,
   getFontSize,
   getBorderRadius,
-  height as h,
+  getHeight,
   getBoxShadow,
   getConcreteBreakpointSize,
 } from 'styled-config';
@@ -167,15 +167,15 @@ const borderRadius = (props) => {
 const height = (props) => {
   if (props.lg && !props.multiple && props.select) {
     return css`
-      height: ${h(props, 'formControl').selectLg};
+      height: ${getHeight(props, 'formControl', 'selectLg')};
     `;
   } else if (props.sm && !props.multiple && props.select) {
     return css`
-      height: ${h(props, 'formControl').selectSm};
+      height: ${getHeight(props, 'formControl', 'selectSm')};
     `;
   } else if (!props.multiple && props.select) {
     return css`
-      height: ${h(props, 'formControl').select};
+      height: ${getHeight(props, 'formControl', 'select')};
     `;
   }
 
