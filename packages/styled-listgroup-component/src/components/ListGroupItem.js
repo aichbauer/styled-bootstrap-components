@@ -7,7 +7,7 @@ import {
   getColor,
   getPadding,
   getBorder,
-  borderRadius,
+  getBorderRadius,
 } from 'styled-config';
 
 const color = (props) => {
@@ -114,8 +114,8 @@ const ListGroupItem = styled(Li)`
   border-bottom: none;
   margin-bottom: -1px;
   &:first-child {
-    border-top-left-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
-    border-top-right-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
+    border-top-left-radius: ${(props) => getBorderRadius(props, 'listGroupItem', 'default')};
+    border-top-right-radius: ${(props) => getBorderRadius(props, 'listGroupItem', 'default')};
   };
   &:last-child {
     border-bottom: ${(props) => getBorder(props, 'listGroupItem', 'default')}
@@ -127,8 +127,8 @@ const ListGroupItem = styled(Li)`
     return getColor(props, 'listGroupItem', 'borderColor');
   }};
     margin-bottom: 0;
-    border-bottom-right-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
-    border-bottom-left-radius: ${(props) => borderRadius(props, 'listGroupItem', 'default')};
+    border-bottom-right-radius: ${(props) => getBorderRadius(props, 'listGroupItem', 'default')};
+    border-bottom-left-radius: ${(props) => getBorderRadius(props, 'listGroupItem', 'default')};
   };
   & > a:hover,
   & > a:focus {

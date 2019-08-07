@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getBreakpointSize,
-  borderRadius as br,
+  getBorderRadius,
   getBorder,
   getPadding,
   getMargin,
@@ -178,16 +178,16 @@ const backgroundColor = (props) => {
 
 const borderRadius = (props) => {
   if (props.pill) {
-    return css`border-radius: ${br(props, 'button').pill};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'pill')};`;
   } else if (props.noRadius) {
-    return css`border-radius: ${br(props, 'button').noRadius};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'noRadius')};`;
   } else if (props.sm) {
-    return css`border-radius: ${br(props, 'button').sm};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'sm')};`;
   } else if (props.lg) {
-    return css`border-radius: ${br(props, 'button').lg};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'lg')};`;
   }
 
-  return css`border-radius: ${br(props, 'button').default};`;
+  return css`border-radius: ${getBorderRadius(props, 'button', 'default')};`;
 };
 
 const buttonToggler = (props) => (

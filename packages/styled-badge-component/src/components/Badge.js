@@ -6,18 +6,18 @@ import {
   theme,
   getColor,
   getPadding,
-  borderRadius as br,
+  getBorderRadius,
   fontWeight,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.pill) {
-    return css`border-radius: ${br(props, 'badge').pill};`;
+    return css`border-radius: ${getBorderRadius(props, 'badge', 'pill')};`;
   } else if (props.noRadius) {
-    return css`border-radius: ${br(props, 'badge').noRadius};`;
+    return css`border-radius: ${getBorderRadius(props, 'badge', 'noRadius')};`;
   }
 
-  return css`border-radius: ${br(props, 'badge').default};`;
+  return css`border-radius: ${getBorderRadius(props, 'badge', 'default')};`;
 };
 
 const padding = (props) => {

@@ -22,7 +22,7 @@ import {
 import {
   theme,
   getBorder,
-  borderRadius,
+  getBorderRadius,
   getBoxShadow,
   getColor,
   fontFamily,
@@ -118,7 +118,7 @@ export {
   CardTitle,
   theme,
   getBorder,
-  borderRadius,
+  getBorderRadius,
   getBoxShadow,
   getColor,
   fontFamily,

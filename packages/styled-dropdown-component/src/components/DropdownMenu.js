@@ -8,7 +8,7 @@ import { Div } from 'styled-base-components';
 import {
   theme as DefaultTheme,
   getColor,
-  borderRadius as br,
+  getBorderRadius,
   getPadding,
   getMargin,
   fontSize,
@@ -46,12 +46,12 @@ const isFullWidth = (props) => (
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'dropdownMenu').noRadius};
+      border-radius: ${getBorderRadius(props, 'dropdownMenu', 'noRadius')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'dropdownMenu').default};
+    border-radius: ${getBorderRadius(props, 'dropdownMenu', 'default')};
   `;
 };
 

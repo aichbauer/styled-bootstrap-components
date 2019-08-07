@@ -8,7 +8,7 @@ import {
   getMargin,
   getPadding,
   getBorder,
-  borderRadius as br,
+  getBorderRadius,
   fontWeight,
 } from 'styled-config';
 
@@ -50,12 +50,12 @@ const linkHoverColor = (props) => (
 
 const borderRadius = (props) => {
   if (props.noRadius) {
-    return css`border-radius: ${br(props, 'alert', 'noRadius')}`;
+    return css`border-radius: ${getBorderRadius(props, 'alert', 'noRadius')}`;
   } else if (props.pill) {
-    return css`border-radius: ${br(props, 'alert', 'pill')}`;
+    return css`border-radius: ${getBorderRadius(props, 'alert', 'pill')}`;
   }
 
-  return css`border-radius: ${br(props, 'alert', 'default')}`;
+  return css`border-radius: ${getBorderRadius(props, 'alert', 'default')}`;
 };
 
 const Alert = styled(Div)`

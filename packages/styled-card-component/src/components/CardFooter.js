@@ -7,18 +7,18 @@ import {
   getColor,
   getPadding,
   getBorder,
-  borderRadius as br,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'cardFooter').noRadius};
+      border-radius: ${getBorderRadius(props, 'cardFooter', 'noRadius')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'cardFooter').default};
+    border-radius: ${getBorderRadius(props, 'cardFooter', 'default')};
   `;
 };
 

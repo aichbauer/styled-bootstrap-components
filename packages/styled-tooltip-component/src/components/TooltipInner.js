@@ -6,22 +6,22 @@ import {
   theme,
   getPadding,
   getColor,
-  borderRadius as br,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'tooltipInner').noRadius};
+      border-radius: ${getBorderRadius(props, 'tooltipInner', 'noRadius')};
     `;
   } else if (props.pill) {
     return css`
-      border-radius: ${br(props, 'tooltipInner').pill};
+      border-radius: ${getBorderRadius(props, 'tooltipInner', 'pill')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'tooltipInner').default};
+    border-radius: ${getBorderRadius(props, 'tooltipInner', 'default')};
   `;
 };
 

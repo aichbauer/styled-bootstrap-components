@@ -6,19 +6,19 @@ import {
   theme,
   getColor,
   getPadding,
-  borderRadius as br,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'cardHeader').noRadius};
+      border-radius: ${getBorderRadius(props, 'cardHeader', 'noRadius')};
     `;
   }
 
   return css`
-    border-top-left-radius: ${br(props, 'cardHeader').topLeftRight};
-    border-top-right-radius: ${br(props, 'cardHeader').topLeftRight};
+    border-top-left-radius: ${getBorderRadius(props, 'cardHeader', 'topLeftRight')};
+    border-top-right-radius: ${getBorderRadius(props, 'cardHeader', 'topLeftRight')};
   `;
 };
 

@@ -7,7 +7,7 @@ import {
   getPadding,
   getMargin,
   getBorder,
-  borderRadius,
+  getBorderRadius,
 } from 'styled-config';
 
 const border = (props) => (
@@ -17,7 +17,7 @@ const border = (props) => (
     & > li {
       border-right: ${getBorder(props, 'listGroup', 'aLiFlushRight')};
       border-left: ${getBorder(props, 'listGroup', 'aLiFlushLeft')};
-      border-radius: ${borderRadius(props, 'listGroup').noRadius};
+      border-radius: ${getBorderRadius(props, 'listGroup', 'noRadius')};
       &:first-child {
         border-top: ${getBorder(props, 'listGroup', 'aLiFlushFirstChildTop')};
       };

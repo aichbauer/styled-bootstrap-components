@@ -20,7 +20,7 @@ import {
   CardTitle,
   theme,
   getBorder,
-  borderRadius,
+  getBorderRadius,
   getBoxShadow,
   getColor,
   fontFamily,
@@ -128,7 +128,7 @@ test('Simply check if all components are imported and exported correctly', () =>
   expect(thisTheme).toMatchSnapshot();
 
   expect(typeof getBorder).toBe('function');
-  expect(typeof borderRadius).toBe('function');
+  expect(typeof getBorderRadius).toBe('function');
   expect(typeof getBoxShadow).toBe('function');
   expect(typeof fontFamily).toBe('function');
   expect(typeof getColor).toBe('function');

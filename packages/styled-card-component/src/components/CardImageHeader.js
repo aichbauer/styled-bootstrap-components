@@ -4,19 +4,19 @@ import { Img } from 'styled-base-components';
 
 import {
   theme,
-  borderRadius as br,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'cardImageHeader').noRadius};
+      border-radius: ${getBorderRadius(props, 'cardImageHeader', 'noRadius')};
     `;
   }
 
   return css`
-    border-top-left-radius: ${br(props, 'cardImageHeader').topLeftRight};
-    border-top-right-radius: ${br(props, 'cardImageHeader').topLeftRight};
+    border-top-left-radius: ${getBorderRadius(props, 'cardImageHeader', 'topLeftRight')};
+    border-top-right-radius: ${getBorderRadius(props, 'cardImageHeader', 'topLeftRight')};
   `;
 };
 

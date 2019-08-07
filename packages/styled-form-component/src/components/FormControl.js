@@ -9,7 +9,7 @@ import {
   getBorder,
   getPadding,
   fontSize as fs,
-  borderRadius as br,
+  getBorderRadius,
   height as h,
   getBoxShadow,
   getConcreteBreakpointSize,
@@ -143,24 +143,24 @@ const fontSize = (props) => {
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'formControl').noRadius};
+      border-radius: ${getBorderRadius(props, 'formControl', 'noRadius')};
     `;
   } else if (props.pill) {
     return css`
-      border-radius: ${br(props, 'formControl').pill};
+      border-radius: ${getBorderRadius(props, 'formControl', 'pill')};
     `;
   } else if (props.lg) {
     return css`
-      border-radius: ${br(props, 'formControl').lg};
+      border-radius: ${getBorderRadius(props, 'formControl', 'lg')};
     `;
   } else if (props.sm) {
     return css`
-      border-radius: ${br(props, 'formControl').sm};
+      border-radius: ${getBorderRadius(props, 'formControl', 'sm')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'formControl').default};
+    border-radius: ${getBorderRadius(props, 'formControl', 'default')};
   `;
 };
 

@@ -7,7 +7,7 @@ import {
   getColor,
   getConcreteBreakpointSize,
   getPadding,
-  borderRadius as br,
+  getBorderRadius,
 } from 'styled-config';
 
 const padding = (props) => {
@@ -30,16 +30,16 @@ const padding = (props) => {
 const borderRadius = (props) => {
   if (props.fluid || props.noRadius) {
     return css`
-      border-radius: ${br(props, 'jumbotron', 'noRadius')}
+      border-radius: ${getBorderRadius(props, 'jumbotron', 'noRadius')}
     `;
   } else if (props.pill) {
     return css`
-      border-radius: ${br(props, 'jumbotron', 'pill')}
+      border-radius: ${getBorderRadius(props, 'jumbotron', 'pill')}
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'jumbotron', 'lg')}
+    border-radius: ${getBorderRadius(props, 'jumbotron', 'lg')}
   `;
 };
 

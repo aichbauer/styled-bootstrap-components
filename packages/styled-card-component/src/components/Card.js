@@ -5,19 +5,19 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   getColor,
-  borderRadius as br,
+  getBorderRadius,
   getBorder,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'card').noRadius};
+      border-radius: ${getBorderRadius(props, 'card', 'noRadius')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'card').default};
+    border-radius: ${getBorderRadius(props, 'card', 'default')};
   `;
 };
 

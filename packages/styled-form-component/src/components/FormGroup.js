@@ -6,7 +6,7 @@ import {
   theme,
   getMargin,
   getPadding,
-  borderRadius as br,
+  getBorderRadius,
   fontSize as fs,
   getConcreteBreakpointSize,
 } from 'styled-config';
@@ -89,7 +89,7 @@ const borderRadius = (props) => {
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
-        border-radius: ${br(props, 'formGroup').noRadius};
+        border-radius: ${getBorderRadius(props, 'formGroup', 'noRadius')};
       };
     `;
   }
@@ -99,7 +99,7 @@ const borderRadius = (props) => {
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
-        border-radius: ${br(props, 'formGroup').lg};
+        border-radius: ${getBorderRadius(props, 'formGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
@@ -108,7 +108,7 @@ const borderRadius = (props) => {
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
-        border-radius: ${br(props, 'formGroup').sm};
+        border-radius: ${getBorderRadius(props, 'formGroup', 'sm')};
       };
     `;
   }
@@ -118,7 +118,7 @@ const borderRadius = (props) => {
     & > div > input,
     & > :not(input[type=file]),
     & > div > :not(input[type=file]) {
-      border-radius: ${br(props, 'formGroup').default};
+      border-radius: ${getBorderRadius(props, 'formGroup', 'default')};
     };
   `;
 };

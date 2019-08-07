@@ -6,7 +6,7 @@ import {
   theme,
   getColor,
   getPadding,
-  borderRadius as br,
+  getBorderRadius,
   getBorder,
 } from 'styled-config';
 
@@ -81,17 +81,17 @@ const border = (props) => {
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'navLink').noRadius};
+      border-radius: ${getBorderRadius(props, 'navLink', 'noRadius')};
     `;
   } else if (props.pills && props.active) {
     return css`
-      border-radius: ${br(props, 'navLink').default};
+      border-radius: ${getBorderRadius(props, 'navLink', 'default')};
     `;
   }
 
   return css`
-    border-top-left-radius: ${br(props, 'navLink').default};
-    border-top-right-radius: ${br(props, 'navLink').default};
+    border-top-left-radius: ${getBorderRadius(props, 'navLink', 'default')};
+    border-top-right-radius: ${getBorderRadius(props, 'navLink', 'default')};
   `;
 };
 

@@ -4,7 +4,7 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  borderRadius as br,
+  getBorderRadius,
   getPadding,
   fontSize as fs,
   getMargin,
@@ -14,20 +14,20 @@ const borderRadius = (props) => {
   if (props.lg) {
     return css`
       & > input {
-        border-radius: ${br(props, 'inputGroup').lg};
+        border-radius: ${getBorderRadius(props, 'inputGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
     return css`
       & > input {
-        border-radius: ${br(props, 'inputGroup').sm};
+        border-radius: ${getBorderRadius(props, 'inputGroup', 'sm')};
       };
     `;
   }
 
   return css`
   & > input {
-    border-radius: ${br(props, 'inputGroup').default};
+    border-radius: ${getBorderRadius(props, 'inputGroup', 'default')};
   };
 `;
 };
@@ -99,12 +99,12 @@ const InputGroup = styled(Div)`
     width: 1%;
     margin-bottom: ${(props) => getMargin(props, 'inputGroup', 'bottom')};
     &:not(:last-child) {
-      border-top-right-radius: ${(props) => br(props, 'inputGroup').noRadius};
-      border-bottom-right-radius: ${(props) => br(props, 'inputGroup').noRadius};
+      border-top-right-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
+      border-bottom-right-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
     };
     &:not(:first-child) {
-      border-top-left-radius: ${(props) => br(props, 'inputGroup').noRadius};
-      border-bottom-left-radius: ${(props) => br(props, 'inputGroup').noRadius};
+      border-top-left-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
+      border-bottom-left-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
     };
   };
   ${(props) => borderRadius(props)};

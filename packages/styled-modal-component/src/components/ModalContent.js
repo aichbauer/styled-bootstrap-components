@@ -6,15 +6,15 @@ import {
   theme,
   getColor,
   getBorder,
-  borderRadius as br,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
-    return css`border-radius: ${br(props, 'modalContent').noRadius};`;
+    return css`border-radius: ${getBorderRadius(props, 'modalContent', 'noRadius')};`;
   }
 
-  return css`border-radius: ${br(props, 'modalContent').lg};`;
+  return css`border-radius: ${getBorderRadius(props, 'modalContent', 'lg')};`;
 };
 
 const ModalContent = styled(Div)`

@@ -7,7 +7,7 @@ import {
   getColor,
   getPadding,
   getBorder,
-  borderRadius,
+  getBorderRadius,
 } from 'styled-config';
 
 const ModalHeader = styled(Div)`
@@ -16,8 +16,8 @@ const ModalHeader = styled(Div)`
   justify-content: space-between;
   padding: ${(props) => getPadding(props, 'modalHeader', 'default')};
   border-bottom: ${(props) => getBorder(props, 'modalHeader', 'default')} ${(props) => getColor(props, 'modalHeader', 'borderColor')};
-  border-top-left-radius: ${(props) => borderRadius(props, 'modalHeader').lg};
-  border-top-right-radius: ${(props) => borderRadius(props, 'modalHeader').lg};
+  border-top-left-radius: ${(props) => getBorderRadius(props, 'modalHeader', 'lg')};
+  border-top-right-radius: ${(props) => getBorderRadius(props, 'modalHeader', 'lg')};
 `;
 
 ModalHeader.defaultProps = {
