@@ -6,7 +6,7 @@ import {
   getColor,
   fontFamily,
   fontSize,
-  fontWeight,
+  getFontWeight,
   height,
   getMargin,
   getPadding,
@@ -65,8 +65,8 @@ test('test if fontSize extract fontSize of theme', () => {
   expect(fs).toEqual(theme.button.fontSize);
 });
 
-test('test if fontWeight extract fontWeight of theme', () => {
-  const fw = fontWeight({ theme }, 'button');
+test('test if getFontWeight extract fontWeight of theme', () => {
+  const fw = getFontWeight({ theme }, 'button');
   expect(fw).toEqual(theme.button.fontWeight);
 });
 

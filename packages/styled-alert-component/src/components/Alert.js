@@ -9,7 +9,7 @@ import {
   getPadding,
   getBorder,
   getBorderRadius,
-  fontWeight,
+  getFontWeight,
 } from 'styled-config';
 
 const alertDismissible = (props) => (
@@ -64,7 +64,7 @@ const Alert = styled(Div)`
   margin-bottom: ${(props) => getMargin(props, 'alert', 'bottom')};
   border: ${(props) => getBorder(props, 'alert', 'default')};
   & > a {
-    font-weight: ${(props) => fontWeight(props, 'alert', 'default')};
+    font-weight: ${(props) => getFontWeight(props, 'alert', 'default')};
   };
   & > h1,
   & > h2,

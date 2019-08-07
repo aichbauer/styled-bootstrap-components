@@ -7,7 +7,7 @@ import {
   theme,
   getPadding,
   getMargin,
-  fontWeight,
+  getFontWeight,
   fontSize,
   fontFamily,
 } from 'styled-config';
@@ -29,7 +29,7 @@ export const TooltipWithoutTransition = styled(Div)`
   margin: ${(props) => getMargin(props, 'tooltip', 'default')};
   font-family: ${(props) => fontFamily(props, 'tooltip').default};
   font-style: normal;
-  font-weight: ${(props) => fontWeight(props, 'tooltip').default};
+  font-weight: ${(props) => getFontWeight(props, 'tooltip', 'default')};
   line-height: 1.5;
   text-align: left;
   text-decoration: none;

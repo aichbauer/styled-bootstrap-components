@@ -7,7 +7,7 @@ import {
   getColor,
   getPadding,
   getBorderRadius,
-  fontWeight,
+  getFontWeight,
 } from 'styled-config';
 
 const borderRadius = (props) => {
@@ -73,7 +73,7 @@ const badgeLink = (props) => {
 const Badge = styled(Span)`
   display: inline-block;
   font-size: 75%;
-  font-weight: ${(props) => fontWeight(props, 'badge', 'default')};
+  font-weight: ${(props) => getFontWeight(props, 'badge', 'default')};
   line-height: 1;
   text-align: center;
   white-space: nowrap;

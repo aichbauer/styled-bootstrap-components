@@ -7,7 +7,7 @@ import {
   width,
   fontFamily,
   fontSize,
-  fontWeight,
+  getFontWeight,
   getBreakpointSize,
 } from 'styled-config';
 
@@ -17,7 +17,7 @@ const Container = styled(Div)`
   margin-right: auto;
   margin-left: auto;
   font-size:  ${(props) => fontSize(props, 'container').default};
-  font-weight: ${(props) => fontWeight(props, 'container').default};
+  font-weight: ${(props) => getFontWeight(props, 'container', 'default')};
   line-height: 1.5;
   box-sizing: border-box;
   @media (min-width: ${(props) => {

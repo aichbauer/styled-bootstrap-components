@@ -6,7 +6,7 @@ import { Transition, Div } from 'styled-base-components';
 import {
   theme,
   getColor,
-  fontWeight,
+  getFontWeight,
   getMargin,
   fontFamily,
   getBorderRadius,
@@ -42,7 +42,7 @@ export const PopoverWithoutTransition = styled(Div)`
   max-width: 276px;
   font-family: ${(props) => fontFamily(props, 'popover').default};
   font-style: normal;
-  font-weight: ${(props) => fontWeight(props, 'popover').default};
+  font-weight: ${(props) => getFontWeight(props, 'popover', 'default')};
   line-height: 1.5;
   text-align: left;
   text-decoration: none;
