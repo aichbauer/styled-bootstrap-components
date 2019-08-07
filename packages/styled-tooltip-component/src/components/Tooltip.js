@@ -9,7 +9,7 @@ import {
   getMargin,
   getFontWeight,
   getFontSize,
-  fontFamily,
+  getFontFamily,
 } from 'styled-config';
 
 const padding = (props) => (
@@ -27,7 +27,7 @@ export const TooltipWithoutTransition = styled(Div)`
   z-index: 1070;
   display: block;
   margin: ${(props) => getMargin(props, 'tooltip', 'default')};
-  font-family: ${(props) => fontFamily(props, 'tooltip').default};
+  font-family: ${(props) => getFontFamily(props, 'tooltip', 'default')};
   font-style: normal;
   font-weight: ${(props) => getFontWeight(props, 'tooltip', 'default')};
   line-height: 1.5;

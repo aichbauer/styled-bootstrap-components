@@ -36,7 +36,7 @@ export const getBorder = makeGetter('border');
 export const getBorderRadius = makeGetter('borderRadius');
 export const getFontWeight = makeGetter('fontWeight');
 export const getFontSize = makeGetter('fontSize');
-export const fontFamily = makeGetter('fontFamily');
+export const getFontFamily = makeGetter('fontFamily');
 export const width = makeGetter('width');
 export const height = makeGetter('height');
 

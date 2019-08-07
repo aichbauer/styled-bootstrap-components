@@ -4,7 +4,7 @@ import {
   getBorderRadius,
   getBoxShadow,
   getColor,
-  fontFamily,
+  getFontFamily,
   getFontSize,
   getFontWeight,
   height,
@@ -54,8 +54,8 @@ test('test if colors extracts colors of theme', () => {
   expect(cDark).toEqual(theme.button.colors.dark);
 });
 
-test('test if fontFamily extracts fontFamily of theme', () => {
-  const ff = fontFamily({ theme }, 'tooltip');
+test('test if getFontFamily extracts fontFamily of theme', () => {
+  const ff = getFontFamily({ theme }, 'tooltip');
 
   expect(ff).toEqual(theme.tooltip.fontFamily);
 });

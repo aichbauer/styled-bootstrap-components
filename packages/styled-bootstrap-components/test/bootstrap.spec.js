@@ -23,7 +23,7 @@ import {
   getBorderRadius,
   getBoxShadow,
   getColor,
-  fontFamily,
+  getFontFamily,
   getFontSize,
   getFontWeight,
   height,
@@ -130,7 +130,7 @@ test('Simply check if all components are imported and exported correctly', () =>
   expect(typeof getBorder).toBe('function');
   expect(typeof getBorderRadius).toBe('function');
   expect(typeof getBoxShadow).toBe('function');
-  expect(typeof fontFamily).toBe('function');
+  expect(typeof getFontFamily).toBe('function');
   expect(typeof getColor).toBe('function');
   expect(typeof getMargin).toBe('function');
   expect(typeof getFontSize).toBe('function');

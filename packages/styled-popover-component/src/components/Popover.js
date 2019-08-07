@@ -8,7 +8,7 @@ import {
   getColor,
   getFontWeight,
   getMargin,
-  fontFamily,
+  getFontFamily,
   getBorderRadius,
   getBorder,
   getFontSize,
@@ -40,7 +40,7 @@ export const PopoverWithoutTransition = styled(Div)`
   left: 0;
   z-index: 1060;
   max-width: 276px;
-  font-family: ${(props) => fontFamily(props, 'popover').default};
+  font-family: ${(props) => getFontFamily(props, 'popover', 'default')};
   font-style: normal;
   font-weight: ${(props) => getFontWeight(props, 'popover', 'default')};
   line-height: 1.5;

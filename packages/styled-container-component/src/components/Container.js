@@ -5,14 +5,14 @@ import { Div } from 'styled-base-components';
 import {
   theme,
   width,
-  fontFamily,
+  getFontFamily,
   getFontSize,
   getFontWeight,
   getBreakpointSize,
 } from 'styled-config';
 
 const Container = styled(Div)`
-  font-family: ${(props) => fontFamily(props, 'container').default};
+  font-family: ${(props) => getFontFamily(props, 'container', 'default')};
   width: ${(props) => width(props, 'container').default};
   margin-right: auto;
   margin-left: auto;
