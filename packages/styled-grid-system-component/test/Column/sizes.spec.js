@@ -8,12 +8,6 @@ import { Column } from '../../src';
 test('Styles matches Column with specified xs size', () => {
   const tree = renderer.create(<Column xs={6} />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('box-sizing', 'border-box');
-  expect(tree).toHaveStyleRule('padding-right', '15px');
-  expect(tree).toHaveStyleRule('padding-left', '15px');
-  expect(tree).toHaveStyleRule('flex-basis', undefined);
-  expect(tree).toHaveStyleRule('flex-grow', undefined);
-  expect(tree).toHaveStyleRule('width', '100%');
 });
 
 test('Styles matches Column with specified sm size', () => {

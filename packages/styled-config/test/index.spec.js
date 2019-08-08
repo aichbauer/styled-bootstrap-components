@@ -14,7 +14,21 @@ import {
   getConfigProperty,
   getBreakpointSize,
   getConcreteBreakpointSize,
-} from '../../src';
+} from '../src';
+
+test('test if all values in configuration resolves', () => {
+  const traverse = (obj) => {
+    Object.keys(obj).forEach((key) => {
+      const value = getConfigProperty(obj, key);
+
+      if (typeof value === 'object') {
+        traverse(value);
+      }
+    });
+  };
+
+  traverse(theme);
+});
 
 test('test if getBorder extracts border of theme', () => {
   const b = getBorder({ theme }, 'button');

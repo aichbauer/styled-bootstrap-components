@@ -119,7 +119,7 @@ const defaultTheme = {
 
 To see how to modify all the styled-bootstrap-components to create your own
 UI component library take a look at the
-[theme](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-config/test/fixtures/index.js)
+[theme](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-config/src/theme).
 
 ## License
 
