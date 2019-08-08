@@ -3,11 +3,11 @@ import { theme as defaultTheme } from '../theme';
 // ---------------------------------------------------------------------------
 
 export const getConfigProperty = (theme, ...propertyPath) => {
-  // Function for getting values from current theme.
+  // Function for getting values from themes
   const getterFunction = (...path) => getConfigProperty(theme, ...path);
 
   // Function for gettings values from objects while 'dereferencing' all
-  // functional values.
+  // functional values
   const receiveValueSafe = (initialValue, ...path) => {
     let value = initialValue;
 
@@ -26,7 +26,7 @@ export const getConfigProperty = (theme, ...propertyPath) => {
 
   const value = receiveValueSafe(theme, ...propertyPath);
 
-  // Use default theme if property is not found in current theme.
+  // Use default theme if property is not found in current theme
   if (value === undefined) {
     return receiveValueSafe(defaultTheme, ...propertyPath);
   }
