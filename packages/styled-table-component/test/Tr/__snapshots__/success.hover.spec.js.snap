@@ -3,15 +3,15 @@
 exports[`Styles matches Tr success hover 1`] = `
 .c0 > th,
 .c0 > td {
-  background-color: #c3e6cb;
+  background-color: #72d889;
 }
 
-.c0:hover > td,
-.c0:hover > th,
-.c0 tbody tr:hover,
-.c0 tbody tr:hover > th,
-.c0 tbody tr:hover > td {
-  background-color: #b1dfbb;
+.hover .c0:hover > th,
+.hover .c0:hover > td,
+.hover .c0 tbody tr:hover,
+.hover .c0 tbody tr:hover > th,
+.hover .c0 tbody tr:hover > td {
+  background-color: #28a745;
 }
 
 <tr

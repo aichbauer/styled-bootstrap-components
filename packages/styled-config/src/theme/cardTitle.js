@@ -1,9 +1,7 @@
-import { colors } from './colors';
-
 const cardTitle = {
   colors: {
     default: {
-      colorMuted: colors.gray,
+      colorMuted: (get) => get('colorScheme', 'darkLighter'),
     },
   },
   margin: {

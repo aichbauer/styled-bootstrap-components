@@ -7,23 +7,23 @@ exports[`Styles matches Table responsiveMd bordered 1`] = `
   margin-bottom: 1rem;
   border-collapse: collapse;
   background-color: transparent;
-  border: 1px solid #dee2e6;
+  border: 1px solid #e2e6ea;
 }
 
 .c1 th,
 .c1 td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #d6d8d9;
 }
 
 .c1 thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid #d6d8d9;
 }
 
 .c1 tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #d6d8d9;
 }
 
 .c1 + .c0 {
@@ -32,7 +32,7 @@ exports[`Styles matches Table responsiveMd bordered 1`] = `
 
 .c1 th,
 .c1 td {
-  border: 1px solid #dee2e6;
+  border: 1px solid #e2e6ea;
 }
 
 .c1 thead th,
@@ -50,6 +50,6 @@ exports[`Styles matches Table responsiveMd bordered 1`] = `
 }
 
 <table
-  className="c0 c1"
+  className="  c0 c1"
 />
 `;

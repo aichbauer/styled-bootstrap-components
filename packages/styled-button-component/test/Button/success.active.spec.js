@@ -8,7 +8,7 @@ test('Styles matches Button success active', () => {
   const tree = renderer.create(<Button success active />).toJSON();
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#fff');
-  expect(tree).toHaveStyleRule('background-color', '#1e7e34');
+  expect(tree).toHaveStyleRule('background-color', '#1c7430');
   expect(tree).toHaveStyleRule('border', '1px solid #1c7430');
   expect(tree).toHaveStyleRule('color', '#fff', {
     modifier: '&:hover',

@@ -3,7 +3,7 @@
 exports[`Styles matches PopoverBody 1`] = `
 .c0 {
   padding: 0.5rem 0.75rem;
-  color: #212529;
+  color: #2d2f31;
 }
 
 <div

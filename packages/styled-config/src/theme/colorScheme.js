@@ -51,12 +51,12 @@ const colorScheme = {
   lightLighter: '#fdfdfe',
   light: '#f0f0f0',
   lightDarker: '#e2e6ea',
-  lightDark: '#d3d9df',
+  lightDark: '#cccecf',
   lightDarkest: '#343a40',
   lightBoxShadow: 'rgba(248, 249, 250, 0.5)',
 
   darkLight: '#d6d8d9',
-  darkLighter: '#c6c8ca',
+  darkLighter: '#abaeb1',
   dark: '#343a40',
   darkDarker: '#23272b',
   darkDark: '#201a1d',
@@ -68,6 +68,7 @@ const colorScheme = {
   darker: '#2d2f31',
   darkerDarker: '#212529',
   darkerDark: '#16181b',
+  darkerBoxShadow: 'rgba(0, 0, 0, 0.15)',
 
   white: '#fff',
   whiteDarker: '#f4f4f4',
@@ -75,10 +76,30 @@ const colorScheme = {
 
   transparent: 'transparent',
 
-  whiteHalfTransparent: 'rgba(0, 0, 0, 0.5)',
-  whiteTenthTransparent: 'rgba(0, 0, 0, 0.1)',
-  darkHalfTransparent: 'rgba(255, 255, 255, 0.5)',
-  darkTenthTransparent: 'rgba(255, 255, 255, 0.1)',
+  white90Alpha: 'rgba(255, 255, 255, 0.9)',
+  white75Alpha: 'rgba(255, 255, 255, 0.75)',
+  white50Alpha: 'rgba(255, 255, 255, 0.5)',
+  white25Alpha: 'rgba(255, 255, 255, 0.25)',
+  white10Alpha: 'rgba(255, 255, 255, 0.1)',
+
+  dark90Alpha: 'rgba(0, 0, 0, 0.9)',
+  dark75Alpha: 'rgba(0, 0, 0, 0.75)',
+  dark50Alpha: 'rgba(0, 0, 0, 0.5)',
+  dark25Alpha: 'rgba(0, 0, 0, 0.25)',
+  dark10Alpha: 'rgba(0, 0, 0, 0.1)',
+
+  white90Transparent: 'rgba(255, 255, 255, 0.9)',
+  whiteHalfTransparent: 'rgba(255, 255, 255, 0.5)',
+  whiteQuarterTransparent: 'rgba(255, 255, 255, 0.25)',
+  whiteTenthTransparent: 'rgba(255, 255, 255, 0.1)',
+
+  dark90Transparent: 'rgba(0, 0, 0, 0.9)',
+  darkHalfTransparent: 'rgba(0, 0, 0, 0.5)',
+  darkQuarterTransparent: 'rgba(0, 0, 0, 0.25)',
+  darkTenthTransparent: 'rgba(0, 0, 0, 0.1)',
+
+  weakBorder: 'rgba(0, 0, 0, 0.2)',
+  weakBackground: 'rgba(0, 0, 0, 0.05)',
 };
 
 export { colorScheme };

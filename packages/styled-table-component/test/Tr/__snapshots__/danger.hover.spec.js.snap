@@ -3,15 +3,15 @@
 exports[`Styles matches Tr danger hover 1`] = `
 .c0 > th,
 .c0 > td {
-  background-color: #f5c6cb;
+  background-color: #f5b4bb;
 }
 
-.c0:hover > td,
-.c0:hover > th,
-.c0 tbody tr:hover,
-.c0 tbody tr:hover > th,
-.c0 tbody tr:hover > td {
-  background-color: #f1b0b7;
+.hover .c0:hover > th,
+.hover .c0:hover > td,
+.hover .c0 tbody tr:hover,
+.hover .c0 tbody tr:hover > th,
+.hover .c0 tbody tr:hover > td {
+  background-color: #dc3545;
 }
 
 <tr

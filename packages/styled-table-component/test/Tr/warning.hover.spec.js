@@ -7,7 +7,7 @@ import { Tr } from '../../src';
 test('Styles matches Tr warning hover', () => {
   const tree = renderer.create(<Tr warning hover />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('background-color', '#ffeeba', {
+  expect(tree).toHaveStyleRule('background-color', '#f3da8d', {
     modifier: '& > th',
   });
   expect(tree).toHaveStyleRule('background-color', '#ffeeba', {

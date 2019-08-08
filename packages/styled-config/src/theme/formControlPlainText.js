@@ -1,8 +1,8 @@
 const formControlPlainText = {
   colors: {
     default: {
-      backgroundColor: 'transparent',
-      borderColor: 'transparent',
+      backgroundColor: (get) => get('colorScheme', 'transparent'),
+      borderColor: (get) => get('colorScheme', 'transparent'),
     },
   },
   padding: {

@@ -1,10 +1,9 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const jumbotron = {
   colors: {
     default: {
-      backgroundColor: colors.gray200,
+      backgroundColor: (get) => get('colorScheme', 'light'),
     },
   },
   padding: {

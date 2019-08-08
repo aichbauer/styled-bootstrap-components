@@ -21,7 +21,7 @@ exports[`Styles matches TooltipArrow top 1`] = `
   top: 0.4rem;
   left: calc(50% - 0.35rem);
   border-width: 0.4rem 0.4rem 0;
-  border-top-color: #000;
+  border-top-color: #2d2f31;
 }
 
 <div

@@ -4,12 +4,11 @@ exports[`Styles matches pill 1`] = `
 .c0 {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 10rem;
   color: #383d41;
   background-color: #e2e3e5;
-  border-color: #d6d8db;
+  border-color: #b4b5b7;
 }
 
 .c0 > a {
@@ -26,12 +25,12 @@ exports[`Styles matches pill 1`] = `
 }
 
 .c0 > hr {
-  border-top-color: #c8cbcf;
+  border-top-color: #b4b5b7;
 }
 
 .c0 > a,
 .c0 > a:hover {
-  color: #202326;
+  color: #383d41;
 }
 
 <div

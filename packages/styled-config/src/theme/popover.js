@@ -1,11 +1,10 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const popover = {
   colors: {
     default: {
-      backgroundColor: colors.white,
-      borderColor: colors.modalBorder,
+      backgroundColor: (get) => get('colorScheme', 'white'),
+      borderColor: (get) => get('colorScheme', 'dark25Alpha'),
     },
   },
   fontWeight: {

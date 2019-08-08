@@ -1,11 +1,10 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const modalContent = {
   colors: {
     default: {
-      backgroundColor: colors.white,
-      borderColor: colors.modalBorder,
+      backgroundColor: (get) => get('colorScheme', 'white'),
+      borderColor: (get) => get('colorScheme', 'weakBorder'),
     },
   },
   borderRadius: utils.borderRadius,

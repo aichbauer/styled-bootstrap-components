@@ -1,9 +1,7 @@
-import { colors } from './colors';
-
 const popoverBody = {
   colors: {
     default: {
-      color: colors.gray900,
+      color: (get) => get('colorScheme', 'darker'),
     },
   },
   padding: {

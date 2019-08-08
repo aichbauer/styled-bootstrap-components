@@ -1,14 +1,12 @@
-import { colors } from './colors';
-
 const dropdownItem = {
   colors: {
     default: {
-      color: colors.gray900,
-      colorHoverFocus: colors.gray900HoverFocus,
-      colorActive: colors.white,
-      backgroundColorActive: colors.blue,
-      colorDisabled: colors.gray,
-      backgroundColorHoverFocus: colors.gray100,
+      color: (get) => get('colorScheme', 'darker'),
+      colorHoverFocus: (get) => get('colorScheme', 'darkerDarker'),
+      colorActive: (get) => get('colorScheme', 'darkerDark'),
+      colorDisabled: (get) => get('colorScheme', 'lightDarker'),
+      backgroundColorActive: (get) => get('colorScheme', 'primary'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'light'),
     },
   },
   fontWeight: {

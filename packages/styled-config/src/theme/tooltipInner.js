@@ -1,11 +1,10 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const tooltipInner = {
   colors: {
     default: {
-      color: colors.white,
-      backgroundColor: colors.black,
+      color: (get) => get('colorScheme', 'white'),
+      backgroundColor: (get) => get('colorScheme', 'darker'),
     },
   },
   padding: {

@@ -1,22 +1,16 @@
-import { colors } from './colors';
-
 const navbar = {
   colors: {
     dark: {
-      color: colors.navbarDarkColor,
-      borderColor: colors.navbarDarkBorderColor,
-      backgroundColor: colors.gray800,
+      color: (get) => get('colorScheme', 'white50Alpha'),
+      borderColor: (get) => get('colorScheme', 'white10Alpha'),
+      backgroundColor: (get) => get('colorScheme', 'dark'),
     },
     light: {
-      color: colors.navbarLightColor,
-      borderColor: colors.navbarLightBorderColor,
-      backgroundColor: colors.gray100,
+      color: (get) => get('colorScheme', 'dark50Alpha'),
+      borderColor: (get) => get('colorScheme', 'dark10Alpha'),
+      backgroundColor: (get) => get('colorScheme', 'light'),
     },
-    default: {
-      color: colors.navbarLightColor,
-      borderColor: colors.navbarLightBorderColor,
-      backgroundColor: colors.gray100,
-    },
+    default: (get) => get('navbar', 'colors', 'light'),
   },
   padding: {
     default: '0.5rem 1rem',

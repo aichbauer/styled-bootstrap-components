@@ -1,10 +1,9 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const nav = {
   colors: {
     default: {
-      borderColorTabs: colors.gray300,
+      borderColorTabs: (get) => get('colorScheme', 'lightDark'),
     },
   },
   padding: {

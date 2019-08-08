@@ -13,8 +13,8 @@ exports[`Styles matches Button light 1`] = `
   user-select: none;
   -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
-  border: 1px solid #f8f9fa;
-  background-color: #f8f9fa;
+  border: 1px solid #f0f0f0;
+  background-color: #f0f0f0;
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 1rem;
@@ -31,8 +31,8 @@ exports[`Styles matches Button light 1`] = `
 .c0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 1px solid #f8f9fa;
-  background-color: #f8f9fa;
+  border: 1px solid #f0f0f0;
+  background-color: #f0f0f0;
   color: #212529;
   cursor: pointer;
 }
@@ -41,7 +41,7 @@ exports[`Styles matches Button light 1`] = `
 .c0:focus:focus,
 .c0:hover:hover,
 .c0:focus:hover {
-  border: 1px solid #dae0e5;
+  border: 1px solid #cccecf;
 }
 
 .c0:hover:focus,
@@ -53,7 +53,7 @@ exports[`Styles matches Button light 1`] = `
 
 .c0:focus,
 .c0:hover {
-  border: 1px solid #dae0e5;
+  border: 1px solid #cccecf;
 }
 
 .c0:focus,
@@ -79,9 +79,9 @@ exports[`Styles matches Button light disabled 1`] = `
   user-select: none;
   -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #f0f0f0;
   background-image: none;
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
   border-radius: 0.25rem;
   display: inline-block;
   opacity: 0.65;
@@ -99,9 +99,9 @@ exports[`Styles matches Button light disabled 1`] = `
 .c0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #f0f0f0;
   background-image: none;
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
   color: #212529;
 }
 

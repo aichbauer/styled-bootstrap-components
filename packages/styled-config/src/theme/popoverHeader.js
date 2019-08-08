@@ -1,11 +1,10 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const popoverHeader = {
   colors: {
     default: {
-      backgrondColor: colors.popoverHeaderBackgroundColor,
-      borderBottomColor: colors.popoverHeaderBorderColor,
+      backgrondColor: (get) => get('colorScheme', 'light'),
+      borderBottomColor: (get) => get('colorScheme', 'lightDarker'),
     },
   },
   padding: {

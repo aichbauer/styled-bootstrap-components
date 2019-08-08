@@ -11,6 +11,7 @@ import {
   getMargin,
   getPadding,
   getWidth,
+  getConfigProperty,
   getBreakpointSize,
   getConcreteBreakpointSize,
 } from '../../src';
@@ -43,7 +44,7 @@ test('test if colors extracts colors of theme', () => {
   const cLight = getColor({ theme, light: true }, 'button');
   const cDark = getColor({ theme, dark: true }, 'button');
 
-  expect(cDefault).toEqual(theme.button.colors.default);
+  expect(cDefault).toEqual(getConfigProperty(theme, 'button', 'colors', 'default'));
   expect(cPrimary).toEqual(theme.button.colors.primary);
   expect(cSecondary).toEqual(theme.button.colors.secondary);
   expect(cSuccess).toEqual(theme.button.colors.success);

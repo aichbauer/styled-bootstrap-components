@@ -13,9 +13,9 @@ exports[`Styles matches Button light active 1`] = `
   user-select: none;
   -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
-  border: 1px solid #d3d9df;
+  border: 1px solid #cccecf;
   background-image: none;
-  background-color: #dae0e5;
+  background-color: #cccecf;
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 1rem;
@@ -32,9 +32,9 @@ exports[`Styles matches Button light active 1`] = `
 .c0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 1px solid #d3d9df;
+  border: 1px solid #cccecf;
   background-image: none;
-  background-color: #dae0e5;
+  background-color: #cccecf;
   color: #212529;
   cursor: pointer;
 }

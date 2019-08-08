@@ -15,7 +15,7 @@ exports[`Styles matches Button primary active 1`] = `
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   border: 1px solid #005cbf;
   background-image: none;
-  background-color: #0062cc;
+  background-color: #005cbf;
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 1rem;
@@ -34,7 +34,7 @@ exports[`Styles matches Button primary active 1`] = `
   text-decoration: none;
   border: 1px solid #005cbf;
   background-image: none;
-  background-color: #0062cc;
+  background-color: #005cbf;
   color: #fff;
   cursor: pointer;
 }

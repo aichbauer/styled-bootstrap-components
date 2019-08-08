@@ -1,11 +1,10 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const cardHeader = {
   colors: {
     default: {
-      background: colors.backgroundCard,
-      borderBottom: colors.borderCard,
+      background: (get) => get('colorScheme', 'white'),
+      borderBottom: (get) => get('colorScheme', 'weakBorder'),
     },
   },
   padding: {

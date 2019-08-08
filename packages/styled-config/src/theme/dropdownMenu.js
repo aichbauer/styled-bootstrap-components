@@ -1,12 +1,11 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const dropdownMenu = {
   colors: {
     default: {
-      color: colors.gray900,
-      backgroundColor: colors.white,
-      borderColor: colors.gray900BoxShadow,
+      color: (get) => get('colorScheme', 'darker'),
+      backgroundColor: (get) => get('colorScheme', 'white'),
+      borderColor: (get) => get('colorScheme', 'darkerBoxShadow'),
     },
   },
   fontSize: {

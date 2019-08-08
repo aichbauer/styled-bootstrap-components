@@ -1,10 +1,9 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const modalFooter = {
   colors: {
     default: {
-      borderColor: colors.borderCard,
+      borderColor: (get) => get('colorScheme', 'weakBorder'),
     },
   },
   padding: {

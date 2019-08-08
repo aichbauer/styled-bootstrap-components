@@ -42,7 +42,7 @@ exports[`Styles matches Button block 1`] = `
 .c1:focus:focus,
 .c1:hover:hover,
 .c1:focus:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c1:hover:focus,
@@ -54,7 +54,7 @@ exports[`Styles matches Button block 1`] = `
 
 .c1:focus,
 .c1:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c1:focus,

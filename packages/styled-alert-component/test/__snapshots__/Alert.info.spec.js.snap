@@ -4,12 +4,11 @@ exports[`Styles matches info 1`] = `
 .c0 {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  color: #0c5460;
+  color: #10707f;
   background-color: #d1ecf1;
-  border-color: #bee5eb;
+  border-color: #a3d6de;
 }
 
 .c0 > a {
@@ -26,12 +25,12 @@ exports[`Styles matches info 1`] = `
 }
 
 .c0 > hr {
-  border-top-color: #abdde5;
+  border-top-color: #a3d6de;
 }
 
 .c0 > a,
 .c0 > a:hover {
-  color: #062c33;
+  color: #10707f;
 }
 
 <div

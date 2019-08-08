@@ -8,7 +8,7 @@ test('Styles matches CardFooter', () => {
   const tree = renderer.create(<CardFooter />).toJSON();
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('padding', '0.75rem 1.25rem');
-  expect(tree).toHaveStyleRule('background-color', 'rgba(0,0,0,0.03)');
+  expect(tree).toHaveStyleRule('background-color', 'rgba(0,0,0,0.05)');
   expect(tree).toHaveStyleRule('border-top', '1px solid rgba(0,0,0,0.125)');
   expect(tree).toHaveStyleRule('display', 'flex');
   expect(tree).toHaveStyleRule('flex-flow', 'row wrap');

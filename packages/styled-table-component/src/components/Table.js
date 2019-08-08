@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { Table as BaseTable } from 'styled-base-components';
@@ -90,9 +91,8 @@ const tableDarkStriped = (props) => (
 );
 
 const tableDarkHover = (props) => (
-  props.hover &&
   css`
-    & tbody tr:hover {
+    .hover & tbody tr:hover {
       background-color: ${getColor(props, 'table', 'darkBackgroundColorHoverFocus')};
     };
   `
@@ -101,7 +101,7 @@ const tableDarkHover = (props) => (
 const tableDark = (props) => (
   (props.tableDark || props.dark) &&
   css`
-    color: ${getColor(props, 'table').darkColor};
+    color: ${getColor(props, 'table', 'darkColor')};
     background-color: ${getColor(props, 'table', 'darkBackgroundColor')};
     & th,
     & td,
@@ -179,7 +179,7 @@ const tableResponsive = (props) => (
   `
 );
 
-const Table = styled(BaseTable)`
+const TableWoClass = styled(BaseTable)`
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
@@ -215,8 +215,23 @@ const Table = styled(BaseTable)`
   ${tableResponsive};
 `;
 
-Table.defaultProps = {
+TableWoClass.defaultProps = {
   theme,
 };
+
+const Table = React.forwardRef(({
+  hover, className, children, ...rest
+}, ref) => (
+  <TableWoClass
+    ref={ref}
+    className={`${hover ? 'hover' : ''} ${className || ''}`}
+    hover={hover}
+    {...rest}
+  >
+    {children}
+  </TableWoClass>
+));
+
+// const Table = TableWoClass;
 
 export { Table };

@@ -2,20 +2,33 @@ import { theme as defaultTheme } from '../theme';
 
 // ---------------------------------------------------------------------------
 
-export const getProperty = (obj, level, ...rest) => {
-  if (obj === undefined) return undefined;
-  if (rest.length === 0) return obj[level];
-  return getProperty(obj[level], ...rest);
-};
-
 export const getConfigProperty = (theme, ...propertyPath) => {
-  const value = (
-    getProperty(theme, ...propertyPath)
-    || getProperty(defaultTheme, ...propertyPath)
-  );
+  // Function for getting values from current theme.
+  const getterFunction = (...path) => getConfigProperty(theme, ...path);
 
-  if (typeof value === 'function') {
-    return value((...path) => getConfigProperty(theme, ...path));
+  // Function for gettings values from objects while 'dereferencing' all
+  // functional values.
+  const receiveValueSafe = (initialValue, ...path) => {
+    let value = initialValue;
+
+    for (let i = 0; value !== undefined && i < path.length; i += 1) {
+      let tempValue = value[path[i]];
+
+      while (typeof tempValue === 'function') {
+        tempValue = tempValue(getterFunction);
+      }
+
+      value = tempValue;
+    }
+
+    return value;
+  };
+
+  const value = receiveValueSafe(theme, ...propertyPath);
+
+  // Use default theme if property is not found in current theme.
+  if (value === undefined) {
+    return receiveValueSafe(defaultTheme, ...propertyPath);
   }
 
   return value;

@@ -1,10 +1,9 @@
-import { colors } from './colors';
 import { utils } from './utils';
 
 const breadcrumb = {
   colors: {
     default: {
-      backgroundColor: colors.gray200,
+      backgroundColor: (get) => get('colorScheme', 'lightDarker'),
     },
   },
   padding: {

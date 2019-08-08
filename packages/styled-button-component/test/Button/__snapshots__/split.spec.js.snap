@@ -43,7 +43,7 @@ exports[`Styles matches Button split 1`] = `
 .c0:focus:focus,
 .c0:hover:hover,
 .c0:focus:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c0:hover:focus,
@@ -55,7 +55,7 @@ exports[`Styles matches Button split 1`] = `
 
 .c0:focus,
 .c0:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c0:focus,
@@ -115,7 +115,7 @@ exports[`Styles matches Button split lg 1`] = `
 .c0:focus:focus,
 .c0:hover:hover,
 .c0:focus:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c0:hover:focus,
@@ -127,7 +127,7 @@ exports[`Styles matches Button split lg 1`] = `
 
 .c0:focus,
 .c0:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c0:focus,
@@ -187,7 +187,7 @@ exports[`Styles matches Button split sm 1`] = `
 .c0:focus:focus,
 .c0:hover:hover,
 .c0:focus:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c0:hover:focus,
@@ -199,7 +199,7 @@ exports[`Styles matches Button split sm 1`] = `
 
 .c0:focus,
 .c0:hover {
-  border: 1px solid #545b62;
+  border: 1px solid #4e555b;
 }
 
 .c0:focus,
