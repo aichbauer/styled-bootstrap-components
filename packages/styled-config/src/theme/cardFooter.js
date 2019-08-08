@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const cardFooter = {
   colors: {
     default: {
@@ -11,10 +9,10 @@ const cardFooter = {
     default: '0.75rem 1.25rem',
   },
   borderRadius: {
-    noRadius: utils.borderRadius.noRadius,
+    noRadius: (get) => get('globals', 'borderRadius', 'noRadius'),
     default: '0 0 calc(0.25rem - 1px) calc(0.25rem - 1px)',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { cardFooter };

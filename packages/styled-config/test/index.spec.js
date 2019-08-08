@@ -33,13 +33,13 @@ test('test if all values in configuration resolves', () => {
 test('test if getBorder extracts border of theme', () => {
   const b = getBorder({ theme }, 'button');
 
-  expect(b).toEqual(theme.button.border);
+  expect(b).toEqual(getConfigProperty(theme, 'button', 'border'));
 });
 
 test('test if getBorderRadius extracts borderRadius of theme', () => {
   const br = getBorderRadius({ theme }, 'button');
 
-  expect(br).toEqual(theme.button.borderRadius);
+  expect(br).toEqual(getConfigProperty(theme, 'button', 'borderRadius'));
 });
 
 test('test if getBoxShadow extracts boxShadow of theme', () => {
@@ -77,7 +77,7 @@ test('test if getFontFamily extracts fontFamily of theme', () => {
 
 test('test if getFontSize extract fontSize of theme', () => {
   const fs = getFontSize({ theme }, 'button');
-  expect(fs).toEqual(theme.button.fontSize);
+  expect(fs).toEqual(getConfigProperty(theme, 'button', 'fontSize'));
 });
 
 test('test if getFontWeight extract fontWeight of theme', () => {

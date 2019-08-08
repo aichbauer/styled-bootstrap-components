@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const card = {
   colors: {
     default: {
@@ -7,8 +5,8 @@ const card = {
       borderColor: (get) => get('colorScheme', 'weakBorder'),
     },
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
 };
 
 export { card };

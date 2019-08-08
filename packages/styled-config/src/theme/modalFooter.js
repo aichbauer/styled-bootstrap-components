@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const modalFooter = {
   colors: {
     default: {
@@ -9,7 +7,7 @@ const modalFooter = {
   padding: {
     default: '1rem',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { modalFooter };

@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const listGroupItem = {
   colors: {
     primary: {
@@ -115,8 +113,8 @@ const listGroupItem = {
   padding: {
     default: '0.75rem 1.25rem',
   },
-  border: utils.border,
-  borderRadius: utils.borderRadius,
+  border: (get) => get('globals', 'border'),
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { listGroupItem };

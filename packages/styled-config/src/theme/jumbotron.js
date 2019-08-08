@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const jumbotron = {
   colors: {
     default: {
@@ -15,7 +13,7 @@ const jumbotron = {
     smPill: '4rem 4rem',
     default: '2rem 1rem',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { jumbotron };

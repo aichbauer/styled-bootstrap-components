@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const navbarLink = {
   colors: {
     dark: {
@@ -24,7 +22,7 @@ const navbarLink = {
     brandTop: '0.3125rem',
     brandBottom: '0.3125rem',
   },
-  fontSize: utils.fontSize,
+  fontSize: (get) => get('globals', 'fontSize'),
 };
 
 export { navbarLink };

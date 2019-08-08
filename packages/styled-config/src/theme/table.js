@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const table = {
   colors: {
     light: {
@@ -26,10 +24,7 @@ const table = {
       sm: '0.3rem',
     },
   },
-  border: {
-    ...utils.border,
-    bottomTop: '2px solid',
-  },
+  border: (get) => get('globals', 'border'),
 };
 
 export { table };

@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const badge = {
   colors: {
     primary: {
@@ -59,7 +57,7 @@ const badge = {
   fontWeight: {
     default: '700',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { badge };

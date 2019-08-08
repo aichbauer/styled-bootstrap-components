@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const navLink = {
   colors: {
     light: {
@@ -24,8 +22,8 @@ const navLink = {
   padding: {
     default: '0.5rem',
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
 };
 
 export { navLink };

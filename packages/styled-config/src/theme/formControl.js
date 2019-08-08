@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const formControl = {
   colors: {
     default: {
@@ -16,8 +14,8 @@ const formControl = {
       formControlBoxShadowInvalid: (get) => get('colorScheme', 'dangerBoxShadow'),
     },
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
   boxShadow: {
     default: '0 0 0 0.2rem',
   },

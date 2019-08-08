@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const cardHeader = {
   colors: {
     default: {
@@ -11,10 +9,10 @@ const cardHeader = {
     default: '0.75rem 1.25rem',
   },
   borderRadius: {
-    noRadius: utils.borderRadius.noRadius,
+    noRadius: (get) => get('globals', 'borderRadius', 'noRadius'),
     topLeftRight: 'calc(0.25rem - 1px)',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { cardHeader };

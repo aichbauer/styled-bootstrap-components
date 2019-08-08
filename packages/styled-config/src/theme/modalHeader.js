@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const modalHeader = {
   colors: {
     default: {
@@ -9,8 +7,8 @@ const modalHeader = {
   padding: {
     default: '1rem',
   },
-  border: utils.border,
-  borderRadius: utils.borderRadius,
+  border: (get) => get('globals', 'border'),
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { modalHeader };

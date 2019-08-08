@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const dropdownDivider = {
   colors: {
     default: {
@@ -12,7 +10,7 @@ const dropdownDivider = {
   margin: {
     top: '0.6rem',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { dropdownDivider };

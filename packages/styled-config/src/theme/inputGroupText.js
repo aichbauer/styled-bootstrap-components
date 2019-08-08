@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const inputGroupText = {
   colors: {
     default: {
@@ -20,9 +18,9 @@ const inputGroupText = {
   fontWeight: {
     default: '400',
   },
-  fontSize: utils.fontSize,
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  fontSize: (get) => get('globals', 'fontSize'),
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
 };
 
 export { inputGroupText };

@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const alert = {
   colors: {
     primary: {
@@ -70,7 +68,7 @@ const alert = {
   border: {
     default: '1px solid transparent',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
   fontWeight: {
     default: '700',
   },

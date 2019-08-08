@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const tooltipInner = {
   colors: {
     default: {
@@ -10,7 +8,7 @@ const tooltipInner = {
   padding: {
     default: '0.25rem 0.5rem',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { tooltipInner };

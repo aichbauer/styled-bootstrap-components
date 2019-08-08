@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const dropdownMenu = {
   colors: {
     default: {
@@ -17,8 +15,8 @@ const dropdownMenu = {
   margin: {
     default: '0.125rem 0 0',
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
 };
 
 export { dropdownMenu };

@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const popover = {
   colors: {
     default: {
@@ -19,9 +17,9 @@ const popover = {
   fontFamily: {
     default: ' -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
-  fontSize: utils.fontSize,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
+  fontSize: (get) => get('globals', 'fontSize'),
 };
 
 export { popover };

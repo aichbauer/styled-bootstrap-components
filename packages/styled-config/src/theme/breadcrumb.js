@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const breadcrumb = {
   colors: {
     default: {
@@ -12,7 +10,7 @@ const breadcrumb = {
   margin: {
     bottom: '1rem',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { breadcrumb };

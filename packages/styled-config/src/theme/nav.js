@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const nav = {
   colors: {
     default: {
@@ -14,7 +12,7 @@ const nav = {
   margin: {
     bottom: '0',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { nav };

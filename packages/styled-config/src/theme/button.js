@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const button = {
   colors: {
     primary: {
@@ -133,7 +131,10 @@ const button = {
     dropDownToggleLeft: '0255rem',
   },
   padding: {
-    ...utils.padding.button,
+    sm: '0.25rem 0.5rem',
+    lg: '0.5rem 1rem',
+    default: '0.375rem 0.75rem',
+
     splitSmRight: '0.375rem',
     splitSmLeft: '0.375rem',
     splitLgRight: '0.75rem',
@@ -141,12 +142,9 @@ const button = {
     splitDefaultRight: '0.5625rem',
     splitDefaultLeft: '0.5625rem',
   },
-  fontSize: {
-    ...utils.fontSize,
-    toggle: '1.25rem',
-  },
-  border: utils.border,
-  borderRadius: utils.borderRadius,
+  fontSize: (get) => get('globals', 'fontSize'),
+  border: (get) => get('globals', 'border'),
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { button };
