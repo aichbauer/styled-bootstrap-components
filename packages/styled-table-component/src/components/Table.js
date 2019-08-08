@@ -224,7 +224,7 @@ const Table = React.forwardRef(({
 }, ref) => (
   <TableWoClass
     ref={ref}
-    className={`${hover ? 'hover' : ''} ${className || ''}`}
+    className={`${hover ? 'hover' : ''} ${className || ''}`.trim()}
     hover={hover}
     {...rest}
   >

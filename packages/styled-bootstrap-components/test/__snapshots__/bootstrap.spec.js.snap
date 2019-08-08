@@ -1843,7 +1843,7 @@ exports[`Simply check if all components are imported and exported correctly 56`]
 }
 
 <table
-  className=" undefined c0 c1"
+  className="c0 c1"
 />
 `;
 

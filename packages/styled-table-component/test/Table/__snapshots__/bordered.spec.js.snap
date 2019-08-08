@@ -41,6 +41,6 @@ exports[`Styles matches Table bordered 1`] = `
 }
 
 <table
-  className="  c0 c1"
+  className="c0 c1"
 />
 `;

@@ -34,6 +34,6 @@ exports[`Styles matches Table hover 1`] = `
 }
 
 <table
-  className="hover  c0 c1"
+  className="hover c0 c1"
 />
 `;
