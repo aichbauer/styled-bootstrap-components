@@ -8,52 +8,24 @@
 
 > The [bootstrap](https://getbootstrap.com) modal component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-modal-component
-```
-
-or
-
-```sh
-$ yarn add styled-modal-component
+npm install --save styled-modal-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
-> Note: if you want this example to work you need to install `styled-container-component`, and `styled-button-component` as well, but you do not need a `<Container />` component or a `<Button />`  to work with `styled-modal-component`.
-
 ```jsx
-import React from 'react';
+import React, { useState } from 'react';
 
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import {
   Modal,
   ModalBody,
@@ -61,55 +33,35 @@ import {
   ModalHeader,
   ModalTitle,
 } from 'styled-modal-component';
-import { Container } from 'styled-container-component';
-import { Button } from 'styled-button-component';
 
-export class ModalExample extends React.Component {
-  constructor(props) {
-    super(props);
+export const ModalExample = () => {
+  const [hidden, setHidden] = useState(true);
 
-    this.state = {
-      hidden: true,
-    };
+  return (
+    <div>
+      <Modal hidden={hidden} toggle={() => setHidden(!hidden)}>
+        <ModalHeader>
+          <ModalTitle>Modal Title</ModalTitle>
 
-    this.toggleModal = this.toggleModal.bind(this);
-  }
+          <button outline onClick={() => setHidden(!hidden)}>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </ModalHeader>
 
-  toggleModal() {
-    this.setState({
-      hidden: !this.state.hidden,
-    });
-  }
+        <ModalBody>
+          Modal body text goes here.
+        </ModalBody>
 
-  render() {
-    const { hidden } = this.state;
+        <ModalFooter>
+          <button onClick={() => setHidden(!hidden)}>Close</button>
+        </ModalFooter>
+      </Modal>
 
-    return (
-      <Container>
-        <Modal hidden={hidden} toggle={this.toggleModal}>
-          <ModalHeader>
-            <ModalTitle>Modal Title</ModalTitle>
-
-            <Button outline onClick={this.toggleModal}>
-              <span aria-hidden="true">&times;</span>
-            </Button>
-          </ModalHeader>
-
-          <ModalBody textAlign="left">
-            Modal body text goes here.
-          </ModalBody>
-
-          <ModalFooter>
-            <Button onClick={this.toggleModal}>Close</Button>
-          </ModalFooter>
-        </Modal>
-
-        <Button block danger onClick={this.toggleModal}>
-          Launch Modal
-        </Button>
-      </Container>
-    );
-  }
+      <button block danger onClick={() => setHidden(!hidden)}>
+        Launch Modal
+      </button>
+    </div>
+  );
 }
 ```
 
@@ -138,11 +90,6 @@ Properties which can be added to the component to change the visual appearance.
 
 > Property `backdrop` can be set to false or 'static' to prevent dialog from
 > closing on click outsite of the window.
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

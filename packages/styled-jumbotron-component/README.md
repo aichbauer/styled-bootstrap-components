@@ -8,56 +8,27 @@
 
 > The [bootstrap](https://getbootstrap.com) jumbotron component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-jumbotron-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-jumbotron-component
+npm install --save styled-jumbotron-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import { Jumbotron } from 'styled-jumbotron-component';
 
 const MyButtonComponent = (props) => (
-  {/* use different props to change the visual appearance */}
   <Jumbotron fluid>
-    <h1>
-    Fluid jumbotron
-    </h1>
+    <h1>Fluid jumbotron</h1>
     <p>
       This is a modified jumbotron that occupies the entire horizontal space of its parent.
     </p>
@@ -70,11 +41,6 @@ const MyButtonComponent = (props) => (
 Properties which can be added to the component to change the visual appearance.
 
 * `fluid` **Type**: boolean
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

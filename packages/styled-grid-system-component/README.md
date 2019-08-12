@@ -8,58 +8,28 @@
 
 > The [bootstrap](https://getbootstrap.com) grid system component made with [styled-components](https://styled-components.com)
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
 > Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
 
 ```sh
-$ npm i styled-grid-system-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-grid-system-component
+npm install --save styled-grid-system-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
-> Note: if you want this example to work you need to install the `styled-container-component` as well, but you do not need a `<Container />` component around a `<Row />` or `<Column />` component.
-
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
-import { Container } from 'styled-container-component';
-import {
-  Column,
-  Row,
-} from 'styled-grid-system-component';
+import { Column, Row } from 'styled-grid-system-component';
 
 const MyGridComponent = (props) => (
-  <Container fluid>
+  <div>
     <Row>
       <Column xs={6}>
         {'xs={6}'}
@@ -92,15 +62,13 @@ const MyGridComponent = (props) => (
         {'xs={6}'}
       </Column>
     </Row>
-  </Container>
+  </div>
 );
 ```
 
 ## Properties
 
-Properties which can be added to the component to change the visual appearance.
-
-Every row consists of maximum of 12 columns.
+Properties which can be added to the component to change the visual appearance. Every row consists of maximum of 12 columns.
 
 * `xs` **Type:** only on Column, number (between 1 and 12)
 * `sm` **Type:** only on Column, number (between 1 and 12)
@@ -112,11 +80,6 @@ Every row consists of maximum of 12 columns.
 * `mdOffset` **Type:** only on Column, number (between 1 and 12)
 * `lgOffset` **Type:** only on Column, number (between 1 and 12)
 * `xlOffset` **Type:** only on Column, number (between 1 and 12)
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

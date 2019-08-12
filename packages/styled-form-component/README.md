@@ -8,48 +8,22 @@
 
 > The [bootstrap](https://getbootstrap.com) form component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-form-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-form-component
+npm install --save styled-form-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import {
   Button,
   ButtonGroups,
@@ -57,45 +31,24 @@ import {
 } from 'styled-form-component';
 
 const MyFormComponent = (props) => (
-  {/* use different props to change the visual appearance */}
   <form>
     <FormGroup>
-      <Label>Email address</Label>
-      <FormControl type="email" placeholder="name@example.com" />
+      <label>Email address <FormControl type="email" placeholder="Enter email" /></label>
+      <FormText muted>We&#39;ll never share your email with anyone else.</FormText>
     </FormGroup>
     <FormGroup>
-      <Label>Example select</Label>
-      <FormControl select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </FormControl>
+      <label>Password <FormControl type="password" placeholder="Password" /></label>
     </FormGroup>
+    <FormCheck>
+      <label><FormCheckInput type="checkbox" /> Check me out</label>
+    </FormCheck>
     <FormGroup>
-      <Label>Example multiple select</Label>
-      <FormControl select multiple>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </FormControl>
-    </FormGroup>
-    <FormGroup>
-      <Label>Example textarea</Label>
-      <FormControl textarea rows="3" />
-    </FormGroup>
-    <FormGroup>
-      <Label>Example file input</Label>
-      <FormControlFile type="file" />
+      <Button block primary>Submit</Button>
     </FormGroup>
   </form>
 );
 
 const MyInputGroupComponent = (props) => (
-  {/* use different props to change the visual appearance */}
   <InputGroup>
     <InputGroupPrepend>
       <InputGroupText>@</InputGroupText>
@@ -126,11 +79,6 @@ Properties which can be added to the component to change the visual appearance.
 * `nomb` no margin-bottom, only on FormGroup **Type**: boolean
 * `justify` only on FormGroup **Type**: boolean
 * `muted` only on FormText **Type**: boolean
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

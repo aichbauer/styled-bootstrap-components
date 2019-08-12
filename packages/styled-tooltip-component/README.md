@@ -8,53 +8,30 @@
 
 > The [bootstrap](https://getbootstrap.com) tooltip component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
 > Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
 
 ```sh
-$ npm i styled-tooltip-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-tooltip-component
+npm install --save styled-tooltip-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
 > Note: if you want this example to work you need to install `styled-container-component`, and  `styled-button-component`as well, but you do not need them to work properly
 
+> This example uses `styled-button-component` package
+
 ```jsx
-import React from 'react';
+import React, { useState } from 'react';
 
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
-import { Container } from 'styled-container-component';
 import { Button } from 'styled-button-component';
 import {
   Tooltip,
@@ -62,53 +39,38 @@ import {
   TooltipInner,
 } from 'styled-tooltip-component';
 
-export class SimpleTooltipToggle extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      top: 0,
-      left: 0,
-      hidden: true,
-    };
-  }
+export const SimpleTooltipToggle = () => {
+  const [hidden, setHidden] = useState(true);
+  const [position, setPosition] = useState([0, 0]);
 
-  handleTooltip(ev, hidden) {
-    this.setState({
-      top: ev.target.offsetTop + 5,
-      left: ev.target.offsetLeft + ev.target.offsetWidth,
-      hidden,
-    });
-  }
-
-  render() {
-    const {
-      top,
-      left,
-      hidden,
-    } = this.state;
-    return (
-      <Container>
-        <Button
-          danger
-          onMouseEnter={(ev) => this.handleTooltip(ev, false)}
-          onMouseLeave={(ev) => this.handleTooltip(ev, true)}
-        >
-          Click to toggle popover
-        </Button>
-        <Tooltip
-          hidden={hidden}
-          style={{
-            top: `${top}px`,
-            left: `${left}px`
-          }}
-          right
-        >
-          <TooltipArrow right />
-          <TooltipInner right>Tooltip Title</TooltipInner>
-        </Tooltip>
-      </Container>
-    );
-  }
+  return (
+    <Container style={{ minHeight: '50vh' }} dFlex alignItemsCenter justifyContentCenter>
+      <Button
+        danger
+        onMouseLeave={() => setHidden(true)}
+        onMouseEnter={(ev) => {
+          setHidden(false);
+          setPosition([
+            ev.target.offsetTop + 5,
+            ev.target.offsetLeft + ev.target.offsetWidth,
+          ]);
+        }}
+      >
+        Hover to toggle tooltip
+      </Button>
+      <Tooltip
+        hidden={hidden}
+        style={{
+          top: `${position[0]}px`,
+          left: `${position[1]}px`,
+        }}
+        right
+      >
+        <TooltipArrow right />
+        <TooltipInner right>Tooltip Title</TooltipInner>
+      </Tooltip>
+    </Container>
+  );
 };
 ```
 
@@ -124,11 +86,6 @@ Properties which can be added to the component to change the visual appearance.
 * `left` **Type**: boolean
 * `bottom` **Type**: boolean
 * `transitionProps` **Type:**: object
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 
