@@ -1,79 +1,58 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Story } from '../../utils';
-import {
-  Card,
-  CardBody,
-  CardImageHeader,
-  CardText,
-  CardTitle,
-} from '../../../packages/styled-card-component';
 import { Button } from '../../../packages/styled-button-component';
+import ButtonReadme from '../../../packages/styled-button-component/README.md';
 
-storiesOf('Card', module)
+storiesOf('Button', module)
+  .addParameters({
+    readme: { sidebar: ButtonReadme },
+  })
   .add('simple', () => (
-    <Card style={{width: '18rem'}}>
-      <CardImageHeader src="http://via.placeholder.com/350x150" />
-      <CardBody>
-        <CardTitle h3>
-          Card title
-        </CardTitle>
-        <CardText>
-          Some quick example text to
-          build on the card title and
-          make up the bulk of the card&#39;s
-          content.
-        </CardText>
-        <Button primary>Go somewhere</Button>
-      </CardBody>
-    </Card>
+    <div>
+      <Button m1 primary>Primary</Button>
+      <Button m1 secondary>Secondary</Button>
+      <Button m1 success>Success</Button>
+      <Button m1 danger>Danger</Button>
+      <Button m1 warning>Warning</Button>
+      <Button m1 info>Info</Button>
+      <Button m1 light>Light</Button>
+      <Button m1 dark>Dark</Button>
+    </div>
   ))
-  .add('with plain body', () => (
-    <Card>
-      <CardBody>
-        This is some text within a card body.
-      </CardBody>
-    </Card>
+  .add('outline', () => (
+    <div>
+      <Button m1 primary outline>Primary</Button>
+      <Button m1 secondary outline>Secondary</Button>
+      <Button m1 success outline>Success</Button>
+      <Button m1 danger outline>Danger</Button>
+      <Button m1 warning outline>Warning</Button>
+      <Button m1 info outline>Info</Button>
+      <Button m1 light outline>Light</Button>
+      <Button m1 dark outline>Dark</Button>
+    </div>
   ))
-  .add('with plain body', () => (
-    <Card>
-      <CardBody>
-        This is some text within a card body.
-      </CardBody>
-    </Card>
+  .add('sizes', () => (
+    <div>
+      <Button mb2 primary sm>Small button</Button><br />
+      <Button mb2 primary>Normal button</Button><br />
+      <Button mb2 primary lg>Large button</Button>
+    </div>
   ))
-  .add('with multiple titles', () => (
-    <Card style={{ width: '18rem' }}>
-      <CardBody>
-        <CardTitle h3>
-          Card title
-        </CardTitle>
-        <CardText>
-          Some quick example text to
-          build on the card title and
-          make up the bulk of the card&#39;s
-          content.
-        </CardText>
-      </CardBody>
-    </Card>
+  .add('block', () => (
+    <div>
+      <Button mb2 block primary>Block level button</Button>
+      <Button mb2 block secondary>Block level button</Button>
+    </div>
   ))
-  .add('with links', () => (
-    <Card style={{ width: '18rem' }}>
-      <CardBody>
-        <CardTitle h3>
-          Card title
-        </CardTitle>
-        <CardTitle h4 muted subtitle style={{marginBottom: '0.5rem'}}>
-          Card subtitle
-        </CardTitle>
-        <CardText>
-          Some quick example text to
-          build on the card title and
-          make up the bulk of the card&#39;s
-          content.
-        </CardText>
-        <a href="#">Card Link</a>
-        <a href="#">Another link</a>
-      </CardBody>
-    </Card>
+  .add('active', () => (
+    <div>
+      <Button mb2 active primary>Active button</Button><br />
+      <Button mb2 active secondary>Active button</Button>
+    </div>
+  ))
+  .add('disabled', () => (
+    <div>
+      <Button mb2 disabled primary>Disabled button</Button><br />
+      <Button mb2 disabled secondary>Disabled button</Button>
+    </div>
   ));

@@ -19,7 +19,6 @@ const color = (props) => (
 );
 
 const FormCheckInput = styled(Input)`
-  position: absolute;
   margin-top: ${(props) => margin(props, 'formCheckInput').top};
   margin-left: ${(props) => margin(props, 'formCheckInput').left};
   box-sizing: border-box;

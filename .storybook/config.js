@@ -1,14 +1,16 @@
 import React from 'react';
 import { addParameters, addDecorator, configure } from '@storybook/react';
 import { createGlobalStyle } from 'styled-components';
+import { addReadme } from 'storybook-readme';
 import { Container } from '../packages/styled-container-component';
 
 addParameters({
   options: {
     showPanel: true,
     panelPosition: 'bottom',
-  }
-})
+    hierarchySeparator: '/',
+  },
+});
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -31,10 +33,11 @@ const req = require.context('./stories', true, /\.stories\.js$/);
 
 function loadStories() {
   addDecorator(storyWrapper);
+  addDecorator(addReadme);
 
   require('./stories/index.stories');
 
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);

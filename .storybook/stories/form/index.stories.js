@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Story } from '../../utils';
-import { Alert } from '../../../packages/styled-alert-component';
 import { Button } from '../../../packages/styled-button-component';
 import { Column } from '../../../packages/styled-grid-system-component';
 import {
@@ -14,22 +12,23 @@ import {
   FormInline,
   FormText,
 } from '../../../packages/styled-form-component';
+import FormReadme from '../../../packages/styled-form-component/README.md';
 
 storiesOf('Form', module)
+  .addParameters({
+    readme: { sidebar: FormReadme },
+  })
   .add('simple', () => (
     <form>
       <FormGroup>
-        <label>Email address</label>
-        <FormControl type="email" placeholder="Enter email" />
+        <label>Email address <FormControl type="email" placeholder="Enter email" /></label>
         <FormText muted>We&#39;ll never share your email with anyone else.</FormText>
       </FormGroup>
       <FormGroup>
-        <label>Password</label>
-        <FormControl type="password" placeholder="Password" />
+        <label>Password <FormControl type="password" placeholder="Password" /></label>
       </FormGroup>
       <FormCheck>
-        <FormCheckInput type="checkbox" />
-        <label>Check me out</label>
+        <label><FormCheckInput type="checkbox" /> Check me out</label>
       </FormCheck>
       <FormGroup>
         <Button block primary>Submit</Button>
@@ -39,47 +38,54 @@ storiesOf('Form', module)
   .add('different fields', () => (
     <form>
       <FormGroup>
-        <label>Email address</label>
-        <FormControl type="email" placeholder="name@example.com" />
+        <label>Email address <FormControl type="email" placeholder="name@example.com" /></label>
       </FormGroup>
       <FormGroup>
-        <label>Example select</label>
-        <FormControl select>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </FormControl>
+        <label>
+          Example select
+          <FormControl select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </FormControl>
+        </label>
       </FormGroup>
       <FormGroup>
-        <label>Example multiple select</label>
-        <FormControl select multiple>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </FormControl>
+        <label>
+          Example multiple select
+          <FormControl select multiple>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </FormControl>
+        </label>
       </FormGroup>
       <FormGroup>
-        <label>Example textarea</label>
-        <FormControl textarea rows="3" />
+        <label>
+          Example textarea
+          <FormControl textarea rows="3" />
+        </label>
       </FormGroup>
       <FormGroup>
-        <label>Example file input</label>
-        <FormControlFile type="file" />
+        <label>
+          Example file input
+          <FormControlFile type="file" />
+        </label>
       </FormGroup>
     </form>
   ))
-  .add('sized', () => (
+  .add('sizes', () => (
     <form>
       <FormControl mb2 lg type="text" placeholder="Large" />
       <FormControl mb2 type="text" placeholder="Normal" />
       <FormControl mb2 sm type="text" placeholder="Small" />
     </form>
   ))
-  .add('sized groups', () => (
+  .add('sizes on groups', () => (
     <form>
       <FormGroup row justify lg mb2>
         <FormControl type="text" placeholder="Large" />
@@ -116,48 +122,38 @@ storiesOf('Form', module)
   .add('checkboxes and radios', () => (
     <form>
       <FormCheck>
-        <FormCheckInput type="checkbox" />
-        <label>Default checkbox</label>
+        <label><FormCheckInput type="checkbox" /> Default checkbox</label>
       </FormCheck>
       <FormCheck>
-        <FormCheckInput disabled type="checkbox" />
-        <label>Disabled checkbox</label>
+        <label><FormCheckInput disabled type="checkbox" /> Disabled checkbox</label>
       </FormCheck>
       <FormCheck>
-        <FormCheckInput type="radio" name="exampleRadios" />
-        <label>Default radio</label>
+        <label><FormCheckInput type="radio" name="exampleRadios" /> Default radio</label>
       </FormCheck>
       <FormCheck>
-        <FormCheckInput type="radio" name="exampleRadios" />
-        <label>Default radio</label>
+        <label><FormCheckInput type="radio" name="exampleRadios" /> Default radio</label>
       </FormCheck>
       <FormCheck>
-        <FormCheckInput disabled type="radio" name="exampleRadios" />
-        <label>Disabled radio</label>
+        <label><FormCheckInput disabled type="radio" name="exampleRadios" /> Disabled radio</label>
       </FormCheck>
     </form>
   ))
   .add('inline checkboxes and radios', () => (
     <form>
       <FormCheck inline>
-        <FormCheckInput type="checkbox" />
-        <label>Default checkbox</label>
+        <label><FormCheckInput type="checkbox" /> Default checkbox</label>
       </FormCheck>
       <FormCheck inline>
-        <FormCheckInput disabled type="checkbox" />
-        <label>Disabled checkbox</label>
+        <label><FormCheckInput disabled type="checkbox" /> Disabled checkbox</label>
       </FormCheck>
       <FormCheck inline>
-        <FormCheckInput type="radio" name="exampleRadios" />
-        <label>Default radio</label>
+        <label><FormCheckInput type="radio" name="exampleRadios" /> Default radio</label>
       </FormCheck>
       <FormCheck inline>
-        <FormCheckInput type="radio" name="exampleRadios" />
-        <label>Default radio</label>
+        <label><FormCheckInput type="radio" name="exampleRadios" /> Default radio</label>
       </FormCheck>
       <FormCheck inline>
-        <FormCheckInput disabled type="radio" name="exampleRadios" />
-        <label>Disabled radio</label>
+        <label><FormCheckInput disabled type="radio" name="exampleRadios" /> Disabled radio</label>
       </FormCheck>
     </form>
   ))

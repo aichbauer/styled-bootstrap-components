@@ -185,6 +185,9 @@ const Table = styled(BaseTable)`
   margin-bottom: 1rem;
   border-collapse: collapse;
   background-color: transparent;
+  & th {
+    text-align: inherit;
+  }
   & th,
   & td {
     padding: 0.75rem;

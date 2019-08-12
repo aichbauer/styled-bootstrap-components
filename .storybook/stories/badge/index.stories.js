@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Badge } from '../../../packages/styled-badge-component';
+import BadgeReadme from '../../../packages/styled-badge-component/README.md';
 import { Button } from '../../../packages/styled-button-component';
 
 storiesOf('Badge', module)
+  .addParameters({
+    readme: { sidebar: BadgeReadme },
+  })
   .add('in headings', () => (
     <React.Fragment>
       <h1>Example heading <Badge primary>New</Badge></h1>
@@ -18,12 +22,12 @@ storiesOf('Badge', module)
     <React.Fragment>
       <Button block primary>Notifications <Badge light>4</Badge></Button>
       <Button block dark>Notifications <Badge light>4</Badge></Button>
-      <div style={{backgroundColor: "#aaaaaa", padding: "0.5rem", marginTop: "0.5rem"}}>
+      <div style={{ backgroundColor: '#aaaaaa', padding: '0.5rem', marginTop: '0.5rem' }}>
         <Button block light >Notifications <Badge dark>4</Badge></Button>
       </div>
     </React.Fragment>
   ))
-  .add('colored', () => (
+  .add('contextual', () => (
     <React.Fragment>
       <Badge primary>Primary</Badge><br />
       <Badge secondary>Secondary</Badge><br />
@@ -35,7 +39,7 @@ storiesOf('Badge', module)
       <Badge dark>Dark</Badge>
     </React.Fragment>
   ))
-  .add('as pills', () => (
+  .add('pills', () => (
     <React.Fragment>
       <Badge pill primary>Primary</Badge><br />
       <Badge pill secondary>Secondary</Badge><br />

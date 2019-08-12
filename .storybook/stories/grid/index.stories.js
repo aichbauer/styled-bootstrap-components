@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Story } from '../../utils';
-import { Alert } from '../../../packages/styled-alert-component';
-import { Transition } from '../../../packages/styled-base-components';
 import {
   Column,
   Row,
 } from '../../../packages/styled-grid-system-component';
+import GridReadme from '../../../packages/styled-grid-system-component/README.md';
 
 storiesOf('Grid', module)
+  .addParameters({
+    readme: { sidebar: GridReadme },
+  })
   .add('simple', () => (
     <Row bgDarker p2>
       <Column md={3} bgSecondary>
@@ -40,8 +41,8 @@ storiesOf('Grid', module)
       <Column sm={12} md={8} bgSecondary>
         {'sm={12} md={8}'}
       </Column>
-      <Column xs={8} md={4} sm={6} bgPrimary>
-        {'xs={6} md={4} sm={6}'}
+      <Column xs={8} md={4} sm={6} lg={12} bgPrimary>
+        {'xs={6} md={4} sm={6} lg={12}'}
       </Column>
     </Row>
   ))

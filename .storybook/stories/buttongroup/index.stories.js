@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import ButtonGroupReadme from '../../../packages/styled-button-component/README.md';
 import {
   Button,
   ButtonGroup,
@@ -7,6 +8,9 @@ import {
 } from '../../../packages/styled-button-component';
 
 storiesOf('ButtonGroup', module)
+  .addParameters({
+    readme: { sidebar: ButtonGroupReadme },
+  })
   .add('simple', () => (
     <ButtonGroup>
       <Button>Left</Button>

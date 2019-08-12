@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Story } from '../../utils';
 import { Alert } from '../../../packages/styled-alert-component';
+import AlertReadme from '../../../packages/styled-alert-component/README.md';
 import { Transition } from '../../../packages/styled-base-components';
 
 storiesOf('Alert', module)
+  .addParameters({
+    readme: { sidebar: AlertReadme },
+  })
   .add('simple', () => (
     <Alert primary>Hello World</Alert>
   ))
-  .add('colored', () => (
-    <React.Fragment>
+  .add('contextual', () => (
+    <div>
       <Alert primary>Primary alert</Alert>
       <Alert secondary>Secondary alert</Alert>
       <Alert success>Success alert</Alert>
@@ -18,7 +22,7 @@ storiesOf('Alert', module)
       <Alert info>Info alert</Alert>
       <Alert light>Light alert</Alert>
       <Alert dark>Dark alert</Alert>
-    </React.Fragment>
+    </div>
   ))
   .add('dismissible', Story(() => {
     const [hidden, setHidden] = useState(false);
@@ -27,7 +31,7 @@ storiesOf('Alert', module)
       <Transition noInitialEnter hideOnExit hidden={hidden}>
         <Alert>
           Hello World
-          <span style={{float: 'right', cursor: 'pointer'}} onClick={() => setHidden(true)}>
+          <span style={{ float: 'right', cursor: 'pointer' }} onClick={() => setHidden(true)}>
             &#10006;
           </span>
         </Alert>
