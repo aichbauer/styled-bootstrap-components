@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Story } from '../../utils';
 import { Button, ButtonGroup } from '../../../packages/styled-button-component';
+import { Transition } from '../../../packages/styled-base-components';
 import {
   Dropdown,
   DropdownItem,
@@ -114,6 +115,26 @@ storiesOf('Dropdown', module)
           <DropdownDivider />
           <DropdownItem>Seperated link</DropdownItem>
         </DropdownMenu>
+      </Dropdown>
+    );
+  }))
+  .add('animated', Story(() => {
+    const [hidden, setHidden] = useState(true);
+
+    return (
+      <Dropdown>
+        <Button dropdownToggle onClick={() => setHidden(!hidden)}>
+          Dropdown button
+        </Button>
+        <Transition hidden={hidden}>
+          <DropdownMenu alwaysVisible hidden={hidden} toggle={() => setHidden(!hidden)}>
+            <DropdownItem>Action</DropdownItem>
+            <DropdownItem>Another action</DropdownItem>
+            <DropdownItem>Something else here</DropdownItem>
+            <DropdownDivider />
+            <DropdownItem>Seperated link</DropdownItem>
+          </DropdownMenu>
+        </Transition>
       </Dropdown>
     );
   }));
