@@ -53,10 +53,10 @@
     "jest-styled-components": "^6.3.1",
     "lerna": "^2.8.0",
     "lint-staged": "^8.1.4",
-    "react": "^16.9.0",
+    "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-test-renderer": "^16.7.0",
     "regenerator-runtime": "^0.13.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.1.3"
   }
 }
