@@ -2,9 +2,8 @@
 
 exports[`Styles matches FormCheckInput 1`] = `
 .c0 {
-  position: absolute;
   margin-top: 0.3rem;
-  margin-left: -1.25rem;
+  margin-left: 0rem;
   box-sizing: border-box;
 }
 

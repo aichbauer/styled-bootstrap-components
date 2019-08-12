@@ -9,6 +9,10 @@ exports[`Styles matches Table theadDark 1`] = `
   background-color: transparent;
 }
 
+.c1 th {
+  text-align: inherit;
+}
+
 .c1 th,
 .c1 td {
   padding: 0.75rem;

@@ -587,7 +587,7 @@ const themeFixture = {
     },
     margin: {
       top: '0.3rem',
-      left: '-1.25rem',
+      left: '0rem',
     },
   },
   formControl: {
