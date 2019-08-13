@@ -2,6 +2,8 @@
 
 exports[`Styles matches LinkButton 1`] = `
 .c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 400;
   line-height: 1.5;
   text-align: center;

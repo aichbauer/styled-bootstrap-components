@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '../../../packages/styled-button-component';
+import { Button, LinkButton } from '../../../packages/styled-button-component';
 import ButtonReadme from '../../../packages/styled-button-component/README.md';
 
 storiesOf('Button', module)
@@ -43,6 +43,9 @@ storiesOf('Button', module)
       <Button mb2 block primary>Block level button</Button>
       <Button mb2 block secondary>Block level button</Button>
     </div>
+  ))
+  .add('link', () => (
+    <LinkButton primary href="">Link styled as button</LinkButton>
   ))
   .add('active', () => (
     <div>
