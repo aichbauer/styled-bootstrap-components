@@ -12,48 +12,52 @@ storiesOf('Grid', module)
   })
   .add('simple', () => (
     <Row bgDarker p2>
-      <Column md={3} bgSecondary>
-        {'md={3}'}
+      <Column md={2} bgLight p2>
+        {'md={2}'}
       </Column>
-      <Column md={3} bgPrimary>
-        {'md={3}'}
+      <Column md={2} bgPrimary p2>
+        {'md={2}'}
       </Column>
-      <Column md={6} bgSecondary>
-        {'md={6}'}
+      <Column md={8} bgLight p2>
+        {'md={8}'}
       </Column>
     </Row>
   ))
   .add('without props', () => (
     <Row bgDarker p2>
-      <Column bgSecondary>
+      <Column bgLight p2>
         {'no props'}
       </Column>
-      <Column bgPrimary>
+      <Column bgPrimary p2>
         {'no props'}
       </Column>
-      <Column bgSecondary>
+      <Column bgLight p2>
         {'no props'}
       </Column>
     </Row>
   ))
   .add('with multiple breakpoints', () => (
     <Row bgDarker p2>
-      <Column sm={12} md={8} bgSecondary>
-        {'sm={12} md={8}'}
+      <Column xs={12} sm={8} md={6} lg={4} xl={1} bgLight p2>
+        {'xs={12} md={8} sm={6} lg={4} xl={2}'}
       </Column>
-      <Column xs={8} md={4} sm={6} lg={12} bgPrimary>
-        {'xs={6} md={4} sm={6} lg={12}'}
+    </Row>
+  ))
+  .add('offset', () => (
+    <Row bgDarker p2>
+      <Column md={6} mdOffset={6} bgLight p2>
+        Offsetted column (only on md)
       </Column>
     </Row>
   ))
   .add('inner', () => (
     <Row bgDarker p2>
-      <Column md={6} mdOffset={6} bgLight p2>
+      <Column md={6} bgDark p2>
         <Row bgLight>
-          <Column md={6} bgPrimary>
+          <Column md={6} bgLight p2>
             {'md={6}'}
           </Column>
-          <Column md={6} bgSecondary>
+          <Column md={6} bgPrimary p2>
             {'md={6}'}
           </Column>
         </Row>
