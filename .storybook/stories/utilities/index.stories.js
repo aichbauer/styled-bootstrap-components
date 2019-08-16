@@ -27,10 +27,14 @@ storiesOf('Utilities', module)
   .add('spacing', () => (
     <div>
       <Display p0>No padding</Display>
-      <Display p6>Padding with 6 spacers (6 * 0.25rem)</Display>
-      <Display py6>Vertical padding with 6 spacers</Display>
+      <Display p2>Padding with 2 spacers</Display>
+      <Display py6>Vertical padding with 6 spacers (6 * 0.25rem)</Display>
+      <Display px6>Horizontal padding with 6 spacers (6 * 0.25rem)</Display>
+    </div>
+  ))
+  .add('adaptive spacing', () => (
+    <div>
       <Display p1 pSm2 pMd4 pLg6 pXl8>Different paddings on different breakpoints</Display>
-      <Display mt4>Top margin with 4 spacers</Display>
     </div>
   ))
   .add('shadows', () => (
