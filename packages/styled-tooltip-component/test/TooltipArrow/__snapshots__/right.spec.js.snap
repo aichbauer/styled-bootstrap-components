@@ -22,7 +22,7 @@ exports[`Styles matches TooltipArrow right 1`] = `
   right: 0;
   top: calc(50% - 0.35rem);
   border-width: 0.4rem 0.4rem 0.4rem 0;
-  border-right-color: #000;
+  border-right-color: #2d2f31;
 }
 
 <div

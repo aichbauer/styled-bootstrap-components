@@ -4,17 +4,17 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  border,
-  borderRadius as br,
+  getColor,
+  getBorder,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
-    return css`border-radius: ${br(props, 'modalContent').noRadius};`;
+    return css`border-radius: ${getBorderRadius(props, 'modalContent', 'noRadius')};`;
   }
 
-  return css`border-radius: ${br(props, 'modalContent').lg};`;
+  return css`border-radius: ${getBorderRadius(props, 'modalContent', 'lg')};`;
 };
 
 const ModalContent = styled(Div)`
@@ -23,9 +23,9 @@ const ModalContent = styled(Div)`
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: ${(props) => colors(props, 'modalContent').backgroundColor};
+  background-color: ${(props) => getColor(props, 'modalContent', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'modalContent').default} ${(props) => colors(props, 'modalContent').borderColor};
+  border: ${(props) => getBorder(props, 'modalContent', 'default')} ${(props) => getColor(props, 'modalContent', 'borderColor')};
   outline: 0;
   ${(props) => borderRadius(props)}
 `;

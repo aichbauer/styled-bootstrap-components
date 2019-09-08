@@ -5,13 +5,13 @@ exports[`Styles matches FormControl large 1`] = `
   display: block;
   width: 100%;
   line-height: 1.5;
-  color: #495057;
+  color: #343a40;
   background-clip: padding-box;
   -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   box-sizing: border-box;
   background-color: #fff;
-  border: 1px solid #ced4da;
+  border: 1px solid #abaeb1;
   padding-right: 0;
   padding-left: 0;
   padding: 0.5rem 1rem;
@@ -25,9 +25,9 @@ exports[`Styles matches FormControl large 1`] = `
 }
 
 .c0:focus {
-  color: #495057;
+  color: #343a40;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.15);
 }
 
 .c0::-webkit-input-placeholder {
@@ -55,7 +55,7 @@ exports[`Styles matches FormControl large 1`] = `
 }
 
 .c0:focus {
-  border-color: #ced4da;
+  border-color: #abaeb1;
 }
 
 .c0:focus {
@@ -72,13 +72,13 @@ exports[`Styles matches FormControl large select 1`] = `
   display: block;
   width: 100%;
   line-height: 1.5;
-  color: #495057;
+  color: #343a40;
   background-clip: padding-box;
   -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   box-sizing: border-box;
   background-color: #fff;
-  border: 1px solid #ced4da;
+  border: 1px solid #abaeb1;
   padding-right: 0;
   padding-left: 0;
   padding: 0.5rem 1rem;
@@ -93,9 +93,9 @@ exports[`Styles matches FormControl large select 1`] = `
 }
 
 .c0:focus {
-  color: #495057;
+  color: #343a40;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.15);
 }
 
 .c0::-webkit-input-placeholder {
@@ -123,7 +123,7 @@ exports[`Styles matches FormControl large select 1`] = `
 }
 
 .c0:focus {
-  border-color: #ced4da;
+  border-color: #abaeb1;
 }
 
 .c0:focus {
@@ -131,7 +131,7 @@ exports[`Styles matches FormControl large select 1`] = `
 }
 
 .c0:focus::-ms-value {
-  color: #495057;
+  color: #343a40;
   background-color: #fff;
 }
 

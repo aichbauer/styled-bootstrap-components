@@ -1,21 +1,18 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const cardFooter = {
   colors: {
     default: {
-      background: colors.backgroundCardFooter,
-      borderTop: colors.borderCard,
+      background: (get) => get('colorScheme', 'weakBackground'),
+      borderTop: (get) => get('colorScheme', 'weakBorder'),
     },
   },
   padding: {
     default: '0.75rem 1.25rem',
   },
   borderRadius: {
-    noRadius: utils.borderRadius.noRadius,
+    noRadius: (get) => get('globals', 'borderRadius', 'noRadius'),
     default: '0 0 calc(0.25rem - 1px) calc(0.25rem - 1px)',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { cardFooter };

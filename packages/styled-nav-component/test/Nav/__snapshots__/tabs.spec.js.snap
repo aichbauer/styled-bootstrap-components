@@ -12,7 +12,7 @@ exports[`Styles matches Nav tabs 1`] = `
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #cccecf;
 }
 
 .c0 > a {

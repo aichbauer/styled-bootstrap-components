@@ -13,8 +13,8 @@ exports[`Styles matches light 1`] = `
   top: -1px;
   border-radius: 0.25rem;
   padding: 0.25rem 0.4rem;
-  color: #212529;
-  background-color: #f8f9fa;
+  color: #2d2f31;
+  background-color: #f0f0f0;
 }
 
 .c0:empty {
@@ -22,10 +22,10 @@ exports[`Styles matches light 1`] = `
 }
 
 .c0 > a {
-  color: #212529;
+  color: #2d2f31;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
 }
 
 <span
@@ -46,8 +46,8 @@ exports[`Styles matches light action 1`] = `
   top: -1px;
   border-radius: 0.25rem;
   padding: 0.25rem 0.4rem;
-  color: #212529;
-  background-color: #f8f9fa;
+  color: #2d2f31;
+  background-color: #f0f0f0;
 }
 
 .c0:empty {
@@ -55,28 +55,28 @@ exports[`Styles matches light action 1`] = `
 }
 
 .c0 > a {
-  color: #212529;
+  color: #2d2f31;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
 }
 
 .c0 > a:hover,
 .c0 > a:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #dae0e5;
+  background-color: #e2e6ea;
 }
 
 .c0:hover,
 .c0:focus {
   cursor: pointer;
-  background-color: #dae0e5;
+  background-color: #e2e6ea;
 }
 
 .c0:hover > a,
 .c0:focus > a {
-  background-color: #dae0e5;
+  background-color: #e2e6ea;
 }
 
 <span

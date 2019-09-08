@@ -4,30 +4,30 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  borderRadius as br,
-  padding as p,
-  fontSize as fs,
-  margin as m,
+  getBorderRadius,
+  getPadding,
+  getFontSize,
+  getMargin,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.lg) {
     return css`
       & > input {
-        border-radius: ${br(props, 'inputGroup').lg};
+        border-radius: ${getBorderRadius(props, 'inputGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
     return css`
       & > input {
-        border-radius: ${br(props, 'inputGroup').sm};
+        border-radius: ${getBorderRadius(props, 'inputGroup', 'sm')};
       };
     `;
   }
 
   return css`
   & > input {
-    border-radius: ${br(props, 'inputGroup').default};
+    border-radius: ${getBorderRadius(props, 'inputGroup', 'default')};
   };
 `;
 };
@@ -38,7 +38,7 @@ const fontSize = (props) => {
       & > div > span,
       & > input {
         line-height: 1.5;
-        font-size: ${fs(props, 'inputGroup').lg};
+        font-size: ${getFontSize(props, 'inputGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
@@ -46,7 +46,7 @@ const fontSize = (props) => {
       & > div > span,
       & > input {
         line-height: 1.5;
-        font-size: ${fs(props, 'inputGroup').sm};
+        font-size: ${getFontSize(props, 'inputGroup', 'sm')};
       };
     `;
   }
@@ -55,7 +55,7 @@ const fontSize = (props) => {
     & > div > span,
     & > input {
       line-height: 1.5;
-      font-size: ${fs(props, 'inputGroup').default};
+      font-size: ${getFontSize(props, 'inputGroup', 'default')};
     };
   `;
 };
@@ -65,18 +65,18 @@ const padding = (props) => {
     return css`
     & > div > span,
     & > input {
-      padding-right: ${p(props, 'inputGroup').rightLg};
-      padding-left: ${p(props, 'inputGroup').leftLg};
-      padding: ${p(props, 'inputGroup').lg};
+      padding-right: ${getPadding(props, 'inputGroup', 'rightLg')};
+      padding-left: ${getPadding(props, 'inputGroup', 'leftLg')};
+      padding: ${getPadding(props, 'inputGroup', 'lg')};
     };
     `;
   } else if (props.sm) {
     return css`
       & > div > span,
       & > input {
-        padding-right: ${p(props, 'inputGroup').rightSm};
-        padding-left: ${p(props, 'inputGroup').leftSm};
-        padding: ${p(props, 'inputGroup').sm};
+        padding-right: ${getPadding(props, 'inputGroup', 'rightSm')};
+        padding-left: ${getPadding(props, 'inputGroup', 'leftSm')};
+        padding: ${getPadding(props, 'inputGroup', 'sm')};
       };
     `;
   }
@@ -97,14 +97,14 @@ const InputGroup = styled(Div)`
     position: relative;
     flex: 1 1 auto;
     width: 1%;
-    margin-bottom: ${(props) => m(props, 'inputGroup').bottom};
+    margin-bottom: ${(props) => getMargin(props, 'inputGroup', 'bottom')};
     &:not(:last-child) {
-      border-top-right-radius: ${(props) => br(props, 'inputGroup').noRadius};
-      border-bottom-right-radius: ${(props) => br(props, 'inputGroup').noRadius};
+      border-top-right-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
+      border-bottom-right-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
     };
     &:not(:first-child) {
-      border-top-left-radius: ${(props) => br(props, 'inputGroup').noRadius};
-      border-bottom-left-radius: ${(props) => br(props, 'inputGroup').noRadius};
+      border-top-left-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
+      border-bottom-left-radius: ${(props) => getBorderRadius(props, 'inputGroup', 'noRadius')};
     };
   };
   ${(props) => borderRadius(props)};

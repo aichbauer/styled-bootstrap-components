@@ -1,8 +1,6 @@
-import { utils } from './utils';
-
 const cardImageHeader = {
   borderRadius: {
-    noRadius: utils.borderRadius.noRadius,
+    noRadius: (get) => get('globals', 'borderRadius', 'noRadius'),
     topLeftRight: 'calc(0.25rem - 1px)',
   },
 };

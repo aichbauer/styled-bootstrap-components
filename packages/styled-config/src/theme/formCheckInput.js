@@ -1,10 +1,8 @@
-import { colors } from './colors';
-
 const formCheckInput = {
   colors: {
     default: {
-      colorDisabled: colors.gray,
-      colorDisabledLabel: colors.gray,
+      colorDisabled: (get) => get('colorScheme', 'darkLighter'),
+      colorDisabledLabel: (get) => get('colorScheme', 'darkLighter'),
     },
   },
   margin: {

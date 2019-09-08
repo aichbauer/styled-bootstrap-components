@@ -65,18 +65,18 @@ exports[`Styles matches danger action 1`] = `
 .c0 > a:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #bd2130;
+  background-color: #c82333;
 }
 
 .c0:hover,
 .c0:focus {
   cursor: pointer;
-  background-color: #bd2130;
+  background-color: #c82333;
 }
 
 .c0:hover > a,
 .c0:focus > a {
-  background-color: #bd2130;
+  background-color: #c82333;
 }
 
 <span

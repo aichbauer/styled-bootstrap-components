@@ -15,7 +15,7 @@ exports[`Styles matches Button success active 1`] = `
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   border: 1px solid #1c7430;
   background-image: none;
-  background-color: #1e7e34;
+  background-color: #1c7430;
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 1rem;
@@ -34,7 +34,7 @@ exports[`Styles matches Button success active 1`] = `
   text-decoration: none;
   border: 1px solid #1c7430;
   background-image: none;
-  background-color: #1e7e34;
+  background-color: #1c7430;
   color: #fff;
   cursor: pointer;
 }

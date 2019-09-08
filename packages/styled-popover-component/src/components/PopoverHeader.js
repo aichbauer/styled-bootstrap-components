@@ -5,23 +5,23 @@ import { H1, H2, H3, H4, H5, H6 } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  padding,
-  margin,
-  border,
-  fontSize,
+  getColor,
+  getPadding,
+  getMargin,
+  getBorder,
+  getFontSize,
 } from 'styled-config';
 
 const popoverHeaderBottom = (props) => (
   props.bottom &&
   css`
-    padding: ${padding(props, 'popoverHeader').default};
-    margin-bottom: ${margin(props, 'popoverHeader').bottom};
-    font-size:  ${fontSize(props, 'popoverHeader').default};
+    padding: ${getPadding(props, 'popoverHeader', 'default')};
+    margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
+    font-size:  ${getFontSize(props, 'popoverHeader', 'default')};
     color: inherit;
-    background-color: ${colors(props, 'popoverHeader').backgrondColor};
+    background-color: ${getColor(props, 'popoverHeader', 'backgrondColor')};
     border-bottom: 0;
-    border-top: ${border(props, 'popoverHeader').default} ${colors(props, 'popoverHeader').borderBottomColor};
+    border-top: ${getBorder(props, 'popoverHeader', 'default')} ${getColor(props, 'popoverHeader', 'borderBottomColor')};
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: calc(0.3rem - 1px);
@@ -35,13 +35,13 @@ const popoverHeaderStyle = (props) => (
     left: 50%;
     display: block;
     content: "";
-    padding: ${padding(props, 'popoverHeader').default};
-    margin-bottom: ${margin(props, 'popoverHeader').bottom};
-    margin-top: ${margin(props, 'popoverHeader').top};
-    font-size: ${fontSize(props, 'popoverHeader').default};
+    padding: ${getPadding(props, 'popoverHeader', 'default')};
+    margin-bottom: ${getMargin(props, 'popoverHeader', 'bottom')};
+    margin-top: ${getMargin(props, 'popoverHeader', 'top')};
+    font-size: ${getFontSize(props, 'popoverHeader', 'default')};
     color: inherit;
-    background-color: ${colors(props, 'popoverHeader').backgrondColor};
-    border-bottom: ${border(props, 'popoverHeader').default} ${colors(props, 'popoverHeader').borderBottomColor};
+    background-color: ${getColor(props, 'popoverHeader', 'backgrondColor')};
+    border-bottom: ${getBorder(props, 'popoverHeader', 'default')} ${getColor(props, 'popoverHeader', 'borderBottomColor')};
     border-top-left-radius: calc(0.3rem - 1px);
     border-top-right-radius: calc(0.3rem - 1px);
     &::before {
@@ -50,9 +50,9 @@ const popoverHeaderStyle = (props) => (
       left: 50%;
       display: block;
       width: 1rem;
-      margin-left: ${margin(props, 'popoverHeader').beforeLeft};
+      margin-left: ${getMargin(props, 'popoverHeader', 'beforeLeft')};
       content: "";
-      border-bottom: ${border(props, 'popoverHeader').default} ${colors(props, 'popoverHeader').backgrondColor};
+      border-bottom: ${getBorder(props, 'popoverHeader', 'default')} ${getColor(props, 'popoverHeader', 'backgrondColor')};
     }
     ${popoverHeaderBottom(props)};
     &:empty {

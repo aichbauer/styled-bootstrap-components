@@ -13,13 +13,13 @@ exports[`Styles matches Button light outline 1`] = `
   user-select: none;
   -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #f0f0f0;
   background-image: none;
   background-color: transparent;
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 1rem;
-  color: #f8f9fa;
+  color: #f0f0f0;
   padding: 0.375rem 0.75rem;
 }
 
@@ -32,16 +32,16 @@ exports[`Styles matches Button light outline 1`] = `
 .c0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #f0f0f0;
   background-image: none;
   background-color: transparent;
-  color: #f8f9fa;
+  color: #f0f0f0;
   cursor: pointer;
 }
 
 .c0:hover:hover,
 .c0:focus:hover {
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
 }
 
 .c0:hover:hover,
@@ -50,7 +50,7 @@ exports[`Styles matches Button light outline 1`] = `
 }
 
 .c0:hover {
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
 }
 
 .c0:hover {
@@ -75,14 +75,14 @@ exports[`Styles matches Button light outline disabled 1`] = `
   user-select: none;
   -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #f0f0f0;
   background-image: none;
   background-color: transparent;
   border-radius: 0.25rem;
   display: inline-block;
   opacity: 0.65;
   font-size: 1rem;
-  color: #f8f9fa;
+  color: #f0f0f0;
   padding: 0.375rem 0.75rem;
 }
 
@@ -95,10 +95,10 @@ exports[`Styles matches Button light outline disabled 1`] = `
 .c0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #f0f0f0;
   background-image: none;
   background-color: transparent;
-  color: #f8f9fa;
+  color: #f0f0f0;
 }
 
 .c0:hover:hover,

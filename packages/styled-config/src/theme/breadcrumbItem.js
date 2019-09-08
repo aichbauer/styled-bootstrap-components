@@ -1,10 +1,7 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const breadcrumbItem = {
   colors: {
     default: {
-      color: colors.gray,
+      color: (get) => get('colorScheme', 'secondary'),
     },
   },
   padding: {
@@ -14,7 +11,7 @@ const breadcrumbItem = {
   margin: {
     bottom: '1rem',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { breadcrumbItem };

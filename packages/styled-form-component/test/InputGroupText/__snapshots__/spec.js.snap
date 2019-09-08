@@ -15,11 +15,11 @@ exports[`Styles matches InputGroupText 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #343a40;
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
+  background-color: #e2e6ea;
+  border: 1px solid #cccecf;
   border-radius: 0.25rem;
 }
 

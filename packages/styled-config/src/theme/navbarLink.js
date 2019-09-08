@@ -1,38 +1,28 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const navbarLink = {
   colors: {
     dark: {
-      colorDisabled: colors.navbarDarkColorDisabled,
-      colorDisabledHoverFocus: colors.navbarDarkColorDisabled,
-      colorActive: colors.navbarDarkColorActive,
-      colorActiveHoverFocus: colors.navbarDarkColorActive,
-      color: colors.navbarDarkColor,
-      colorHoverFocus: colors.navbarDarkColorHoverFocus,
+      colorDisabled: (get) => get('colorScheme', 'white25Alpha'),
+      colorDisabledHoverFocus: (get) => get('colorScheme', 'white25Alpha'),
+      colorActive: (get) => get('colorScheme', 'white90Alpha'),
+      colorActiveHoverFocus: (get) => get('colorScheme', 'white90Alpha'),
+      color: (get) => get('colorScheme', 'white50Alpha'),
+      colorHoverFocus: (get) => get('colorScheme', 'white75Alpha'),
     },
     light: {
-      colorDisabled: colors.navbarLightColorDisabled,
-      colorDisabledHoverFocus: colors.navbarLightColorDisabled,
-      colorActive: colors.navbarLightColorActive,
-      colorActiveHoverFocus: colors.navbarLightColorActive,
-      color: colors.navbarLightColor,
-      colorHoverFocus: colors.navbarLightColorHoverFocus,
+      colorDisabled: (get) => get('colorScheme', 'dark25Alpha'),
+      colorDisabledHoverFocus: (get) => get('colorScheme', 'dark25Alpha'),
+      colorActive: (get) => get('colorScheme', 'dark90Alpha'),
+      colorActiveHoverFocus: (get) => get('colorScheme', 'dark90Alpha'),
+      color: (get) => get('colorScheme', 'dark50Alpha'),
+      colorHoverFocus: (get) => get('colorScheme', 'dark75Alpha'),
     },
-    default: {
-      colorDisabled: colors.navbarLightColorDisabled,
-      colorDisabledHoverFocus: colors.navbarLightColorDisabled,
-      colorActive: colors.navbarLightColorActive,
-      colorActiveHoverFocus: colors.navbarLightColorActive,
-      color: colors.navbarLightColor,
-      colorHoverFocus: colors.navbarLightColorHoverFocus,
-    },
+    default: (get) => get('navbarLink', 'colors', 'light'),
   },
   padding: {
     brandTop: '0.3125rem',
     brandBottom: '0.3125rem',
   },
-  fontSize: utils.fontSize,
+  fontSize: (get) => get('globals', 'fontSize'),
 };
 
 export { navbarLink };
