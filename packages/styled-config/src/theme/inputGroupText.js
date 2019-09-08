@@ -1,12 +1,9 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const inputGroupText = {
   colors: {
     default: {
-      color: colors.gray700,
-      backgroundColor: colors.gray200,
-      borderColor: colors.gray400,
+      color: (get) => get('colorScheme', 'dark'),
+      backgroundColor: (get) => get('colorScheme', 'lightDarker'),
+      borderColor: (get) => get('colorScheme', 'lightDark'),
     },
   },
   margin: {
@@ -21,9 +18,9 @@ const inputGroupText = {
   fontWeight: {
     default: '400',
   },
-  fontSize: utils.fontSize,
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  fontSize: (get) => get('globals', 'fontSize'),
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
 };
 
 export { inputGroupText };

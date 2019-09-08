@@ -4,37 +4,36 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  margin,
-  padding,
-  border,
-  borderRadius as br,
-  fontWeight,
+  getColor,
+  getPadding,
+  getBorder,
+  getBorderRadius,
+  getFontWeight,
 } from 'styled-config';
 
 const alertDismissible = (props) => (
   props.dismissible &&
   css`
-    padding-right: ${padding(props, 'alert').dismissibleRight};
+    padding-right: ${getPadding(props, 'alert', 'dismissibleRight')};
   `
 );
 
 const color = (props) => (
-  css`color: ${colors(props, 'alert').text};`
+  css`color: ${getColor(props, 'alert', 'text')};`
 );
 
 const backgroundColor = (props) => (
-  css`background-color: ${colors(props, 'alert').background};`
+  css`background-color: ${getColor(props, 'alert', 'background')};`
 );
 
 const borderColor = (props) => (
-  css`border-color: ${colors(props, 'alert').border};`
+  css`border-color: ${getColor(props, 'alert', 'border')};`
 );
 
 const borderTopColor = (props) => (
   css`
     & > hr {
-      border-top-color: ${colors(props, 'alert').borderTop};
+      border-top-color: ${getColor(props, 'alert', 'borderTop')};
     };
   `
 );
@@ -43,28 +42,27 @@ const linkHoverColor = (props) => (
   css`
     & > a,
     & > a:hover {
-      color: ${colors(props, 'alert').hover};
+      color: ${getColor(props, 'alert', 'hover')};
     };
   `
 );
 
 const borderRadius = (props) => {
   if (props.noRadius) {
-    return css`border-radius: ${br(props, 'alert').noRadius}`;
+    return css`border-radius: ${getBorderRadius(props, 'alert', 'noRadius')}`;
   } else if (props.pill) {
-    return css`border-radius: ${br(props, 'alert').pill}`;
+    return css`border-radius: ${getBorderRadius(props, 'alert', 'pill')}`;
   }
 
-  return css`border-radius: ${br(props, 'alert').default}`;
+  return css`border-radius: ${getBorderRadius(props, 'alert', 'default')}`;
 };
 
 const Alert = styled(Div)`
   position: relative;
-  padding: ${(props) => padding(props, 'alert').default};
-  margin-bottom: ${(props) => margin(props, 'alert').bottom};
-  border: ${(props) => border(props, 'alert').default};
+  padding: ${(props) => getPadding(props, 'alert', 'default')};
+  border: ${(props) => getBorder(props, 'alert', 'default')};
   & > a {
-    font-weight: ${(props) => fontWeight(props, 'alert').default};
+    font-weight: ${(props) => getFontWeight(props, 'alert', 'default')};
   };
   & > h1,
   & > h2,

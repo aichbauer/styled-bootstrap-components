@@ -14,19 +14,5 @@ test('Styles matches primary', () => {
 test('Styles matches primary action', () => {
   const tree = renderer.create(<Badge primary action />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('color', '#fff');
-  expect(tree).toHaveStyleRule('background-color', '#007bff');
-  expect(tree).toHaveStyleRule('text-decoration', 'none', {
-    modifier: '& > a',
-  });
-  expect(tree).toHaveStyleRule('color', '#fff', {
-    modifier: '& > a',
-  });
-  expect(tree).toHaveStyleRule('background-color', '#0062cc', {
-    modifier: '&:focus',
-  });
-  expect(tree).toHaveStyleRule('background-color', '#0062cc', {
-    modifier: '&:focus',
-  });
 });
 

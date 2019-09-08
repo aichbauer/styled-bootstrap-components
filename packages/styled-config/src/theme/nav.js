@@ -1,10 +1,7 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const nav = {
   colors: {
     default: {
-      borderColorTabs: colors.gray300,
+      borderColorTabs: (get) => get('colorScheme', 'lightDark'),
     },
   },
   padding: {
@@ -15,7 +12,7 @@ const nav = {
   margin: {
     bottom: '0',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { nav };

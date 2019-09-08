@@ -73,7 +73,7 @@ exports[`Styles matches CardTitle h6 1`] = `
 exports[`Styles matches CardTitle muted 1`] = `
 .c0 {
   margin-bottom: 0.75rem;
-  color: #6c757d;
+  color: #abaeb1;
 }
 
 <h6

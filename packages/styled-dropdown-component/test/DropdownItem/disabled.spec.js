@@ -7,6 +7,4 @@ import { DropdownItem } from '../../src';
 test('Styles matches DropdownItem disabled', () => {
   const tree = renderer.create(<DropdownItem disabled />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('color', '#6c757d');
-  expect(tree).toHaveStyleRule('background-color', 'transparent');
 });

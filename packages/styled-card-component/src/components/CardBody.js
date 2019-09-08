@@ -4,19 +4,19 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  padding,
-  margin,
+  getPadding,
+  getMargin,
 } from 'styled-config';
 
 const CardBody = styled(Div)`
   flex: 1 1 auto;
-  padding: ${(props) => padding(props, 'cardBody').default};
+  padding: ${(props) => getPadding(props, 'cardBody', 'default')};
   & > a {
     &:hover {
       text-decoration: none;
     };
     & + a {
-      margin-left: ${(props) => margin(props, 'cardBody').leftA};
+      margin-left: ${(props) => getMargin(props, 'cardBody', 'leftA')};
     };
   };
 `;

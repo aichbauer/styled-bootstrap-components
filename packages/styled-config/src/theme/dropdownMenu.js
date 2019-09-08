@@ -1,12 +1,9 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const dropdownMenu = {
   colors: {
     default: {
-      color: colors.gray900,
-      backgroundColor: colors.white,
-      borderColor: colors.gray900BoxShadow,
+      color: (get) => get('colorScheme', 'darker'),
+      backgroundColor: (get) => get('colorScheme', 'white'),
+      borderColor: (get) => get('colorScheme', 'darkerBoxShadow'),
     },
   },
   fontSize: {
@@ -18,8 +15,8 @@ const dropdownMenu = {
   margin: {
     default: '0.125rem 0 0',
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
 };
 
 export { dropdownMenu };

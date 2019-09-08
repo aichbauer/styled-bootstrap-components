@@ -33,25 +33,4 @@ test('Styles matches ListGroupItem action active', () => {
 test('Styles matches ListGroupItem action', () => {
   const tree = renderer.create(<ListGroupItem action />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('color', '#495057', {
-    modifier: '& > a',
-  });
-  expect(tree).toHaveStyleRule('color', '#495057', {
-    modifier: '& > a:hover',
-  });
-  expect(tree).toHaveStyleRule('color', '#495057', {
-    modifier: '& > a:focus',
-  });
-  expect(tree).toHaveStyleRule('background-color', '#f8f9fa', {
-    modifier: '&:hover',
-  });
-  expect(tree).toHaveStyleRule('cursor', 'pointer', {
-    modifier: '&:hover',
-  });
-  expect(tree).toHaveStyleRule('background-color', '#f8f9fa', {
-    modifier: '&:focus',
-  });
-  expect(tree).toHaveStyleRule('cursor', 'pointer', {
-    modifier: '&:focus',
-  });
 });

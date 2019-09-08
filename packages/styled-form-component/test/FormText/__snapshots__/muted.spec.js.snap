@@ -5,7 +5,7 @@ exports[`Styles matches FormText muted 1`] = `
   display: block;
   margin-top: 0.25rem;
   box-sizing: border-box;
-  color: #6c757d;
+  color: #343a40;
 }
 
 <small

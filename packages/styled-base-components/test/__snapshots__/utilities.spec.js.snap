@@ -154,7 +154,7 @@ exports[`Styles match Div with colored border 1`] = `
 
 exports[`Styles match Div with colored text and background 1`] = `
 .c0 {
-  color: #f8f9fa;
+  color: #f0f0f0;
   background-color: #343a40;
 }
 

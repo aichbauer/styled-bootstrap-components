@@ -1,10 +1,7 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const jumbotron = {
   colors: {
     default: {
-      backgroundColor: colors.gray200,
+      backgroundColor: (get) => get('colorScheme', 'light'),
     },
   },
   padding: {
@@ -16,7 +13,7 @@ const jumbotron = {
     smPill: '4rem 4rem',
     default: '2rem 1rem',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { jumbotron };

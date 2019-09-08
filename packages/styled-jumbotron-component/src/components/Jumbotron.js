@@ -4,63 +4,64 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  padding as p,
-  borderRadius as br,
+  getColor,
+  getConcreteBreakpointSize,
+  getPadding,
+  getBorderRadius,
 } from 'styled-config';
 
 const padding = (props) => {
   if (props.fluid) {
     return css`
-      padding-right: ${p(props, 'jumbotron').fluidRight};
-      padding-left: ${p(props, 'jumbotron').fluidLeft};
+      padding-right: ${getPadding(props, 'jumbotron', 'fluidRight')};
+      padding-left: ${getPadding(props, 'jumbotron', 'fluidLeft')};
     `;
   } else if (props.pill) {
     return css`
-      padding: ${p(props, 'jumbotron').pill};
+      padding: ${getPadding(props, 'jumbotron', 'pill')};
     `;
   }
 
   return css`
-    padding: ${p(props, 'jumbotron').default};
+    padding: ${getPadding(props, 'jumbotron', 'default')};
   `;
 };
 
 const borderRadius = (props) => {
   if (props.fluid || props.noRadius) {
     return css`
-      border-radius: ${br(props, 'jumbotron').noRadius}
+      border-radius: ${getBorderRadius(props, 'jumbotron', 'noRadius')}
     `;
   } else if (props.pill) {
     return css`
-      border-radius: ${br(props, 'jumbotron').pill}
+      border-radius: ${getBorderRadius(props, 'jumbotron', 'pill')}
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'jumbotron').lg}
+    border-radius: ${getBorderRadius(props, 'jumbotron', 'lg')}
   `;
 };
 
 const Jumbotron = styled(Div)`
   margin-bottom: 2rem;
-  background-color: ${(props) => colors(props, 'jumbotron').backgroundColor};
-  @media(min-width: ${(props) => props.theme.screenSize.sm}) {
+  background-color: ${(props) => getColor(props, 'jumbotron', 'backgroundColor')};
+  @media(min-width: ${(props) => getConcreteBreakpointSize(props.theme, 'sm')}) {
     padding: ${(props) => {
     if (props.pill) {
-      return p(props, 'jumbotron').lgPill;
+      return getPadding(props, 'jumbotron', 'lgPill');
     }
 
-    return p(props, 'jumbotron').sm;
+    return getPadding(props, 'jumbotron', 'sm');
   }};
   };
-  @media(max-width: ${(props) => props.theme.screenSize.md}) {
+  @media(max-width: ${(props) => getConcreteBreakpointSize(props, 'md')}) {
     padding: ${(props) => {
     if (props.pill) {
-      return p(props, 'jumbotron').smPill;
+      return getPadding(props, 'jumbotron', 'smPill');
     }
 
-    return p(props, 'jumbotron').sm;
+    return getPadding(props, 'jumbotron', 'sm');
   }};
   };
   ${(props) => padding(props)};

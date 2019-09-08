@@ -13,7 +13,7 @@ exports[`Styles matches warning 1`] = `
   top: -1px;
   border-radius: 0.25rem;
   padding: 0.25rem 0.4rem;
-  color: #212529;
+  color: #2d2f31;
   background-color: #ffc107;
 }
 
@@ -22,7 +22,7 @@ exports[`Styles matches warning 1`] = `
 }
 
 .c0 > a {
-  color: #212529;
+  color: #2d2f31;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #ffc107;
@@ -46,7 +46,7 @@ exports[`Styles matches warning action 1`] = `
   top: -1px;
   border-radius: 0.25rem;
   padding: 0.25rem 0.4rem;
-  color: #212529;
+  color: #2d2f31;
   background-color: #ffc107;
 }
 
@@ -55,7 +55,7 @@ exports[`Styles matches warning action 1`] = `
 }
 
 .c0 > a {
-  color: #212529;
+  color: #2d2f31;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #ffc107;
@@ -65,18 +65,18 @@ exports[`Styles matches warning action 1`] = `
 .c0 > a:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #d39e00;
+  background-color: #e0a800;
 }
 
 .c0:hover,
 .c0:focus {
   cursor: pointer;
-  background-color: #d39e00;
+  background-color: #e0a800;
 }
 
 .c0:hover > a,
 .c0:focus > a {
-  background-color: #d39e00;
+  background-color: #e0a800;
 }
 
 <span

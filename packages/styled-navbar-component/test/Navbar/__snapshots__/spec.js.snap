@@ -21,7 +21,7 @@ exports[`Styles matches Navbar 1`] = `
   padding: 0.5rem 1rem;
   color: rgba(0,0,0,0.5);
   border-color: rgba(0,0,0,0.1);
-  background-color: #f8f9fa !important;
+  background-color: #f0f0f0 !important;
 }
 
 <nav

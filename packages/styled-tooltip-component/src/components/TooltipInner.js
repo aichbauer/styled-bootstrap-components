@@ -4,24 +4,24 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  padding,
-  colors,
-  borderRadius as br,
+  getPadding,
+  getColor,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'tooltipInner').noRadius};
+      border-radius: ${getBorderRadius(props, 'tooltipInner', 'noRadius')};
     `;
   } else if (props.pill) {
     return css`
-      border-radius: ${br(props, 'tooltipInner').pill};
+      border-radius: ${getBorderRadius(props, 'tooltipInner', 'pill')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'tooltipInner').default};
+    border-radius: ${getBorderRadius(props, 'tooltipInner', 'default')};
   `;
 };
 
@@ -34,10 +34,10 @@ const pill = (props) => (
 
 const TooltipInner = styled(Div)`
   max-width: 200px;
-  padding: ${(props) => padding(props, 'tooltipInner').default};
-  color: ${(props) => colors(props, 'tooltipInner').color};
+  padding: ${(props) => getPadding(props, 'tooltipInner', 'default')};
+  color: ${(props) => getColor(props, 'tooltipInner', 'color')};
   text-align: center;
-  background-color: ${(props) => colors(props, 'tooltipInner').backgroundColor};
+  background-color: ${(props) => getColor(props, 'tooltipInner', 'backgroundColor')};
   ${(props) => borderRadius(props)};
   ${(props) => pill(props)};
 `;

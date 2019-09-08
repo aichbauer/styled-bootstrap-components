@@ -65,18 +65,18 @@ exports[`Styles matches info action 1`] = `
 .c0 > a:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #117a8b;
+  background-color: #138496;
 }
 
 .c0:hover,
 .c0:focus {
   cursor: pointer;
-  background-color: #117a8b;
+  background-color: #138496;
 }
 
 .c0:hover > a,
 .c0:focus > a {
-  background-color: #117a8b;
+  background-color: #138496;
 }
 
 <span

@@ -5,23 +5,23 @@ exports[`Styles matches DropdownItem active 1`] = `
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #2d2f31;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
   border: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #16181b;
   background-color: #007bff;
 }
 
 .c0:hover,
 .c0:focus {
-  color: #16181b;
+  color: #212529;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
 }
 
 <div

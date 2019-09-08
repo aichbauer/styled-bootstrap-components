@@ -1,24 +1,21 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const formControl = {
   colors: {
     default: {
-      color: colors.gray700,
-      background: colors.white,
-      border: colors.gray400,
-      borderFocus: colors.formControlBorderFocus,
-      boxShadowFocus: colors.formControlBoxShadowFocus,
-      placeholder: colors.gray,
-      backgroundColorDisabledReadonly: colors.gray200,
-      borderValid: colors.green,
-      formControlBoxShadowValid: colors.formControlBoxShadowValid,
-      borderInvalid: colors.red,
-      formControlBoxShadowInvalid: colors.formControlBoxShadowInvalid,
+      color: (get) => get('colorScheme', 'dark'),
+      background: (get) => get('colorScheme', 'white'),
+      border: (get) => get('colorScheme', 'darkLighter'),
+      borderFocus: (get) => get('colorScheme', 'darkLight'),
+      boxShadowFocus: (get) => get('colorScheme', 'darkerBoxShadow'),
+      placeholder: (get) => get('colorScheme', 'secondary'),
+      backgroundColorDisabledReadonly: (get) => get('colorScheme', 'whiteDark'),
+      borderValid: (get) => get('colorScheme', 'success'),
+      formControlBoxShadowValid: (get) => get('colorScheme', 'successBoxShadow'),
+      borderInvalid: (get) => get('colorScheme', 'danger'),
+      formControlBoxShadowInvalid: (get) => get('colorScheme', 'dangerBoxShadow'),
     },
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
   boxShadow: {
     default: '0 0 0 0.2rem',
   },
