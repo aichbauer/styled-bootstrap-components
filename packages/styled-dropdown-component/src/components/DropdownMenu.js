@@ -126,10 +126,16 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const {
+      children, alwaysVisible, hidden, ...rest
+    } = this.props;
 
     return (
-      <StyledDiv ref={this.container} {...rest}>
+      <StyledDiv
+        ref={this.container}
+        hidden={!alwaysVisible && hidden}
+        {...rest}
+      >
         {children}
       </StyledDiv>
     );
