@@ -7,12 +7,12 @@ import { Div } from 'styled-base-components';
 
 import {
   theme as DefaultTheme,
-  colors,
-  borderRadius as br,
-  padding,
-  margin,
-  fontSize,
-  border,
+  getColor,
+  getBorderRadius,
+  getPadding,
+  getMargin,
+  getFontSize,
+  getBorder,
 } from 'styled-config';
 
 const isLeftOrRight = (props) => (
@@ -46,12 +46,12 @@ const isFullWidth = (props) => (
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'dropdownMenu').noRadius};
+      border-radius: ${getBorderRadius(props, 'dropdownMenu', 'noRadius')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'dropdownMenu').default};
+    border-radius: ${getBorderRadius(props, 'dropdownMenu', 'default')};
   `;
 };
 
@@ -61,15 +61,15 @@ const StyledDiv = styled(Div)`
   z-index: 1000;
   float: left;
   min-width: 10rem;
-  padding: ${(props) => padding(props, 'dropdownMenu').default};
-  margin: ${(props) => margin(props, 'dropdownMenu').default};
-  font-size: ${(props) => fontSize(props, 'dropdownMenu').default};
-  color: ${(props) => colors(props, 'dropdownMenu').color};
+  padding: ${(props) => getPadding(props, 'dropdownMenu', 'default')};
+  margin: ${(props) => getMargin(props, 'dropdownMenu', 'default')};
+  font-size: ${(props) => getFontSize(props, 'dropdownMenu', 'default')};
+  color: ${(props) => getColor(props, 'dropdownMenu', 'color')};
   text-align: left;
   list-style: none;
-  background-color: ${(props) => colors(props, 'dropdownMenu').backgroundColor};
+  background-color: ${(props) => getColor(props, 'dropdownMenu', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'dropdownMenu').default} ${(props) => colors(props, 'dropdownMenu').borderColor};
+  border: ${(props) => getBorder(props, 'dropdownMenu', 'default')} ${(props) => getColor(props, 'dropdownMenu', 'borderColor')};
   ${(props) => borderRadius(props)};
   ${(props) => dropdownMenuHidden(props)};
   ${(props) => isLeftOrRight(props)};
@@ -126,10 +126,16 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { children, ...rest } = this.props;
+    const {
+      children, alwaysVisible, hidden, ...rest
+    } = this.props;
 
     return (
-      <StyledDiv ref={this.container} {...rest}>
+      <StyledDiv
+        ref={this.container}
+        hidden={!alwaysVisible && hidden}
+        {...rest}
+      >
         {children}
       </StyledDiv>
     );

@@ -4,41 +4,41 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  padding,
-  fontWeight,
+  getColor,
+  getPadding,
+  getFontWeight,
 } from 'styled-config';
 
 const dropdownItemActive = (props) => (
   props.active &&
   css`
     text-decoration: none;
-    color: ${colors(props, 'dropdownItem').colorActive};
-    background-color: ${colors(props, 'dropdownItem').backgroundColorActive};
+    color: ${getColor(props, 'dropdownItem', 'colorActive')};
+    background-color: ${getColor(props, 'dropdownItem', 'backgroundColorActive')};
   `
 );
 
 const dropdownItemDisabled = (props) => (
   props.disabled &&
   css`
-    color: ${colors(props, 'dropdownItem').colorDisabled};
+    color: ${getColor(props, 'dropdownItem', 'colorDisabled')};
     background-color: transparent;
   `
 );
 
 const DropdownItem = styled(Div)`
-  padding: ${(props) => padding(props, 'dropdownItem').default};
+  padding: ${(props) => getPadding(props, 'dropdownItem', 'default')};
   clear: both;
-  font-weight: ${(props) => fontWeight(props, 'dropdownItem').default};
-  color: ${(props) => colors(props, 'dropdownItem').color};
+  font-weight: ${(props) => getFontWeight(props, 'dropdownItem', 'default')};
+  color: ${(props) => getColor(props, 'dropdownItem', 'color')};
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
   border: 0;
   &:hover, &:focus {
-    color: ${(props) => colors(props, 'dropdownItem').colorHoverFocus};
+    color: ${(props) => getColor(props, 'dropdownItem', 'colorHoverFocus')};
     text-decoration: none;
-    background-color: ${(props) => colors(props, 'dropdownItem').backgroundColorHoverFocus};
+    background-color: ${(props) => getColor(props, 'dropdownItem', 'backgroundColorHoverFocus')};
   }
   ${(props) => dropdownItemActive(props)};
   ${(props) => dropdownItemDisabled(props)};

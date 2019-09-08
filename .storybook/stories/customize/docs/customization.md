@@ -1,25 +1,11 @@
-# styled-config
+# Customize
 
-[![npm](https://img.shields.io/npm/v/styled-config.svg?style=flat-square)](https://www.npmjs.com/package/styled-config)
-[![Travis branch](https://img.shields.io/travis/aichbauer/styled-bootstrap-components/master.svg?style=flat-square)](https://travis-ci.org/aichbauer/styled-bootstrap-components)
-[![Codecov branch](https://img.shields.io/codecov/c/github/aichbauer/styled-bootstrap-components/master.svg?style=flat-square)](https://codecov.io/gh/aichbauer/styled-bootstrap-components)
-[![storybook](https://img.shields.io/badge/docs%20with-storybook-f1618c.svg?style=flat-square)](https://aichbauer.github.io/styled-bootstrap-components)
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
+> Create **your own UI Component Library** on top of `styled-bootstrap-components`
 
-> The configuration for styled-bootstrap-components
+Use the components as an entry point for your library or add themes to
+your projects.
 
-## Installation
-
-```sh
-npm install --save styled-config
-```
-
-## Usage
-
-This package holds the theme for the styled-bootstrap-components and related
-functions. You can use is to customize your components.
-
-### Using styled-components
+## Using styled-components
 
 You can change appearance of styled-components as normal.
 
@@ -33,7 +19,7 @@ const CustomizedButton = styled(Button)`
 `;
 ```
 
-### Using a theme
+## Using a theme
 
 You can use 'ThemeProvider' from 'styled-components' to modify the components'
 look. Theme provided to components directly or through provider can contain
@@ -116,11 +102,3 @@ const defaultTheme = {
   // ...
 }
 ```
-
-To see how to modify all the styled-bootstrap-components to create your own
-UI component library take a look at the
-[theme](https://github.com/aichbauer/styled-bootstrap-components/tree/master/packages/styled-config/src/theme).
-
-## License
-
-MIT © Lukas Aichbauer

@@ -41,7 +41,7 @@ exports[`Styles matches Button warning 1`] = `
 .c0:focus:focus,
 .c0:hover:hover,
 .c0:focus:hover {
-  border: 1px solid #d39e00;
+  border: 1px solid #c69500;
 }
 
 .c0:hover:focus,
@@ -53,7 +53,7 @@ exports[`Styles matches Button warning 1`] = `
 
 .c0:focus,
 .c0:hover {
-  border: 1px solid #d39e00;
+  border: 1px solid #c69500;
 }
 
 .c0:focus,

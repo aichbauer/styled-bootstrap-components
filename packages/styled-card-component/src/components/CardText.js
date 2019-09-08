@@ -4,14 +4,14 @@ import { P } from 'styled-base-components';
 
 import {
   theme,
-  margin,
+  getMargin,
 } from 'styled-config';
 
 const CardText = styled(P)`
-  margin-top: ${(props) => margin(props, 'cardText').top};
-  margin-bottom: ${(props) => margin(props, 'cardText').bottom};
+  margin-top: ${(props) => getMargin(props, 'cardText', 'top')};
+  margin-bottom: ${(props) => getMargin(props, 'cardText', 'bottom')};
   &:last-child {
-    margin-bottom: ${(props) => margin(props, 'cardText').lastChildBottom};
+    margin-bottom: ${(props) => getMargin(props, 'cardText', 'lastChildBottom')};
   };
 `;
 

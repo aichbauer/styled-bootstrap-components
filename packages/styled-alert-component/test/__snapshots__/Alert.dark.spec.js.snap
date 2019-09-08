@@ -4,12 +4,11 @@ exports[`Styles matches dark 1`] = `
 .c0 {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  color: #1b1e21;
+  color: #171a1d;
   background-color: #d6d8d9;
-  border-color: #c6c8ca;
+  border-color: #abaeb1;
 }
 
 .c0 > a {
@@ -26,12 +25,12 @@ exports[`Styles matches dark 1`] = `
 }
 
 .c0 > hr {
-  border-top-color: #b9bbbe;
+  border-top-color: #abaeb1;
 }
 
 .c0 > a,
 .c0 > a:hover {
-  color: #040505;
+  color: #171a1d;
 }
 
 <div

@@ -13,16 +13,16 @@ exports[`Styles matches Table theadDark 1`] = `
 .c1 td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #d6d8d9;
 }
 
 .c1 thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid #d6d8d9;
 }
 
 .c1 tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #d6d8d9;
 }
 
 .c1 + .c0 {
@@ -31,8 +31,8 @@ exports[`Styles matches Table theadDark 1`] = `
 
 .c1 thead th {
   color: #fff;
-  background-color: #212529;
-  border-color: #32383e;
+  background-color: #2d2f31;
+  border-color: #212529;
 }
 
 <table

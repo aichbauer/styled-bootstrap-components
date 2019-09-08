@@ -15,7 +15,7 @@ exports[`Styles matches Button danger active 1`] = `
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   border: 1px solid #b21f2d;
   background-image: none;
-  background-color: #bd2130;
+  background-color: #b21f2d;
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 1rem;
@@ -34,7 +34,7 @@ exports[`Styles matches Button danger active 1`] = `
   text-decoration: none;
   border: 1px solid #b21f2d;
   background-image: none;
-  background-color: #bd2130;
+  background-color: #b21f2d;
   color: #fff;
   cursor: pointer;
 }

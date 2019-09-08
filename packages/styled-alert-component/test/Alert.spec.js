@@ -9,7 +9,6 @@ test('Styles matches plane', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('position', 'relative');
   expect(tree).toHaveStyleRule('padding', '0.75rem 1.25rem');
-  expect(tree).toHaveStyleRule('margin-bottom', '1rem');
   expect(tree).toHaveStyleRule('border', '1px solid transparent');
   expect(tree).toHaveStyleRule('border-radius', '0.25rem');
   expect(tree).toHaveStyleRule('font-weight', '700', {

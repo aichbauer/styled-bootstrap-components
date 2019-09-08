@@ -4,58 +4,58 @@ import { Span } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  padding as p,
-  borderRadius as br,
-  fontWeight,
+  getColor,
+  getPadding,
+  getBorderRadius,
+  getFontWeight,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.pill) {
-    return css`border-radius: ${br(props, 'badge').pill};`;
+    return css`border-radius: ${getBorderRadius(props, 'badge', 'pill')};`;
   } else if (props.noRadius) {
-    return css`border-radius: ${br(props, 'badge').noRadius};`;
+    return css`border-radius: ${getBorderRadius(props, 'badge', 'noRadius')};`;
   }
 
-  return css`border-radius: ${br(props, 'badge').default};`;
+  return css`border-radius: ${getBorderRadius(props, 'badge', 'default')};`;
 };
 
 const padding = (props) => {
   if (props.pill) {
     return css`
-      padding: ${p(props, 'badge').pill};
+      padding: ${getPadding(props, 'badge', 'pill')};
     `;
   }
 
-  return css`padding: ${p(props, 'badge').default};`;
+  return css`padding: ${getPadding(props, 'badge', 'default')};`;
 };
 
 const backgroundColor = (props) => (
-  css`background-color: ${colors(props, 'badge').backgroundColor};`
+  css`background-color: ${getColor(props, 'badge', 'backgroundColor')};`
 );
 
 const color = (props) => (
-  css`color: ${colors(props, 'badge').color};`
+  css`color: ${getColor(props, 'badge', 'color')};`
 );
 
 const badgeLink = (props) => {
   if (props.action) {
     return css`
     & > a {
-      color: ${colors(props, 'badge').linkColor};
+      color: ${getColor(props, 'badge', 'linkColor')};
       text-decoration: none;
-      background-color: ${colors(props, 'badge').backgroundColor};
+      background-color: ${getColor(props, 'badge', 'backgroundColor')};
       &:hover, &:focus {
         text-decoration: none;
-        background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
+        background-color: ${getColor(props, 'badge', 'backgroundColorHoverFocus')};
       };
     };
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
+      background-color: ${getColor(props, 'badge', 'backgroundColorHoverFocus')};
       & > a {
-        background-color: ${colors(props, 'badge').backgroundColorHoverFocus};
+        background-color: ${getColor(props, 'badge', 'backgroundColorHoverFocus')};
       };
     };
   `;
@@ -63,9 +63,9 @@ const badgeLink = (props) => {
 
   return css`
     & > a {
-      color: ${colors(props, 'badge').linkColor};
+      color: ${getColor(props, 'badge', 'linkColor')};
       text-decoration: none;
-      background-color: ${colors(props, 'badge').backgroundColor};
+      background-color: ${getColor(props, 'badge', 'backgroundColor')};
     }
   `;
 };
@@ -73,7 +73,7 @@ const badgeLink = (props) => {
 const Badge = styled(Span)`
   display: inline-block;
   font-size: 75%;
-  font-weight: ${(props) => fontWeight(props, 'badge').default};
+  font-weight: ${(props) => getFontWeight(props, 'badge', 'default')};
   line-height: 1;
   text-align: center;
   white-space: nowrap;

@@ -1,15 +1,12 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const card = {
   colors: {
     default: {
-      backgroundColor: colors.white,
-      borderColor: colors.borderCard,
+      backgroundColor: (get) => get('colorScheme', 'white'),
+      borderColor: (get) => get('colorScheme', 'weakBorder'),
     },
   },
-  borderRadius: utils.borderRadius,
-  border: utils.border,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  border: (get) => get('globals', 'border'),
 };
 
 export { card };

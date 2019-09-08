@@ -4,21 +4,22 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  margin as m,
-  padding as p,
-  borderRadius as br,
-  fontSize as fs,
+  getMargin,
+  getPadding,
+  getBorderRadius,
+  getFontSize,
+  getConcreteBreakpointSize,
 } from 'styled-config';
 
 const formGroupFormInline = (props) => (
   props.formInline &&
   css`
-    @media (min-width: ${props.theme.screenSize.sm}) {
+    @media (min-width: ${getConcreteBreakpointSize(props, 'sm')}) {
       display: flex;
       flex: 0 0 auto;
       flex-flow: row wrap;
       align-items: center;
-      margin-bottom: ${m(props, 'formGroup').inlineBottom}
+      margin-bottom: ${getMargin(props, 'formGroup', 'inlineBottom')}
     };
   `
 );
@@ -40,30 +41,30 @@ const flexWrap = (props) => (
 const margin = (props) => {
   if (props.nomb && !props.row) {
     return css`
-      margin-bottom: ${m(props, 'formGroup').nombNoRow};
+      margin-bottom: ${getMargin(props, 'formGroup', 'nombNoRow')};
     `;
   } if (props.nomb && props.row) {
     return css`
-      margin-right: ${m(props, 'formGroup').nombRowRight};
-      margin-left: ${m(props, 'formGroup').nombRowLeft};
+      margin-right: ${getMargin(props, 'formGroup', 'nombRowRight')};
+      margin-left: ${getMargin(props, 'formGroup', 'nombRowLeft')};
       & > div > label {
-        margin-bottom: ${m(props, 'formGroup').nombRowDivLabelBottom};
+        margin-bottom: ${getMargin(props, 'formGroup', 'nombRowDivLabelBottom')};
       };
-      margin-bottom: ${m(props, 'formGroup').nombRowBottom};
+      margin-bottom: ${getMargin(props, 'formGroup', 'nombRowBottom')};
     `;
   } else if (props.row) {
     return css`
-      margin-right: ${m(props, 'formGroup').rowRight};
-      margin-left: ${m(props, 'formGroup').rowLeft};
+      margin-right: ${getMargin(props, 'formGroup', 'rowRight')};
+      margin-left: ${getMargin(props, 'formGroup', 'rowLeft')};
       & > div > label {
-        margin-bottom: ${m(props, 'formGroup').rowDivLabel};
+        margin-bottom: ${getMargin(props, 'formGroup', 'rowDivLabel')};
       };
-      margin-bottom: ${m(props, 'formGroup').bottom};
+      margin-bottom: ${getMargin(props, 'formGroup', 'bottom')};
     `;
   }
 
   return css`
-    margin-bottom: ${m(props, 'formGroup').bottom};
+    margin-bottom: ${getMargin(props, 'formGroup', 'bottom')};
   `;
 };
 
@@ -88,7 +89,7 @@ const borderRadius = (props) => {
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
-        border-radius: ${br(props, 'formGroup').noRadius};
+        border-radius: ${getBorderRadius(props, 'formGroup', 'noRadius')};
       };
     `;
   }
@@ -98,7 +99,7 @@ const borderRadius = (props) => {
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
-        border-radius: ${br(props, 'formGroup').lg};
+        border-radius: ${getBorderRadius(props, 'formGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
@@ -107,7 +108,7 @@ const borderRadius = (props) => {
       & > div > input,
       & > :not(input[type=file]),
       & > div > :not(input[type=file]) {
-        border-radius: ${br(props, 'formGroup').sm};
+        border-radius: ${getBorderRadius(props, 'formGroup', 'sm')};
       };
     `;
   }
@@ -117,7 +118,7 @@ const borderRadius = (props) => {
     & > div > input,
     & > :not(input[type=file]),
     & > div > :not(input[type=file]) {
-      border-radius: ${br(props, 'formGroup').default};
+      border-radius: ${getBorderRadius(props, 'formGroup', 'default')};
     };
   `;
 };
@@ -138,7 +139,7 @@ const fontSize = (props) => {
       & > div > input,
       & > label,
       & > div > label {
-        font-size: ${fs(props, 'formGroup').lg};
+        font-size: ${getFontSize(props, 'formGroup', 'lg')};
       };
     `;
   } else if (props.sm) {
@@ -147,7 +148,7 @@ const fontSize = (props) => {
       & > div > input,
       & > label,
       & > div > label {
-        font-size: ${fs(props, 'formGroup').sm};
+        font-size: ${getFontSize(props, 'formGroup', 'sm')};
       };
     `;
   }
@@ -157,7 +158,7 @@ const fontSize = (props) => {
     & > div > input,
     & > label,
     & > div > label {
-      font-size: ${fs(props, 'formGroup').default};
+      font-size: ${getFontSize(props, 'formGroup', 'default')};
     };
   `;
 };
@@ -166,25 +167,25 @@ const padding = (props) => {
   if (props.lg) {
     return css`
       & > label, & > div > label {
-        padding-top: ${p(props, 'formGroup').labelTopLg};
-        padding-bottom: ${p(props, 'formGroup').labelBottomLg};
+        padding-top: ${getPadding(props, 'formGroup', 'labelTopLg')};
+        padding-bottom: ${getPadding(props, 'formGroup', 'labelBottomLg')};
       };
       & > input, & > div > input {
-        padding-right: ${p(props, 'formGroup').inputRightLg};
-        padding-left: ${p(props, 'formGroup').inputLeftLg};
-        padding: ${p(props, 'formGroup').inputLg};
+        padding-right: ${getPadding(props, 'formGroup', 'inputRightLg')};
+        padding-left: ${getPadding(props, 'formGroup', 'inputLeftLg')};
+        padding: ${getPadding(props, 'formGroup', 'inputLg')};
       };
     `;
   } else if (props.sm) {
     return css`
       & > label, & > div > label {
-        padding-top: ${p(props, 'formGroup').labelTopSm};
-        padding-bottom: ${p(props, 'formGroup').labelBottomSm};
+        padding-top: ${getPadding(props, 'formGroup', 'labelTopSm')};
+        padding-bottom: ${getPadding(props, 'formGroup', 'labelBottomSm')};
       };
       & > input, & > div > input {
-        padding-right: ${p(props, 'formGroup').inputRightSm};
-        padding-left: ${p(props, 'formGroup').inputLeftSm};
-        padding: ${p(props, 'formGroup').inputSm};
+        padding-right: ${getPadding(props, 'formGroup', 'inputRightSm')};
+        padding-left: ${getPadding(props, 'formGroup', 'inputLeftSm')};
+        padding: ${getPadding(props, 'formGroup', 'inputSm')};
       };
     `;
   }

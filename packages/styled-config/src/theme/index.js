@@ -45,6 +45,7 @@ import { tooltip } from './tooltip';
 import { tooltipArrow } from './tooltipArrow';
 import { tooltipInner } from './tooltipInner';
 import { colorScheme } from './colorScheme';
+import { globals } from './globals';
 
 const theme = {
   colorScheme,
@@ -94,6 +95,7 @@ const theme = {
   tooltip,
   tooltipArrow,
   tooltipInner,
+  globals,
 };
 
 export { theme };

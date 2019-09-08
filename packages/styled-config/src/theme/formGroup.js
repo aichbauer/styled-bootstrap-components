@@ -1,5 +1,3 @@
-import { utils } from './utils';
-
 const formGroup = {
   margin: {
     inlineBottom: '0',
@@ -25,8 +23,8 @@ const formGroup = {
     inputLeftSm: '0',
     inputSm: '0.25rem 0.5rem',
   },
-  borderRadius: utils.borderRadius,
-  fontSize: utils.fontSize,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  fontSize: (get) => get('globals', 'fontSize'),
 };
 
 export { formGroup };

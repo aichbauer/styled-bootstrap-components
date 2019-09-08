@@ -5,32 +5,32 @@ import { Transition, Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  fontWeight,
-  margin as m,
-  fontFamily,
-  borderRadius,
-  border,
-  fontSize,
+  getColor,
+  getFontWeight,
+  getMargin,
+  getFontFamily,
+  getBorderRadius,
+  getBorder,
+  getFontSize,
 } from 'styled-config';
 
 const margin = (props) => {
   if (props.top) {
     return css`
-      margin-bottom: ${m(props, 'popover').topBottom};
+      margin-bottom: ${getMargin(props, 'popover', 'topBottom')};
     `;
   } else if (props.left) {
     return css`
-      margin-right: ${m(props, 'popover').leftRight};
+      margin-right: ${getMargin(props, 'popover', 'leftRight')};
     `;
   } else if (props.bottom) {
     return css`
-      margin-top: ${m(props, 'popover').bottomTop};
+      margin-top: ${getMargin(props, 'popover', 'bottomTop')};
     `;
   }
 
   return css`
-    margin-left: ${m(props, 'popover').rightLeft};
+    margin-left: ${getMargin(props, 'popover', 'rightLeft')};
   `;
 };
 
@@ -40,9 +40,9 @@ export const PopoverWithoutTransition = styled(Div)`
   left: 0;
   z-index: 1060;
   max-width: 276px;
-  font-family: ${(props) => fontFamily(props, 'popover').default};
+  font-family: ${(props) => getFontFamily(props, 'popover', 'default')};
   font-style: normal;
-  font-weight: ${(props) => fontWeight(props, 'popover').default};
+  font-weight: ${(props) => getFontWeight(props, 'popover', 'default')};
   line-height: 1.5;
   text-align: left;
   text-decoration: none;
@@ -53,12 +53,12 @@ export const PopoverWithoutTransition = styled(Div)`
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: ${(props) => fontSize(props, 'popover').sm};
+  font-size: ${(props) => getFontSize(props, 'popover', 'sm')};
   word-wrap: break-word;
-  background-color: ${(props) => colors(props, 'popover').backgroundColor};
+  background-color: ${(props) => getColor(props, 'popover', 'backgroundColor')};
   background-clip: padding-box;
-  border: ${(props) => border(props, 'popover').default} ${(props) => colors(props, 'popover').borderColor};
-  border-radius: ${(props) => borderRadius(props, 'popover').lg};
+  border: ${(props) => getBorder(props, 'popover', 'default')} ${(props) => getColor(props, 'popover', 'borderColor')};
+  border-radius: ${(props) => getBorderRadius(props, 'popover', 'lg')};
   ${(props) => margin(props)};
 `;
 

@@ -4,17 +4,17 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  border,
-  margin,
-  padding,
+  getColor,
+  getBorder,
+  getMargin,
+  getPadding,
 } from 'styled-config';
 
 const DropdownDivider = styled(Div)`
   height: 0;
-  padding-top: ${(props) => padding(props, 'dropdownDivider').top};
-  margin-top: ${(props) => margin(props, 'dropdownDivider').top};
-  border-top: ${(props) => border(props, 'dropdownDivider').default} ${(props) => colors(props, 'dropdownDivider').borderTop};
+  padding-top: ${(props) => getPadding(props, 'dropdownDivider', 'top')};
+  margin-top: ${(props) => getMargin(props, 'dropdownDivider', 'top')};
+  border-top: ${(props) => getBorder(props, 'dropdownDivider', 'default')} ${(props) => getColor(props, 'dropdownDivider', 'borderTop')};
 `;
 
 DropdownDivider.defaultProps = {

@@ -4,28 +4,28 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  padding,
-  border,
-  borderRadius as br,
+  getColor,
+  getPadding,
+  getBorder,
+  getBorderRadius,
 } from 'styled-config';
 
 const borderRadius = (props) => {
   if (props.noRadius) {
     return css`
-      border-radius: ${br(props, 'cardFooter').noRadius};
+      border-radius: ${getBorderRadius(props, 'cardFooter', 'noRadius')};
     `;
   }
 
   return css`
-    border-radius: ${br(props, 'cardFooter').default};
+    border-radius: ${getBorderRadius(props, 'cardFooter', 'default')};
   `;
 };
 
 const CardFooter = styled(Div)`
-  padding: ${(props) => padding(props, 'cardFooter').default};
-  background-color: ${(props) => colors(props, 'cardFooter').background};
-  border-top: ${(props) => border(props, 'cardFooter').default} ${(props) => colors(props, 'cardFooter').borderTop};
+  padding: ${(props) => getPadding(props, 'cardFooter', 'default')};
+  background-color: ${(props) => getColor(props, 'cardFooter', 'background')};
+  border-top: ${(props) => getBorder(props, 'cardFooter', 'default')} ${(props) => getColor(props, 'cardFooter', 'borderTop')};
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
