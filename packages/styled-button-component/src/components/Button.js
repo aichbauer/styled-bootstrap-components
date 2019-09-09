@@ -4,18 +4,18 @@ import { Utilities, Button as BaseButton, A } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  screenSize,
-  borderRadius as br,
-  border as b,
-  padding as p,
-  margin,
-  fontSize as fs,
+  getColor,
+  getBreakpointSize,
+  getBorderRadius,
+  getBorder,
+  getPadding,
+  getMargin,
+  getFontSize,
 } from 'styled-config';
 
 const boxShadow = (props) => (
   css`
-    box-shadow: 0 0 0 0.2rem ${colors(props, 'button').boxShadow};
+    box-shadow: 0 0 0 0.2rem ${getColor(props, 'button', 'boxShadow')};
   `
 );
 
@@ -24,8 +24,8 @@ const padding = (props) => {
     if (props.sm) {
       return css`
       padding: 0;
-      padding-right: ${p(props, 'button').splitSmRight};
-      padding-left: ${p(props, 'button').splitSmLeft};
+      padding-right: ${getPadding(props, 'button', 'splitSmRight')};
+      padding-left: ${getPadding(props, 'button', 'splitSmLeft')};
       &::after {
         margin-left: 0;
       };
@@ -33,8 +33,8 @@ const padding = (props) => {
     } else if (props.lg) {
       return css`
       padding: 0;
-      padding-right: ${p(props, 'button').splitLgRight};
-      padding-left: ${p(props, 'button').splitLgLeft};
+      padding-right: ${getPadding(props, 'button', 'splitLgRight')};
+      padding-left: ${getPadding(props, 'button', 'splitLgLeft')};
       &::after {
         margin-left: 0;
       };
@@ -43,24 +43,24 @@ const padding = (props) => {
 
     return css`
       padding: 0;
-      padding-right: ${p(props, 'button').splitDefaultRight};
-      padding-left: ${p(props, 'button').splitDefaultLeft};
+      padding-right: ${getPadding(props, 'button', 'splitDefaultRight')};
+      padding-left: ${getPadding(props, 'button', 'splitDefaultLeft')};
       &::after {
         margin-left: 0;
       };
   `;
   } else if (props.lg) {
     return css`
-      padding: ${p(props, 'button').lg};
+      padding: ${getPadding(props, 'button', 'lg')};
     `;
   } else if (props.sm) {
     return css`
-      padding: ${p(props, 'button').sm};
+      padding: ${getPadding(props, 'button', 'sm')};
     `;
   }
 
   return css`
-    padding: ${p(props, 'button').default};
+    padding: ${getPadding(props, 'button', 'default')};
   `;
 };
 
@@ -70,7 +70,7 @@ const block = (props) => {
       display: block;
       width: 100%;
       & + & {
-        margin-top: ${margin(props, 'button').blockTop};
+        margin-top: ${getMargin(props, 'button', 'blockTop')};
       };
     `;
   }
@@ -83,16 +83,16 @@ const block = (props) => {
 const fontSize = (props) => {
   if (props.lg) {
     return css`
-      font-size: ${fs(props, 'button').lg};
+      font-size: ${getFontSize(props, 'button', 'lg')};
     `;
   } else if (props.sm) {
     return css`
-      font-size: ${fs(props, 'button').sm};
+      font-size: ${getFontSize(props, 'button', 'sm')};
     `;
   }
 
   return css`
-    font-size: ${fs(props, 'button').default};
+    font-size: ${getFontSize(props, 'button', 'default')};
   `;
 };
 
@@ -103,7 +103,7 @@ const dropdownToggle = (props) => (
       display: inline-block;
       width: 0;
       height: 0;
-      margin-left: ${margin(props, 'button').dropdownToggleLeft};
+      margin-left: ${getMargin(props, 'button', 'dropdownToggleLeft')};
       vertical-align: 0.255em;
       content: "";
       border-top: 0.3em solid;
@@ -129,18 +129,18 @@ const disabled = (props) => (
 
 const border = (props) => {
   if (props.active) {
-    return css`border: ${b(props, 'button').default} ${colors(props, 'button').borderColorActive};`;
+    return css`border: ${getBorder(props, 'button', 'default')} ${getColor(props, 'button', 'borderColorActive')};`;
   } else if (props.disabled) {
-    return css`border: ${b(props, 'button').default} ${colors(props, 'button').borderColorDisabled};`;
+    return css`border: ${getBorder(props, 'button', 'default')} ${getColor(props, 'button', 'borderColorDisabled')};`;
   }
 
   return css`
-    border: 1px solid ${colors(props, 'button').borderColor};
+    border: 1px solid ${getColor(props, 'button', 'borderColor')};
     ${!props.outline &&
     css`
       &:focus,
       &:hover {
-        border: 1px solid ${colors(props, 'button').borderColorHoverFocus};
+        border: 1px solid ${getColor(props, 'button', 'borderColorHoverFocus')};
       }
     `}
   `;
@@ -150,53 +150,53 @@ const backgroundColor = (props) => {
   if (props.active) {
     return css`
       background-image: none;
-      background-color: ${colors(props, 'button').backgroundColorActive};
+      background-color: ${getColor(props, 'button', 'backgroundColorActive')};
     `;
   } else if (props.outline) {
     return css`
       background-image: none;
       background-color: transparent;
       &:hover {
-        background-color: ${props.disabled ? 'transparent' : colors(props, 'button').backgroundColor};
+        background-color: ${props.disabled ? 'transparent' : getColor(props, 'button', 'backgroundColor')};
       }
     `;
   } else if (props.disabled) {
     return css`
       background-image: none;
-      background-color: ${colors(props, 'button').backgroundColorDisabled};
+      background-color: ${getColor(props, 'button', 'backgroundColorDisabled')};
     `;
   }
 
   return css`
-    background-color: ${colors(props, 'button').backgroundColor};
+    background-color: ${getColor(props, 'button', 'backgroundColor')};
     &:focus,
     &:hover {
-      background-color: ${colors(props, 'button').backgroundColorHoverFocus};
+      background-color: ${getColor(props, 'button', 'backgroundColorHoverFocus')};
     }
   `;
 };
 
 const borderRadius = (props) => {
   if (props.pill) {
-    return css`border-radius: ${br(props, 'button').pill};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'pill')};`;
   } else if (props.noRadius) {
-    return css`border-radius: ${br(props, 'button').noRadius};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'noRadius')};`;
   } else if (props.sm) {
-    return css`border-radius: ${br(props, 'button').sm};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'sm')};`;
   } else if (props.lg) {
-    return css`border-radius: ${br(props, 'button').lg};`;
+    return css`border-radius: ${getBorderRadius(props, 'button', 'lg')};`;
   }
 
-  return css`border-radius: ${br(props, 'button').default};`;
+  return css`border-radius: ${getBorderRadius(props, 'button', 'default')};`;
 };
 
 const buttonToggler = (props) => (
   css`
-    color: ${colors(props, 'button').toggle.color};
-    border-color: ${colors(props, 'button').toggle.borderColor};
+    color: ${getColor(props, 'button', 'toggle', 'color')};
+    border-color: ${getColor(props, 'button', 'toggle', 'borderColor')};
     &:hover, &:focus {
-      color: ${colors(props, 'button').toggle.color};
-      border-color: ${colors(props, 'button').toggle.borderColor};
+      color: ${getColor(props, 'button', 'toggle', 'color')};
+      border-color: ${getColor(props, 'button', 'toggle', 'borderColor')};
     }
   `
 );
@@ -213,7 +213,7 @@ const buttonToggleCollapse = (props) => {
   ) {
     return css`
       display: none;
-      @media (max-width: ${screenSize(props)}) {
+      @media (max-width: ${getBreakpointSize(props)}) {
         display: block;
         font-size: ${fontSize(props).toggle};
         ${buttonToggler};
@@ -228,19 +228,19 @@ const color = (props) => {
   if (props.outline) {
     if (props.disabled) {
       return css`
-        color: ${colors(props, 'button').colorOutline};
+        color: ${getColor(props, 'button', 'colorOutline')};
       `;
     }
 
     return css`
-      color: ${colors(props, 'button').colorOutline};
+      color: ${getColor(props, 'button', 'colorOutline')};
       &:hover {
-        color: ${colors(props, 'button').colorOutlineHover};
+        color: ${getColor(props, 'button', 'colorOutlineHover')};
       }
     `;
   }
 
-  return css`color: ${colors(props, 'button').color};`;
+  return css`color: ${getColor(props, 'button', 'color')};`;
 };
 
 const cursor = (props) => (

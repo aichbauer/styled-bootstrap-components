@@ -5,20 +5,20 @@ import { Transition, Div } from 'styled-base-components';
 
 import {
   theme,
-  padding as p,
-  margin,
-  fontWeight,
-  fontSize,
-  fontFamily,
+  getPadding,
+  getMargin,
+  getFontWeight,
+  getFontSize,
+  getFontFamily,
 } from 'styled-config';
 
 const padding = (props) => (
   (props.left || props.right)
     ? css`
-        padding: ${p(props, 'tooltip').leftRight};
+        padding: ${getPadding(props, 'tooltip', 'leftRight')};
       `
     : css`
-      padding: ${p(props, 'tooltip').topBottom};
+      padding: ${getPadding(props, 'tooltip', 'topBottom')};
     `
 );
 
@@ -26,10 +26,10 @@ export const TooltipWithoutTransition = styled(Div)`
   position: absolute;
   z-index: 1070;
   display: block;
-  margin: ${(props) => margin(props, 'tooltip').default};
-  font-family: ${(props) => fontFamily(props, 'tooltip').default};
+  margin: ${(props) => getMargin(props, 'tooltip', 'default')};
+  font-family: ${(props) => getFontFamily(props, 'tooltip', 'default')};
   font-style: normal;
-  font-weight: ${(props) => fontWeight(props, 'tooltip').default};
+  font-weight: ${(props) => getFontWeight(props, 'tooltip', 'default')};
   line-height: 1.5;
   text-align: left;
   text-decoration: none;
@@ -40,7 +40,7 @@ export const TooltipWithoutTransition = styled(Div)`
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: ${(props) => fontSize(props, 'tooltip').default};
+  font-size: ${(props) => getFontSize(props, 'tooltip', 'default')};
   word-wrap: break-word;
   opacity: 0.9;
   ${(props) => padding(props)};

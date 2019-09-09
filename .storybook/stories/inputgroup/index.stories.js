@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Button } from '../../../packages/styled-button-component';
 import {
   FormControl,
+  FormCheckInput,
   InputGroup,
   InputGroupAppend,
   InputGroupPrepend,
@@ -28,6 +29,16 @@ storiesOf('InputGroup', module)
       <InputGroupAppend>
         <InputGroupText>@example.com</InputGroupText>
       </InputGroupAppend>
+    </InputGroup>
+  ))
+  .add('check', () => (
+    <InputGroup>
+      <InputGroupPrepend>
+        <InputGroupText>
+          <FormCheckInput type="checkbox" />
+        </InputGroupText>
+      </InputGroupPrepend>
+      <FormControl type="text" placeholder="Selectable input" />
     </InputGroup>
   ))
   .add('prepend and append', () => (

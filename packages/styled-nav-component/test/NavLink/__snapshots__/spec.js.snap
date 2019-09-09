@@ -18,7 +18,7 @@ exports[`Styles matches NavLink 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #0056b3;
+  color: #0069d9;
 }
 
 <a

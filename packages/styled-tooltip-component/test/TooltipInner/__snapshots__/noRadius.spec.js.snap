@@ -6,7 +6,7 @@ exports[`Styles matches TooltipInner noRadius 1`] = `
   padding: 0.25rem 0.5rem;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #2d2f31;
   border-radius: 0;
 }
 

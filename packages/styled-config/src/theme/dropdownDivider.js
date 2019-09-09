@@ -1,10 +1,7 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const dropdownDivider = {
   colors: {
     default: {
-      borderTop: colors.gray200,
+      borderTop: (get) => get('colorScheme', 'lightDarker'),
     },
   },
   padding: {
@@ -13,7 +10,7 @@ const dropdownDivider = {
   margin: {
     top: '0.6rem',
   },
-  border: utils.border,
+  border: (get) => get('globals', 'border'),
 };
 
 export { dropdownDivider };

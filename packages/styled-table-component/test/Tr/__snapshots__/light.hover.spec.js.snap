@@ -6,12 +6,12 @@ exports[`Styles matches Tr light hover 1`] = `
   background-color: #fdfdfe;
 }
 
-.c0:hover > td,
-.c0:hover > th,
-.c0 tbody tr:hover,
-.c0 tbody tr:hover > th,
-.c0 tbody tr:hover > td {
-  background-color: #ececf6;
+.hover .c0:hover > th,
+.hover .c0:hover > td,
+.hover .c0 tbody tr:hover,
+.hover .c0 tbody tr:hover > th,
+.hover .c0 tbody tr:hover > td {
+  background-color: #cccecf;
 }
 
 <tr

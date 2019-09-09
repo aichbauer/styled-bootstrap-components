@@ -4,12 +4,11 @@ exports[`Styles matches warning 1`] = `
 .c0 {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
   color: #856404;
   background-color: #fff3cd;
-  border-color: #ffeeba;
+  border-color: #f3da8d;
 }
 
 .c0 > a {
@@ -26,12 +25,12 @@ exports[`Styles matches warning 1`] = `
 }
 
 .c0 > hr {
-  border-top-color: #ffe8a1;
+  border-top-color: #f3da8d;
 }
 
 .c0 > a,
 .c0 > a:hover {
-  color: #533f03;
+  color: #856404;
 }
 
 <div

@@ -5,12 +5,12 @@ exports[`Styles matches ListGroupItem dark 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0,0,0,0.2);
   border-bottom: none;
   margin-bottom: -1px;
-  color: #1b1e21;
-  background-color: #c6c8ca;
-  border-color: rgba(0,0,0,0.125);
+  color: #171a1d;
+  background-color: #abaeb1;
+  border-color: rgba(0,0,0,0.2);
 }
 
 .c0:first-child {
@@ -19,7 +19,7 @@ exports[`Styles matches ListGroupItem dark 1`] = `
 }
 
 .c0:last-child {
-  border-bottom: 1px solid rgba(0,0,0,0.125);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -50,12 +50,12 @@ exports[`Styles matches ListGroupItem dark action 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0,0,0,0.2);
   border-bottom: none;
   margin-bottom: -1px;
-  color: #1b1e21;
-  background-color: #c6c8ca;
-  border-color: rgba(0,0,0,0.125);
+  color: #171a1d;
+  background-color: #abaeb1;
+  border-color: rgba(0,0,0,0.2);
 }
 
 .c0:first-child {
@@ -64,7 +64,7 @@ exports[`Styles matches ListGroupItem dark action 1`] = `
 }
 
 .c0:last-child {
-  border-bottom: 1px solid rgba(0,0,0,0.125);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -81,14 +81,14 @@ exports[`Styles matches ListGroupItem dark action 1`] = `
 .c0 > a,
 .c0 > a:hover,
 .c0 > a:focus {
-  color: #1b1e21;
+  color: #171a1d;
 }
 
 .c0:hover,
 .c0:focus,
 .c0 > a:hover,
 .c0 > a:focus {
-  background-color: #b9bbbe;
+  background-color: #abaeb1;
 }
 
 .c0:hover,
@@ -109,14 +109,14 @@ exports[`Styles matches ListGroupItem dark active 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0,0,0,0.2);
   border-bottom: none;
   margin-bottom: -1px;
   color: #fff;
-  background-color: #c6c8ca;
-  border-color: rgba(0,0,0,0.125);
-  background-color: #1b1e21;
-  border-color: #1b1e21;
+  background-color: #abaeb1;
+  border-color: rgba(0,0,0,0.2);
+  background-color: #171a1d;
+  border-color: #171a1d;
   z-index: 2;
 }
 
@@ -126,7 +126,7 @@ exports[`Styles matches ListGroupItem dark active 1`] = `
 }
 
 .c0:last-child {
-  border-bottom: 1px solid #1b1e21;
+  border-bottom: 1px solid #171a1d;
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -144,7 +144,7 @@ exports[`Styles matches ListGroupItem dark active 1`] = `
 .c0:focus,
 .c0 > a:hover,
 .c0 > a:focus {
-  background-color: #1b1e21;
+  background-color: #171a1d;
 }
 
 .c0:hover,

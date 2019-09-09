@@ -5,12 +5,12 @@ exports[`Styles matches ListGroupItem success 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0,0,0,0.2);
   border-bottom: none;
   margin-bottom: -1px;
   color: #155724;
-  background-color: #c3e6cb;
-  border-color: rgba(0,0,0,0.125);
+  background-color: #72d889;
+  border-color: rgba(0,0,0,0.2);
 }
 
 .c0:first-child {
@@ -19,7 +19,7 @@ exports[`Styles matches ListGroupItem success 1`] = `
 }
 
 .c0:last-child {
-  border-bottom: 1px solid rgba(0,0,0,0.125);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -50,12 +50,12 @@ exports[`Styles matches ListGroupItem success action 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0,0,0,0.2);
   border-bottom: none;
   margin-bottom: -1px;
   color: #155724;
-  background-color: #c3e6cb;
-  border-color: rgba(0,0,0,0.125);
+  background-color: #72d889;
+  border-color: rgba(0,0,0,0.2);
 }
 
 .c0:first-child {
@@ -64,7 +64,7 @@ exports[`Styles matches ListGroupItem success action 1`] = `
 }
 
 .c0:last-child {
-  border-bottom: 1px solid rgba(0,0,0,0.125);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
   margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -88,7 +88,7 @@ exports[`Styles matches ListGroupItem success action 1`] = `
 .c0:focus,
 .c0 > a:hover,
 .c0 > a:focus {
-  background-color: #b1dfbb;
+  background-color: #72d889;
 }
 
 .c0:hover,
@@ -109,12 +109,12 @@ exports[`Styles matches ListGroupItem success active 1`] = `
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0,0,0,0.2);
   border-bottom: none;
   margin-bottom: -1px;
   color: #fff;
-  background-color: #c3e6cb;
-  border-color: rgba(0,0,0,0.125);
+  background-color: #72d889;
+  border-color: rgba(0,0,0,0.2);
   background-color: #155724;
   border-color: #155724;
   z-index: 2;

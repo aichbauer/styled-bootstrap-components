@@ -8,17 +8,6 @@ import { PopoverHeader } from '../../src';
 test('Styles matches PopoverHeader', () => {
   const tree = renderer.create(<PopoverHeader />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('padding', '0.5rem 0.75rem');
-  expect(tree).toHaveStyleRule('margin-bottom', '0');
-  expect(tree).toHaveStyleRule('font-size', '1rem');
-  expect(tree).toHaveStyleRule('color', 'inherit');
-  expect(tree).toHaveStyleRule('background-color', '#f7f7f7');
-  expect(tree).toHaveStyleRule('border-bottom', '1px solid #ebebeb');
-  expect(tree).toHaveStyleRule('border-top-left-radius', 'calc(0.3rem - 1px)');
-  expect(tree).toHaveStyleRule('border-top-right-radius', 'calc(0.3rem - 1px)');
-  expect(tree).toHaveStyleRule('display', 'none', {
-    modifier: '&:empty',
-  });
 });
 
 test('Styles matches PopoverHeader h1', () => {

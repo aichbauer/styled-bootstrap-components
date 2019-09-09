@@ -154,7 +154,7 @@ exports[`Styles match Div with colored border 1`] = `
 
 exports[`Styles match Div with colored text and background 1`] = `
 .c0 {
-  color: #f8f9fa;
+  color: #f0f0f0;
   background-color: #343a40;
 }
 
@@ -679,10 +679,10 @@ exports[`Styles match Divs with justify content 3`] = `
 
 exports[`Styles match Divs with justify content 4`] = `
 .c0 {
-  -webkit-box-pack: between;
-  -webkit-justify-content: between;
-  -ms-flex-pack: between;
-  justify-content: between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 <div
@@ -692,10 +692,23 @@ exports[`Styles match Divs with justify content 4`] = `
 
 exports[`Styles match Divs with justify content 5`] = `
 .c0 {
-  -webkit-box-pack: around;
-  -webkit-justify-content: around;
-  -ms-flex-pack: around;
-  justify-content: around;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styles match Divs with justify content 6`] = `
+.c0 {
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 <div

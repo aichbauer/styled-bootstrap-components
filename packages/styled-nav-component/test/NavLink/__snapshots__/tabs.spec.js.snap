@@ -18,12 +18,12 @@ exports[`Styles matches NavLink tabs 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #0056b3;
+  color: #0069d9;
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: #d6d8d9 #d6d8d9 #d6d8d9;
 }
 
 <a
@@ -36,8 +36,8 @@ exports[`Styles matches NavLink tabs active 1`] = `
   display: block;
   padding: 0.5rem;
   border: 1px solid transparent;
-  color: #495057;
-  border-color: #e9ecef #e9ecef #fff;
+  color: #343a40;
+  border-color: #d6d8d9 #d6d8d9 #fff;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -50,7 +50,7 @@ exports[`Styles matches NavLink tabs active 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #495057;
+  color: #201a1d;
 }
 
 <a
@@ -63,7 +63,7 @@ exports[`Styles matches NavLink tabs disabled 1`] = `
   display: block;
   padding: 0.5rem;
   border: 1px solid transparent;
-  color: #6c757d;
+  color: #abaeb1;
   border-color: transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -77,7 +77,7 @@ exports[`Styles matches NavLink tabs disabled 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #6c757d;
+  color: #abaeb1;
 }
 
 <a

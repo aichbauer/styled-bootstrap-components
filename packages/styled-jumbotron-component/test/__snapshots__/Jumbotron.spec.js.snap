@@ -3,7 +3,7 @@
 exports[`Styles matches Jumbotron 1`] = `
 .c0 {
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  background-color: #f0f0f0;
   padding: 2rem 1rem;
   border-radius: 0.3rem;
 }

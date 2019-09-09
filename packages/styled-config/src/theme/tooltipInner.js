@@ -1,17 +1,14 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const tooltipInner = {
   colors: {
     default: {
-      color: colors.white,
-      backgroundColor: colors.black,
+      color: (get) => get('colorScheme', 'white'),
+      backgroundColor: (get) => get('colorScheme', 'darker'),
     },
   },
   padding: {
     default: '0.25rem 0.5rem',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { tooltipInner };

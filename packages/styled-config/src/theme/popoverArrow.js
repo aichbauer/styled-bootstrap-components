@@ -1,10 +1,8 @@
-import { colors } from './colors';
-
 const popoverArrow = {
   colors: {
     default: {
-      borderColor: colors.popoverArrowBorderColor,
-      borderColorWhite: colors.white,
+      borderColor: (get) => get('colorScheme', 'dark25Alpha'),
+      borderColorWhite: (get) => get('colorScheme', 'white'),
     },
   },
 };

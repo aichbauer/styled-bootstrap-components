@@ -4,26 +4,26 @@ import { Nav } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  padding,
-  screenSize,
+  getColor,
+  getPadding,
+  getBreakpointSize,
 } from 'styled-config';
 
 const color = (props) => (
   css`
-    color: ${colors(props, 'navbar').color};
+    color: ${getColor(props, 'navbar', 'color')};
   `
 );
 
 const borderColor = (props) => (
   css`
-    border-color: ${colors(props, 'navbar').borderColor};
+    border-color: ${getColor(props, 'navbar', 'borderColor')};
   `
 );
 
 const backgroundColor = (props) => (
   css`
-    background-color: ${colors(props, 'navbar').backgroundColor} !important;
+    background-color: ${getColor(props, 'navbar', 'backgroundColor')} !important;
   `
 );
 
@@ -36,7 +36,7 @@ const navbarExpand = (props) => (
     || props.expandXl
   )
   && css`
-    @media (max-width: ${screenSize(props)}) {
+    @media (max-width: ${getBreakpointSize(props)}) {
       & > nav:not(:last-child) {
         display: flex !important;
         width: 100%;
@@ -52,7 +52,7 @@ const Navbar = styled(Nav)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: ${(props) => padding(props, 'navbar').default};
+  padding: ${(props) => getPadding(props, 'navbar', 'default')};
   ${(props) => color(props)}
   ${(props) => borderColor(props)}
   ${(props) => backgroundColor(props)}

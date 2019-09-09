@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { theme } from 'styled-config';
+import { theme, getConcreteBreakpointSize } from 'styled-config';
 
 /* Constants and helpers */
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
@@ -302,8 +302,9 @@ const justifyContent = (size) => css`
     (props[`justifyContent${size}Start`] ? 'start' : '')
     || (props[`justifyContent${size}End`] ? 'end' : '')
     || (props[`justifyContent${size}Center`] ? 'center' : '')
-    || (props[`justifyContent${size}Between`] ? 'between' : '')
-    || (props[`justifyContent${size}Around`] ? 'around' : '')
+    || (props[`justifyContent${size}SpaceBetween`] ? 'space-between' : '')
+    || (props[`justifyContent${size}SpaceAround`] ? 'space-around' : '')
+    || (props[`justifyContent${size}SpaceEvenly`] ? 'space-evenly' : '')
     || null};
 `;
 
@@ -475,7 +476,7 @@ export const Utilities = css`
   ${makeUtilitiesForScreenSize('')};
 
   ${['Sm', 'Md', 'Lg', 'Xl'].map((size) => css`
-    @media (min-width: ${(props) => (props.theme.screenSize || theme.screenSize)[size.toLowerCase()]}) {
+    @media (min-width: ${(props) => getConcreteBreakpointSize(props, size.toLowerCase())}) {
       ${makeUtilitiesForScreenSize(size)};
     }
   `)};

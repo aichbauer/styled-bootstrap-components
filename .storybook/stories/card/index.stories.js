@@ -44,6 +44,9 @@ storiesOf('Card', module)
         <CardTitle h3>
           Card title
         </CardTitle>
+        <CardTitle h4 muted subtitle>
+          Card subtitle
+        </CardTitle>
         <CardText>
           Some quick example text to
           build on the card title and
@@ -58,9 +61,6 @@ storiesOf('Card', module)
       <CardBody>
         <CardTitle h3>
           Card title
-        </CardTitle>
-        <CardTitle h4 muted subtitle style={{ marginBottom: '0.5rem' }}>
-          Card subtitle
         </CardTitle>
         <CardText>
           Some quick example text to

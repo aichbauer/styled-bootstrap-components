@@ -4,23 +4,23 @@ import { Input } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  margin,
+  getColor,
+  getMargin,
 } from 'styled-config';
 
 const color = (props) => (
   props.disabled &&
   css`
-    color: ${colors(props, 'formCheckInput').colorDisabled};
+    color: ${getColor(props, 'formCheckInput', 'colorDisabled')};
     & + label {
-      color: ${colors(props, 'formCheckInput').colorDisabledLabel};
+      color: ${getColor(props, 'formCheckInput', 'colorDisabledLabel')};
     };
   `
 );
 
 const FormCheckInput = styled(Input)`
-  margin-top: ${(props) => margin(props, 'formCheckInput').top};
-  margin-left: ${(props) => margin(props, 'formCheckInput').left};
+  margin-top: ${(props) => getMargin(props, 'formCheckInput', 'top')};
+  margin-left: ${(props) => getMargin(props, 'formCheckInput', 'left')};
   box-sizing: border-box;
   ${(props) => color(props)};
 `;

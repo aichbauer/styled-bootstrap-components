@@ -1,8 +1,6 @@
-import { utils } from './utils';
-
 const inputGroup = {
-  borderRadius: utils.borderRadius,
-  fontSize: utils.fontSize,
+  borderRadius: (get) => get('globals', 'borderRadius'),
+  fontSize: (get) => get('globals', 'fontSize'),
   padding: {
     leftLg: '0',
     rightLg: '0',

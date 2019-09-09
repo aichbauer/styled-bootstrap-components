@@ -1,9 +1,7 @@
-import { colors } from './colors';
-
 const tooltipArrow = {
   colors: {
     default: {
-      borderColor: colors.black,
+      borderColor: (get) => get('colorScheme', 'darker'),
     },
   },
 };

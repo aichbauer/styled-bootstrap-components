@@ -4,7 +4,7 @@ import { Tr as BaseTr } from 'styled-base-components';
 
 import {
   theme,
-  colors,
+  getColor,
 } from 'styled-config';
 
 const color = (props) => {
@@ -15,27 +15,26 @@ const color = (props) => {
       & tbody tr:hover,
       & tbody tr:hover > th,
       & tbody tr:hover > td {
-        background-color: ${colors(props, 'tr').activeBackgroundColor};
+        background-color: ${getColor(props, 'tr', 'activeBackgroundColor')};
       };
     `;
   }
 
+  // Hover is used as workaround for making Tr hoverable if Table if hoverable
+
   return css`
     & > th,
     & > td {
-      background-color: ${colors(props, 'tr').backgroundColor};
-    };
-    ${props.hover &&
-    css`
-        &:hover > td,
-        &:hover > th,
-        & tbody tr:hover,
-        & tbody tr:hover > th,
-        & tbody tr:hover > td {
-          background-color: ${colors(props, 'tr').backgroundColorHoverFocus};
-        };
-      `};
-    `;
+      background-color: ${getColor(props, 'tr', 'backgroundColor')};
+    }
+    .hover &:hover > th,
+    .hover &:hover > td,
+    .hover & tbody tr:hover,
+    .hover & tbody tr:hover > th,
+    .hover & tbody tr:hover > td {
+      background-color: ${getColor(props, 'tr', 'backgroundColorHoverFocus')};
+    }
+  `;
 };
 
 const Tr = styled(BaseTr)`

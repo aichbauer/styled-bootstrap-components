@@ -5,27 +5,27 @@ import { H1, H2, H3, H4, H5, H6 } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  margin as m,
+  getColor,
+  getMargin,
 } from 'styled-config';
 
 const margin = (props) => (
   props.subtitle &&
   css`
-    margin-top: ${m(props, 'cardTitle').subtitleTop};
-    margin-bottom: ${m(props, 'cardTitle').subtitleBottom};
+    margin-top: ${getMargin(props, 'cardTitle', 'subtitleTop')};
+    margin-bottom: ${getMargin(props, 'cardTitle', 'subtitleBottom')};
   `
 );
 
 const color = (props) => (
   props.muted &&
   css`
-    color: ${colors(props, 'cardTitle').colorMuted};
+    color: ${getColor(props, 'cardTitle', 'colorMuted')};
   `
 );
 
 const cardTitleStyle = () => css`
-    margin-bottom: ${(props) => m(props, 'cardTitle').bottom};
+    margin-bottom: ${(props) => getMargin(props, 'cardTitle', 'bottom')};
     ${(props) => margin(props)};
     ${(props) => color(props)};
   `;

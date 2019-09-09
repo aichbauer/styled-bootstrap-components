@@ -213,8 +213,9 @@ Possible values for `{size}`:
   * `justifyContent{size}Start`
   * `justifyContent{size}End`
   * `justifyContent{size}Center`
-  * `justifyContent{size}Between`
-  * `justifyContent{size}Around`
+  * `justifyContent{size}SpaceBetween`
+  * `justifyContent{size}SpaceAround`
+  * `justifyContent{size}SpaceEvenly`
 * align-items:
   * `alignItems{size}Start`
   * `alignItems{size}End`

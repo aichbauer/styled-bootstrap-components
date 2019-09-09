@@ -1,9 +1,7 @@
-import { colors } from './colors';
-
 const formText = {
   colors: {
     default: {
-      colorMuted: colors.gray,
+      colorMuted: (get) => get('colorScheme', 'dark'),
     },
   },
   margin: {

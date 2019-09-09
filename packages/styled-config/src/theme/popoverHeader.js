@@ -1,11 +1,8 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const popoverHeader = {
   colors: {
     default: {
-      backgrondColor: colors.popoverHeaderBackgroundColor,
-      borderBottomColor: colors.popoverHeaderBorderColor,
+      backgrondColor: (get) => get('colorScheme', 'light'),
+      borderBottomColor: (get) => get('colorScheme', 'lightDarker'),
     },
   },
   padding: {
@@ -16,8 +13,8 @@ const popoverHeader = {
     top: '0',
     beforeLeft: '-0.5rem',
   },
-  border: utils.border,
-  fontSize: utils.fontSize,
+  border: (get) => get('globals', 'border'),
+  fontSize: (get) => get('globals', 'fontSize'),
 };
 
 export { popoverHeader };

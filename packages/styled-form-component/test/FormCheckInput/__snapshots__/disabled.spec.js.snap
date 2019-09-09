@@ -5,11 +5,11 @@ exports[`Styles matches FormCheckInput disabled 1`] = `
   margin-top: 0.3rem;
   margin-left: 0rem;
   box-sizing: border-box;
-  color: #6c757d;
+  color: #abaeb1;
 }
 
 .c0 + label {
-  color: #6c757d;
+  color: #abaeb1;
 }
 
 <input

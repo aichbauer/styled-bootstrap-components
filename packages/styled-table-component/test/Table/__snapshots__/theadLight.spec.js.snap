@@ -17,16 +17,16 @@ exports[`Styles matches Table theadLight 1`] = `
 .c1 td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #d6d8d9;
 }
 
 .c1 thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid #d6d8d9;
 }
 
 .c1 tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #d6d8d9;
 }
 
 .c1 + .c0 {
@@ -34,9 +34,9 @@ exports[`Styles matches Table theadLight 1`] = `
 }
 
 .c1 thead th {
-  color: #495057;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
+  color: #343a40;
+  background-color: #d6d8d9;
+  border-color: #d6d8d9;
 }
 
 <table

@@ -1,15 +1,13 @@
-import { colors } from './colors';
-
 const cardTitle = {
   colors: {
     default: {
-      colorMuted: colors.gray,
+      colorMuted: (get) => get('colorScheme', 'darkLighter'),
     },
   },
   margin: {
-    bottom: '0.75rem',
-    subtitleTop: '-0.375rem',
-    subtitleBottom: '0',
+    bottom: '0.5rem',
+    subtitleTop: '-0.5rem',
+    subtitleBottom: '0.5rem',
   },
 };
 

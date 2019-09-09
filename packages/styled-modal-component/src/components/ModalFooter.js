@@ -4,17 +4,17 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  colors,
-  padding,
-  border,
+  getColor,
+  getPadding,
+  getBorder,
 } from 'styled-config';
 
 const ModalFooter = styled(Div)`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: ${(props) => padding(props, 'modalFooter').default};
-  border-top: ${(props) => border(props, 'modalFooter').default} ${(props) => colors(props, 'modalFooter').borderColor};
+  padding: ${(props) => getPadding(props, 'modalFooter', 'default')};
+  border-top: ${(props) => getBorder(props, 'modalFooter', 'default')} ${(props) => getColor(props, 'modalFooter', 'borderColor')};
 `;
 
 ModalFooter.defaultProps = {

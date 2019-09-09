@@ -1,8 +1,6 @@
-import { utils } from './utils';
-
 const buttonGroup = {
-  padding: utils.padding.button,
-  fontSize: utils.fontSize,
+  padding: (get) => get('button', 'padding'),
+  fontSize: (get) => get('globals', 'fontSize'),
 };
 
 export { buttonGroup };

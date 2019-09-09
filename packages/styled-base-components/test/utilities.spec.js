@@ -302,10 +302,13 @@ test('Styles match Divs with justify content', () => {
   div = renderer.create(<Div justifyContentCenter />).toJSON();
   expect(div).toMatchSnapshot();
 
-  div = renderer.create(<Div justifyContentBetween />).toJSON();
+  div = renderer.create(<Div justifyContentSpaceBetween />).toJSON();
   expect(div).toMatchSnapshot();
 
-  div = renderer.create(<Div justifyContentAround />).toJSON();
+  div = renderer.create(<Div justifyContentSpaceAround />).toJSON();
+  expect(div).toMatchSnapshot();
+
+  div = renderer.create(<Div justifyContentSpaceEvenly />).toJSON();
   expect(div).toMatchSnapshot();
 });
 

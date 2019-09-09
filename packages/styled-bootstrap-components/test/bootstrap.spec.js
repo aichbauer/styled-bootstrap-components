@@ -19,18 +19,19 @@ import {
   CardText,
   CardTitle,
   theme,
-  border,
-  borderRadius,
-  boxShadow,
-  colors,
-  fontFamily,
-  fontSize,
-  fontWeight,
-  height,
-  margin,
-  padding,
-  screenSize,
-  width,
+  getBorder,
+  getBorderRadius,
+  getBoxShadow,
+  getColor,
+  getFontFamily,
+  getFontSize,
+  getFontWeight,
+  getHeight,
+  getMargin,
+  getPadding,
+  getBreakpointSize,
+  getConcreteBreakpointSize,
+  getWidth,
   Container,
   Dropdown,
   DropdownItem,
@@ -126,18 +127,19 @@ test('Simply check if all components are imported and exported correctly', () =>
   const thisTheme = renderer.create(JSON.stringify(theme)).toJSON();
   expect(thisTheme).toMatchSnapshot();
 
-  expect(typeof border).toBe('function');
-  expect(typeof borderRadius).toBe('function');
-  expect(typeof boxShadow).toBe('function');
-  expect(typeof fontFamily).toBe('function');
-  expect(typeof colors).toBe('function');
-  expect(typeof margin).toBe('function');
-  expect(typeof fontSize).toBe('function');
-  expect(typeof fontWeight).toBe('function');
-  expect(typeof height).toBe('function');
-  expect(typeof padding).toBe('function');
-  expect(typeof screenSize).toBe('function');
-  expect(typeof width).toBe('function');
+  expect(typeof getBorder).toBe('function');
+  expect(typeof getBorderRadius).toBe('function');
+  expect(typeof getBoxShadow).toBe('function');
+  expect(typeof getFontFamily).toBe('function');
+  expect(typeof getColor).toBe('function');
+  expect(typeof getMargin).toBe('function');
+  expect(typeof getFontSize).toBe('function');
+  expect(typeof getFontWeight).toBe('function');
+  expect(typeof getHeight).toBe('function');
+  expect(typeof getPadding).toBe('function');
+  expect(typeof getBreakpointSize).toBe('function');
+  expect(typeof getConcreteBreakpointSize).toBe('function');
+  expect(typeof getWidth).toBe('function');
 
   const container = renderer.create(<Container />).toJSON();
   expect(container).toMatchSnapshot();

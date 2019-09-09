@@ -1,62 +1,54 @@
-import { colors } from './colors';
-import { utils } from './utils';
-
 const badge = {
   colors: {
     primary: {
-      backgroundColor: colors.blue,
-      backgroundColorHoverFocus: colors.blueHoverFocus,
-      color: colors.white,
-      linkColor: colors.white,
+      backgroundColor: (get) => get('colorScheme', 'primary'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'primaryDarker'),
+      color: (get) => get('colorScheme', 'white'),
+      linkColor: (get) => get('colorScheme', 'white'),
     },
     secondary: {
-      backgroundColor: colors.gray,
-      backgroundColorHoverFocus: colors.grayHoverFocus,
-      color: colors.white,
-      linkColor: colors.white,
+      backgroundColor: (get) => get('colorScheme', 'secondary'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'secondaryDarker'),
+      color: (get) => get('colorScheme', 'white'),
+      linkColor: (get) => get('colorScheme', 'white'),
     },
     success: {
-      backgroundColor: colors.green,
-      backgroundColorHoverFocus: colors.greenHoverFocus,
-      color: colors.white,
-      linkColor: colors.white,
+      backgroundColor: (get) => get('colorScheme', 'success'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'successDarker'),
+      color: (get) => get('colorScheme', 'white'),
+      linkColor: (get) => get('colorScheme', 'white'),
     },
     danger: {
-      backgroundColor: colors.red,
-      backgroundColorHoverFocus: colors.redHoverFocus,
-      color: colors.white,
-      linkColor: colors.white,
+      backgroundColor: (get) => get('colorScheme', 'danger'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'dangerDarker'),
+      color: (get) => get('colorScheme', 'white'),
+      linkColor: (get) => get('colorScheme', 'white'),
     },
     warning: {
-      backgroundColor: colors.yellow,
-      backgroundColorHoverFocus: colors.yellowHoverFocus,
-      color: colors.gray900,
-      linkColor: colors.gray900,
+      backgroundColor: (get) => get('colorScheme', 'warning'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'warningDarker'),
+      color: (get) => get('colorScheme', 'darker'),
+      linkColor: (get) => get('colorScheme', 'darker'),
     },
     info: {
-      backgroundColor: colors.cyan,
-      backgroundColorHoverFocus: colors.cyanHoverFocus,
-      color: colors.white,
-      linkColor: colors.white,
+      backgroundColor: (get) => get('colorScheme', 'info'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'infoDarker'),
+      color: (get) => get('colorScheme', 'white'),
+      linkColor: (get) => get('colorScheme', 'white'),
     },
     light: {
-      backgroundColor: colors.gray100,
-      backgroundColorHoverFocus: colors.gray100HoverFocus,
-      color: colors.gray900,
-      linkColor: colors.gray900,
+      backgroundColor: (get) => get('colorScheme', 'light'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'lightDarker'),
+      color: (get) => get('colorScheme', 'darker'),
+      linkColor: (get) => get('colorScheme', 'darker'),
     },
     dark: {
-      backgroundColor: colors.gray800,
-      backgroundColorHoverFocus: colors.gray800HoverFocus,
-      color: colors.white,
-      linkColor: colors.white,
+      backgroundColor: (get) => get('colorScheme', 'dark'),
+      backgroundColorHoverFocus: (get) => get('colorScheme', 'darkDarker'),
+      color: (get) => get('colorScheme', 'white'),
+      linkColor: (get) => get('colorScheme', 'white'),
     },
-    default: {
-      backgroundColor: colors.gray,
-      backgroundColorHoverFocus: colors.grayHoverFocus,
-      color: colors.white,
-      linkColor: colors.white,
-    },
+    default: (get) => get('badge', 'colors', 'secondary'),
   },
   padding: {
     pill: '0.25rem 0.6rem',
@@ -65,7 +57,7 @@ const badge = {
   fontWeight: {
     default: '700',
   },
-  borderRadius: utils.borderRadius,
+  borderRadius: (get) => get('globals', 'borderRadius'),
 };
 
 export { badge };

@@ -5,7 +5,7 @@ exports[`Styles matches DropdownDivider 1`] = `
   height: 0;
   padding-top: 0.5rem;
   margin-top: 0.6rem;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid #e2e6ea;
 }
 
 <div

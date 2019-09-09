@@ -1,4 +1,4 @@
-const utils = {
+const globals = {
   borderRadius: {
     noRadius: '0',
     pill: '10rem',
@@ -10,6 +10,7 @@ const utils = {
     sm: '0.875rem',
     lg: '1.25rem',
     default: '1rem',
+    toggle: '1.25rem',
   },
   padding: {
     button: {
@@ -20,7 +21,8 @@ const utils = {
   },
   border: {
     default: '1px solid',
+    bottomTop: '2px solid',
   },
 };
 
-export { utils };
+export { globals };

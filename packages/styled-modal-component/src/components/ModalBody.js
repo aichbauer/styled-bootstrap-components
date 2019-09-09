@@ -4,13 +4,13 @@ import { Div } from 'styled-base-components';
 
 import {
   theme,
-  padding,
+  getPadding,
 } from 'styled-config';
 
 const ModalBody = styled(Div)`
   position: relative;
   flex: 1 1 auto;
-  padding: ${(props) => padding(props, 'modalBody').default};
+  padding: ${(props) => getPadding(props, 'modalBody', 'default')};
 `;
 
 ModalBody.defaultProps = {
