@@ -130,6 +130,7 @@ const ListGroupItem = styled(Li)`
     border-bottom-right-radius: ${(props) => getBorderRadius(props, 'listGroupItem', 'default')};
     border-bottom-left-radius: ${(props) => getBorderRadius(props, 'listGroupItem', 'default')};
   };
+  & > a,
   & > a:hover,
   & > a:focus {
     z-index: 1;

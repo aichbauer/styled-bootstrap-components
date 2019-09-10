@@ -8,100 +8,58 @@
 
 > The [bootstrap](https://getbootstrap.com) navbar component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-navbar-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-navbar-component
+npm install --save styled-navbar-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
-> Note: if you want this example to work you need to install `styled-container-component`, `styled-button-component`, and `styled-nav-component` as well
+> This example uses `styled-button-component` package
 
 ```jsx
 import React from 'react';
 
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import { Container } from 'styled-container-component';
 import { Button } from 'styled-button-component';
 import { Navbar, NavbarLink } from 'styled-navbar-component';
 import { Nav } from 'styled-nav-component';
 
-export class NavbarLight extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      hidden: true,
-    };
-  }
+export const NavbarLight = () => {
+  const [hidden, setHidden] = useState(true);
 
-  handleOpenCloseNav() {
-    this.setState({
-      hidden: !this.state.hidden,
-    });
-  }
-
-  render() {
-    const { hidden } = this.state;
-    return (
-      <Container fluid>
-        <Container fluid>
-          <Navbar expandSm light>
-            <Nav start>
-              <NavbarLink light brand href="#">BRAND</NavbarLink>
-              <Button
-                light
-                outline
-                toggleCollapse
-                expandSm
-                onClick={() => this.handleOpenCloseNav()}
-              >
-                <span>&#9776;</span>
-              </Button>
-            </Nav>
-            <Nav start collapse expandSm hidden={hidden}>
-              <NavbarLink light active href="#">Active</NavbarLink>
-              <NavbarLink light href="#">Link</NavbarLink>
-              <NavbarLink light href="#">Link</NavbarLink>
-              <NavbarLink light disabled href="#">Disabled</NavbarLink>
-            </Nav>
-          </Navbar>
-        </Container>
-      </Container>
-    );
-  }
+  return (
+    <Navbar expandSm light>
+      <Nav start>
+        <NavbarLink light brand href="#">BRAND</NavbarLink>
+        <Nav end>
+          <Button
+            light
+            outline
+            toggleCollapse
+            expandSm
+            onClick={() => setHidden(!hidden)}
+          >
+            <span>&#9776;</span>
+          </Button>
+        </Nav>
+      </Nav>
+      <Nav start collapse expandSm hidden={hidden}>
+        <NavbarLink light active>Active</NavbarLink>
+        <NavbarLink light href="#">Link</NavbarLink>
+        <NavbarLink light href="#">Link</NavbarLink>
+        <NavbarLink light disabled href="#">Disabled</NavbarLink>
+      </Nav>
+    </Navbar>
+  );
 };
 ```
 
@@ -139,11 +97,6 @@ Properties which can be added to the component to change the visual appearance.
 * `expandLg` only on Navbar **Type**: boolean
 * `expandXl` only on Navbar **Type**: boolean
 * `brand` only on NavbarLink **Type**: boolean
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

@@ -10,6 +10,10 @@ exports[`Styles matches Table responsiveXl bordered 1`] = `
   border: 1px solid #e2e6ea;
 }
 
+.c1 th {
+  text-align: inherit;
+}
+
 .c1 th,
 .c1 td {
   padding: 0.75rem;

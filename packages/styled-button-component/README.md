@@ -8,49 +8,22 @@
 
 > The [bootstrap](https://getbootstrap.com) button component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-button-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-button-component
+npm install --save styled-button-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-.
-
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import {
   Button,
   LinkButton,
@@ -59,12 +32,10 @@ import {
 } from 'styled-button-component';
 
 const MyButtonComponent = (props) => (
-  {/* use different props to change the visual appearance */}
   <Button primary outline disabled>My Button</Button>
 );
 
 const MyButtonGroupComponent = (props) => (
-  {/* use different props to change the visual appearance */}
   <ButtonGroup>
     <Button secondary>Left</Button>
     <Button secondary>Middle</Button>
@@ -73,15 +44,14 @@ const MyButtonGroupComponent = (props) => (
 );
 
 const MyButtonToolbarComponent = (props) => (
-  {/* use different props to change the visual appearance */}
   <ButtonToolbar>
-    <ButtonGroup mr="0.5rem">
+    <ButtonGroup mr2>
       <LinkButton secondary>1</LinkButton>
       <LinkButton secondary>2</LinkButton>
       <LinkButton secondary>3</LinkButton>
       <LinkButton secondary>4</LinkButton>
     </ButtonGroup>
-    <ButtonGroup mr="0.5rem">
+    <ButtonGroup mr2>
       <LinkButton secondary>5</LinkButton>
       <LinkButton secondary>6</LinkButton>
       <LinkButton secondary>7</LinkButton>
@@ -114,11 +84,6 @@ Properties which can be added to the component to change the visual appearance.
 * `sm` small **Type**: boolean
 * `lg` large **Type**: boolean
 * `vertical` only on ButtonGroup **Type**: boolean
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

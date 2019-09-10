@@ -292,6 +292,7 @@ Button.defaultProps = {
 
 const LinkButton = styled(A)`
   ${Utilities}
+  text-decoration: none;
   ${(props) => buttonStyle(props)};
 `;
 

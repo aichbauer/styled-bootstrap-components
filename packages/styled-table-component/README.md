@@ -8,114 +8,43 @@
 
 > The [bootstrap](https://getbootstrap.com) table component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-table-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-table-component
+npm install --save styled-table-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
+import React from 'react';
+import { Table, Tr } from 'styled-table-component';
 
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
-import {
-  Table,
-  Tr,
-} from 'styled-table-component';
-
-const MyTableComponent = (props) => (
-  {/* use different props to change the visual appearance */}
+const MyTable = (props) => (
   <Table>
     <thead>
       <tr>
-        <th scope="col">Class</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
+        <th scope="col">Color</th>
+        <th scope="col">Content</th>
       </tr>
     </thead>
     <tbody>
-      <Tr active>
-        <td>Active</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr>
-        <td>Default</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr primary>
-        <td>Primary</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr secondary>
-        <td>Secondary</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr success>
-        <td>Success</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr danger>
-        <td>Danger</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr warning>
-        <td>Warning</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr info>
-        <td>Info</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr light>
-        <td>Light</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
-      <Tr dark>
-        <td>Dark</td>
-        <td>Cell</td>
-        <td>Cell</td>
-      </Tr>
+      <Tr active><td>Active</td><td>Content</td></Tr>
+        <Tr primary><td>Primary</td><td>Content</td></Tr>
+        <Tr secondary><td>Secondary</td><td>Content</td></Tr>
+        <Tr success><td>Success</td><td>Content</td></Tr>
+        <Tr danger><td>Danger</td><td>Content</td></Tr>
+        <Tr warning><td>Warning</td><td>Content</td></Tr>
+        <Tr info><td>Info</td><td>Content</td></Tr>
+        <Tr light><td>Light</td><td>Content</td></Tr>
+        <Tr dark><td>Dark</td><td>Content</td></Tr>
     </tbody>
   </Table>
 );
@@ -146,11 +75,6 @@ Properties which can be added to the component to change the visual appearance.
 * `light` only on Tr **Type**: boolean
 * `dark` only on Tr **Type**: boolean
 * `active` only on Tr **Type**: boolean
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

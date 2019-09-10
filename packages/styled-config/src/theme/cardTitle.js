@@ -5,9 +5,9 @@ const cardTitle = {
     },
   },
   margin: {
-    bottom: '0.75rem',
-    subtitleTop: '-0.375rem',
-    subtitleBottom: '0',
+    bottom: '0.5rem',
+    subtitleTop: '-0.5rem',
+    subtitleBottom: '0.5rem',
   },
 };
 

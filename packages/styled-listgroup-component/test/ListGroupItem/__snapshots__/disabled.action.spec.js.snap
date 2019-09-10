@@ -24,6 +24,7 @@ exports[`Styles matches ListGroupItem disabled 1`] = `
   border-bottom-left-radius: 0.25rem;
 }
 
+.c0 > a,
 .c0 > a:hover,
 .c0 > a:focus {
   z-index: 1;

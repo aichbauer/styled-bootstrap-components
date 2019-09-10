@@ -27,7 +27,7 @@ exports[`Styles matches InputGroupText 1`] = `
 .c0 input[type="checkbox"] {
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 0.4125rem;
+  margin-bottom: 0;
 }
 
 <span

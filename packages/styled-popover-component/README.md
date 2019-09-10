@@ -8,53 +8,24 @@
 
 > The [bootstrap](https://getbootstrap.com) popover component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-popover-component -S
-```
-
-or
-
-```sh
-$ yarn add styled-popover-component
+npm install --save styled-popover-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
-> Note: if you want this example to work you need to install `styled-container-component`, and `styled-button-component` as well, but you do not need them to work properly
+> This example uses `styled-button-component` package
 
 ```jsx
-import React from 'react';
+import React, { useState } from 'react';
 
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
-import { Container } from 'styled-container-component';
 import { Button } from 'styled-button-component';
 import {
   Popover,
@@ -63,54 +34,42 @@ import {
   PopoverHeader,
 } from 'styled-popover-component';
 
-export class SimplePopoverToggle extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      top: 0,
-      left: 0,
-      hidden: true,
-    };
-  }
+export const SimplePopoverToggle = () => {
+  const [hidden, setHidden] = useState(true);
+  const [position, setPosition] = useState([0, 0]);
 
-  handleModal(ev) {
-    this.setState({
-      top: ev.target.offsetTop - ev.target.offsetHeight,
-      left: ev.target.offsetLeft + ev.target.offsetWidth,
-      hidden: !this.state.hidden,
-    });
-  }
-
-  render() {
-    const {
-      top,
-      left,
-      hidden,
-    } = this.state;
-
-    return (
-      <Container>
-        <Button
-          danger
-          onClick={(ev) => this.handleModal(ev)}
-        >
-          Click to toggle popover
-        </Button>
-        <Popover
-          hidden={hidden}
-          style={{
-            top: `${top}px`,
-            left: `${left}px`
-          }}
-          right
-        >
-          <PopoverArrow right />
-          <PopoverHeader right>Popover Title</PopoverHeader>
-          <PopoverBody right>And here's some amazing content. It's very engaging. Right?</PopoverBody>
-        </Popover>
-      </Container>
-    );
-  }
+  return (
+    <div style={{ minHeight: '50vh', display: 'flex', alignItems: 'center'}}>
+      <Button
+        danger
+        onBlur={() => setHidden(true)}
+        onClick={(ev) => {
+          setHidden(false);
+          setPosition([
+            ev.target.offsetTop - ev.target.offsetHeight,
+            ev.target.offsetLeft + ev.target.offsetWidth,
+          ]);
+        }}
+      >
+        Click to show popover
+      </Button>
+      <Popover
+        hidden={hidden}
+        style={{
+          top: `${position[0]}px`,
+          left: `${position[1]}px`,
+        }}
+        right
+      >
+        <PopoverArrow right />
+        <PopoverHeader right>Popover Title</PopoverHeader>
+        <PopoverBody right>
+          And here&#39;s some amazing content.
+          It&#39;s very engaging. Right?
+        </PopoverBody>
+      </Popover>
+    </div>
+  );
 };
 ```
 
@@ -124,12 +83,7 @@ Properties which can be added to the component to change the visual appearance.
 * `left` **Type**: boolean
 * `bottom` **Type**: boolean
 * `transitionProps` **Type**: object
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
-
+*
 ## License
 
 MIT © Lukas Aichbauer

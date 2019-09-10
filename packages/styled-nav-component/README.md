@@ -8,60 +8,33 @@
 
 > The [bootstrap](https://getbootstrap.com) nav component made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com)
+components for quick prototypes, as an entrypoint of your own component
+library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-nav-component
-```
-
-or
-
-```sh
-$ yarn add styled-nav-component
+npm install --save styled-nav-component
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
 For detailed information take a look at the [documentation](https://aichbauer.github.io/styled-bootstrap-components).
 
-To use HTML that uses the Boostrap style, use [styled-base-components](https://github.com/aichbauer/styled-bootstrap-components/blob/master/packages/styled-base-components/README.md).
-
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import {
   Nav,
   NavLink,
 } from 'styled-nav-component';
 
-const MyNavWithATag = (props) => (
-  {/* use different props to change visual the appearance */}
-  <Nav vertical>
-    <NavLink tabs active href="#">Active</NavLink>
-    <NavLink tabs href="#">Link</NavLink>
-    <NavLink tabs href="#">Link</NavLink>
-    <NavLink tabs disabled href="#">Disabled</NavLink>
+const Navigation = (props) => (
+  <Nav мertical>
+    <NavLink href="#" active>Active</NavLink>
+    <NavLink href="#">Link</NavLink>
+    <NavLink href="#">Link</NavLink>
+    <NavLink href="#" disabled>Disabled</NavLink>
   </Nav>
 );
 ```
@@ -69,13 +42,6 @@ const MyNavWithATag = (props) => (
 Usage with [react-router-dom](https://reacttraining.com/react-router/web/example/basic).
 
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { ... } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import {
   Nav,
   NavLink,
@@ -83,7 +49,6 @@ import {
 import { Link } from 'react-router-dom';
 
 const MyNavWithReactRouterDom = (props) => (
-  {/* use different props to change visual the appearance */}
   <Nav vertical>
     <Link to="#">
       <NavLink tabs active>Active</NavLink>
@@ -123,11 +88,6 @@ Properties which can be added to the component to change the visual appearance.
 * `active` only on NavLink **Type**: string
 * `disabled` only on NavLink **Type**: string
 * `item` only on NavLink **Type**: string
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

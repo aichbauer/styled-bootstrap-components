@@ -8,49 +8,24 @@
 
 > The [bootstrap](https://getbootstrap.com) base components made with [styled-components](https://styled-components.com).
 
-## Table of Contents
-
-* [Documentation](https://aichbauer.github.io/styled-bootstrap-components)
-* [Why?](#why)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Properties](#properties)
-* [Related](#related)
-* [License](#license)
-
-## Why?
-
-This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one [bootstrap](https://getbootstrap.com) component for your application. To work with ease with any other libary or framework this component is built with [styled-components](https://styled-components.com).
+This is a modular approach to use [bootstrap](https://getbootstrap.com) components for quick prototypes, as an entrypoint of your own component library, or if you need just one bootstrap component for your application.
 
 ## Installation
 
-> Note: this component has a peer dependency on `styled-components` > v4. To use this component you also need to `npm i styled-components -S`.
-
 ```sh
-$ npm i styled-base-components -S
-```
-
-or
-
-```sh
-$ yarn add styled-base-components
+npm install --save styled-base-components
+npm install --save styled-components@^4.1.3 react@^16.7.0 # Peer dependencies
 ```
 
 ## Usage
 
-> This package contains basic global style for bootstrap layouts and
-> styled components for using `utility` classes from bootstrap.
-> This package also contains `Transition` components that can be used for
-> creating transitions.
+This package contains basic global style for bootstrap layouts and
+styled components for using `utility` classes from bootstrap.
+
+This package also contains `Transition` components that can be used for
+creating transitions.
 
 ```jsx
-/*
-  if you installed `styled-bootstrap-components` use
-
-    import { BootstrapBaseCss } from 'styled-bootstrap-components'
-
-  instead.
-*/
 import { styled } from 'styled-components';
 import { BootstrapBaseCss, Div, Utilities } from 'styled-base-components';
 
@@ -63,12 +38,8 @@ const MyComponent = styled.div`
 const App = (props) => (
   <div>
     <BootstrapBaseCss />
-    {/*
-      Use plain HTML
-      e.g. <h4>Hello World</h4>
-      these HTML uses the bootstrap
-      styles for h4 now
-    */}
+    {/* This installs bootstrap styling for html elements */}
+
     <Div bgDark textLight p2>
       Hello World
     </Div>
@@ -342,11 +313,6 @@ my3 (margin-top: 3*0.25rem; margin-bottom: 3*0.25rem)
 pr2 (padding-right: 2*0.25rem)
 pMd5 (@media (min-width: medium-screen-size) { padding: 5*0.25rem;})
 ```
-
-## Related
-
-* [bootstrap](https://getbootstrap.com)
-* [styled-components](https://styled-components.com)
 
 ## License
 

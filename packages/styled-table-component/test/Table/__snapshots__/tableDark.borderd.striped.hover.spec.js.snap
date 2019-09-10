@@ -13,6 +13,10 @@ exports[`Styles matches Table tableDark bordered striped hover 1`] = `
   border: 0;
 }
 
+.c1 th {
+  text-align: inherit;
+}
+
 .c1 th,
 .c1 td {
   padding: 0.75rem;

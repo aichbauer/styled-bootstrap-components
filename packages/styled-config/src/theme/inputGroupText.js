@@ -10,7 +10,7 @@ const inputGroupText = {
     bottom: '0',
     radioCheckboxTop: '0',
     radioCheckboxRight: '0',
-    radioCheckboxBottom: '0.4125rem',
+    radioCheckboxBottom: '0',
   },
   padding: {
     default: '0.375rem 0.75rem',
