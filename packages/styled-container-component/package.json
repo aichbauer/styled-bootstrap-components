@@ -1,6 +1,6 @@
 {
   "name": "styled-container-component",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "The bootstrap container component created with styled-components",
   "main": "./lib/index.js",
   "private": false,
@@ -35,8 +35,8 @@
     }
   },
   "dependencies": {
-    "styled-config": "^3.0.1",
-    "styled-base-components": "^3.0.1"
+    "styled-base-components": "^4.0.0",
+    "styled-config": "^4.0.0"
   },
   "peerDependencies": {
     "react": "^16.7.0",
