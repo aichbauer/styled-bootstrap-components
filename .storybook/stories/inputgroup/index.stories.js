@@ -53,7 +53,7 @@ storiesOf('InputGroup', module)
     </InputGroup>
   ))
   .add('sizes', () => (
-    <React.Fragment>
+    <>
       <InputGroup sm mb2>
         <InputGroupPrepend>
           <InputGroupText>Small</InputGroupText>
@@ -72,7 +72,7 @@ storiesOf('InputGroup', module)
         </InputGroupPrepend>
         <FormControl type="text" />
       </InputGroup>
-    </React.Fragment>
+    </>
   ))
   .add('multiple inputs', () => (
     <InputGroup>

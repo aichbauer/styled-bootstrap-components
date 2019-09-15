@@ -19,7 +19,7 @@ storiesOf('ButtonGroup', module)
     </ButtonGroup>
   ))
   .add('sizes', () => (
-    <React.Fragment>
+    <>
       <div>
         <ButtonGroup lg mb2>
           <Button secondary>Left</Button>
@@ -41,7 +41,7 @@ storiesOf('ButtonGroup', module)
           <Button secondary>Right</Button>
         </ButtonGroup>
       </div>
-    </React.Fragment>
+    </>
   ))
   .add('vertical', () => (
     <ButtonGroup vertical>

@@ -20,12 +20,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const storyWrapper = (story) => (
-  <React.Fragment>
+  <>
     <GlobalStyle />
     <Container>
       {story()}
     </Container>
-  </React.Fragment>
+  </>
 );
 
 // automatically import all files ending in *.stories.js
