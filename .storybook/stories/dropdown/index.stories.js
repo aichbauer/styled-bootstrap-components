@@ -51,7 +51,7 @@ storiesOf('Dropdown', module)
     };
 
     return (
-      <React.Fragment>
+      <>
         {makeDropdown('primary')}
         {makeDropdown('secondary')}
         {makeDropdown('success')}
@@ -60,7 +60,7 @@ storiesOf('Dropdown', module)
         {makeDropdown('danger')}
         {makeDropdown('light')}
         {makeDropdown('dark')}
-      </React.Fragment>
+      </>
     );
   }))
   .add('with split', Story(() => {
