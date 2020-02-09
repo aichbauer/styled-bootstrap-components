@@ -7,6 +7,8 @@ const Row = styled(Div)`
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin-left: -15px;
+  margin-right: -15px;
 `;
 
 export { Row };
