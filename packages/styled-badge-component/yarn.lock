@@ -2759,9 +2759,9 @@ js-tokens@^3.0.2:
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
 js-yaml@^3.7.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
-  integrity sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
+  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -4184,6 +4184,19 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+styled-base-components@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/styled-base-components/-/styled-base-components-4.0.0.tgz#a5f0e1c4b2558926793aa59a4ff60616a1198e65"
+  integrity sha512-1Ikyk279YnwyKnh5+Vlb6q1qfXZ+43xzAqMc4iB+LN7uM/ePJXlGME6gUw2P6DNq9lxRmQrYaWdKsfoiUN3oSQ==
+  dependencies:
+    styled-base-components "^4.0.0"
+    styled-config "^4.0.0"
+
+styled-config@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/styled-config/-/styled-config-4.0.0.tgz#42530f37d1a33205a28a1cc058020aca4c5f131b"
+  integrity sha512-sQq5C1t5KtN0iMpF7lAuzh3fSpk8T0vFIh8XH7l+pOzD+w9+Wow6OPcgnZ+Q/ay6jtyhgUk6E8jMopv+dmUsVw==
 
 supports-color@^2.0.0:
   version "2.0.0"
