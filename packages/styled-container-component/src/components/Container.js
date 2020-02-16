@@ -20,6 +20,8 @@ const Container = styled(Div)`
   font-weight: ${(props) => getFontWeight(props, 'container', 'default')};
   line-height: 1.5;
   box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
   @media (min-width: ${(props) => {
     const screenWidth = getBreakpointSize({
       ...props,

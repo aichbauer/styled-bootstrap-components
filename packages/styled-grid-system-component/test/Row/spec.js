@@ -11,4 +11,6 @@ test('Styles matches Row', () => {
   expect(tree).toHaveStyleRule('display', 'flex');
   expect(tree).toHaveStyleRule('flex-wrap', 'wrap');
   expect(tree).toHaveStyleRule('list-style', 'none');
+  expect(tree).toHaveStyleRule('margin-left', '-15px');
+  expect(tree).toHaveStyleRule('margin-right', '-15px');
 });

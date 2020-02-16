@@ -16,6 +16,8 @@ test('Styles matches Container', () => {
   expect(tree).toHaveStyleRule('font-weight', '400');
   expect(tree).toHaveStyleRule('line-height', '1.5');
   expect(tree).toHaveStyleRule('box-sizing', 'border-box');
+  expect(tree).toHaveStyleRule('padding-left', '15px');
+  expect(tree).toHaveStyleRule('padding-right', '15px');
 });
 
 // TODO: how to test @media queries
