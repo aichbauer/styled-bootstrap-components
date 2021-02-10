@@ -81,8 +81,13 @@ test('test if getFontSize extract fontSize of theme', () => {
 });
 
 test('test if getFontWeight extract fontWeight of theme', () => {
-  const fw = getFontWeight({ theme }, 'button');
-  expect(fw).toEqual(theme.button.fontWeight);
+  const fwDefault = getFontWeight({ theme }, 'button', 'default');
+  const fwSmall = getFontWeight({ theme }, 'button', 'sm');
+  const fwLarge = getFontWeight({ theme }, 'button', 'lg');
+
+  expect(fwDefault).toEqual(theme.button.fontWeight.default);
+  expect(fwSmall).toEqual(theme.button.fontWeight.sm);
+  expect(fwLarge).toEqual(theme.button.fontWeight.lg);
 });
 
 test('test if getHeight extract height of theme', () => {

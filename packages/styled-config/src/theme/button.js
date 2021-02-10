@@ -142,6 +142,11 @@ const button = {
     splitDefaultRight: '0.5625rem',
     splitDefaultLeft: '0.5625rem',
   },
+  fontWeight: {
+    sm: '400',
+    lg: '400',
+    default: '400',
+  },
   fontSize: (get) => get('globals', 'fontSize'),
   border: (get) => get('globals', 'border'),
   borderRadius: (get) => get('globals', 'borderRadius'),

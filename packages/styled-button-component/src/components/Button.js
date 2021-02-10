@@ -11,6 +11,7 @@ import {
   getPadding,
   getMargin,
   getFontSize,
+  getFontWeight,
 } from 'styled-config';
 
 const boxShadow = (props) => (
@@ -93,6 +94,22 @@ const fontSize = (props) => {
 
   return css`
     font-size: ${getFontSize(props, 'button', 'default')};
+  `;
+};
+
+const fontWeight = (props) => {
+  if (props.lg) {
+    return css`
+      font-weight: ${getFontWeight(props, 'button', 'lg')};
+    `;
+  } else if (props.sm) {
+    return css`
+      font-weight: ${getFontWeight(props, 'button', 'sm')};
+    `;
+  }
+
+  return css`
+    font-weight: ${getFontWeight(props, 'button', 'default')};
   `;
 };
 
@@ -251,7 +268,7 @@ const cursor = (props) => (
 );
 
 const buttonStyle = (props) => css`
-  font-weight: 400;
+  ${fontWeight(props)};
   line-height: 1.5;
   text-align: center;
   white-space: nowrap;
